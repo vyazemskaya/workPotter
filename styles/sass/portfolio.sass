@@ -72,9 +72,8 @@ img
     margin-bottom: 1rem
     width: 45rem
   &__list-wrapper
-    border: 0.05rem solid $pf-black
-    border-left: 0
-    border-right: 0
+    border-top: 0.05rem solid $pf-black
+    border-bottom: 0.05rem solid $pf-black
   &__list
     width: 156.4rem
     margin: 0 auto
@@ -88,11 +87,10 @@ img
     width: 52rem
     display: flex
     flex-direction: column
-    justify-content: center
-    align-items: center
     position: relative
     background: white
     &__info
+      margin-left: 3rem
       margin-top: 3rem
       width: 46rem
       margin-bottom: 7.6rem
@@ -120,6 +118,7 @@ img
       margin-bottom: 9.6rem
       margin-left: 3rem
     &__img
+      margin-left: 3rem
       width: 46rem
       margin-bottom: 3rem
 
@@ -149,6 +148,7 @@ img
       font-size: 2.8rem
       line-height: 3rem
     &__title
+      letter-spacing: -0.1rem
       margin: 0rem
       font-weight: 400
       font-size: 4.8rem
@@ -158,8 +158,11 @@ img
       width: 100%
       gap: 0
       background-color: transparent
+      border-left: 0
+      border-right: 0
     .item
       margin: 0 auto
+      padding: 0
       width: 68.6rem
       border-left: 0.05rem solid $pf-black
       border-right: 0.05rem solid $pf-black
@@ -170,6 +173,7 @@ img
         width: 31.3*2rem
         margin-top: 2.4rem
         margin-bottom: 8.18rem
+        margin-left: 3rem
       &__type
         font-weight: 400
         font-size: 2.8rem
@@ -184,5 +188,9 @@ img
         font-size: 3.2rem
         line-height: 4rem
         margin-bottom: 8.4rem
+        letter-spacing: -0.07rem
+        width: 62rem
+        margin-left: 3rem
       &__img
+        margin-left: 3rem
         width: 62.6rem

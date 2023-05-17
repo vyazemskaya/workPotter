@@ -74,9 +74,8 @@ img {
   width: 45rem;
 }
 .portfolio__list-wrapper {
-  border: 0.05rem solid #434248;
-  border-left: 0;
-  border-right: 0;
+  border-top: 0.05rem solid #434248;
+  border-bottom: 0.05rem solid #434248;
 }
 .portfolio__list {
   width: 156.4rem;
@@ -92,12 +91,11 @@ img {
   width: 52rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
   background: white;
 }
 .portfolio .item__info {
+  margin-left: 3rem;
   margin-top: 3rem;
   width: 46rem;
   margin-bottom: 7.6rem;
@@ -130,6 +128,7 @@ img {
   margin-left: 3rem;
 }
 .portfolio .item__img {
+  margin-left: 3rem;
   width: 46rem;
   margin-bottom: 3rem;
 }
@@ -163,6 +162,7 @@ img {
     line-height: 3rem;
   }
   .portfolio__title {
+    letter-spacing: -0.1rem;
     margin: 0rem;
     font-weight: 400;
     font-size: 4.8rem;
@@ -173,9 +173,12 @@ img {
     width: 100%;
     gap: 0;
     background-color: transparent;
+    border-left: 0;
+    border-right: 0;
   }
   .portfolio .item {
     margin: 0 auto;
+    padding: 0;
     width: 68.6rem;
     border-left: 0.05rem solid #434248;
     border-right: 0.05rem solid #434248;
@@ -188,6 +191,7 @@ img {
     width: 62.6rem;
     margin-top: 2.4rem;
     margin-bottom: 8.18rem;
+    margin-left: 3rem;
   }
   .portfolio .item__type {
     font-weight: 400;
@@ -205,8 +209,12 @@ img {
     font-size: 3.2rem;
     line-height: 4rem;
     margin-bottom: 8.4rem;
+    letter-spacing: -0.07rem;
+    width: 62rem;
+    margin-left: 3rem;
   }
   .portfolio .item__img {
+    margin-left: 3rem;
     width: 62.6rem;
   }
 }/*# sourceMappingURL=portfolio.css.map */
