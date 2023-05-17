@@ -68,6 +68,9 @@ img {
 .about__img {
   width: 36.2rem;
 }
+.about__img-mobile {
+  display: none;
+}
 .about__content {
   display: flex;
   justify-content: space-between;
@@ -203,4 +206,157 @@ img {
   font-size: 1.6rem;
   line-height: 1.9rem;
   color: rgba(67, 66, 72, 0.5);
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: 1.3333333333vw;
+    -webkit-text-size-adjust: none;
+  }
+  .about {
+    width: 68.6rem;
+    padding-top: 3rem;
+    padding-bottom: 24rem;
+  }
+  .about__img {
+    display: none;
+  }
+  .about__img-mobile {
+    width: 100%;
+    display: block;
+    margin-bottom: 6rem;
+  }
+  .about__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 8.6rem;
+    margin-bottom: 10rem;
+  }
+  .about__discription {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-bottom: 14rem;
+    width: 100%;
+  }
+  .about__subtitle {
+    width: 57.2rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 4.8rem;
+  }
+  .about__features {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 68.6rem;
+    margin-bottom: 42.4rem;
+  }
+  .about__content {
+    margin-bottom: 0;
+  }
+  .about .item {
+    width: 86.6rem;
+    padding-top: 4rem;
+    border-bottom: 0.1rem solid;
+  }
+  .about .item__icon {
+    width: 8rem;
+    margin-bottom: 2rem;
+  }
+  .about .item__title {
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+  .about .item__discription {
+    width: 86.6rem;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+  .about .mission {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  .about .mission__title {
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    margin-bottom: 6rem;
+    width: 100%;
+  }
+  .about .mission__discription {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    width: 100%;
+    line-height: 3.8rem;
+    margin-bottom: 7.3rem;
+  }
+  .about .mission__img {
+    left: 0;
+    right: 0;
+    width: 75rem;
+    margin-bottom: 19rem;
+  }
+  .about .mission__img-text {
+    width: 68.6rem;
+    bottom: 30rem;
+    left: 0;
+    right: 0;
+  }
+  .about .mission__icon {
+    width: 10rem;
+    margin: 0;
+  }
+  .about .mission__quote {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    margin: 0;
+    width: 58.4rem;
+    margin-left: 5rem;
+    margin-bottom: 4rem;
+  }
+  .about .mission__author {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .about .mission__button-wrapper {
+    position: absolute;
+    top: 120rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .mission__button {
+    width: 68.6rem;
+    height: 8.6rem;
+    border-radius: 6rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+  }
+  .about .mission__button-subtitles {
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
 }/*# sourceMappingURL=about.css.map */
