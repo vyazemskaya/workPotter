@@ -1591,9 +1591,9 @@ input[type='number'] {
   }
 
   .header__logo--footer{
-    margin-top: 5rem;
+    padding-top: 5rem;
     width: 31.2rem;
-    margin-bottom: 5.8rem;
+    margin-bottom: 6rem;
   }
 
   .footer__box-top{

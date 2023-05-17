@@ -94,7 +94,7 @@
       <p class="cart__title">КОРЗИНА</p>
       <ul class="cart__list">
 
-        <li class="cart__item item">
+        <li class="cart__item item item--hide">
           <span class="item__list-title">Блюдо</span>
           <span class="item__list-title">Цена</span>
           <span class="item__list-title">Количество</span>
@@ -104,7 +104,8 @@
         <li class="cart__item item">
           <img src="./img/_cart/cart-item-img.png" alt="card-item-img" class="item__img">
           <p class="item__title">Комплексный обед “Сытный”</p>
-          <span class="item__price">500</span>
+          <span class="item__price">500<span class="item__price-count">шт.</span></span>
+          
           <div class="item__buttons">
             <img alt="minus-one-button" class="item__minus" src="./img/_cart/minus-button.svg">
             <span class="item__counter">01</span>
@@ -117,7 +118,7 @@
         <li class="cart__item item">
           <img src="./img/_cart/cart-item2-img.png" alt="card-item-img" class="item__img">
           <p class="item__title">Фирменное комбо с пастой</p>
-          <span class="item__price">1000</span>
+          <span class="item__price">1000<span class="item__price-count">шт.</span></span>
           <div class="item__buttons">
             <img alt="minus-one-button" class="item__minus" src="./img/_cart/minus-button.svg">
             <span class="item__counter">10</span>
@@ -130,7 +131,7 @@
 
       <div class="cart__confirm-order">
         <p class="cart__total-price">
-          <span>ИТОГО: </span>
+          ИТОГО:
           <span class="item__price">10 500</span>
         </p>
         <button class="cart__confirm-button">
@@ -143,7 +144,7 @@
 
   <footer class="footer container">
     <div class="footer__box-top">
-      <a class="header__logo" href="main.html" aria-label="Логотип"
+      <a class="header__logo header__logo--footer" href="main.html" aria-label="Логотип"
         ><img src="img/logo.png" alt="Potter Family"
       /></a>
       <nav class="footer__nav">
