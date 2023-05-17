@@ -1591,9 +1591,9 @@ input[type='number'] {
   }
 
   .header__logo--footer{
-    margin-top: 5rem;
+    padding-top: 5rem;
     width: 31.2rem;
-    margin-bottom: 6rem
+    margin-bottom: 6rem;
   }
 
   .footer__box-top{
@@ -1601,7 +1601,98 @@ input[type='number'] {
   }
 
   .footer__nav-title{
-    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.1rem;
+    line-height: 4rem;
+    letter-spacing: 0rem;
+    margin-bottom: 2.3rem;
   }
 
+  .footer__nav{
+    margin-bottom: 6rem;
+  }
+
+  .footer__nav-link{
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.7rem; 
+  }
+
+  .footer__nav-item:not(:last-child){
+    margin-bottom: 2rem; 
+  }
+
+  .footer__contact-item:not(:last-child) {
+    margin-bottom: 5.8rem;
+  }
+
+  .footer__contact-item:last-child{
+    margin-bottom: 5.6rem;
+  }
+
+  .footer__contact-title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 2.6rem;
+    letter-spacing: -0.05rem;
+  }
+
+  .footer__contact-desc{
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    max-width: 56rem;
+    font-weight: 400;
+    letter-spacing: 0.07rem;
+  }
+
+  .footer__socials-list{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+    align-items: flex-start;
+    margin-bottom: 3.8rem;
+  }
+
+  .footer__link-policy{
+    order: 1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.02rem;
+  }
+
+  .footer__copyright{
+    order: 3;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.09rem;
+  }
+
+  .footer__box-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 5.75rem;
+  }
+
+  .footer__socials-link{
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    letter-spacing: 0.07rem;
+  }
+
+  .footer__socials-item{
+    margin: 0;
+    margin-bottom: 2rem;
+  }
 }

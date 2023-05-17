@@ -74,6 +74,8 @@ img
     align-items: center
     padding-top: 2.5rem
     padding-bottom: 2.5rem
+    &--hide
+      display: flex
     &__list-title
       color: $pf-black-secondary
       font-family: 'Gotham'
@@ -99,17 +101,22 @@ img
       font-size: 1.6rem
       line-height: 1.9rem
       color: $pf-black
-      min-width: 25rem
+      width: 25rem
       margin-right: 21.9rem
       letter-spacing: 0.035rem
       margin-bottom: 0.3rem
+    &__price-count
+      font-style: normal
+      font-weight: 400
+      font-size: 1.4rem
+      line-height: 1.5rem
+      display: none
     &__price
       font-family: 'Montserrat'
       font-style: normal
       font-weight: 500
       font-size: 2rem
       line-height: 2.4rem
-      text-transform: uppercase
       color: $pf-black
       width: 20rem
       margin-right: 8.1rem
@@ -198,3 +205,137 @@ img
     line-height: 1.9rem
     color: white
     letter-spacing: 0.035rem
+
+@media (max-width: 48em)
+  html
+    font-size: 5px
+    font-size: 1.5625vw
+    font-size: 1.3333333333vw
+    -webkit-text-size-adjust: none
+
+  .cart
+    width: 68.6rem
+    padding-top: 3rem
+    padding-bottom: 24rem
+    &__title
+      font-style: normal
+      font-weight: 400
+      font-size: 4.8rem
+      line-height: 5.8rem
+      margin-bottom: 6rem
+      letter-spacing: -0.09rem
+      &::after
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        left: 1rem
+        top: -0.4rem
+    &__list
+      align-items: flex-start
+      .item--hide
+        display: none
+      .item
+        flex-wrap: wrap
+        padding-top: 3rem
+        padding-bottom: 3rem
+        &:nth-child(2)
+          border-top: 0.1rem solid $pf-black
+        &__img
+          width: 12rem
+          margin-right: 1.7rem
+          margin-bottom: 2rem
+          order: 1
+        &__title
+          width: 40.8rem
+          font-weight: 400
+          font-size: 2.8rem
+          line-height: 3rem
+          margin: 0
+          order: 2
+          letter-spacing: 0.022rem
+          margin-right: 11.35rem
+          margin-bottom: 2rem
+        &__price-count
+          margin-left: 2.7rem
+          margin-bottom: 1rem
+          display: inline-block
+          font-size: 2.8rem
+          color: $pf-black-secondary
+          line-height: 3rem
+        &__price
+          font-weight: 500
+          font-size: 3.2rem
+          line-height: 4rem
+          order: 4
+          margin-top: 1rem
+          margin-right: 1.8rem
+          &::after
+            font-weight: 500
+            font-size: 2.5rem
+            line-height: 3rem
+            top: -1.3rem
+            left: -6.6rem
+          &--second
+            order: 6
+            margin: 0
+            text-align: right
+            width: 15rem
+            margin-top: 1rem
+            &::after
+              font-weight: 500
+              font-size: 2.3rem
+              line-height: 3rem
+              top: -1.4rem
+              left: 0.6rem
+        &__remove
+          order: 3
+          width: 2.66rem
+          margin-bottom: 10.8rem
+        &__buttons
+          order: 5
+          margin: 0
+          padding: 3.76rem 12.15rem
+          margin-right: 6.4rem
+        &__minus
+          width: 3.2rem
+          height: 3.2rem
+        &__plus
+          width: 3.2rem
+          height: 3.2rem
+        &__counter
+          margin-left: 3rem
+          margin-right: 3rem
+          font-size: 2.8rem
+          line-height: 3rem
+    &__confirm-order
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+      margin-top: 4rem
+    &__confirm-button
+      width: 68.6rem
+      height: 8.6rem
+      border-radius: 6rem
+    &__button-text
+      font-weight: 400
+      font-size: 2.8rem
+      line-height: 3rem
+      &::first-letter
+        text-transform: capitalize
+    &__button-img
+      width: 4rem
+    &__total-price
+      font-weight: 400
+      font-size: 4rem
+      line-height: 4.8rem
+      margin-bottom: 6rem
+      .item__price
+        font-weight: 400
+        font-size: 4rem
+        line-height: 4.8rem
+        margin-left: 1rem
+        &::after
+          font-size: 2.6rem
+          line-height: 4rem
+          top: -0.7rem
+          left: 0.9rem
