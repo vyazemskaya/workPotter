@@ -1,0 +1,192 @@
+@font-face 
+  font-family: Gotham
+  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
+  font-display: swap
+  font-weight: 500
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+$pf-black: #434248
+$pf-black-secondary: rgba(67, 66, 72, 0.5)
+$pf-orange: #E9743F
+$pf-beige: #FFF3E5
+
+*,
+::after,
+::before 
+  box-sizing: border-box
+
+html 
+  font-family: Gotham, sans-serif
+  font-size: 0.5208335vw
+  font-style: normal
+  font-weight: 400
+  -webkit-animation: 1s infinite bugfix
+  line-height: 1.2
+  margin: 0
+  padding: 0
+
+img
+  object-fit: contain
+
+.about
+  padding-top: 3rem
+  padding-bottom: 23.8rem
+  margin: 0 auto
+  width: 156rem
+  &__title
+    color: $pf-black
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 14.3rem
+    line-height: 17.4rem
+    margin-bottom: 11rem
+  &__discription
+    width: 116.1rem
+    color: $pf-black
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 4rem
+    line-height: 4.9rem
+    margin-bottom: 17rem
+  &__img
+    width: 36.2rem
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 24rem
+  &__content-wrapper
+    display: flex
+    flex-direction: column
+  &__subtitle
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 2rem
+    line-height: 2.4rem
+    width: 32.4rem
+    margin-bottom: 8rem
+  &__features
+    width: 102.9rem
+    gap: 10rem 3.7rem
+    display: flex
+    flex-wrap: wrap
+  .item
+    border-top: 0.1rem solid
+    border-color: $pf-black
+    width: 49.6rem
+    padding-top: 4.5rem
+    &__icon
+      width: 8rem
+      margin-bottom: 3.5rem
+    &__title
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 2rem
+      line-height: 2.4rem
+    &__discription
+      margin-top: 5rem
+      width: 45rem
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+  .mission
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    &__wrapper
+    &__img
+      width: 101.9rem
+      position: relative
+      right: -11.3rem
+    &__img-text
+      position: absolute
+      right: 14.8rem
+      bottom: 4rem
+      background-color: $pf-beige
+      width: 64.6rem
+    &__icon
+      margin: 0
+      position: relative
+      top: -4.25rem
+      left: 4.9rem
+      width: 9.5rem
+    &__quote
+      width: 52.2rem
+      margin-left: 6.2rem
+      margin-top: 6.2-4.25rem
+      margin-bottom: 3.5rem
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 2rem
+      line-height: 2.4rem
+    &__author
+      margin-left: 6.2rem
+      padding-bottom: 7rem
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+    &__title
+      color: $pf-orange
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 400
+      font-size: 6rem
+      line-height: 7.3rem
+      margin-bottom: 6rem
+      width: 60.8rem  
+    &__discription
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 2rem
+      line-height: 2.4rem
+      color: $pf-black
+      margin-bottom: 6rem
+      width: 49.6rem
+    &__button
+      width: 32rem
+      height: 4.3rem
+      border-radius: 3rem
+      border: 0.1rem solid $pf-black
+      display: flex
+      justify-content: center
+      align-items: center
+      color: $pf-black
+      margin-bottom: 2rem
+    &__button-subtitles
+      margin-left: 3.4rem
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: $pf-black-secondary
+    
+
+
+
+      

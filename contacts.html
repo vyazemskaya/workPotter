@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="another website" />
+    <title>Potter Family - Контакты</title>
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/css/contacts.css"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="./js/contacts.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container container">
+      <a class="header__logo" href="main.html" aria-label="Логотип"
+        ><img src="img/logo.png" alt="Potter Family"
+      /></a>
+      <nav class="header__nav" id="menu">
+        <button class="header__nav-close" id="menu-close">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.78622 6.99681L13.5047 1.27549C13.6059 1.17066 13.6619 1.03025 13.6606 0.884511C13.6593 0.73877 13.6009 0.599358 13.4979 0.496299C13.3949 0.393241 13.2555 0.334784 13.1099 0.333517C12.9642 0.332251 12.8239 0.388277 12.7191 0.489528L7.00065 6.21084L1.28222 0.489528C1.17744 0.388277 1.0371 0.332251 0.891431 0.333517C0.745763 0.334784 0.60642 0.393241 0.503414 0.496299C0.400408 0.599358 0.341979 0.73877 0.340714 0.884511C0.339448 1.03025 0.395446 1.17066 0.496646 1.27549L6.21508 6.99681L0.496646 12.7181C0.392494 12.8224 0.333984 12.9637 0.333984 13.1111C0.333984 13.2585 0.392494 13.3998 0.496646 13.5041C0.60083 13.6083 0.742115 13.6668 0.889431 13.6668C1.03675 13.6668 1.17803 13.6083 1.28222 13.5041L7.00065 7.78277L12.7191 13.5041C12.8233 13.6083 12.9646 13.6668 13.1119 13.6668C13.2592 13.6668 13.4005 13.6083 13.5047 13.5041C13.6088 13.3998 13.6673 13.2585 13.6673 13.1111C13.6673 12.9637 13.6088 12.8224 13.5047 12.7181L7.78622 6.99681Z"
+              fill="white"
+            ></path>
+          </svg>
+        </button>
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="services.html">Услуги</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="portfolio.html">Портфолио</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="about.html">О нас</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+        <a
+          class="header__nav-tel"
+          href="tel:+74991362923"
+          aria-label="Номер телефона"
+          >+7 (499) 136 29 23</a
+        >
+      </nav>
+      <div class="header__box-right">
+        <a class="header__tel" href="tel:+74991362923" aria-label="Номер телефона"
+          >+7 (499) 136 29 23</a
+        ><a class="header__basket" href="cart.html" aria-label="Корзина"
+          ><svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.9734 21.2917C12.7517 21.2917 12.5301 21.21 12.3551 21.035L10.6051 19.285C10.2667 18.9467 10.2667 18.3867 10.6051 18.0484C10.9434 17.71 11.5034 17.71 11.8417 18.0484L12.9967 19.2034L16.1701 16.275C16.5201 15.9484 17.0801 15.9717 17.4067 16.3217C17.7334 16.6717 17.7101 17.2317 17.3601 17.5584L13.5684 21.0584C13.4051 21.21 13.1951 21.2917 12.9734 21.2917Z"
+              fill="#434248"
+            ></path>
+            <path
+              d="M6.05494 7.44351C5.83328 7.44351 5.59994 7.35018 5.43661 7.18684C5.09828 6.84851 5.09828 6.28851 5.43661 5.95018L9.67161 1.71518C10.0099 1.37684 10.5699 1.37684 10.9083 1.71518C11.2466 2.05351 11.2466 2.61351 10.9083 2.95184L6.67328 7.18684C6.49828 7.35018 6.27661 7.44351 6.05494 7.44351Z"
+              fill="#434248"
+            ></path>
+            <path
+              d="M21.945 7.44351C21.7233 7.44351 21.5016 7.36184 21.3266 7.18684L17.0916 2.95184C16.7533 2.61351 16.7533 2.05351 17.0916 1.71518C17.43 1.37684 17.99 1.37684 18.3283 1.71518L22.5633 5.95018C22.9016 6.28851 22.9016 6.84851 22.5633 7.18684C22.4 7.35018 22.1666 7.44351 21.945 7.44351Z"
+              fill="#434248"
+            ></path>
+            <path
+              d="M23.5783 12.3669C23.4966 12.3669 23.4149 12.3669 23.3333 12.3669H23.0649H4.66659C3.84992 12.3785 2.91659 12.3785 2.23992 11.7019C1.70325 11.1769 1.45825 10.3602 1.45825 9.15853C1.45825 5.9502 3.80325 5.9502 4.92325 5.9502H23.0766C24.1966 5.9502 26.5416 5.9502 26.5416 9.15853C26.5416 10.3719 26.2966 11.1769 25.7599 11.7019C25.1533 12.3085 24.3366 12.3669 23.5783 12.3669ZM4.92325 10.6169H23.3449C23.8699 10.6285 24.3599 10.6285 24.5233 10.4652C24.6049 10.3835 24.7799 10.1035 24.7799 9.15853C24.7799 7.8402 24.4533 7.7002 23.0649 7.7002H4.92325C3.53492 7.7002 3.20825 7.8402 3.20825 9.15853C3.20825 10.1035 3.39492 10.3835 3.46492 10.4652C3.62825 10.6169 4.12992 10.6169 4.64325 10.6169H4.92325Z"
+              fill="#434248"
+            ></path>
+            <path
+              d="M17.3717 26.5419H10.3367C6.16004 26.5419 5.22671 24.0569 4.86504 21.8985L3.22004 11.8069C3.13837 11.3285 3.46504 10.8852 3.94337 10.8035C4.41004 10.7219 4.86504 11.0485 4.94671 11.5269L6.59171 21.6069C6.93004 23.6719 7.63004 24.7919 10.3367 24.7919H17.3717C20.37 24.7919 20.7084 23.7419 21.0934 21.7119L23.0534 11.5035C23.1467 11.0252 23.6017 10.7102 24.08 10.8152C24.5584 10.9085 24.8617 11.3635 24.7684 11.8419L22.8084 22.0502C22.3534 24.4185 21.595 26.5419 17.3717 26.5419Z"
+              fill="#434248"
+            ></path></svg></a
+        ><button class="header__nav-open" id="menu-open">меню</button>
+      </div>
+    </div>
+    <script src="js/header.js"></script>
+  </header>
+  
+  <main>
+    <section class="contacts">
+      <div class="contacts__info">
+        <p class="contacts__title">КОНТАКТЫ</p>
+        <div class="contacts__list">
+          <p class="contacts__item item">
+            <span class="item__title item__title--phone">Телефон</span>
+            <span class="item__line item__line--phone"></span>
+            <a class="item__info item__info--phone" href="tel:+74991362923">+7 (499) 136 29 23</a>
+          </p>
+
+          <p class="contacts__item item">
+            <span class="item__title">Адрес</span>
+            <span class="item__line"></span>
+            <a class="item__info">МОСКВА<br>
+              УЛ. ТИМИРЯЗЕВСКАЯ, ДОМ 1
+              ПН-ПТ 09:00 - 19:00</a>
+          </p>
+
+          <p class="contacts__item item">
+            <span class="item__title">Почта</span>
+            <span class="item__line"></span>
+            <a class="item__info" href="mailto:Info@potterfamily.ru">INFO@POTTERFAMILY.RU</a>
+          </p>
+        </div>
+        <img class="contacts__img" alt="main-entry-button" src="./img/_contacts/contacts-circle.png">
+      </div>
+
+      <div class="contacts__location-map">
+        <p class="contacts__subtitle">Мы всегда рады проконсультировать вас по любым вопросам.</p>
+        <div id="root" class="contacts__map-api"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="footer__box-top">
+      <a class="header__logo" href="main.html" aria-label="Логотип"
+        ><img src="img/logo.png" alt="Potter Family"
+      /></a>
+      <nav class="footer__nav">
+        <h3 class="footer__nav-title">Меню</h3>
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="main.html">Главная</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="services.html">Услуги</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="portfolio.html">Портфолио</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="about.html">О нас</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="footer__contact-list">
+        <li class="footer__contact-item">
+          <h3 class="footer__contact-title">телефон</h3>
+          <a class="footer__contact-desc" href="tel:+74991362923"
+            >+7 (499) 136-29-23</a
+          >
+        </li>
+        <li class="footer__contact-item">
+          <h3 class="footer__contact-title">сотрудничество</h3>
+          <a class="footer__contact-desc" href="mailto:info@potterfamily.ru"
+            >info@potterfamily.ru</a
+          >
+        </li>
+        <li class="footer__contact-item">
+          <h3 class="footer__contact-title">Адрес</h3>
+          <address class="footer__contact-desc">
+            РФ, г. Москва, ул. Тимирязевская, 1 пн-пт: 09:00 - 19:00
+          </address>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__box-bottom">
+      <a class="footer__link-policy" href="#">Политика конфиденциальности</a>
+      <ul class="footer__socials-list">
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="">Facebook</a>
+        </li>
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="">Instagram</a>
+        </li>
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="">Youtube</a>
+        </li>
+        <li class="footer__socials-item">
+          <a class="footer__socials-link" href="">Vk</a>
+        </li>
+      </ul>
+      <strong class="footer__copyright">© 2007 - 2023 Potterfamily</strong>
+    </div>
+  </footer>
+  
+</body>
+</html>

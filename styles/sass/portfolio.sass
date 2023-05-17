@@ -1,0 +1,188 @@
+@font-face 
+  font-family: Gotham
+  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
+  font-display: swap
+  font-weight: 500
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+$pf-black: #434248
+$pf-black-secondary: rgba(67, 66, 72, 0.5)
+$pf-orange: #E9743F
+$pf-beige: #FFF3E5
+
+*,
+::after,
+::before 
+  box-sizing: border-box
+
+html 
+  font-family: Gotham, sans-serif
+  font-size: 0.5208335vw
+  font-style: normal
+  font-weight: 400
+  -webkit-animation: 1s infinite bugfix
+  line-height: 1.2
+  margin: 0
+  padding: 0
+
+img
+  object-fit: contain
+
+.portfolio
+  padding-top: 3rem
+  padding-bottom: 23.8rem
+  margin: 0 auto
+  width: 100%
+  display: flex
+  flex-direction: column
+  &__header
+    margin: 0 auto
+    width: 156rem
+    display: flex
+    gap: 9.1rem
+    margin-bottom: 5rem
+    align-items: flex-end
+  &__title
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 6rem
+    line-height: 7.3rem
+    color: $pf-black
+  &__subtitle
+    font-family: 'Gotham'
+    font-style: normal
+    font-weight: 400
+    font-size: 1.6rem
+    line-height: 1.9rem
+    margin-bottom: 1rem
+    width: 45rem
+  &__list-wrapper
+    border: 0.05rem solid $pf-black
+    border-left: 0
+    border-right: 0
+  &__list
+    width: 156.4rem
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    gap: 0.1rem
+    background-color: $pf-black
+    border-left: 0.05rem solid $pf-black
+    border-right: 0.05rem solid $pf-black
+  .item
+    width: 52rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    background: white
+    &__info
+      margin-top: 3rem
+      width: 46rem
+      margin-bottom: 7.6rem
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__type
+      margin-right: 2rem
+      color: $pf-black-secondary
+      &--amount 
+        margin-right: 0rem
+    &__date
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      color: $pf-black
+    &__title
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      margin-bottom: 9.6rem
+      margin-left: 3rem
+    &__img
+      width: 46rem
+      margin-bottom: 3rem
+
+@media (max-width: 48em)
+  html
+    font-size: 5px
+    font-size: 1.5625vw
+    font-size: 1.3333333333vw
+    -webkit-text-size-adjust: none
+
+  .portfolio
+    padding-top: 2.5rem
+    margin: 0 auto
+    width: 100%
+    &__header
+      width: 68.6rem
+      gap: 3.6rem
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: 6rem
+    &__subtitle
+      width: 58rem
+      margin: 0rem
+      font-style: normal
+      font-weight: 400
+      font-size: 2.8rem
+      line-height: 3rem
+    &__title
+      margin: 0rem
+      font-weight: 400
+      font-size: 4.8rem
+      line-height: 5.8rem
+    &__list
+      margin: 0 auto
+      width: 100%
+      gap: 0
+      background-color: transparent
+    .item
+      margin: 0 auto
+      width: 68.6rem
+      border-left: 0.05rem solid $pf-black
+      border-right: 0.05rem solid $pf-black
+      border-bottom: 0.05rem solid $pf-black
+      &:last-child
+        border-bottom: 0
+      &__info
+        width: 31.3*2rem
+        margin-top: 2.4rem
+        margin-bottom: 8.18rem
+      &__type
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        margin-right: 2rem
+      &__date
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+      &__title
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        margin-bottom: 8.4rem
+      &__img
+        width: 62.6rem
