@@ -79,13 +79,30 @@ img {
 }
 .portfolio__list {
   width: 156.4rem;
+  height: 109.8rem;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.1rem;
+  overflow: scroll;
   background-color: #434248;
   border-left: 0.05rem solid #434248;
   border-right: 0.05rem solid #434248;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.portfolio__list::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+.portfolio__list::-webkit-scrollbar-thumb {
+  display: none;
+}
+.portfolio__list::-webkit-scrollbar-button {
+  display: none;
+}
+.portfolio__list-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
 }
 .portfolio .item {
   width: 52rem;
@@ -175,6 +192,7 @@ img {
     background-color: transparent;
     border-left: 0;
     border-right: 0;
+    height: 203.4rem;
   }
   .portfolio .item {
     margin: 0 auto;
