@@ -80,6 +80,8 @@ img
       color: $pf-black
       margin-bottom: 2.5rem
       margin-top: 4rem
+    &__title
+      letter-spacing: 0.03rem
     &__count
       font-family: 'Gotham'
       font-style: normal
@@ -93,17 +95,24 @@ img
       font-weight: 500
       font-size: 2rem
       line-height: 2.4rem
+      display: flex
+      margin-right: 0.3rem
+      align-items: center
       &--gray
         color: $pf-black-secondary
-      &::after
-        content: '₽' 
-        font-weight: 500
-        font-family: 'Montserrat'
-        font-size: 1.4rem
+    &__price-ruble
+      font-weight: 500
+      font-family: 'Montserrat'
+      font-size: 1.4rem
+      line-height: 1.9rem
+      top: -0.5rem
+      left: 0.2rem
+      position: relative
+      &--results
+        font-size: 1.9rem
         line-height: 1.9rem
-        top: -0.5rem
-        left: 0.2rem
-        position: relative
+        top: -2.2rem
+        left: 0rem
     &__list
       margin-left: 3rem
       width: 56.8rem
@@ -157,22 +166,13 @@ img
       font-size: 4rem
       line-height: 4.9rem
       color: $pf-black
-      &::after
-        content: '₽' 
-        font-weight: 400
-        font-family: 'Montserrat'
-        font-size: 2rem
-        line-height: 2.4rem
-        top: -1.8rem
-        left: 0.4rem
-        position: relative
+
               
   .form
     width: 76.2rem
     display: flex
     flex-direction: column
     &__wrapper
-      // border: 0.1rem solid red
       width: 76.2rem
       display: flex
       flex-wrap: wrap
@@ -257,3 +257,102 @@ img
       line-height: 1.9rem
       color: white
       letter-spacing: 0.035rem
+
+@media (max-width: 48em)
+  html
+    font-size: 5px
+    font-size: 1.5625vw
+    font-size: 1.3333333333vw
+    -webkit-text-size-adjust: none
+
+  .payment
+    width: 68.6rem
+    padding-top: 3rem
+    padding-bottom: 58.4rem
+    &__content
+      display: flex
+      flex-direction: column
+    &__title
+      font-style: normal
+      font-weight: 400
+      font-size: 4.8rem
+      line-height: 5.8rem
+      margin-bottom: 6rem
+    .form
+      align-items: center
+      order: 2
+      width: 68.6rem
+    .order
+      width: 100%
+      &__item
+        padding: 3.5rem 0
+      &__date
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        margin-top: 6rem
+        margin-bottom: 5rem
+      &__title
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        width: 27rem
+        position: relative
+        top: 0.4rem
+        left: -0.1rem
+      &__img
+        width: 12rem
+      &__price
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        position: relative
+        right: 0.7rem
+        bottom: 0.3rem
+        display: flex
+        align-items: center
+      &__price-ruble
+        margin-bottom: 1.1rem
+        margin-right: -0.5rem
+        margin-left: 0.3rem
+        font-weight: 400
+        font-size: 2.6rem
+        line-height: 3rem
+        margin-bottom: 1rem
+        &--results
+          top: -0.7rem
+          left: 0.7rem
+          font-size: 3rem
+      &__wrapper
+        gap: 2.8rem
+      &__count
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        position: relative
+        top: 0.4rem
+      &__list
+        width: 62.6rem
+        margin-bottom: 5rem
+      &__cost
+        width: 62.6rem
+        padding-bottom: 2.8rem
+        margin-bottom: 3rem
+        gap: 2rem
+      &__price-text
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+      &__summary
+        font-weight: 400
+        font-size: 4rem
+        line-height: 4.8rem
+      &__results
+        width: 62.6rem
+        margin-bottom: 6rem
+      &__total-price
+        white-space: nowrap
+        font-weight: 400
+        font-size: 4rem
+        line-height: 4.8rem
+        margin-right: 1.2rem

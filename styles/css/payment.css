@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: Gotham;
   src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
@@ -82,6 +81,9 @@ img {
   margin-bottom: 2.5rem;
   margin-top: 4rem;
 }
+.payment .order__title {
+  letter-spacing: 0.03rem;
+}
 .payment .order__count {
   font-family: "Gotham";
   font-style: normal;
@@ -96,12 +98,14 @@ img {
   font-weight: 500;
   font-size: 2rem;
   line-height: 2.4rem;
+  display: flex;
+  margin-right: 0.3rem;
+  align-items: center;
 }
 .payment .order__price--gray {
   color: rgba(67, 66, 72, 0.5);
 }
-.payment .order__price::after {
-  content: "₽";
+.payment .order__price-ruble {
   font-weight: 500;
   font-family: "Montserrat";
   font-size: 1.4rem;
@@ -109,6 +113,12 @@ img {
   top: -0.5rem;
   left: 0.2rem;
   position: relative;
+}
+.payment .order__price-ruble--results {
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  top: -2.2rem;
+  left: 0rem;
 }
 .payment .order__list {
   margin-left: 3rem;
@@ -171,16 +181,6 @@ img {
   font-size: 4rem;
   line-height: 4.9rem;
   color: #434248;
-}
-.payment .order__total-price::after {
-  content: "₽";
-  font-weight: 400;
-  font-family: "Montserrat";
-  font-size: 2rem;
-  line-height: 2.4rem;
-  top: -1.8rem;
-  left: 0.4rem;
-  position: relative;
 }
 .payment .form {
   width: 76.2rem;
@@ -286,4 +286,124 @@ img {
   line-height: 1.9rem;
   color: white;
   letter-spacing: 0.035rem;
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: 1.3333333333vw;
+    -webkit-text-size-adjust: none;
+  }
+  .payment {
+    width: 68.6rem;
+    padding-top: 3rem;
+    padding-bottom: 58.4rem;
+  }
+  .payment__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .payment__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    margin-bottom: 6rem;
+  }
+  .payment .form {
+    align-items: center;
+    order: 2;
+    width: 68.6rem;
+  }
+  .payment .order {
+    width: 100%;
+  }
+  .payment .order__item {
+    padding: 3.5rem 0;
+  }
+  .payment .order__date {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+  }
+  .payment .order__title {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    width: 27rem;
+    position: relative;
+    top: 0.4rem;
+    left: -0.1rem;
+  }
+  .payment .order__img {
+    width: 12rem;
+  }
+  .payment .order__price {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    position: relative;
+    right: 0.7rem;
+    bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+  }
+  .payment .order__price-ruble {
+    margin-bottom: 1.1rem;
+    margin-right: -0.5rem;
+    margin-left: 0.3rem;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+  .payment .order__price-ruble--results {
+    top: -0.7rem;
+    left: 0.7rem;
+    font-size: 3rem;
+  }
+  .payment .order__wrapper {
+    gap: 2.8rem;
+  }
+  .payment .order__count {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    position: relative;
+    top: 0.4rem;
+  }
+  .payment .order__list {
+    width: 62.6rem;
+    margin-bottom: 5rem;
+  }
+  .payment .order__cost {
+    width: 62.6rem;
+    padding-bottom: 2.8rem;
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+  .payment .order__price-text {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .payment .order__summary {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  .payment .order__results {
+    width: 62.6rem;
+    margin-bottom: 6rem;
+  }
+  .payment .order__total-price {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-right: 1.2rem;
+  }
 }/*# sourceMappingURL=payment.css.map */
