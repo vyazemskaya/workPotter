@@ -25,6 +25,7 @@ $pf-orange: #E9743F
 $pf-beige: #FFF3E5
 $pf-beige: #FFF3E5
 $pf-black-tertiary: #43424840
+$pf-error: #F63737
 
 *,
 ::after,
@@ -180,11 +181,33 @@ img
       &--textarea
         gap: 0
         margin-bottom: 4rem
+    &__error-icon
+      position: absolute
+      bottom: 1.247rem
+      right: 0
+      width: 1.46rem
+      display: none
+      &--show
+        display: block
     &__item
       width: 36.6rem
       display: flex
       flex-direction: column
       border-bottom: 0.1rem solid $pf-black
+      position: relative
+      &--error
+        border-bottom: 0.1rem solid $pf-error
+    &__error
+      position: absolute
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.4rem
+      line-height: 1.3rem
+      text-align: right
+      right: 0
+      bottom: -2rem
+      color: $pf-error
     &__title
       font-family: 'Gotham'
       font-style: normal

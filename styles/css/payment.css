@@ -198,11 +198,37 @@ img {
   gap: 0;
   margin-bottom: 4rem;
 }
+.payment .form__error-icon {
+  position: absolute;
+  bottom: 1.247rem;
+  right: 0;
+  width: 1.46rem;
+  display: none;
+}
+.payment .form__error-icon--show {
+  display: block;
+}
 .payment .form__item {
   width: 36.6rem;
   display: flex;
   flex-direction: column;
   border-bottom: 0.1rem solid #434248;
+  position: relative;
+}
+.payment .form__item--error {
+  border-bottom: 0.1rem solid #F63737;
+}
+.payment .form__error {
+  position: absolute;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  text-align: right;
+  right: 0;
+  bottom: -2rem;
+  color: #F63737;
 }
 .payment .form__title {
   font-family: "Gotham";

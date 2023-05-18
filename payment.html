@@ -33,7 +33,7 @@
         </button>
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a class="header__nav-link" href="services.html">Услуги</a>
+            <a class="header__nav-link" href="services.html">Меню</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link" href="portfolio.html">Портфолио</a>
@@ -99,21 +99,25 @@
               <div class="form__item">
                 <label class="form__title" for="name">Ваше имя</label>
                 <input class="form__value" type="text" placeholder="Иван" id="name">
+                <img src="./img/payment/payment-error-icon.svg" class="form__error-icon" alt="error-icon">
               </div>            
           
               <div class="form__item">
                 <label class="form__title" for="email">E-mail</label>
                 <input class="form__value" type="text" placeholder="example@mail.com" id="email">
+                <img src="./img/payment/payment-error-icon.svg" class="form__error-icon" alt="error-icon">
               </div>
 
               <div class="form__item">
                 <label class="form__title" for="phone-number">Номер телефона</label>
                 <input class="form__value" type="number" placeholder="+7 (999) 999-99-99" id="phone-number">
+                <img src="./img/payment/payment-error-icon.svg" class="form__error-icon" alt="error-icon">
               </div>
               
               <div class="form__item">
                 <label class="form__title" for="location">Адрес</label>
                 <input class="form__value" type="text" placeholder="г. Москва" id="location">
+                <img src="./img/payment/payment-error-icon.svg" class="form__error-icon" alt="error-icon">
               </div>
           </div>
 
@@ -122,7 +126,7 @@
             <textarea class="form__value form__value--textarea" id="comment"></textarea>
           </div>
 
-          <button class="form__confirm-button">
+          <button type="submit" class="form__confirm-button" id="button">
             <img src="./img/payment/payment-button-icon.svg" alt="cart-img" class="form__button-img">
             <span class="form__button-text">заказать</span>
           </button>
@@ -246,6 +250,7 @@
       </ul>
       <strong class="footer__copyright">© 2007 - 2023 Potterfamily</strong>
     </div>
-  </footer>  
+  </footer>
+  <script src="./js/payment.js"></script>
 </body>
 </html>
