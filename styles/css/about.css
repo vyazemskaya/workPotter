@@ -224,6 +224,13 @@ img {
     font-size: 1.3333333333vw;
     -webkit-text-size-adjust: none;
   }
+}
+@media (max-width: 48em) and (hover: hover) {
+  .item {
+    cursor: url("../../img/shared/pagination-icon");
+  }
+}
+@media (max-width: 48em) {
   .about {
     width: 68.6rem;
     padding-top: 3rem;
@@ -369,6 +376,8 @@ img {
     font-size: 2.8rem;
     line-height: 3rem;
   }
+}
+@media (max-width: 48em) {
   .swiper-wrapper {
     gap: 0;
     display: flex;
