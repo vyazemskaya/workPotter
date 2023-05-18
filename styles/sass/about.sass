@@ -47,6 +47,7 @@ img
   padding-bottom: 23.8rem
   margin: 0 auto
   width: 156rem
+  // overflow: hidden
   &__title
     color: $pf-black
     font-family: 'Montserrat'
@@ -86,9 +87,9 @@ img
     margin-bottom: 8rem
   &__features
     width: 102.9rem
-    gap: 10rem 3.7rem
+    // gap: 10rem 3.7rem
     display: flex
-    flex-wrap: wrap
+    // flex-wrap: wrap
   .item
     border-top: 0.1rem solid
     border-color: $pf-black
@@ -187,6 +188,17 @@ img
       line-height: 1.9rem
       color: $pf-black-secondary
 
+.swiper
+  &-wrapper
+    width: 102.9rem
+    gap: 10rem 3.7rem
+    display: flex
+    flex-wrap: wrap
+    margin: 0
+  &-slide
+    height: auto !important
+
+
 @media (max-width: 48em)
   html
     font-size: 5px
@@ -201,7 +213,7 @@ img
     &__img
       display: none
     &__img-mobile
-      width: 100%
+      width: 68.6rem
       display: block
       margin-bottom: 6rem
     &__title
@@ -225,16 +237,16 @@ img
       line-height: 4rem
       margin-bottom: 4.8rem
     &__features
-      flex-wrap: nowrap
-      overflow: hidden
       width: 68.6rem
-      margin-bottom: 42.4rem
+      overflow: hidden
+      border-bottom: 0.1rem solid
+      border-top: 0.1rem solid
     &__content
       margin-bottom: 0
     .item
-      width: 86.6rem
+      width: 68.6rem
       padding-top: 4rem
-      border-bottom: 0.1rem solid
+      border: 0
       &__icon
         width: 8rem
         margin-bottom: 2rem
@@ -243,10 +255,10 @@ img
         font-size: 3.2rem
         line-height: 3.8rem
       &__discription
-        width: 86.6rem
+        width: 68.6rem
         font-weight: 400
         font-size: 2.8rem
-        line-height: 3.8rem
+        line-height: 2.95rem
         margin-top: 3rem
         margin-bottom: 4rem
     .mission
@@ -257,6 +269,7 @@ img
         font-weight: 400
         font-size: 4.8rem
         line-height: 5.8rem
+        margin-top: 42.4rem
         margin-bottom: 6rem
         width: 100%
       &__discription
@@ -315,7 +328,15 @@ img
         font-weight: 400
         font-size: 2.8rem
         line-height: 3rem
-
+  
+  .swiper
+    &-wrapper
+      gap: 0
+      display: flex
+      flex-wrap: nowrap
+      width: 68.6rem
+    &-slide
+      height: auto !important
 
 
 
