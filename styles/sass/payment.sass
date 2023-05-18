@@ -1,0 +1,236 @@
+@font-face 
+  font-family: Gotham
+  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
+  font-display: swap
+  font-weight: 500
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+$pf-black: #434248
+$pf-black-secondary: rgba(67, 66, 72, 0.5)
+$pf-orange: #E9743F
+$pf-beige: #FFF3E5
+$pf-beige: #FFF3E5
+$pf-black-tertiary: #43424840
+
+*,
+::after,
+::before 
+  box-sizing: border-box
+
+html 
+  font-family: Gotham, sans-serif
+  font-size: 0.5208335vw
+  font-style: normal
+  font-weight: 400
+  -webkit-animation: 1s infinite bugfix
+  line-height: 1.2
+  margin: 0
+  padding: 0
+
+img
+  object-fit: contain
+
+.payment
+  padding-top: 3rem
+  padding-bottom: 23.8rem
+  margin: 0 auto
+  width: 156rem
+  display: flex
+  flex-direction: column
+  &__title
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 6rem
+    line-height: 7.3rem
+    margin-bottom: 5rem
+  &__content
+    display: flex
+    justify-content: space-between
+  .order
+    width: 62.8rem
+    display: flex
+    flex-direction: column
+    background-color: $pf-beige
+    &__img
+      width: 8rem
+      margin-right: 2rem
+    &__date
+      margin-left: 3rem
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      color: $pf-black
+      margin-bottom: 2.5rem
+      margin-top: 4rem
+    &__count
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+    &__price
+      color: $pf-black
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      &--gray
+        color: $pf-black-secondary
+      &::after
+        content: '₽' 
+        font-weight: 500
+        font-family: 'Montserrat'
+        font-size: 1.4rem
+        line-height: 1.9rem
+        top: -0.5rem
+        left: 0.2rem
+        position: relative
+    &__list
+      margin-left: 3rem
+      width: 56.8rem
+      border-top: 0.1rem solid $pf-black-tertiary
+      margin-bottom: 3rem
+    &__item
+      padding: 2.1rem 0
+      display: flex
+      border-bottom: 0.1rem solid $pf-black-tertiary
+    &__wrapper
+      display: flex
+      width: 100%
+      gap: 3.8rem
+      flex-direction: column
+    &__line
+      width: 100%
+      display: flex
+      justify-content: space-between
+    &__price-text
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: $pf-black-secondary
+    &__cost
+      margin-left: 3rem
+      width: 56.8rem
+      display: flex
+      flex-direction: column
+      gap: 1.6rem
+      border-bottom: 0.1rem solid $pf-black-tertiary
+      padding-bottom: 2rem
+      margin-bottom: 2rem
+    &__results
+      width: 56.8rem
+      display: flex
+      justify-content: space-between
+      margin-left: 3rem
+      margin-bottom: 4rem
+    &__summary
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 400
+      font-size: 4rem
+      line-height: 4.9rem
+      color: $pf-black
+    &__total-price
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 400
+      font-size: 4rem
+      line-height: 4.9rem
+      color: $pf-black
+      &::after
+        content: '₽' 
+        font-weight: 400
+        font-family: 'Montserrat'
+        font-size: 2rem
+        line-height: 2.4rem
+        top: -0.5rem
+        left: 0.2rem
+        position: relative
+              
+  .form
+    width: 76.2rem
+    display: flex
+    flex-direction: column
+    &__wrapper
+      // border: 0.1rem solid red
+      width: 76.2rem
+      display: flex
+      flex-wrap: wrap
+      gap: 3.7rem 3rem
+      margin-bottom: 3.7rem
+      &--textarea
+        gap: 0
+        margin-bottom: 4rem
+    &__item
+      width: 36.6rem
+      display: flex
+      flex-direction: column
+      border-bottom: 0.1rem solid $pf-black
+    &__title
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.4rem
+      line-height: 1.3rem
+      color: $pf-black
+      margin-bottom: 0.5rem
+      &--textarea
+        margin-bottom: 1.4rem
+    &__value
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      padding-top: 0.8rem
+      padding-bottom: 0.8rem
+      letter-spacing: 0.065rem
+      &::placeholder
+        color: $pf-black-secondary
+      &--textarea
+        width: 76.2rem
+        height: 12rem
+        border: 0.1rem solid $pf-black
+        resize: none
+        padding: 0.9rem
+    &__confirm-button
+      width: 30.2rem
+      height: 4.3rem
+      background-color: $pf-black 
+      display: flex
+      align-items: center
+      justify-content: center
+      white-space: nowrap
+      border-radius: 3rem
+      bottom: 0.35rem
+    &__button-img
+      width: 2.4rem
+      margin-top: 0.2rem
+      margin-right: 1.625rem
+    &__button-text
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: white
+      letter-spacing: 0.035rem
