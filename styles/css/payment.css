@@ -413,6 +413,9 @@ img {
     line-height: 2.2rem;
     bottom: -3rem;
   }
+  .payment .form__error-icon {
+    width: 2.8rem;
+  }
   .payment .form__wrapper {
     width: 68.6rem;
     gap: 6rem;
