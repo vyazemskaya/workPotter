@@ -46,6 +46,9 @@ img {
   margin: 0 auto;
   width: 156rem;
 }
+.about__paggination-icon {
+  display: none;
+}
 .about__title {
   color: #434248;
   font-family: "Montserrat";
@@ -236,6 +239,12 @@ img {
     padding-top: 3rem;
     padding-bottom: 24rem;
   }
+  .about__paggination-icon {
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: block;
+    width: 14.4rem;
+  }
   .about__img {
     display: none;
   }
@@ -307,7 +316,7 @@ img {
     font-weight: 400;
     font-size: 4.8rem;
     line-height: 5.8rem;
-    margin-top: 42.4rem;
+    margin-top: 24rem;
     margin-bottom: 6rem;
     width: 100%;
   }
