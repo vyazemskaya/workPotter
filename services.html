@@ -8,6 +8,10 @@
     <title>Potter Family - Корзина</title>
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/css/services.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -122,9 +126,18 @@
               alt="backgraund-food-img"
               class="services__backgraund-img services__backgraund-img--second"
             />
+            <img
+              src="./img/services/services-backgraund-img-2-mobile.png"
+              alt="backgraund-food-img"
+              class="services__backgraund-img services__backgraund-img--second services__backgraund-img--mobile"
+            />
           </div>
 
-          <img src="./img/services/services-backgraund-icon-1.png.png" alt="service-gift-icon" class="services__gift-icon">
+          <img
+            src="./img/services/services-backgraund-icon-1.png.png"
+            alt="service-gift-icon"
+            class="services__gift-icon"
+          />
 
           <div class="services__discription">
             <div class="services__discription-wrapper">
@@ -136,7 +149,9 @@
                 вашему событию!
               </p>
             </div>
-            <a class="services__link-circle"><div class="services__link-text">Портфолио</div></a>
+            <a class="services__link-circle" href="portfolio.html"
+              ><div class="services__link-text">Портфолио</div></a
+            >
           </div>
         </div>
 
@@ -145,78 +160,105 @@
             Подберем для вас идеальное меню, учтем все пожелания и требования
           </p>
           <p class="slider__title">УСЛУГИ ОТ ПРОФЕССИОНАЛОВ</p>
-          <div class="slider__wrapper">
-            <div class="slider__card card">
-              <img
-                src="./img/services/services-slider-item-1.png"
-                class="card__img"
-                alt="slider-card-img"
-              />
-              <p class="card__title">КЕЙТЕРИНГ</p>
-              <p class="card__subtitle">
-                Коктейльный кейтеринг – это услуга по организации и проведению
-                мероприятий с подачей коктейлей и закусок
-              </p>
-            </div>
+          <div class="slider__line swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider__card card">
+                  <img
+                    src="./img/services/services-slider-item-1.png"
+                    class="card__img"
+                    alt="slider-card-img"
+                  />
+                  <p class="card__title">КЕЙТЕРИНГ</p>
+                  <p class="card__subtitle">
+                    Коктейльный кейтеринг – это услуга по организации и
+                    проведению мероприятий с подачей коктейлей и закусок
+                  </p>
+                  <img
+                    src="./img/services/services-backgraund-dots.svg"
+                    class="slider__backgraund-img"
+                    alt="backgraund-img-dots"
+                  />
+                </div>
+              </div>
 
-            <div class="slider__card card card--second">
-              <img
-                src="./img/services/services-slider-item-1.png"
-                class="card__img"
-                alt="slider-card-img"
-              />
-              <p class="card__title">КЕЙТЕРИНГ</p>
-              <p class="card__subtitle">
-                Коктейльный кейтеринг – это услуга по организации и проведению
-                мероприятий с подачей коктейлей и закусок
-              </p>
-            </div>
+              <div class="swiper-slide">
+                <div class="slider__card card card--second">
+                  <img
+                    src="./img/services/services-slider-item-2.png"
+                    class="card__img"
+                    alt="slider-card-img"
+                  />
+                  <p class="card__title">ДЕТСКИЙ ФУРШЕТ</p>
+                  <p class="card__subtitle">
+                    Коктейльный кейтеринг – это услуга по организации и
+                    проведению мероприятий с подачей коктейлей и закусок
+                  </p>
+                </div>
+              </div>
 
-            <div class="slider__card card card--third">
-              <img
-                src="./img/services/services-slider-item-1.png"
-                class="card__img"
-                alt="slider-card-img"
-              />
-              <p class="card__title">КЕЙТЕРИНГ</p>
-              <p class="card__subtitle">
-                Коктейльный кейтеринг – это услуга по организации и проведению
-                мероприятий с подачей коктейлей и закусок
-              </p>
-            </div>
+              <div class="swiper-slide">
+                <div class="slider__card card card--third">
+                  <img
+                    src="./img/services/services-slider-item-1.png"
+                    class="card__img"
+                    alt="slider-card-img"
+                  />
+                  <p class="card__title">КЕЙТЕРИНГ</p>
+                  <p class="card__subtitle">
+                    Коктейльный кейтеринг – это услуга по организации и
+                    проведению мероприятий с подачей коктейлей и закусок
+                  </p>
+                  <img
+                    src="./img/services/services-backgraund-dots.svg"
+                    class="slider__backgraund-img slider__backgraund-img--top"
+                    alt="backgraund-img-dots"
+                  />
+                </div>
+              </div>
 
-            <div class="slider__card card card--fourth">
-              <img
-                src="./img/services/services-slider-item-1.png"
-                class="card__img"
-                alt="slider-card-img"
-              />
-              <p class="card__title">КЕЙТЕРИНГ</p>
-              <p class="card__subtitle">
-                Коктейльный кейтеринг – это услуга по организации и проведению
-                мероприятий с подачей коктейлей и закусок
-              </p>
-            </div>
+              <div class="swiper-slide">
+                <div class="slider__card card card--fourth">
+                  <img
+                    src="./img/services/services-slider-item-2.png"
+                    class="card__img"
+                    alt="slider-card-img"
+                  />
+                  <p class="card__title">ДЕТСКИЙ ФУРШЕТ</p>
+                  <p class="card__subtitle">
+                    Коктейльный кейтеринг – это услуга по организации и
+                    проведению мероприятий с подачей коктейлей и закусок
+                  </p>
+                </div>
+              </div>
 
-            <div class="slider__card card card--spot">
-              <img
-                src="./img/services/services-slider-item-1.png"
-                class="card__img"
-                alt="slider-card-img"
-              />
-              <p class="card__title">КЕЙТЕРИНГ</p>
-              <p class="card__subtitle">
-                Коктейльный кейтеринг – это услуга по организации и проведению
-                мероприятий с подачей коктейлей и закусок
-              </p>
+              <div class="swiper-slide">
+                <div class="slider__card card card--spot">
+                  <img
+                    src="./img/services/services-slider-item-1.png"
+                    class="card__img"
+                    alt="slider-card-img"
+                  />
+                  <p class="card__title">КЕЙТЕРИНГ</p>
+                  <p class="card__subtitle">
+                    Коктейльный кейтеринг – это услуга по организации и
+                    проведению мероприятий с подачей коктейлей и закусок
+                  </p>
+                  <img
+                    src="./img/services/services-backgraund-dots.svg"
+                    class="slider__backgraund-img"
+                    alt="backgraund-img-dots"
+                  />
+                </div>
+              </div>
             </div>
-            
-            <img
-              src="./img/services/services-backgraund-icon-1.png.png"
-              class="slider__backgraund-img"
-              alt="backgraund-img-dots"
-            />
           </div>
+
+          <img
+            class="slider__pagination-icon"
+            src="./img/shared/pagination-icon.svg"
+            alt="pagginaton-icon"
+          />
         </div>
       </section>
     </main>
@@ -289,5 +331,7 @@
         <strong class="footer__copyright">© 2007 - 2023 Potterfamily</strong>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/services.js"></script>
   </body>
 </html>

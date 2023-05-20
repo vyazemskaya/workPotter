@@ -98,13 +98,15 @@ img
     border-top: 1px solid $pf-gray
     border-bottom: 1px solid $pf-gray
     width: 22.233rem
-    height: 18.184rem
+    height: 18.14rem
     position: absolute
     &--second
       width: 37.614rem
       height: 31.782rem
   &__backgraund-img
     position: relative
+    &--mobile
+      display: none
     &--first
       width: 17.038rem
     &--second
@@ -156,6 +158,16 @@ img
     flex-direction: column
     justify-content: center
     overflow: hidden
+    position: relative
+    &__pagination-icon
+      display: none
+    &__backgraund-img
+      width: 9rem
+      position: absolute
+      bottom: -23.5rem
+      &--top
+        top: 0
+        right: 0rem
     &__subtitle
       margin: 0 auto
       font-family: 'Gotham'
@@ -174,14 +186,24 @@ img
       line-height: 7.3rem
       margin-bottom: 8rem
       padding-right: 4.4rem
-    &__wrapper
-      display: flex
-      gap: 18.2rem
+    &__line
+      cursor: url('../../img/shared/pagination-icon.svg'), auto
+    .swiper
+      &-container
+        display: flex
+      &-wrapper
+        width: auto
+        display: flex
+      &-slide
+        user-select: none
+        width: auto !important
     .card
       width: 39.9rem
       display: flex
       flex-direction: column
       align-items: flex-start
+      z-index: 5
+      position: relative
       &--second
         padding-top: 15rem
       &--third
@@ -198,12 +220,130 @@ img
         font-size: 4rem
         line-height: 4.9rem
         margin-bottom: 2rem
+        width: 38.9rem
       &__subtitle
         font-family: 'Gotham'
         font-style: normal
         font-weight: 400
         font-size: 1.6rem
         line-height: 1.9rem
-    
 
+@media (max-width: 48em)
+  html
+    font-size: 5px
+    font-size: 1.5625vw
+    font-size: 1.3333333333vw
+    -webkit-text-size-adjust: none
+
+  .services
+    padding-top: 3rem
+    margin: 0 auto
+    width: 68.6rem
+    &__content
+      margin-bottom: 24.3rem
+    &__title-fragment
+      font-style: normal
+      font-weight: 400
+      font-size: 8.8rem
+      line-height: 10.8rem
+      &--first
+        margin-bottom: 0.4rem
+      &--second
+        margin-left: 0rem
+        margin-bottom: 0.4rem
+      &--third
+        margin-left: 0rem
+        margin-bottom: 36rem
+    &__discription
+      margin: 0
+      width: 100%
+      flex-direction: column
+    &__gift-icon
+      width: 28.2rem
+      left: 0rem
+    &__img-wrapper
+      display: none
+      &--second
+        width: 33.4rem
+        padding-top: 3.92rem
+        padding-bottom: 4.126rem
+        display: flex
+        top: 38.1rem
+        right: 0rem
+    &__img-box
+      &--second
+        width: 33.4rem
+        height: 18.3rem
+    &__backgraund-img
+      &--second
+        display: none
+      &--mobile
+        display: block
+        position: relative
+        width: 29rem
+    &__subtitle
+      font-weight: 500
+      font-size: 3.2rem
+      line-height: 4rem
+      width: 50rem
+    &__guarantees
+      font-weight: 400
+      font-size: 2.8rem
+      line-height: 3rem
+      margin-bottom: 7rem
+    &__link-circle
+      margin: 0
+      padding: 0
+    &__link-text
+      width: 25rem
+      height: 25rem
+      border-radius: 20rem
+      font-weight: 400
+      font-size: 2.8rem
+      line-height: 3rem
+    .slider
+      &__backgraund-img
+        display: none
+        &--second
+          display: none
+      &__pagination-icon
+        display: block
+        width: 14.4rem
+      &__subtitle
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        width: 53.6rem
+        margin: 0
+        margin-bottom: 3rem
+        padding: 0
+      &__title
+        font-weight: 400
+        font-size: 4.8rem
+        line-height: 5.8rem
+        margin-bottom: 6rem
+      .swiper-wrapper
+        margin-bottom: 3rem
+      .card
+        width: 68.6rem
+        &--second
+          padding-top: 0rem
+        &--third
+          padding-top: 0rem
+        &--fourth
+          padding-top: 0rem
+        &__img
+          width: 68.6rem
+          margin-bottom: 2.8rem
+        &__title
+          font-weight: 400
+          font-size: 4rem
+          line-height: 4.8rem
+          margin-bottom: 1.6rem
+        &__subtitle
+          font-style: normal
+          font-weight: 400
+          font-size: 2.8rem
+          line-height: 3rem
+        
 

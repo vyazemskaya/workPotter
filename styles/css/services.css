@@ -101,7 +101,7 @@ img {
   border-top: 1px solid #D2D2D2;
   border-bottom: 1px solid #D2D2D2;
   width: 22.233rem;
-  height: 18.184rem;
+  height: 18.14rem;
   position: absolute;
 }
 .services__img-box--second {
@@ -110,6 +110,9 @@ img {
 }
 .services__backgraund-img {
   position: relative;
+}
+.services__backgraund-img--mobile {
+  display: none;
 }
 .services__backgraund-img--first {
   width: 17.038rem;
@@ -169,6 +172,19 @@ img {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+.services .slider__pagination-icon {
+  display: none;
+}
+.services .slider__backgraund-img {
+  width: 9rem;
+  position: absolute;
+  bottom: -23.5rem;
+}
+.services .slider__backgraund-img--top {
+  top: 0;
+  right: 0rem;
 }
 .services .slider__subtitle {
   margin: 0 auto;
@@ -190,15 +206,27 @@ img {
   margin-bottom: 8rem;
   padding-right: 4.4rem;
 }
-.services .slider__wrapper {
+.services .slider__line {
+  cursor: url("../../img/shared/pagination-icon.svg"), auto;
+}
+.services .slider .swiper-container {
   display: flex;
-  gap: 18.2rem;
+}
+.services .slider .swiper-wrapper {
+  width: auto;
+  display: flex;
+}
+.services .slider .swiper-slide {
+  user-select: none;
+  width: auto !important;
 }
 .services .slider .card {
   width: 39.9rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 5;
+  position: relative;
 }
 .services .slider .card--second {
   padding-top: 15rem;
@@ -220,6 +248,7 @@ img {
   font-size: 4rem;
   line-height: 4.9rem;
   margin-bottom: 2rem;
+  width: 38.9rem;
 }
 .services .slider .card__subtitle {
   font-family: "Gotham";
@@ -227,4 +256,150 @@ img {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: 1.3333333333vw;
+    -webkit-text-size-adjust: none;
+  }
+  .services {
+    padding-top: 3rem;
+    margin: 0 auto;
+    width: 68.6rem;
+  }
+  .services__content {
+    margin-bottom: 24.3rem;
+  }
+  .services__title-fragment {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8.8rem;
+    line-height: 10.8rem;
+  }
+  .services__title-fragment--first {
+    margin-bottom: 0.4rem;
+  }
+  .services__title-fragment--second {
+    margin-left: 0rem;
+    margin-bottom: 0.4rem;
+  }
+  .services__title-fragment--third {
+    margin-left: 0rem;
+    margin-bottom: 36rem;
+  }
+  .services__discription {
+    margin: 0;
+    width: 100%;
+    flex-direction: column;
+  }
+  .services__gift-icon {
+    width: 28.2rem;
+    left: 0rem;
+  }
+  .services__img-wrapper {
+    display: none;
+  }
+  .services__img-wrapper--second {
+    width: 33.4rem;
+    padding-top: 3.92rem;
+    padding-bottom: 4.126rem;
+    display: flex;
+    top: 38.1rem;
+    right: 0rem;
+  }
+  .services__img-box--second {
+    width: 33.4rem;
+    height: 18.3rem;
+  }
+  .services__backgraund-img--second {
+    display: none;
+  }
+  .services__backgraund-img--mobile {
+    display: block;
+    position: relative;
+    width: 29rem;
+  }
+  .services__subtitle {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    width: 50rem;
+  }
+  .services__guarantees {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-bottom: 7rem;
+  }
+  .services__link-circle {
+    margin: 0;
+    padding: 0;
+  }
+  .services__link-text {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 20rem;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .services .slider__backgraund-img {
+    display: none;
+  }
+  .services .slider__backgraund-img--second {
+    display: none;
+  }
+  .services .slider__pagination-icon {
+    display: block;
+    width: 14.4rem;
+  }
+  .services .slider__subtitle {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    width: 53.6rem;
+    margin: 0;
+    margin-bottom: 3rem;
+    padding: 0;
+  }
+  .services .slider__title {
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    margin-bottom: 6rem;
+  }
+  .services .slider .swiper-wrapper {
+    margin-bottom: 3rem;
+  }
+  .services .slider .card {
+    width: 68.6rem;
+  }
+  .services .slider .card--second {
+    padding-top: 0rem;
+  }
+  .services .slider .card--third {
+    padding-top: 0rem;
+  }
+  .services .slider .card--fourth {
+    padding-top: 0rem;
+  }
+  .services .slider .card__img {
+    width: 68.6rem;
+    margin-bottom: 2.8rem;
+  }
+  .services .slider .card__title {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-bottom: 1.6rem;
+  }
+  .services .slider .card__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
 }/*# sourceMappingURL=services.css.map */
