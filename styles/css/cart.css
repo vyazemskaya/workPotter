@@ -361,6 +361,7 @@ img {
   }
   .cart__confirm-button {
     width: 68.6rem;
+    cursor: pointer;
     height: 8.6rem;
     border-radius: 6rem;
   }

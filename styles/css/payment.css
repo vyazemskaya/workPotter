@@ -1,0 +1,461 @@
+@font-face {
+  font-family: Gotham;
+  src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-medium.woff2) format("woff2"), url(../fonts/Montserrat-medium.woff) format("woff");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-regular.woff2) format("woff2"), url(../fonts/Montserrat-regular.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Gotham, sans-serif;
+  font-size: 0.5208335vw;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-animation: 1s infinite bugfix;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  object-fit: contain;
+}
+
+.payment {
+  padding-top: 3rem;
+  padding-bottom: 23.8rem;
+  margin: 0 auto;
+  width: 156rem;
+  display: flex;
+  flex-direction: column;
+}
+.payment__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 7.3rem;
+  margin-bottom: 5rem;
+}
+.payment__content {
+  display: flex;
+  justify-content: space-between;
+}
+.payment .order {
+  width: 62.8rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF3E5;
+}
+.payment .order__img {
+  width: 8rem;
+  margin-right: 2rem;
+}
+.payment .order__date {
+  margin-left: 3rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #434248;
+  margin-bottom: 2.5rem;
+  margin-top: 4rem;
+}
+.payment .order__title {
+  letter-spacing: 0.03rem;
+}
+.payment .order__count {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+.payment .order__price {
+  color: #434248;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  display: flex;
+  margin-right: 0.3rem;
+  align-items: center;
+}
+.payment .order__price--gray {
+  color: rgba(67, 66, 72, 0.5);
+}
+.payment .order__price-ruble {
+  font-weight: 500;
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  top: -0.5rem;
+  left: 0.2rem;
+  position: relative;
+}
+.payment .order__price-ruble--results {
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  top: -2.2rem;
+  left: 0rem;
+}
+.payment .order__list {
+  margin-left: 3rem;
+  width: 56.8rem;
+  border-top: 0.1rem solid rgba(67, 66, 72, 0.2509803922);
+  margin-bottom: 3rem;
+}
+.payment .order__item {
+  padding: 2.1rem 0;
+  display: flex;
+  border-bottom: 0.1rem solid rgba(67, 66, 72, 0.2509803922);
+}
+.payment .order__wrapper {
+  display: flex;
+  width: 100%;
+  gap: 3.8rem;
+  flex-direction: column;
+}
+.payment .order__line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.payment .order__price-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: rgba(67, 66, 72, 0.5);
+}
+.payment .order__cost {
+  margin-left: 3rem;
+  width: 56.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border-bottom: 0.1rem solid rgba(67, 66, 72, 0.2509803922);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.payment .order__results {
+  width: 56.8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3rem;
+  margin-bottom: 4rem;
+}
+.payment .order__summary {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  color: #434248;
+}
+.payment .order__total-price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  color: #434248;
+}
+.payment .form {
+  width: 76.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.payment .form__wrapper {
+  width: 76.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.7rem 3rem;
+  margin-bottom: 3.7rem;
+}
+.payment .form__wrapper--textarea {
+  gap: 0;
+  margin-bottom: 4rem;
+}
+.payment .form__error-icon {
+  position: absolute;
+  bottom: 1.247rem;
+  right: 0;
+  width: 1.6rem;
+  display: none;
+}
+.payment .form__error-icon--show {
+  display: block;
+}
+.payment .form__item {
+  width: 36.6rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.1rem solid #434248;
+  position: relative;
+}
+.payment .form__item--error {
+  border-bottom: 0.1rem solid #F63737;
+}
+.payment .form__error {
+  position: absolute;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  text-align: right;
+  right: 0;
+  bottom: -2rem;
+  color: #F63737;
+}
+.payment .form__title {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  color: #434248;
+  margin-bottom: 0.5rem;
+}
+.payment .form__title--textarea {
+  margin-bottom: 1.4rem;
+}
+.payment .form__value {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  letter-spacing: 0.065rem;
+}
+.payment .form__value::placeholder {
+  color: rgba(67, 66, 72, 0.5);
+}
+.payment .form__value--textarea {
+  width: 76.2rem;
+  height: 12rem;
+  border: 0.1rem solid #434248;
+  resize: none;
+  padding: 0.9rem;
+}
+.payment .form__confirm-button {
+  width: 30.2rem;
+  height: 4.3rem;
+  background-color: #434248;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 3rem;
+  bottom: 0.35rem;
+}
+.payment .form__button-img {
+  width: 2.4rem;
+  margin-top: 0.2rem;
+  margin-right: 1.625rem;
+}
+.payment .form__button-text {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: white;
+  letter-spacing: 0.035rem;
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: 1.3333333333vw;
+    -webkit-text-size-adjust: none;
+  }
+  .payment {
+    width: 68.6rem;
+    padding-top: 3rem;
+    padding-bottom: 24rem;
+  }
+  .payment__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .payment__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    margin-bottom: 6rem;
+  }
+  .payment .form {
+    align-items: center;
+    order: 2;
+    width: 68.6rem;
+  }
+  .payment .order {
+    width: 100%;
+    margin-bottom: 9.7rem;
+  }
+  .payment .order__item {
+    padding: 3.5rem 0;
+  }
+  .payment .order__date {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+  }
+  .payment .order__title {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    width: 27rem;
+    position: relative;
+    top: 0.4rem;
+    left: -0.1rem;
+  }
+  .payment .order__img {
+    width: 12rem;
+  }
+  .payment .order__price {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    position: relative;
+    right: 0.7rem;
+    bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+  }
+  .payment .order__price-ruble {
+    margin-bottom: 1.1rem;
+    margin-right: -0.5rem;
+    margin-left: 0.3rem;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+  .payment .order__price-ruble--results {
+    top: -0.7rem;
+    left: 0.7rem;
+    font-size: 3rem;
+  }
+  .payment .order__wrapper {
+    gap: 2.8rem;
+  }
+  .payment .order__count {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    position: relative;
+    top: 0.4rem;
+  }
+  .payment .order__list {
+    width: 62.6rem;
+    margin-bottom: 5rem;
+  }
+  .payment .order__cost {
+    width: 62.6rem;
+    padding-bottom: 2.8rem;
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+  .payment .order__price-text {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .payment .order__summary {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  .payment .order__results {
+    width: 62.6rem;
+    margin-bottom: 6rem;
+  }
+  .payment .order__total-price {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-right: 1.2rem;
+  }
+  .payment .form__error {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.2rem;
+    bottom: -3rem;
+  }
+  .payment .form__error-icon {
+    width: 2.8rem;
+  }
+  .payment .form__wrapper {
+    width: 68.6rem;
+    gap: 6rem;
+    margin-bottom: 6rem;
+  }
+  .payment .form__wrapper--textarea {
+    gap: 1.2rem;
+  }
+  .payment .form__item {
+    width: 68.6rem;
+  }
+  .payment .form__title {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  .payment .form__value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    padding: 1rem 0rem;
+  }
+  .payment .form__value--textarea {
+    height: 24rem;
+  }
+  .payment .form__confirm-button {
+    height: 8.6rem;
+    width: 100%;
+    border-radius: 6rem;
+  }
+  .payment .form__button-text {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .payment .form__button-img {
+    width: 4rem;
+  }
+}/*# sourceMappingURL=payment.css.map */
