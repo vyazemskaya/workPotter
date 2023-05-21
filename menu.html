@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="another website" />
-    <title>Potter Family - Услуги</title>
+    <title>Potter Family - Меню</title>
     <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/css/services.css" />
+    <link rel="stylesheet" href="styles/css/menu.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -36,7 +36,7 @@
           </button>
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link" href="services.html">Услуги</a>
+              <a class="header__nav-link" href="services.html">Меню</a>
             </li>
             <li class="header__nav-item">
               <a class="header__nav-link" href="portfolio.html">Портфолио</a>
@@ -96,170 +96,98 @@
     </header>
 
     <main>
-      <section class="services">
-        <div class="services__content">
-          <p class="services__title-fragment services__title-fragment--first">
-            УНИКАЛЬНОЕ
-          </p>
-
-          <p class="services__title-fragment services__title-fragment--second">
-            КАЧЕСТВО
-          </p>
-
-          <p class="services__title-fragment services__title-fragment--third">
-            СЕРВИСА
-          </p>
-
-          <div class="services__img-wrapper">
-            <div class="services__img-box"></div>
+      <section class="menu">
+        <div class="swiper-container">
+          <div class="menu__paggination-icon-wrapper">
             <img
-              src="./img/services/services-backgraund-img-1.png"
-              alt="backgraund-food-img"
-              class="services__backgraund-img services__backgraund-img--first"
+              src="./img/menu/menu-paggination-icon-arrow.svg"
+              alt="paggination-icon-arrow"
+              class="menu__paggination-icon"
             />
           </div>
-
-          <div class="services__img-wrapper services__img-wrapper--second">
-            <div class="services__img-box services__img-box--second"></div>
-            <img
-              src="./img/services/services-backgraund-img-2.png"
-              alt="backgraund-food-img"
-              class="services__backgraund-img services__backgraund-img--second"
-            />
-            <img
-              src="./img/services/services-backgraund-img-2-mobile.png"
-              alt="backgraund-food-img"
-              class="services__backgraund-img services__backgraund-img--second services__backgraund-img--mobile"
-            />
-          </div>
-
-          <img
-            src="./img/services/services-backgraund-icon-1.png.png"
-            alt="service-gift-icon"
-            class="services__gift-icon"
-          />
-
-          <div class="services__discription">
-            <div class="services__discription-wrapper">
-              <p class="services__subtitle">ВЫБЕРИТЕ ПОДХОДЯЩУЮ ВАМ УСЛУГУ</p>
-              <p class="services__guarantees">
-                Мы гарантируем высокое качество и удобство для наших клиентов.
-                Наша команда постарается сделать любое мероприятие незабываемым
-                и оригинальным. С нами ваши гости не останутся равнодушными к
-                вашему событию!
-              </p>
+          <!-- <div class="swiper-container"> -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Завтра</span>
+                <span class="item__value">7</span>
+              </div>
             </div>
-            <a class="services__link-circle" href="portfolio.html"
-              ><div class="services__link-text">Портфолио</div></a
-            >
-          </div>
-        </div>
-
-        <div class="services__slider slider">
-          <p class="slider__subtitle">
-            Подберем для вас идеальное меню, учтем все пожелания и требования
-          </p>
-          <p class="slider__title">УСЛУГИ ОТ ПРОФЕССИОНАЛОВ</p>
-          <div class="slider__line swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slider__card card">
-                  <img
-                    src="./img/services/services-slider-item-1.png"
-                    class="card__img"
-                    alt="slider-card-img"
-                  />
-                  <p class="card__title">КЕЙТЕРИНГ</p>
-                  <p class="card__subtitle">
-                    Коктейльный кейтеринг – это услуга по организации и
-                    проведению мероприятий с подачей коктейлей и закусок
-                  </p>
-                  <img
-                    src="./img/services/services-backgraund-dots.svg"
-                    class="slider__backgraund-img"
-                    alt="backgraund-img-dots"
-                  />
-                </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Среда</span>
+                <span class="item__value">8</span>
               </div>
-
-              <div class="swiper-slide">
-                <div class="slider__card card card--second">
-                  <img
-                    src="./img/services/services-slider-item-2.png"
-                    class="card__img"
-                    alt="slider-card-img"
-                  />
-                  <p class="card__title">ДЕТСКИЙ ФУРШЕТ</p>
-                  <p class="card__subtitle">
-                    Коктейльный кейтеринг – это услуга по организации и
-                    проведению мероприятий с подачей коктейлей и закусок
-                  </p>
-                </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Четверг</span>
+                <span class="item__value">9</span>
               </div>
-
-              <div class="swiper-slide">
-                <div class="slider__card card card--third">
-                  <img
-                    src="./img/services/services-slider-item-1.png"
-                    class="card__img"
-                    alt="slider-card-img"
-                  />
-                  <p class="card__title">КЕЙТЕРИНГ</p>
-                  <p class="card__subtitle">
-                    Коктейльный кейтеринг – это услуга по организации и
-                    проведению мероприятий с подачей коктейлей и закусок
-                  </p>
-                  <img
-                    src="./img/services/services-backgraund-dots.svg"
-                    class="slider__backgraund-img slider__backgraund-img--top"
-                    alt="backgraund-img-dots"
-                  />
-                </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Пятница</span>
+                <span class="item__value">10</span>
               </div>
-
-              <div class="swiper-slide">
-                <div class="slider__card card card--fourth">
-                  <img
-                    src="./img/services/services-slider-item-2.png"
-                    class="card__img"
-                    alt="slider-card-img"
-                  />
-                  <p class="card__title">ДЕТСКИЙ ФУРШЕТ</p>
-                  <p class="card__subtitle">
-                    Коктейльный кейтеринг – это услуга по организации и
-                    проведению мероприятий с подачей коктейлей и закусок
-                  </p>
-                </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Суббота</span>
+                <span class="item__value">11</span>
               </div>
-
-              <div class="swiper-slide">
-                <div class="slider__card card card--spot">
-                  <img
-                    src="./img/services/services-slider-item-1.png"
-                    class="card__img"
-                    alt="slider-card-img"
-                  />
-                  <p class="card__title">КЕЙТЕРИНГ</p>
-                  <p class="card__subtitle">
-                    Коктейльный кейтеринг – это услуга по организации и
-                    проведению мероприятий с подачей коктейлей и закусок
-                  </p>
-                  <img
-                    src="./img/services/services-backgraund-dots.svg"
-                    class="slider__backgraund-img"
-                    alt="backgraund-img-dots"
-                  />
-                </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Воскресенье</span>
+                <span class="item__value">12</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Понедельник</span>
+                <span class="item__value">13</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Вторник</span>
+                <span class="item__value">14</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Среда</span>
+                <span class="item__value">15</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Четверг</span>
+                <span class="item__value">16</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Пятница</span>
+                <span class="item__value">17</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="menu__date-item item">
+                <span class="item__title">Суббота</span>
+                <span class="item__value">18</span>
               </div>
             </div>
           </div>
-
-          <img
-            class="slider__pagination-icon"
-            src="./img/shared/pagination-icon.svg"
-            alt="pagginaton-icon"
-          />
         </div>
+
+        <div class="menu__date-item item item--current">
+          <span class="item__title">Сегодня</span>
+          <span class="item__value">6</span>
+        </div>
+
+        <!-- </div>       -->
       </section>
     </main>
 
@@ -278,7 +206,7 @@
               <a class="footer__nav-link" href="main.html">Главная</a>
             </li>
             <li class="footer__nav-item">
-              <a class="footer__nav-link" href="services.html">Услуги</a>
+              <a class="footer__nav-link" href="services.html">Меню</a>
             </li>
             <li class="footer__nav-item">
               <a class="footer__nav-link" href="portfolio.html">Портфолио</a>
@@ -332,6 +260,6 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./js/services.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
