@@ -1,3 +1,4 @@
+//date-slider
 document.addEventListener('DOMContentLoaded', function () {
   const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
@@ -15,4 +16,25 @@ document.addEventListener('DOMContentLoaded', function () {
     freeModeMomentumBounce: true,
     freeModeMomentumBounceRatio: 0.3, 
   });
+});
+
+//checks for filters
+const checks = document.querySelectorAll('.filter__item')
+
+checks.forEach((box) => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('filter__item--checked')
+  })
+})
+
+//search-input
+const searchInput = document.querySelector('.search__input');
+const placeholder = document.querySelector('.search__placeholder-wrapper');
+
+searchInput.addEventListener('input', function () {
+  if (searchInput.value !== '') {
+    placeholder.style.opacity = 0;
+  } else {
+    placeholder.style.opacity = 1;
+  }
 });
