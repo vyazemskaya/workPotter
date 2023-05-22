@@ -1,0 +1,960 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Gotham;
+  src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-medium.woff2) format("woff2"), url(../fonts/Montserrat-medium.woff) format("woff");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-regular.woff2) format("woff2"), url(../fonts/Montserrat-regular.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Gotham, sans-serif;
+  font-size: 0.5208335vw;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-animation: 1s infinite bugfix;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  object-fit: contain;
+}
+
+.menu {
+  padding-top: 3.8rem;
+  padding-bottom: 23.8rem;
+  margin: 0 auto;
+  width: 156rem;
+  overflow: hidden;
+}
+.menu__filter-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.menu__filter-button-img {
+  width: 3.6rem;
+}
+.menu__list {
+  height: 140rem;
+  overflow: scroll;
+}
+.menu__list::-webkit-scrollbar {
+  width: 0rem;
+}
+.menu__list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.menu__paggination-icon {
+  width: 5rem !important;
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+.menu__paggination-icon-wrapper {
+  background: linear-gradient(270deg, #FFFFFF 52.41%, rgba(255, 255, 255, 0.2) 91.77%);
+  width: 16rem;
+  height: 10rem;
+  position: absolute;
+  right: 9.5rem;
+  top: 0rem;
+  z-index: 3;
+}
+.menu__date-list {
+  position: relative;
+  height: 11rem;
+  display: flex;
+}
+.menu__date-line {
+  display: flex;
+}
+.menu .item {
+  width: 13.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid rgba(67, 66, 72, 0.5);
+}
+.menu .item--current {
+  background-color: #7FAC37;
+  min-width: 15.5rem;
+  border: 0;
+  position: absolute;
+  top: 18rem;
+  left: 17rem;
+}
+.menu .item--current .item__title {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: white;
+  margin-top: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+.menu .item--current .item__value {
+  font-weight: 400;
+  color: white;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  margin-bottom: 2.2rem;
+}
+.menu .item__title {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #7FAC37;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.menu .item__value {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  color: #434248;
+  margin-bottom: 0.5rem;
+}
+.menu__content {
+  margin-top: 5.8rem;
+  display: flex;
+}
+.menu__search-bar {
+  width: 36.2rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 3.6rem;
+}
+.menu .search {
+  position: relative;
+  margin-bottom: 4.2rem;
+}
+.menu .search:focus-within .search__placeholder-wrapper {
+  opacity: 0;
+}
+.menu .search__input {
+  border: 0.2rem solid rgba(67, 66, 72, 0.5);
+  width: 100%;
+  height: 6rem;
+  padding: 1.3rem 3.8rem 1.3rem 3rem;
+}
+.menu .search__placeholder-wrapper {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  display: flex;
+  top: 1.8rem;
+  left: 3rem;
+}
+.menu .search__icon {
+  width: 2.4rem;
+  margin-right: 1.5rem;
+  margin-right: 1.7rem;
+}
+.menu .search__placeholder {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: rgba(67, 66, 72, 0.5);
+  margin-top: 0.4rem;
+}
+.menu .filter {
+  padding-bottom: 1.5rem;
+  border: 0.2rem solid rgba(67, 66, 72, 0.5);
+}
+.menu .filter__title {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: rgba(67, 66, 72, 0.5);
+  margin-bottom: 1.55rem;
+}
+.menu .filter__list {
+  margin-top: 2.8rem;
+  margin-left: 2.9rem;
+  margin-bottom: 1.5rem;
+}
+.menu .filter__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+.menu .filter__item--checked .filter__checker-icon {
+  display: block;
+}
+.menu .filter__item--checked .filter__checker {
+  background-color: #E9743F;
+  border: 0.2rem solid #E9743F;
+}
+.menu .filter__checker {
+  width: 2.75rem;
+  height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 0.2rem solid rgba(67, 66, 72, 0.5);
+  margin-right: 1.5rem;
+}
+.menu .filter__checker-icon {
+  width: 1.3rem;
+  display: none;
+}
+.menu__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 7.3rem;
+  color: #434248;
+  margin-bottom: 3rem;
+  white-space: nowrap;
+  width: 77.3rem;
+}
+.menu .card {
+  width: 76.2rem;
+  background-color: #E9743F;
+  display: flex;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 3.7rem;
+}
+.menu .card__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF3E5;
+  margin-right: 1.7rem;
+  z-index: 1;
+}
+.menu .card__box--second {
+  margin-right: 0;
+  background-color: transparent;
+  align-items: flex-start;
+  z-index: 1;
+}
+.menu .card__icon-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.menu .card__icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 3rem;
+  width: 5.7rem;
+  height: 5.7rem;
+  margin-right: 6.5rem;
+}
+.menu .card__icon {
+  width: 3.6rem;
+  margin-bottom: 0.312rem;
+  position: relative;
+  top: 0.1rem;
+}
+.menu .card__icon-query {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  color: #434248;
+  position: relative;
+  bottom: 0.7rem;
+  right: 0.15rem;
+}
+.menu .card__label {
+  color: rgba(67, 66, 72, 0.5);
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  margin-right: 9.3rem;
+}
+.menu .card__icon-pick {
+  width: 2.8rem;
+}
+.menu .card__image {
+  width: 15rem;
+  margin-bottom: 1.8rem;
+}
+.menu .card__title {
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 0.8rem;
+  color: #434248;
+}
+.menu .card__category {
+  text-align: center;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #7FAC37;
+  margin-bottom: 1.4rem;
+}
+.menu .card__nutrition-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 24.1rem;
+}
+.menu .card__nutrition-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu .card__nutrition-value {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #434248;
+  margin-bottom: 0.4rem;
+}
+.menu .card__nutrition-unit {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: rgba(67, 66, 72, 0.5);
+}
+.menu .card__composition {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: flex-start;
+  border: 0.1rem solid white;
+  margin-bottom: 2rem;
+  color: white;
+}
+.menu .card__composition-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+.menu .card__composition-item {
+  display: flex;
+  max-width: 33.1rem;
+  margin-bottom: 1rem;
+}
+.menu .card__composition-item:last-child {
+  margin-bottom: 0rem;
+}
+.menu .card__composition-name {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.037rem;
+}
+.menu .card__composition-name--gray {
+  color: rgba(255, 255, 255, 0.6509803922);
+}
+.menu .card__composition-icon {
+  display: inline;
+  width: 1.406rem;
+  margin-left: 0.547rem;
+}
+.menu .card__nutrition-summary {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: white;
+  margin-bottom: 9rem;
+  letter-spacing: 0.037rem;
+}
+.menu .card__price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 37.1rem;
+}
+.menu .card__price-item {
+  margin-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menu .card__price-value {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  position: relative;
+  color: white;
+}
+.menu .card__price-rubles {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  position: absolute;
+  color: white;
+  top: 0;
+  right: -1.5rem;
+}
+.menu .card__price-label {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  color: white;
+}
+.menu .card__cart-button {
+  width: 16.6rem;
+  height: 4.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  background-color: #434248;
+}
+.menu .card__cart-button-label {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: white;
+}
+.menu .card__cart-button-icon {
+  width: 2.4rem;
+  margin-right: 1.5rem;
+}
+.menu .order {
+  height: fit-content;
+  margin-left: 3.1rem;
+  margin-top: 10.4rem;
+  padding: 4rem 3rem;
+  background-color: #FFF3E5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #434248;
+}
+.menu .order__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 3rem;
+}
+.menu .order__list {
+  border-top: 0.1rem solid rgba(67, 66, 72, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+.menu .order .item {
+  border: 0;
+  width: 30.2rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 0.1rem solid rgba(67, 66, 72, 0.5);
+}
+.menu .order .item__content {
+  width: 30.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu .order .item__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.7rem;
+}
+.menu .order .item__title {
+  margin: 0;
+  color: #434248;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  width: 19.9rem;
+}
+.menu .order .item__remove-icon {
+  width: 1.667rem;
+  cursor: pointer;
+}
+.menu .order .item__details {
+  width: 30.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu .order .item__price-value {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  position: relative;
+}
+.menu .order .item__price-rubles {
+  position: absolute;
+  top: -0.3rem;
+  right: -1.4rem;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+}
+.menu .order .item__buttons {
+  padding: 1.2rem 2.4rem;
+  border: 0.1rem solid #434248;
+  display: flex;
+}
+.menu .order .item__counter {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+.menu .order .item__plus {
+  cursor: pointer;
+  width: 1.6rem;
+}
+.menu .order .item__minus {
+  width: 1.6rem;
+  cursor: pointer;
+}
+.menu .order__total-price {
+  width: 30.2rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  margin-bottom: 2.5rem;
+}
+.menu .order__price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  position: relative;
+}
+.menu .order__price-rubles {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  position: relative;
+  top: -2rem;
+}
+.menu .order__cart-button {
+  width: 100%;
+  height: 4.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  background-color: #434248;
+}
+.menu .order__cart-button-icon {
+  width: 2.4rem;
+  margin-right: 1.5rem;
+}
+.menu .order__cart-button-label {
+  color: white;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.swiper-container {
+  position: relative;
+  left: 16.5rem;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    background-color: #F8F8F8;
+    box-shadow: 0.7rem 0.7rem 1.2rem 0rem rgba(87, 87, 87, 0.0784313725);
+  }
+  .card:hover .card__composition {
+    background-color: #E1F2C5;
+    border: 0.1rem solid #E1F2C5;
+    color: #434248;
+  }
+  .card:hover .card__nutrition-summary {
+    color: #434248;
+  }
+  .card:hover .card__price-value {
+    color: #434248;
+  }
+  .card:hover .card__price-rubles {
+    color: #434248;
+  }
+  .card:hover .card__composition-name--gray {
+    color: rgba(67, 66, 72, 0.5019607843);
+  }
+  .card:hover .card__composition-icon {
+    filter: brightness(0.5);
+  }
+  .card:hover .card__price-label {
+    color: #434248;
+  }
+  .card__box:hover {
+    box-shadow: 0.7rem 0.7rem 1.2rem 0rem rgba(87, 87, 87, 0.0784313725);
+  }
+  .card__box--second:hover {
+    box-shadow: none;
+  }
+  .card:hover::before {
+    content: "ПРАВИЛЬНОЕ ПИТАНИЕ";
+    position: absolute;
+    white-space: nowrap;
+    top: 5rem;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    color: #E9743F;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.3696rem;
+    line-height: 17.5rem;
+    animation: slideText 7s linear infinite;
+  }
+  @keyframes slideText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+@media (max-width: 48em) {
+  html {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: 1.3333333333vw;
+    -webkit-text-size-adjust: none;
+  }
+  .swiper-container {
+    margin-top: 1rem;
+    left: 23rem;
+  }
+  .swiper-slide {
+    width: auto;
+  }
+  .menu {
+    width: 68.6rem;
+    padding-top: 3rem;
+    padding-bottom: 24rem;
+  }
+  .menu__content {
+    flex-direction: column;
+  }
+  .menu__list {
+    width: 68.6rem;
+    height: 246rem;
+    overflow: scroll;
+    overflow-x: visible;
+  }
+  .menu__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    position: absolute;
+    top: 44.2rem;
+  }
+  .menu__filter-button {
+    display: flex;
+    width: 6.4rem;
+    height: 8rem;
+    border: 0.2rem solid rgba(67, 66, 72, 0.5);
+  }
+  .menu__paggination-icon {
+    width: 8rem !important;
+    margin-left: 4.5rem;
+    margin-top: -0.7rem;
+    height: 15rem;
+  }
+  .menu__paggination-icon-wrapper {
+    right: 19.5rem;
+  }
+  .menu .item {
+    width: 17.6rem;
+  }
+  .menu .item__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.8rem;
+  }
+  .menu .item__value {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-bottom: 2rem;
+  }
+  .menu .item--current {
+    min-width: 21rem;
+    border: 0;
+    position: absolute;
+    top: 22.4rem;
+    left: 3.1rem;
+    z-index: 5;
+  }
+  .menu .item--current .item__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 2.8rem;
+    margin-top: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+  .menu .item--current .item__value {
+    margin-bottom: 4rem;
+  }
+  .menu__search-bar {
+    margin-top: 11rem;
+    width: 68.6rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .menu .filter {
+    display: none;
+  }
+  .menu .search {
+    margin-right: 1.6rem;
+    margin-bottom: 6rem;
+  }
+  .menu .search__placeholder-wrapper {
+    top: 2rem;
+  }
+  .menu .search__placeholder {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .search__icon {
+    width: 3.6rem;
+  }
+  .menu .search__input {
+    height: 8rem;
+    width: 60.6rem;
+  }
+  .menu .card {
+    flex-direction: column;
+    width: 68.6rem;
+    padding: 3rem;
+  }
+  .menu .card__box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .menu .card__icon-group {
+    margin-top: 4rem;
+  }
+  .menu .card__icon-wrapper {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 6rem;
+    margin-right: 12.6rem;
+  }
+  .menu .card__icon {
+    width: 5.3rem;
+    top: -0.7rem;
+  }
+  .menu .card__icon-query {
+    font-size: 2.8rem;
+    bottom: 1.2rem;
+  }
+  .menu .card__label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    margin-right: 17.1rem;
+  }
+  .menu .card__icon-pick {
+    width: 4.4rem;
+  }
+  .menu .card__image {
+    width: 16rem;
+    margin-bottom: 3rem;
+  }
+  .menu .card__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .menu .card__category {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-bottom: 4rem;
+  }
+  .menu .card__nutrition-info {
+    width: 46.6rem;
+    margin-bottom: 4rem;
+  }
+  .menu .card__nutrition-value {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 0.2rem;
+  }
+  .menu .card__nutrition-unit {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .card__composition {
+    width: 100%;
+    padding: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  .menu .card__composition-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 0.8rem;
+  }
+  .menu .card__composition-item {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  .menu .card__composition-name {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .card__composition-icon {
+    width: 3rem;
+    margin-top: -1rem;
+    position: relative;
+    top: 0.8rem;
+    left: 0.5rem;
+  }
+  .menu .card__nutrition-summary {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-bottom: 6rem;
+  }
+  .menu .card__price-info {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 8rem;
+  }
+  .menu .card__price-item {
+    margin: 0;
+  }
+  .menu .card__price-value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+  }
+  .menu .card__price-rubles {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    top: 0.8rem;
+    right: -2.8rem;
+  }
+  .menu .card__price-label {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .card__cart-button {
+    width: 33rem;
+    height: 8.6rem;
+    border-radius: 6rem;
+  }
+  .menu .card__cart-button-icon {
+    width: 4rem;
+    margin-right: 2rem;
+  }
+  .menu .card__cart-button-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .order {
+    display: none;
+  }
+}/*# sourceMappingURL=menu.css.map */

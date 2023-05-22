@@ -1,0 +1,816 @@
+@font-face 
+  font-family: Gotham
+  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
+  font-display: swap
+  font-weight: 500
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+$pf-black: #434248
+$pf-black-secondary: rgba(67, 66, 72, 0.5)
+$pf-orange: #E9743F
+$pf-beige: #FFF3E5
+$pf-green: #7FAC37
+$pf-gray: #434248
+*,
+::after,
+::before 
+  box-sizing: border-box
+
+html 
+  font-family: Gotham, sans-serif
+  font-size: 0.5208335vw
+  font-style: normal
+  font-weight: 400
+  -webkit-animation: 1s infinite bugfix
+  line-height: 1.2
+  margin: 0
+  padding: 0
+
+img
+  object-fit: contain
+
+.menu
+  padding-top: 3.8rem
+  padding-bottom: 23.8rem
+  margin: 0 auto
+  width: 156rem
+  overflow: hidden
+  &__filter-button
+    display: none
+    justify-content: center
+    align-items: center
+  &__filter-button-img
+    width: 3.6rem
+  &__list
+    height: 140rem
+    overflow: scroll
+    &::-webkit-scrollbar 
+      width: 0rem
+    &::-webkit-scrollbar-thumb 
+      background-color: transparent
+  &__paggination-icon
+    width: 5rem !important
+    margin-left: 4rem
+    margin-top: 2rem
+    &-wrapper
+      background: linear-gradient(270deg, #FFFFFF 52.41%, rgba(255, 255, 255, 0.2) 91.77%)
+      width: 16rem
+      height: 10rem
+      position: absolute
+      right: 9.5rem
+      top: 0rem
+      z-index: 3
+  &__date-list
+    position: relative
+    height: 11rem
+    display: flex
+  &__date-line
+    display: flex
+  .item
+    width: 13.5rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border: 0.2rem solid $pf-black-secondary
+    &--current
+      background-color: $pf-green
+      min-width: 15.5rem
+      border: 0
+      position: absolute
+      top: 18rem
+      left: 17rem
+      .item__title
+        font-size: 2rem
+        line-height: 2.4rem
+        color: white
+        margin-top: 0.95rem
+        margin-bottom: 0.2rem
+      .item__value
+        font-weight: 400
+        color: white
+        font-size: 4rem
+        line-height: 4.9rem
+        margin-bottom: 2.2rem
+    &__title
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: $pf-green
+      margin-top: 1.2rem
+      margin-bottom: 0.5rem
+    &__value
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 400
+      font-size: 4rem 
+      line-height: 4.9rem
+      color: $pf-gray
+      margin-bottom: 0.5rem
+  &__content
+    margin-top: 5.8rem
+    display: flex
+  &__search-bar
+    width: 36.2rem
+    display: flex
+    flex-direction: column
+    margin-right: 3.6rem
+  .search
+    position: relative
+    margin-bottom: 4.2rem
+    &:focus-within
+      .search__placeholder-wrapper
+        opacity: 0
+    &__input
+      border: 0.2rem solid $pf-black-secondary
+      width: 100%
+      height: 6rem
+      padding: 1.3rem 3.8rem 1.3rem 3rem
+    &__placeholder-wrapper
+      position: absolute
+      user-select: none
+      pointer-events: none
+      display: flex
+      top: 1.8rem
+      left: 3rem
+    &__icon
+      width: 2.4rem
+      margin-right: 1.5rem
+      margin-right: 1.7rem
+    &__placeholder
+      font-family: 'Gotham' 
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: $pf-black-secondary
+      margin-top: 0.4rem
+  .filter
+    padding-bottom: 1.5rem
+    border: 0.2rem solid $pf-black-secondary
+    &__title
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: $pf-black-secondary
+      margin-bottom: 1.55rem
+    &__list
+      margin-top: 2.8rem
+      margin-left: 2.9rem
+      margin-bottom: 1.5rem
+    &__item
+      display: flex
+      align-items: center
+      margin-bottom: 1.5rem
+      cursor: pointer
+      &--checked
+        .filter__checker-icon
+          display: block
+      &--checked
+        .filter__checker
+          background-color:  $pf-orange
+          border: 0.2rem solid $pf-orange
+    &__checker
+      width: 2.75rem
+      height: 2.8rem
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: white
+      border: 0.2rem solid $pf-black-secondary
+      margin-right: 1.5rem
+    &__checker-icon
+      width: 1.3rem
+      display: none
+  &__title
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 6rem
+    line-height: 7.3rem
+    color: $pf-black
+    margin-bottom: 3rem
+    white-space: nowrap
+    width: 77.3rem
+  .card
+    width: 76.2rem
+    background-color: $pf-orange
+    display: flex
+    padding: 1.5rem
+    position: relative
+    z-index: 1
+    overflow: hidden
+    margin-bottom: 3.7rem
+    &__box
+      display: flex
+      flex-direction: column
+      align-items: center
+      background-color: $pf-beige
+      margin-right: 1.7rem
+      z-index: 1
+      &--second
+        margin-right: 0
+        background-color: transparent
+        align-items: flex-start
+        z-index: 1
+    &__icon-group
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 2rem
+    &__icon-wrapper
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      background-color: white
+      border-radius: 3rem
+      width: 5.7rem
+      height: 5.7rem
+      margin-right: 6.5rem
+    &__icon
+      width: 3.6rem
+      margin-bottom: 0.312rem
+      position: relative
+      top: 0.1rem
+    &__icon-query
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.5rem
+      color: $pf-black
+      position: relative
+      bottom: 0.7rem
+      right: 0.15rem
+    &__label
+      color: $pf-black-secondary
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      margin-right: 9.3rem
+    &__icon-pick
+      width: 2.8rem
+    &__image
+      width: 15rem
+      margin-bottom: 1.8rem
+    &__title
+      text-align: center
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      margin-bottom: 0.8rem
+      color: $pf-black
+    &__category
+      text-align: center
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: $pf-green
+      margin-bottom: 1.4rem
+    &__nutrition-info
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 24.1rem
+    &__nutrition-item
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__nutrition-value
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      color: $pf-black
+      margin-bottom: 0.4rem
+    &__nutrition-unit
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: $pf-black-secondary
+    &__composition
+      display: flex
+      flex-direction: column
+      padding: 2rem
+      justify-content: flex-start
+      border: 0.1rem solid white
+      margin-bottom: 2rem
+      color: white
+    &__composition-title
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      margin-bottom: 1.5rem
+    &__composition-item
+      display: flex
+      max-width: 33.1rem
+      margin-bottom: 1rem
+      &:last-child
+        margin-bottom: 0rem
+    &__composition-name
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      letter-spacing: 0.037rem
+      &--gray
+        color: #FFFFFFA6
+    &__composition-icon
+      display: inline
+      width: 1.406rem
+      margin-left: 0.547rem
+    &__nutrition-summary
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: white
+      margin-bottom: 9rem
+      letter-spacing: 0.037rem
+    &__price-info
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      width: 37.1rem
+    &__price-item
+      margin-left: 1.3rem
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+    &__price-value
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 400
+      font-size: 4rem
+      line-height: 4.9rem
+      position: relative
+      color: white
+    &__price-rubles
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      position: absolute
+      color: white
+      top: 0
+      right: -1.5rem
+    &__price-label
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.5rem
+      color: white
+    &__cart-button
+      width: 16.6rem
+      height: 4.3rem
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 3rem
+      background-color: $pf-black
+    &__cart-button-label
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+      color: white
+    &__cart-button-icon
+      width: 2.4rem
+      margin-right: 1.5rem
+  .order
+    height: fit-content
+    margin-left: 3.1rem
+    margin-top: 10.4rem
+    padding: 4rem 3rem
+    background-color: $pf-beige
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    color: $pf-black
+    &__title
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      margin-bottom: 3rem
+    &__list
+      border-top: 0.1rem solid $pf-black-secondary
+      display: flex
+      flex-direction: column
+      margin-bottom: 2.5rem
+    .item
+      border: 0
+      width: 30.2rem
+      display: flex
+      flex-direction: column
+      padding-top: 2.5rem
+      padding-bottom: 3rem
+      border-bottom: 0.1rem solid $pf-black-secondary
+      &__content
+        width: 30.2rem
+        display: flex
+        flex-direction: column
+      &__info
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-bottom: 0.7rem
+      &__title
+        margin: 0
+        color: $pf-black
+        font-family: 'Gotham'
+        font-style: normal
+        font-weight: 400
+        font-size: 2rem
+        line-height: 2.4rem
+        width: 19.9rem
+      &__remove-icon
+        width: 1.667rem
+        cursor: pointer
+      &__details
+        width: 30.2rem
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+      &__price-value
+        font-family: 'Montserrat'
+        font-style: normal
+        font-weight: 500
+        font-size: 2rem
+        line-height: 2.4rem
+        position: relative
+      &__price-rubles
+        position: absolute
+        top: -0.3rem
+        right: -1.4rem
+        font-family: "Montserrat"
+        font-style: normal
+        font-weight: 500
+        font-size: 1.5rem
+        line-height: 1.9rem
+      &__buttons
+        padding: 1.2rem 2.4rem 
+        border: 0.1rem solid $pf-black
+        display: flex
+      &__counter
+        margin-left: 1.5rem
+        margin-right: 1.5rem
+        font-family: 'Gotham'
+        font-style: normal
+        font-weight: 400
+        font-size: 1.6rem
+        line-height: 1.9rem
+      &__plus
+        cursor: pointer
+        width: 1.6rem
+      &__minus
+        width: 1.6rem
+        cursor: pointer
+    &__total-price
+      width: 30.2rem
+      display: flex
+      justify-content: space-between
+      margin: 0 auto
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 400
+      font-size: 4rem
+      line-height: 4.9rem
+      margin-bottom: 2.5rem
+    &__price
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 400
+      font-size: 4rem
+      line-height: 4.9rem
+      position: relative
+    &__price-rubles
+      font-family: 'Montserrat'
+      font-style: normal
+      font-weight: 500
+      font-size: 2rem
+      line-height: 2.4rem
+      position: relative
+      top: -2rem
+    &__cart-button
+      width: 100%
+      height: 4.3rem
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 3rem
+      background-color: $pf-black
+    &__cart-button-icon
+      width: 2.4rem
+      margin-right: 1.5rem
+    &__cart-button-label
+      color: white
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.9rem
+
+.swiper-container
+  position: relative
+  left: 16.5rem
+
+@media (hover: hover)
+  .card:hover
+    background-color: #F8F8F8
+    box-shadow: 0.7rem 0.7rem 1.2rem 0rem #57575714
+    .card__composition
+      background-color: #E1F2C5
+      border: 0.1rem solid #E1F2C5
+      color: $pf-black
+    .card__nutrition-summary
+      color: $pf-black
+    .card__price-value
+      color: $pf-black
+    .card__price-rubles
+      color: $pf-black
+    .card__composition-name--gray
+      color: #43424880
+    .card__composition-icon
+      filter: brightness(0.5)
+    .card__price-label
+      color: $pf-black
+
+  .card__box:hover
+    box-shadow: 0.7rem 0.7rem 1.2rem 0rem #57575714
+  .card__box--second:hover
+    box-shadow: none
+ 
+  .card:hover::before
+    content: "ПРАВИЛЬНОЕ ПИТАНИЕ"
+    position: absolute
+    white-space: nowrap
+    top: 5rem
+    left: -100%
+    width: 200%
+    height: 100%
+    color: $pf-orange
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 14.3696rem
+    line-height: 17.5rem
+    animation: slideText 7s linear infinite
+
+  @keyframes slideText 
+    0% 
+      transform: translateX(100%)
+    100% 
+      transform: translateX(-100%)
+
+@media (max-width: 48em)
+  html
+    font-size: 5px
+    font-size: 1.5625vw
+    font-size: 1.3333333333vw
+    -webkit-text-size-adjust: none
+
+  .swiper-container
+    margin-top: 1rem
+    left: 23rem
+  .swiper-slide
+    width: auto 
+
+  .menu
+    width: 68.6rem
+    padding-top: 3rem
+    padding-bottom: 24rem
+    &__content
+      flex-direction: column
+    &__list
+      width: 68.6rem
+      height: 246rem
+      overflow: scroll
+      overflow-x: visible
+    &__title
+      font-style: normal
+      font-weight: 400
+      font-size: 4.8rem
+      line-height: 5.8rem
+      position: absolute
+      top: 44.2rem
+    &__filter-button
+      display: flex
+      width: 6.4rem
+      height: 8rem
+      border: 0.2rem solid $pf-black-secondary
+    &__paggination-icon
+      width: 8rem !important
+      margin-left: 4.5rem
+      margin-top: -0.7rem 
+      &-wrapper
+        right: 19.5rem
+      height: 15rem
+    .item
+      width: 17.6rem
+      &__title
+        font-style: normal
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        margin-top: 1.6rem
+        margin-bottom: 1.8rem
+      &__value
+        font-weight: 400
+        font-size: 4rem
+        line-height: 4.8rem
+        margin-bottom: 2rem
+      &--current
+        min-width: 21rem
+        border: 0
+        position: absolute
+        top: 22.4rem
+        left: 3.1rem
+        z-index: 5
+        .item__title
+          font-style: normal
+          font-weight: 400
+          font-size: 3.2rem
+          line-height: 2.8rem
+          margin-top: 2.4rem
+          margin-bottom: 1.6rem
+        .item__value
+          margin-bottom: 4rem
+    &__search-bar
+      margin-top: 11rem
+      width: 68.6rem
+      display: flex
+      flex-direction: row
+    .filter
+      display: none
+    .search
+      margin-right: 1.6rem
+      margin-bottom: 6rem
+      &__placeholder-wrapper
+        top: 2rem
+      &__placeholder
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+      &__icon
+        width: 3.6rem
+      &__input
+        height: 8rem
+        width:60.6rem
+    .card
+      flex-direction: column
+      width: 68.6rem
+      padding: 3rem
+      &__box
+        width: 100%
+        margin: 0
+        padding: 0
+      &__icon-group
+        margin-top: 4rem
+      &__icon-wrapper
+        width: 10rem
+        height: 10rem
+        border-radius: 6rem
+        margin-right: 12.6rem
+      &__icon
+        width: 5.3rem
+        top: -0.7rem
+      &__icon-query
+        font-size: 2.8rem
+        bottom: 1.2rem
+      &__label
+        font-style: normal
+        font-weight: 400
+        font-size: 3.2rem
+        line-height: 3.8rem
+        margin-right: 17.1rem
+      &__icon-pick
+        width: 4.4rem
+      &__image
+        width: 16rem
+        margin-bottom: 3rem
+      &__title
+        font-style: normal
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+      &__category
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        margin-bottom: 4rem
+      &__nutrition-info
+        width: 46.6rem
+        margin-bottom: 4rem
+      &__nutrition-value
+        font-style: normal
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        margin-bottom: 0.2rem
+      &__nutrition-unit
+        font-size: 2.8rem
+        line-height: 3rem
+      &__composition
+        width: 100%
+        padding: 3rem
+        margin-top: 3rem
+        margin-bottom: 2rem
+        gap: 1rem
+      &__composition-title
+        font-style: normal
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        margin-bottom: 0.8rem
+      &__composition-item
+        margin: 0
+        padding: 0
+        max-width: 100%
+      &__composition-name
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+      &__composition-icon
+        width: 3rem
+        margin-top: -1rem
+        position: relative
+        top: 0.8rem
+        left: 0.5rem
+      &__nutrition-summary
+        font-style: normal
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        margin-bottom: 6rem
+      &__price-info
+        width: 100%
+        margin: 0
+        margin-bottom: 8rem
+      &__price-item
+        margin: 0
+      &__price-value
+        font-style: normal
+        font-weight: 400
+        font-size: 4.8rem
+        line-height: 5.8rem
+      &__price-rubles
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        top: 0.8rem
+        right: -2.8rem
+      &__price-label
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+      &__cart-button
+        width: 33rem
+        height: 8.6rem
+        border-radius: 6rem
+      &__cart-button-icon
+        width: 4rem
+        margin-right: 2rem
+      &__cart-button-label
+        font-style: normal
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+    .order
+      display: none
