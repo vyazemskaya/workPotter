@@ -31,18 +31,35 @@ window.addEventListener('load', () => {
 });
 
 // Rates
-document.querySelectorAll('.rates__btn').forEach((btn, _, arr) => {
-  btn.addEventListener('mouseover', (e) => {
-    const thisEl = e.currentTarget;
+function handleMouseOver(e) {
+  const thisEl = e.currentTarget;
 
-    [...arr, ...document.querySelectorAll('[data-tab]')].forEach((el) =>
-      el.classList.remove('active')
-    );
-    [thisEl, document.querySelector(`[data-tab='${thisEl.id}']`)].forEach(
-      (el) => el.classList.add('active')
-    );
+  document.querySelectorAll('.rates__btn, [data-tab]').forEach((el) => {
+    el.classList.remove('active');
   });
-});
+
+  [thisEl, document.querySelector(`[data-tab='${thisEl.id}']`)].forEach((el) => {
+    el.classList.add('active');
+  });
+}
+
+function handleResize() {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth > 768) {
+    document.querySelectorAll('.rates__btn').forEach((btn) => {
+      btn.addEventListener('mouseover', handleMouseOver);
+    });
+  } else {
+    document.querySelectorAll('.rates__btn').forEach((btn) => {
+      btn.removeEventListener('mouseover', handleMouseOver);
+    });
+  }
+}
+
+window.addEventListener('resize', handleResize);
+
+handleResize();
 
 // Popular
 const swiperPopular = new Swiper('.popular__slider', {
@@ -83,6 +100,9 @@ const observerPopular = new IntersectionObserver(
   }
 );
 observerPopular.observe(popularTitle);
+
+//Rates swiper
+
 
 // Formats
 const swiperFormats = new Swiper('.formats__slider', {

@@ -182,7 +182,7 @@
         <h2 class="rates__title">ТАРИФЫ</h2>
         <ul class="rates__list">
           <li class="rates__item">
-            <button class="active rates__btn" id="light">
+            <button class="rates__btn" id="light">
               <span class="rates__btn-word"
                 ><span class="rates__btn-letter" style="transition-delay: 0s"
                   >Т</span
@@ -253,7 +253,7 @@
             /></picture>
           </li>
           <li class="rates__item">
-            <button class="rates__btn" id="classic">
+            <button class="rates__btn active" id="classic">
               <span class="rates__btn-word"
                 ><span class="rates__btn-letter" style="transition-delay: 0s"
                   >Т</span
@@ -415,6 +415,35 @@
             /></picture>
           </li>
         </ul>
+
+        <div class="mobile-block">
+          <div class="mobile-block__cards-wrapper">
+            <div class="mobile-block__card">
+              <img
+                src="./img/main/card-img.png"
+                alt="card-food-img"
+                class="mobile-block__img"
+              />
+            </div>
+
+            <div class="mobile-block__card-center">
+              <img
+                src="./img/main/card-img.png"
+                alt="card-food-img"
+                class="mobile-block__img"
+              />
+            </div>
+
+            <div class="mobile-block__card">
+              <img
+                src="./img/main/card-img.png"
+                alt="card-food-img"
+                class="mobile-block__img"
+              />
+            </div>
+          </div>
+        </div>
+
         <p class="rates__desc">МИНИМАЛЬНАЯ СУММА ЧЕКА: ОТ 300 ₽.</p>
       </section>
       <section class="popular">
@@ -462,34 +491,22 @@
                 <div>
                   <div class="popular__card-box-main">
                     <div class="popular__card-box-rating">
-                      <strong class="popular__card-rating"
-                        ><svg
-                          width="19"
-                          height="18"
-                          viewBox="0 0 19 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M5.41001 17.5041C4.71631 17.7929 3.9604 17.2533 4.00824 16.5034L4.28215 12.2102C4.29898 11.9463 4.2121 11.6863 4.04002 11.4856L1.24003 8.21958C0.750945 7.64909 1.03057 6.76342 1.75856 6.57718L5.92631 5.511C6.18245 5.44548 6.40287 5.28251 6.54059 5.05683L8.78152 1.38462C9.17295 0.74318 10.1017 0.735431 10.5038 1.37024L12.8057 5.00454C12.9471 5.2279 13.1703 5.38717 13.4274 5.44841L17.6124 6.44489C18.3434 6.61894 18.6378 7.49983 18.1583 8.0784L15.4132 11.3907C15.2445 11.5943 15.162 11.8557 15.1832 12.1192L15.5287 16.4073C15.5891 17.1563 14.8422 17.7084 14.1438 17.4312L10.1454 15.844C9.89962 15.7465 9.62551 15.7488 9.38144 15.8504L5.41001 17.5041Z"
-                            fill="#7FAC37"
-                          ></path></svg
-                        ><span>4.7</span></strong
+                      <strong class="popular__card-rating">
+                        <img
+                          src="./img/main/menu-bread-icon.svg"
+                          alt="menu-bread-icon"
+                          class="popular__card-rating-icon"
+                        /><span class="popular__card-rating-ques"
+                          >?</span
+                        ></strong
                       ><strong class="popular__card-classification"
                         >эконом</strong
                       ><button class="popular__card-add">
-                        <svg
-                          width="22"
-                          height="13"
-                          viewBox="0 0 22 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.9062 8.24271L12.2875 9.62401L20.5695 1.34205L21.9527 2.72532L12.2875 12.3905L6.06184 6.16488L7.4451 4.78162L9.52391 6.86042L10.9062 8.24173V8.24271ZM10.9081 5.47619L15.7525 0.630859L17.1318 2.01021L12.2875 6.85553L10.9081 5.47619ZM8.1426 11.0083L6.76032 12.3905L0.534668 6.16488L1.91793 4.78162L3.30021 6.1639L3.29923 6.16488L8.1426 11.0083Z"
-                            fill="#434248"
-                          ></path>
-                        </svg>
+                        <img
+                          src="./img/main/menu-add-icon.svg"
+                          alt="menu-add-icon"
+                          class="popular__add-icon"
+                        />
                       </button>
                     </div>
                     <div class="popular__card-box-title">
@@ -531,7 +548,15 @@
                     ><span class="popular__card-price"
                       ><span>500</span><sup>₽</sup></span
                     >стоимость</strong
-                  ><a class="popular__card-btn" href="#">подробнее</a>
+                  >
+                  <a class="popular__cart-button">
+                    <img
+                      class="popular__cart-button-icon"
+                      src="./img/menu/menu-cart-icon.svg"
+                      alt="menu-cart-icon"
+                    />
+                    <span class="popular__cart-button-label">в корзину</span>
+                  </a>
                 </div>
                 <strong
                   class="popular__text-animate"
@@ -539,38 +564,27 @@
                   >Правильное питание</strong
                 >
               </div>
+
               <div class="popular__card swiper-slide">
                 <div>
                   <div class="popular__card-box-main">
                     <div class="popular__card-box-rating">
-                      <strong class="popular__card-rating"
-                        ><svg
-                          width="19"
-                          height="18"
-                          viewBox="0 0 19 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M5.41001 17.5041C4.71631 17.7929 3.9604 17.2533 4.00824 16.5034L4.28215 12.2102C4.29898 11.9463 4.2121 11.6863 4.04002 11.4856L1.24003 8.21958C0.750945 7.64909 1.03057 6.76342 1.75856 6.57718L5.92631 5.511C6.18245 5.44548 6.40287 5.28251 6.54059 5.05683L8.78152 1.38462C9.17295 0.74318 10.1017 0.735431 10.5038 1.37024L12.8057 5.00454C12.9471 5.2279 13.1703 5.38717 13.4274 5.44841L17.6124 6.44489C18.3434 6.61894 18.6378 7.49983 18.1583 8.0784L15.4132 11.3907C15.2445 11.5943 15.162 11.8557 15.1832 12.1192L15.5287 16.4073C15.5891 17.1563 14.8422 17.7084 14.1438 17.4312L10.1454 15.844C9.89962 15.7465 9.62551 15.7488 9.38144 15.8504L5.41001 17.5041Z"
-                            fill="#7FAC37"
-                          ></path></svg
-                        ><span>4.7</span></strong
+                      <strong class="popular__card-rating">
+                        <img
+                          src="./img/main/menu-bread-icon.svg"
+                          alt="menu-bread-icon"
+                          class="popular__card-rating-icon"
+                        /><span class="popular__card-rating-ques"
+                          >?</span
+                        ></strong
                       ><strong class="popular__card-classification"
                         >эконом</strong
                       ><button class="popular__card-add">
-                        <svg
-                          width="22"
-                          height="13"
-                          viewBox="0 0 22 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.9062 8.24271L12.2875 9.62401L20.5695 1.34205L21.9527 2.72532L12.2875 12.3905L6.06184 6.16488L7.4451 4.78162L9.52391 6.86042L10.9062 8.24173V8.24271ZM10.9081 5.47619L15.7525 0.630859L17.1318 2.01021L12.2875 6.85553L10.9081 5.47619ZM8.1426 11.0083L6.76032 12.3905L0.534668 6.16488L1.91793 4.78162L3.30021 6.1639L3.29923 6.16488L8.1426 11.0083Z"
-                            fill="#434248"
-                          ></path>
-                        </svg>
+                        <img
+                          src="./img/main/menu-add-icon.svg"
+                          alt="menu-add-icon"
+                          class="popular__add-icon"
+                        />
                       </button>
                     </div>
                     <div class="popular__card-box-title">
@@ -612,7 +626,15 @@
                     ><span class="popular__card-price"
                       ><span>500</span><sup>₽</sup></span
                     >стоимость</strong
-                  ><a class="popular__card-btn" href="#">подробнее</a>
+                  >
+                  <a class="popular__cart-button">
+                    <img
+                      class="popular__cart-button-icon"
+                      src="./img/menu/menu-cart-icon.svg"
+                      alt="menu-cart-icon"
+                    />
+                    <span class="popular__cart-button-label">в корзину</span>
+                  </a>
                 </div>
                 <strong
                   class="popular__text-animate"
@@ -620,38 +642,27 @@
                   >Правильное питание</strong
                 >
               </div>
+
               <div class="popular__card swiper-slide">
                 <div>
                   <div class="popular__card-box-main">
                     <div class="popular__card-box-rating">
-                      <strong class="popular__card-rating"
-                        ><svg
-                          width="19"
-                          height="18"
-                          viewBox="0 0 19 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M5.41001 17.5041C4.71631 17.7929 3.9604 17.2533 4.00824 16.5034L4.28215 12.2102C4.29898 11.9463 4.2121 11.6863 4.04002 11.4856L1.24003 8.21958C0.750945 7.64909 1.03057 6.76342 1.75856 6.57718L5.92631 5.511C6.18245 5.44548 6.40287 5.28251 6.54059 5.05683L8.78152 1.38462C9.17295 0.74318 10.1017 0.735431 10.5038 1.37024L12.8057 5.00454C12.9471 5.2279 13.1703 5.38717 13.4274 5.44841L17.6124 6.44489C18.3434 6.61894 18.6378 7.49983 18.1583 8.0784L15.4132 11.3907C15.2445 11.5943 15.162 11.8557 15.1832 12.1192L15.5287 16.4073C15.5891 17.1563 14.8422 17.7084 14.1438 17.4312L10.1454 15.844C9.89962 15.7465 9.62551 15.7488 9.38144 15.8504L5.41001 17.5041Z"
-                            fill="#7FAC37"
-                          ></path></svg
-                        ><span>4.7</span></strong
+                      <strong class="popular__card-rating">
+                        <img
+                          src="./img/main/menu-bread-icon.svg"
+                          alt="menu-bread-icon"
+                          class="popular__card-rating-icon"
+                        /><span class="popular__card-rating-ques"
+                          >?</span
+                        ></strong
                       ><strong class="popular__card-classification"
                         >эконом</strong
                       ><button class="popular__card-add">
-                        <svg
-                          width="22"
-                          height="13"
-                          viewBox="0 0 22 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.9062 8.24271L12.2875 9.62401L20.5695 1.34205L21.9527 2.72532L12.2875 12.3905L6.06184 6.16488L7.4451 4.78162L9.52391 6.86042L10.9062 8.24173V8.24271ZM10.9081 5.47619L15.7525 0.630859L17.1318 2.01021L12.2875 6.85553L10.9081 5.47619ZM8.1426 11.0083L6.76032 12.3905L0.534668 6.16488L1.91793 4.78162L3.30021 6.1639L3.29923 6.16488L8.1426 11.0083Z"
-                            fill="#434248"
-                          ></path>
-                        </svg>
+                        <img
+                          src="./img/main/menu-add-icon.svg"
+                          alt="menu-add-icon"
+                          class="popular__add-icon"
+                        />
                       </button>
                     </div>
                     <div class="popular__card-box-title">
@@ -693,7 +704,15 @@
                     ><span class="popular__card-price"
                       ><span>500</span><sup>₽</sup></span
                     >стоимость</strong
-                  ><a class="popular__card-btn" href="#">подробнее</a>
+                  >
+                  <a class="popular__cart-button">
+                    <img
+                      class="popular__cart-button-icon"
+                      src="./img/menu/menu-cart-icon.svg"
+                      alt="menu-cart-icon"
+                    />
+                    <span class="popular__cart-button-label">в корзину</span>
+                  </a>
                 </div>
                 <strong
                   class="popular__text-animate"
@@ -701,38 +720,27 @@
                   >Правильное питание</strong
                 >
               </div>
+
               <div class="popular__card swiper-slide">
                 <div>
                   <div class="popular__card-box-main">
                     <div class="popular__card-box-rating">
-                      <strong class="popular__card-rating"
-                        ><svg
-                          width="19"
-                          height="18"
-                          viewBox="0 0 19 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M5.41001 17.5041C4.71631 17.7929 3.9604 17.2533 4.00824 16.5034L4.28215 12.2102C4.29898 11.9463 4.2121 11.6863 4.04002 11.4856L1.24003 8.21958C0.750945 7.64909 1.03057 6.76342 1.75856 6.57718L5.92631 5.511C6.18245 5.44548 6.40287 5.28251 6.54059 5.05683L8.78152 1.38462C9.17295 0.74318 10.1017 0.735431 10.5038 1.37024L12.8057 5.00454C12.9471 5.2279 13.1703 5.38717 13.4274 5.44841L17.6124 6.44489C18.3434 6.61894 18.6378 7.49983 18.1583 8.0784L15.4132 11.3907C15.2445 11.5943 15.162 11.8557 15.1832 12.1192L15.5287 16.4073C15.5891 17.1563 14.8422 17.7084 14.1438 17.4312L10.1454 15.844C9.89962 15.7465 9.62551 15.7488 9.38144 15.8504L5.41001 17.5041Z"
-                            fill="#7FAC37"
-                          ></path></svg
-                        ><span>4.7</span></strong
+                      <strong class="popular__card-rating">
+                        <img
+                          src="./img/main/menu-bread-icon.svg"
+                          alt="menu-bread-icon"
+                          class="popular__card-rating-icon"
+                        /><span class="popular__card-rating-ques"
+                          >?</span
+                        ></strong
                       ><strong class="popular__card-classification"
                         >эконом</strong
                       ><button class="popular__card-add">
-                        <svg
-                          width="22"
-                          height="13"
-                          viewBox="0 0 22 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.9062 8.24271L12.2875 9.62401L20.5695 1.34205L21.9527 2.72532L12.2875 12.3905L6.06184 6.16488L7.4451 4.78162L9.52391 6.86042L10.9062 8.24173V8.24271ZM10.9081 5.47619L15.7525 0.630859L17.1318 2.01021L12.2875 6.85553L10.9081 5.47619ZM8.1426 11.0083L6.76032 12.3905L0.534668 6.16488L1.91793 4.78162L3.30021 6.1639L3.29923 6.16488L8.1426 11.0083Z"
-                            fill="#434248"
-                          ></path>
-                        </svg>
+                        <img
+                          src="./img/main/menu-add-icon.svg"
+                          alt="menu-add-icon"
+                          class="popular__add-icon"
+                        />
                       </button>
                     </div>
                     <div class="popular__card-box-title">
@@ -774,7 +782,15 @@
                     ><span class="popular__card-price"
                       ><span>500</span><sup>₽</sup></span
                     >стоимость</strong
-                  ><a class="popular__card-btn" href="#">подробнее</a>
+                  >
+                  <a class="popular__cart-button">
+                    <img
+                      class="popular__cart-button-icon"
+                      src="./img/menu/menu-cart-icon.svg"
+                      alt="menu-cart-icon"
+                    />
+                    <span class="popular__cart-button-label">в корзину</span>
+                  </a>
                 </div>
                 <strong
                   class="popular__text-animate"
@@ -782,38 +798,27 @@
                   >Правильное питание</strong
                 >
               </div>
+
               <div class="popular__card swiper-slide">
                 <div>
                   <div class="popular__card-box-main">
                     <div class="popular__card-box-rating">
-                      <strong class="popular__card-rating"
-                        ><svg
-                          width="19"
-                          height="18"
-                          viewBox="0 0 19 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M5.41001 17.5041C4.71631 17.7929 3.9604 17.2533 4.00824 16.5034L4.28215 12.2102C4.29898 11.9463 4.2121 11.6863 4.04002 11.4856L1.24003 8.21958C0.750945 7.64909 1.03057 6.76342 1.75856 6.57718L5.92631 5.511C6.18245 5.44548 6.40287 5.28251 6.54059 5.05683L8.78152 1.38462C9.17295 0.74318 10.1017 0.735431 10.5038 1.37024L12.8057 5.00454C12.9471 5.2279 13.1703 5.38717 13.4274 5.44841L17.6124 6.44489C18.3434 6.61894 18.6378 7.49983 18.1583 8.0784L15.4132 11.3907C15.2445 11.5943 15.162 11.8557 15.1832 12.1192L15.5287 16.4073C15.5891 17.1563 14.8422 17.7084 14.1438 17.4312L10.1454 15.844C9.89962 15.7465 9.62551 15.7488 9.38144 15.8504L5.41001 17.5041Z"
-                            fill="#7FAC37"
-                          ></path></svg
-                        ><span>4.7</span></strong
+                      <strong class="popular__card-rating">
+                        <img
+                          src="./img/main/menu-bread-icon.svg"
+                          alt="menu-bread-icon"
+                          class="popular__card-rating-icon"
+                        /><span class="popular__card-rating-ques"
+                          >?</span
+                        ></strong
                       ><strong class="popular__card-classification"
                         >эконом</strong
                       ><button class="popular__card-add">
-                        <svg
-                          width="22"
-                          height="13"
-                          viewBox="0 0 22 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.9062 8.24271L12.2875 9.62401L20.5695 1.34205L21.9527 2.72532L12.2875 12.3905L6.06184 6.16488L7.4451 4.78162L9.52391 6.86042L10.9062 8.24173V8.24271ZM10.9081 5.47619L15.7525 0.630859L17.1318 2.01021L12.2875 6.85553L10.9081 5.47619ZM8.1426 11.0083L6.76032 12.3905L0.534668 6.16488L1.91793 4.78162L3.30021 6.1639L3.29923 6.16488L8.1426 11.0083Z"
-                            fill="#434248"
-                          ></path>
-                        </svg>
+                        <img
+                          src="./img/main/menu-add-icon.svg"
+                          alt="menu-add-icon"
+                          class="popular__add-icon"
+                        />
                       </button>
                     </div>
                     <div class="popular__card-box-title">
@@ -855,7 +860,171 @@
                     ><span class="popular__card-price"
                       ><span>500</span><sup>₽</sup></span
                     >стоимость</strong
-                  ><a class="popular__card-btn" href="#">подробнее</a>
+                  >
+                  <a class="popular__cart-button">
+                    <img
+                      class="popular__cart-button-icon"
+                      src="./img/menu/menu-cart-icon.svg"
+                      alt="menu-cart-icon"
+                    />
+                    <span class="popular__cart-button-label">в корзину</span>
+                  </a>
+                </div>
+                <strong
+                  class="popular__text-animate"
+                  data-content="Правильное питание"
+                  >Правильное питание</strong
+                >
+              </div>
+
+              <div class="popular__card swiper-slide">
+                <div>
+                  <div class="popular__card-box-main">
+                    <div class="popular__card-box-rating">
+                      <strong class="popular__card-rating">
+                        <img
+                          src="./img/main/menu-bread-icon.svg"
+                          alt="menu-bread-icon"
+                          class="popular__card-rating-icon"
+                        /><span class="popular__card-rating-ques"
+                          >?</span
+                        ></strong
+                      ><strong class="popular__card-classification"
+                        >эконом</strong
+                      ><button class="popular__card-add">
+                        <img
+                          src="./img/main/menu-add-icon.svg"
+                          alt="menu-add-icon"
+                          class="popular__add-icon"
+                        />
+                      </button>
+                    </div>
+                    <div class="popular__card-box-title">
+                      <picture class="popular__card-box-img"
+                        ><source
+                          class="popular__card-img"
+                          srcset="img/popular/1.webp" />
+                        <img
+                          class="popular__card-img"
+                          src="img/popular/1.webp"
+                          alt="Продукт"
+                      /></picture>
+                      <h3 class="popular__card-title">ТОРТ НАПОЛЕОН</h3>
+                      <h4 class="popular__card-subtitle">русская кухня</h4>
+                    </div>
+                    <div class="popular__card-box-weight">
+                      <strong class="popular__card-weight"
+                        ><span>150</span>грамм</strong
+                      ><strong class="popular__card-calories"
+                        ><span>500</span>калорий</strong
+                      >
+                    </div>
+                  </div>
+                  <div class="popular__card-box-desc">
+                    <div class="popular__card-box-compound">
+                      <strong class="popular__card-title-desc">СОСТАВ</strong>
+                      <p class="popular__card-desc">
+                        вода, сахар, яичный желток, мука пшеничная, сахар
+                        тростниковый
+                      </p>
+                    </div>
+                    <p class="popular__card-desc-2">
+                      белки 6,3 г, жиры 11,9 г, углеводы 61,6 г
+                    </p>
+                  </div>
+                </div>
+                <div class="popular__card-box-more">
+                  <strong class="popular__card-box-price"
+                    ><span class="popular__card-price"
+                      ><span>500</span><sup>₽</sup></span
+                    >стоимость</strong
+                  >
+                  <a class="popular__cart-button">
+                    <img
+                      class="popular__cart-button-icon"
+                      src="./img/menu/menu-cart-icon.svg"
+                      alt="menu-cart-icon"
+                    />
+                    <span class="popular__cart-button-label">в корзину</span>
+                  </a>
+                </div>
+                <strong
+                  class="popular__text-animate"
+                  data-content="Правильное питание"
+                  >Правильное питание</strong
+                >
+              </div>
+
+              <div class="popular__card swiper-slide">
+                <div>
+                  <div class="popular__card-box-main">
+                    <div class="popular__card-box-rating">
+                      <strong class="popular__card-rating">
+                        <img
+                          src="./img/main/menu-bread-icon.svg"
+                          alt="menu-bread-icon"
+                          class="popular__card-rating-icon"
+                        /><span class="popular__card-rating-ques"
+                          >?</span
+                        ></strong
+                      ><strong class="popular__card-classification"
+                        >эконом</strong
+                      ><button class="popular__card-add">
+                        <img
+                          src="./img/main/menu-add-icon.svg"
+                          alt="menu-add-icon"
+                          class="popular__add-icon"
+                        />
+                      </button>
+                    </div>
+                    <div class="popular__card-box-title">
+                      <picture class="popular__card-box-img"
+                        ><source
+                          class="popular__card-img"
+                          srcset="img/popular/1.webp" />
+                        <img
+                          class="popular__card-img"
+                          src="img/popular/1.webp"
+                          alt="Продукт"
+                      /></picture>
+                      <h3 class="popular__card-title">ТОРТ НАПОЛЕОН</h3>
+                      <h4 class="popular__card-subtitle">русская кухня</h4>
+                    </div>
+                    <div class="popular__card-box-weight">
+                      <strong class="popular__card-weight"
+                        ><span>150</span>грамм</strong
+                      ><strong class="popular__card-calories"
+                        ><span>500</span>калорий</strong
+                      >
+                    </div>
+                  </div>
+                  <div class="popular__card-box-desc">
+                    <div class="popular__card-box-compound">
+                      <strong class="popular__card-title-desc">СОСТАВ</strong>
+                      <p class="popular__card-desc">
+                        вода, сахар, яичный желток, мука пшеничная, сахар
+                        тростниковый
+                      </p>
+                    </div>
+                    <p class="popular__card-desc-2">
+                      белки 6,3 г, жиры 11,9 г, углеводы 61,6 г
+                    </p>
+                  </div>
+                </div>
+                <div class="popular__card-box-more">
+                  <strong class="popular__card-box-price"
+                    ><span class="popular__card-price"
+                      ><span>500</span><sup>₽</sup></span
+                    >стоимость</strong
+                  >
+                  <a class="popular__cart-button">
+                    <img
+                      class="popular__cart-button-icon"
+                      src="./img/menu/menu-cart-icon.svg"
+                      alt="menu-cart-icon"
+                    />
+                    <span class="popular__cart-button-label">в корзину</span>
+                  </a>
                 </div>
                 <strong
                   class="popular__text-animate"
@@ -2349,10 +2518,11 @@
     </main>
     <footer class="footer container">
       <div class="footer__box-top">
-        <a class="header__logo header__logo--footer" href="main.html" aria-label="Логотип"
-          ><img
-            src="img/logo.png"
-            alt="Potter Family"
+        <a
+          class="header__logo header__logo--footer"
+          href="main.html"
+          aria-label="Логотип"
+          ><img src="img/logo.png" alt="Potter Family"
         /></a>
         <nav class="footer__nav">
           <h3 class="footer__nav-title">Меню</h3>

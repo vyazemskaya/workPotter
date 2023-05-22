@@ -1582,6 +1582,10 @@ input[type='number'] {
   height: 6.7rem;
 }
 
+.mobile-swiper{
+  display: none;
+}
+
 @media (max-width: 48em){
   html{
     font-size: 5px;
@@ -1695,4 +1699,244 @@ input[type='number'] {
     margin: 0;
     margin-bottom: 2rem;
   }
+
+  .hero {
+    margin-bottom: 10.4rem;
+  }
+
+  .rates {
+    padding-top: 0rem;
+  }
+
+  .rates__img-box{
+    display: none;
+  }
+
+  .rates__btn, .rates__btn * {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5.2rem;
+    line-height: 6.2rem;
+  }
+
+  .rates__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 5rem
+  }
+
+  .rates__item:not(:last-child) {
+    margin-bottom: -0.5rem;
+  }
+
+  .rates__list{
+    padding-bottom: 6rem;
+  }
+
+  .mobile-block{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 10.5rem;
+  }
+
+  .mobile-block__cards-wrapper{
+    width: fit-content;
+    display: flex;
+    gap: 6rem;
+    transform: translateX(-41rem);
+  }
+
+  .mobile-block__card-center {
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46.4rem;
+    height: 33rem;
+    flex-shrink: 0;
+  }
+
+  .mobile-block__card {
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 59rem;
+    width: 46.4rem;
+  }
+
+  .mobile-block__img {
+    width: 25.4rem;
+  }
+
+  .rates__desc {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    width: 54rem;
+    text-align: center;
+  }
+
+  .popular__title{
+    margin: 0 auto 6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 8.6rem;
+    text-align: center;
+    margin-left: -1.5rem;
+  }
+
+  .popular__card{
+    padding: 5rem 2rem 8rem;
+    pointer-events: none;
+  }  
+
+  .popular__card-box-main{
+    max-width: 100%;
+    padding: 3.3rem 2.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .popular__card-rating{
+    width: 10rem;
+    height: 10rem;
+    padding: 0;
+  }
+
+  .popular__card-rating-icon{
+    margin-top: 1rem;
+    width: 5.5rem;
+  }
+
+  .popular__card-rating-ques{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-top: -1rem;
+  }
+
+  .popular__card-classification{
+    font-weight: 400;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-right: 4.1rem;
+  }
+
+  .popular__card-add{
+    width: 5.2rem;
+    height: 4.3rem;
+    margin: -0.2rem -0.7rem -0.7rem 0rem;
+  }
+
+  .popular__card-add svg{
+    width: 5.6rem;
+  }
+
+  .popular__card-img{
+    width: 16rem;
+    height: 16.7rem;
+    margin-bottom: 0rem;
+  }
+
+  .popular__card-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .popular__card-box-img {
+    margin-bottom: 3rem;
+  }
+
+  .popular__card-box-title {
+    flex-direction: column;
+    padding: 0.1rem 0 5rem;
+  }
+
+  .popular__card-box-weight {
+    padding: 0 5rem;
+  }
+
+  .popular__card-weight,
+  .popular__card-calories {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .popular__card-weight span,
+  .popular__card-calories span {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: -0.6rem;
+  }
+
+  .popular__card-box-compound {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .popular__card-title-desc{
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .popular__card-desc, .popular__card-desc-2{
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+
+  .popular__card-desc-2{
+    margin-bottom: 5.5rem;
+  }
+
+  .popular__card-price span {
+    font-size: 5rem;
+    line-height: 7.3rem;
+  }
+
+  .popular__card-price sup {
+    font-size: 3rem;
+    left: 0.2rem;
+    top: -1.7rem;
+  }
+
+  .popular__cart-button{
+    width: 26.8rem;
+    height: 8.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6rem;
+    border: 0.2rem solid white
+  }
+
+  .popular__cart-button-icon{
+    width: 4rem;
+    margin-right: 2rem;
+  }
+
+  .popular__cart-button-label{
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+
 }
