@@ -48,12 +48,20 @@ img {
   width: 156rem;
   overflow: hidden;
 }
+.menu__filter-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.menu__filter-button-img {
+  width: 3.6rem;
+}
 .menu__list {
   height: 140rem;
   overflow: scroll;
 }
 .menu__list::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0rem;
 }
 .menu__list::-webkit-scrollbar-thumb {
   background-color: transparent;
@@ -68,7 +76,7 @@ img {
   width: 16rem;
   height: 10rem;
   position: absolute;
-  right: 95px;
+  right: 9.5rem;
   top: 0rem;
   z-index: 3;
 }
@@ -150,7 +158,7 @@ img {
   border: 0.2rem solid rgba(67, 66, 72, 0.5);
   width: 100%;
   height: 6rem;
-  padding: 13px 38px 13px 30px;
+  padding: 1.3rem 3.8rem 1.3rem 3rem;
 }
 .menu .search__placeholder-wrapper {
   position: absolute;
@@ -533,8 +541,8 @@ img {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
   position: relative;
 }
 .menu .order .item__price-rubles {
@@ -623,13 +631,6 @@ img {
 .swiper-container {
   position: relative;
   left: 16.5rem;
-  display: flex;
-  overflow: hidden;
-  width: auto !important;
-}
-
-.swiper-slide {
-  width: auto !important;
 }
 
 @media (hover: hover) {
@@ -689,5 +690,271 @@ img {
     100% {
       transform: translateX(-100%);
     }
+  }
+}
+@media (max-width: 48em) {
+  html {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: 1.3333333333vw;
+    -webkit-text-size-adjust: none;
+  }
+  .swiper-container {
+    margin-top: 1rem;
+    left: 23rem;
+  }
+  .swiper-slide {
+    width: auto;
+  }
+  .menu {
+    width: 68.6rem;
+    padding-top: 3rem;
+    padding-bottom: 24rem;
+  }
+  .menu__content {
+    flex-direction: column;
+  }
+  .menu__list {
+    width: 68.6rem;
+    height: 246rem;
+    overflow: scroll;
+    overflow-x: visible;
+  }
+  .menu__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    position: absolute;
+    top: 44.2rem;
+  }
+  .menu__filter-button {
+    display: flex;
+    width: 6.4rem;
+    height: 8rem;
+    border: 0.2rem solid rgba(67, 66, 72, 0.5);
+  }
+  .menu__paggination-icon {
+    width: 8rem !important;
+    margin-left: 4.5rem;
+    margin-top: -0.7rem;
+    height: 15rem;
+  }
+  .menu__paggination-icon-wrapper {
+    right: 19.5rem;
+  }
+  .menu .item {
+    width: 17.6rem;
+  }
+  .menu .item__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.8rem;
+  }
+  .menu .item__value {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    margin-bottom: 2rem;
+  }
+  .menu .item--current {
+    min-width: 21rem;
+    border: 0;
+    position: absolute;
+    top: 22.4rem;
+    left: 3.1rem;
+    z-index: 5;
+  }
+  .menu .item--current .item__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 2.8rem;
+    margin-top: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+  .menu .item--current .item__value {
+    margin-bottom: 4rem;
+  }
+  .menu__search-bar {
+    margin-top: 11rem;
+    width: 68.6rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .menu .filter {
+    display: none;
+  }
+  .menu .search {
+    margin-right: 1.6rem;
+    margin-bottom: 6rem;
+  }
+  .menu .search__placeholder-wrapper {
+    top: 2rem;
+  }
+  .menu .search__placeholder {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .search__icon {
+    width: 3.6rem;
+  }
+  .menu .search__input {
+    height: 8rem;
+    width: 60.6rem;
+  }
+  .menu .card {
+    flex-direction: column;
+    width: 68.6rem;
+    padding: 3rem;
+  }
+  .menu .card__box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .menu .card__icon-group {
+    margin-top: 4rem;
+  }
+  .menu .card__icon-wrapper {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 6rem;
+    margin-right: 12.6rem;
+  }
+  .menu .card__icon {
+    width: 5.3rem;
+    top: -0.7rem;
+  }
+  .menu .card__icon-query {
+    font-size: 2.8rem;
+    bottom: 1.2rem;
+  }
+  .menu .card__label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    margin-right: 17.1rem;
+  }
+  .menu .card__icon-pick {
+    width: 4.4rem;
+  }
+  .menu .card__image {
+    width: 16rem;
+    margin-bottom: 3rem;
+  }
+  .menu .card__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .menu .card__category {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-bottom: 4rem;
+  }
+  .menu .card__nutrition-info {
+    width: 46.6rem;
+    margin-bottom: 4rem;
+  }
+  .menu .card__nutrition-value {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 0.2rem;
+  }
+  .menu .card__nutrition-unit {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .card__composition {
+    width: 100%;
+    padding: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  .menu .card__composition-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 0.8rem;
+  }
+  .menu .card__composition-item {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  .menu .card__composition-name {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .card__composition-icon {
+    width: 3rem;
+    margin-top: -1rem;
+    position: relative;
+    top: 0.8rem;
+    left: 0.5rem;
+  }
+  .menu .card__nutrition-summary {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-bottom: 6rem;
+  }
+  .menu .card__price-info {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 8rem;
+  }
+  .menu .card__price-item {
+    margin: 0;
+  }
+  .menu .card__price-value {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+  }
+  .menu .card__price-rubles {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    top: 0.8rem;
+    right: -2.8rem;
+  }
+  .menu .card__price-label {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .card__cart-button {
+    width: 33rem;
+    height: 8.6rem;
+    border-radius: 6rem;
+  }
+  .menu .card__cart-button-icon {
+    width: 4rem;
+    margin-right: 2rem;
+  }
+  .menu .card__cart-button-label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .menu .order {
+    display: none;
   }
 }/*# sourceMappingURL=menu.css.map */

@@ -1,12 +1,14 @@
 //date-slider
+let swiper
+
 document.addEventListener('DOMContentLoaded', function () {
   const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
-  const swiper = new Swiper('.swiper-container', {
+  swiper = new Swiper('.swiper-container', {
     slidesPerView: 9,
     loop: false,
     spaceBetween: 3 * fontSize,
-    slidesOffsetAfter: 16.5 * fontSize,
+    slidesOffsetAfter: 26.5 * fontSize,
     effect: 'slide',
     speed: 550,
     nested: true, 
@@ -16,6 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
     freeModeMomentumBounce: true,
     freeModeMomentumBounceRatio: 0.3, 
   });
+});
+
+window.addEventListener('resize', function() {
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth < 768) {
+    swiper.params.slidesPerView = 3.7;
+    swiper.params.spaceBetween = 1 * fontSize;
+  } else {
+    swiper.params.slidesPerView = 9;
+    swiper.params.spaceBetween = 3 * fontSize;
+  }
+
+  swiper.update();
 });
 
 //checks for filters

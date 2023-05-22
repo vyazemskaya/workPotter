@@ -49,11 +49,17 @@ img
   margin: 0 auto
   width: 156rem
   overflow: hidden
+  &__filter-button
+    display: none
+    justify-content: center
+    align-items: center
+  &__filter-button-img
+    width: 3.6rem
   &__list
     height: 140rem
     overflow: scroll
     &::-webkit-scrollbar 
-      width: 0.8rem
+      width: 0rem
     &::-webkit-scrollbar-thumb 
       background-color: transparent
   &__paggination-icon
@@ -65,7 +71,7 @@ img
       width: 16rem
       height: 10rem
       position: absolute
-      right: 95px
+      right: 9.5rem
       top: 0rem
       z-index: 3
   &__date-list
@@ -135,7 +141,7 @@ img
       border: 0.2rem solid $pf-black-secondary
       width: 100%
       height: 6rem
-      padding: 13px 38px 13px 30px
+      padding: 1.3rem 3.8rem 1.3rem 3rem
     &__placeholder-wrapper
       position: absolute
       user-select: none
@@ -466,8 +472,8 @@ img
         font-family: 'Montserrat'
         font-style: normal
         font-weight: 500
-        font-size: 20px
-        line-height: 24px
+        font-size: 2rem
+        line-height: 2.4rem
         position: relative
       &__price-rubles
         position: absolute
@@ -544,11 +550,6 @@ img
 .swiper-container
   position: relative
   left: 16.5rem
-  display: flex
-  overflow: hidden
-  width: auto !important
-.swiper-slide
-  width: auto !important
 
 @media (hover: hover)
   .card:hover
@@ -597,3 +598,219 @@ img
       transform: translateX(100%)
     100% 
       transform: translateX(-100%)
+
+@media (max-width: 48em)
+  html
+    font-size: 5px
+    font-size: 1.5625vw
+    font-size: 1.3333333333vw
+    -webkit-text-size-adjust: none
+
+  .swiper-container
+    margin-top: 1rem
+    left: 23rem
+  .swiper-slide
+    width: auto 
+
+  .menu
+    width: 68.6rem
+    padding-top: 3rem
+    padding-bottom: 24rem
+    &__content
+      flex-direction: column
+    &__list
+      width: 68.6rem
+      height: 246rem
+      overflow: scroll
+      overflow-x: visible
+    &__title
+      font-style: normal
+      font-weight: 400
+      font-size: 4.8rem
+      line-height: 5.8rem
+      position: absolute
+      top: 44.2rem
+    &__filter-button
+      display: flex
+      width: 6.4rem
+      height: 8rem
+      border: 0.2rem solid $pf-black-secondary
+    &__paggination-icon
+      width: 8rem !important
+      margin-left: 4.5rem
+      margin-top: -0.7rem 
+      &-wrapper
+        right: 19.5rem
+      height: 15rem
+    .item
+      width: 17.6rem
+      &__title
+        font-style: normal
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        margin-top: 1.6rem
+        margin-bottom: 1.8rem
+      &__value
+        font-weight: 400
+        font-size: 4rem
+        line-height: 4.8rem
+        margin-bottom: 2rem
+      &--current
+        min-width: 21rem
+        border: 0
+        position: absolute
+        top: 22.4rem
+        left: 3.1rem
+        z-index: 5
+        .item__title
+          font-style: normal
+          font-weight: 400
+          font-size: 3.2rem
+          line-height: 2.8rem
+          margin-top: 2.4rem
+          margin-bottom: 1.6rem
+        .item__value
+          margin-bottom: 4rem
+    &__search-bar
+      margin-top: 11rem
+      width: 68.6rem
+      display: flex
+      flex-direction: row
+    .filter
+      display: none
+    .search
+      margin-right: 1.6rem
+      margin-bottom: 6rem
+      &__placeholder-wrapper
+        top: 2rem
+      &__placeholder
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+      &__icon
+        width: 3.6rem
+      &__input
+        height: 8rem
+        width:60.6rem
+    .card
+      flex-direction: column
+      width: 68.6rem
+      padding: 3rem
+      &__box
+        width: 100%
+        margin: 0
+        padding: 0
+      &__icon-group
+        margin-top: 4rem
+      &__icon-wrapper
+        width: 10rem
+        height: 10rem
+        border-radius: 6rem
+        margin-right: 12.6rem
+      &__icon
+        width: 5.3rem
+        top: -0.7rem
+      &__icon-query
+        font-size: 2.8rem
+        bottom: 1.2rem
+      &__label
+        font-style: normal
+        font-weight: 400
+        font-size: 3.2rem
+        line-height: 3.8rem
+        margin-right: 17.1rem
+      &__icon-pick
+        width: 4.4rem
+      &__image
+        width: 16rem
+        margin-bottom: 3rem
+      &__title
+        font-style: normal
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+      &__category
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        margin-bottom: 4rem
+      &__nutrition-info
+        width: 46.6rem
+        margin-bottom: 4rem
+      &__nutrition-value
+        font-style: normal
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        margin-bottom: 0.2rem
+      &__nutrition-unit
+        font-size: 2.8rem
+        line-height: 3rem
+      &__composition
+        width: 100%
+        padding: 3rem
+        margin-top: 3rem
+        margin-bottom: 2rem
+        gap: 1rem
+      &__composition-title
+        font-style: normal
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        margin-bottom: 0.8rem
+      &__composition-item
+        margin: 0
+        padding: 0
+        max-width: 100%
+      &__composition-name
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+      &__composition-icon
+        width: 3rem
+        margin-top: -1rem
+        position: relative
+        top: 0.8rem
+        left: 0.5rem
+      &__nutrition-summary
+        font-style: normal
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        margin-bottom: 6rem
+      &__price-info
+        width: 100%
+        margin: 0
+        margin-bottom: 8rem
+      &__price-item
+        margin: 0
+      &__price-value
+        font-style: normal
+        font-weight: 400
+        font-size: 4.8rem
+        line-height: 5.8rem
+      &__price-rubles
+        font-weight: 500
+        font-size: 3.2rem
+        line-height: 4rem
+        top: 0.8rem
+        right: -2.8rem
+      &__price-label
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+      &__cart-button
+        width: 33rem
+        height: 8.6rem
+        border-radius: 6rem
+      &__cart-button-icon
+        width: 4rem
+        margin-right: 2rem
+      &__cart-button-label
+        font-style: normal
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+    .order
+      display: none
