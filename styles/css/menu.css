@@ -756,6 +756,7 @@ img {
     line-height: 5.8rem;
     position: absolute;
     top: 44.2rem;
+    width: auto;
   }
   .menu__filter-button {
     display: flex;
@@ -766,7 +767,7 @@ img {
   .menu__paggination-icon {
     width: 8rem !important;
     margin-left: 4.5rem;
-    margin-top: -0.7rem;
+    margin-top: 2.5rem;
   }
   .menu__paggination-icon-wrapper {
     right: 19.5rem;
@@ -985,5 +986,20 @@ img {
   }
   .menu .order {
     display: none;
+  }
+  .menu .card-box-popup {
+    position: absolute;
+    display: none;
+    width: 18.4rem;
+    height: 5.4rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #7FAC37;
+    border-radius: 0.1rem;
+    font-size: 3rem;
+    line-height: 4.8rem;
+    color: white;
+    top: 2.2rem;
+    left: 7.7rem;
   }
 }/*# sourceMappingURL=menu.css.map */

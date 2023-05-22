@@ -1,37 +1,67 @@
 //date-slider
-let swiper
+// let swiper
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+//   swiper = new Swiper('.swiper-container', {
+//     slidesPerView: 9,
+//     loop: false,
+//     spaceBetween: 3 * fontSize,
+//     slidesOffsetAfter: 26.5 * fontSize,
+//     effect: 'slide',
+//     speed: 550,
+//     nested: true, 
+//     freeMode: true, 
+//     freeModeMomentum: true, 
+//     freeModeMomentumRatio: 0.5, 
+//     freeModeMomentumBounce: true,
+//     freeModeMomentumBounceRatio: 0.3, 
+//   });
+// });
+
+// window.addEventListener('resize', function() {
+//   const windowWidth = window.innerWidth;
+
+//   if (windowWidth < 768) {
+//     swiper.params.slidesPerView = 3.7;
+//     swiper.params.spaceBetween = 1 * fontSize;
+//   } else {
+//     swiper.params.slidesPerView = 9;
+//     swiper.params.spaceBetween = 3 * fontSize;
+//   }
+
+//   swiper.update();
+// });
+
+let swiper;
 
 document.addEventListener('DOMContentLoaded', function () {
   const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-
   swiper = new Swiper('.swiper-container', {
-    slidesPerView: 9,
     loop: false,
-    spaceBetween: 3 * fontSize,
+    spaceBetween: 30,
     slidesOffsetAfter: 26.5 * fontSize,
     effect: 'slide',
     speed: 550,
-    nested: true, 
-    freeMode: true, 
-    freeModeMomentum: true, 
-    freeModeMomentumRatio: 0.5, 
+    nested: true,
+    freeMode: true,
+    freeModeMomentum: true,
+    freeModeMomentumRatio: 0.5,
     freeModeMomentumBounce: true,
-    freeModeMomentumBounceRatio: 0.3, 
+    freeModeMomentumBounceRatio: 0.3,
+    breakpoints: {
+      768: {
+        slidesPerView: 9.5,
+        spaceBetween: 10,
+      },
+      320: {
+        slidesPerView: 3.7,
+        spaceBetween: 10,
+
+      }
+    },
   });
-});
-
-window.addEventListener('resize', function() {
-  const windowWidth = window.innerWidth;
-
-  if (windowWidth < 768) {
-    swiper.params.slidesPerView = 3.7;
-    swiper.params.spaceBetween = 1 * fontSize;
-  } else {
-    swiper.params.slidesPerView = 9;
-    swiper.params.spaceBetween = 3 * fontSize;
-  }
-
-  swiper.update();
 });
 
 //checks for filters
@@ -62,20 +92,11 @@ document.addEventListener('DOMContentLoaded', function() {
   target.forEach((element) => {
     const popupParent = element.parentNode;
     const popup = popupParent.querySelector('.card-box-popup');
-    
-    element.addEventListener('mouseover', () => {
+    element.addEventListener('mouseover', (e) => {  
       popup.style.display = 'flex';
     });
 
-    element.addEventListener('mouseout', () => {
-      popup.style.display = 'none';
-    });
-
-    element.addEventListener('touchstart', () => {
-      popup.style.display = 'flex';
-    });
-
-    element.addEventListener('touchend', () => {
+    element.addEventListener('mouseout', (e) => {
       popup.style.display = 'none';
     });
   });
