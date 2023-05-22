@@ -43,6 +43,35 @@ html
 img
   object-fit: contain
 
+.card-box-popup 
+  position: absolute
+  display: none
+  width: 14.4rem
+  height: 4.4rem
+  justify-content: center
+  align-items: center
+  background-color: $pf-green
+  border-radius: 0.1rem
+  font-size: 2rem
+  line-height: 4.8rem
+  color: white
+  top: 0.2rem
+  left: 3.7rem
+  &::after 
+    content: ''
+    background: $pf-green
+    border-radius: 0.1rem
+    width: 2rem
+    height: 2rem
+    transform: rotate(-45deg)
+    position: absolute
+    top: 100%
+    left: 50%
+    margin-top: -1rem
+    margin-left: -5.4rem
+
+
+
 .menu
   padding-top: 3.8rem
   padding-bottom: 23.8rem
@@ -641,7 +670,7 @@ img
       margin-top: -0.7rem 
       &-wrapper
         right: 19.5rem
-      height: 15rem
+        height: 15rem
     .item
       width: 17.6rem
       &__title

@@ -54,3 +54,29 @@ searchInput.addEventListener('input', function () {
     placeholder.style.opacity = 1;
   }
 });
+
+//:hover popup
+document.addEventListener('DOMContentLoaded', function() {
+  const target = document.querySelectorAll('.card__icon-wrapper');
+  
+  target.forEach((element) => {
+    const popupParent = element.parentNode;
+    const popup = popupParent.querySelector('.card-box-popup');
+    
+    element.addEventListener('mouseover', () => {
+      popup.style.display = 'flex';
+    });
+
+    element.addEventListener('mouseout', () => {
+      popup.style.display = 'none';
+    });
+
+    element.addEventListener('touchstart', () => {
+      popup.style.display = 'flex';
+    });
+
+    element.addEventListener('touchend', () => {
+      popup.style.display = 'none';
+    });
+  });
+});

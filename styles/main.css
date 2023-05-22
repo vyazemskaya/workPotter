@@ -64,6 +64,7 @@ textarea {
   background-color: transparent;
   border: none;
   color: inherit;
+  position: relative
 }
 a {
   color: unset;
@@ -150,12 +151,17 @@ input[type='number'] {
   }
 }
 
+.mobile-block {
+  display: none;
+}
+
 .header {
   position: relative;
   z-index: 50;
   padding: 2rem 0;
   background-color: transparent;
   color: #434248;
+  width: 100%;
 }
 
 .header--active {
@@ -214,13 +220,14 @@ input[type='number'] {
   width: 2.8rem;
   height: 2.8rem;
 }
-.header__basket svg {
-  width: inherit;
-  height: inherit;
+
+.header__basket-icon--active{
+  fill: white;
 }
+
 @media (max-width: 48em) {
   .header {
-    width: 68.6rem;
+    width: 100%;
     position: absolute;
     padding: 2.7rem 0;
     z-index: 100;
@@ -367,6 +374,15 @@ input[type='number'] {
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
 }
+
+.hero__title{
+  z-index: 98;
+}
+
+.hero__title--active{
+  color: white
+}
+
 .hero__banner {
   position: relative;
   overflow: hidden;
@@ -891,6 +907,48 @@ input[type='number'] {
   display: flex;
   align-items: center;
 }
+
+.popular__card-box-rating{
+  position: relative;
+}
+
+.popular__card-rating-icon{
+  width: 4rem;
+}
+
+.popular__card-rating-ques{
+  position: relative;
+  top: -0.5rem;
+}
+
+.popular__card-box-popup{
+  position: absolute;
+  display: none;
+  width: 14.4rem;
+  height: 4.4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #7FAC37;
+  border-radius: 0.1rem;
+  font-size: 2rem;
+  line-height: 4.8rem;
+  color: white;
+  top: -4rem;
+  left: 1rem;
+}
+
+.popular__card-box-popup::after{
+  content: '';
+  background: #7FAC37;
+  border-radius: 0.1rem;
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 2rem;
+  left: -9rem;
+}
+
 .popular__card-box-more,
 .popular__card-box-rating,
 .popular__card-box-weight {
@@ -1534,6 +1592,11 @@ input[type='number'] {
 .back-call__form-item:not(:last-child) {
   margin-bottom: 2.9rem;
 }
+
+.back-call__form-item{
+  position: relative
+}
+
 .back-call__form-label {
   cursor: pointer;
   display: block;
@@ -1591,6 +1654,62 @@ input[type='number'] {
 
 .mobile-swiper {
   display: none;
+}
+
+.popular__cart-button {
+  width: 16.6rem;
+  height: 4.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  border: 0.1rem solid white;
+  color: white
+}
+
+.popular__card:hover .popular__cart-button {
+  border: 0.1rem solid #434248;
+  background-color: #434248;
+}
+
+.popular__cart-button-icon{
+  width: 2.4rem;
+  margin-right: 1.5rem
+}
+
+.reviews__slider,
+.formats__slider,
+.popular__slider-box{
+  cursor: url('../../img/main/pagination-icon.svg'), auto;
+}
+
+.back-call__form-item--error{
+  border-color: red;
+}
+
+.back-call__form-error{
+  position: absolute;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  text-align: right;
+  right: 0;
+  bottom: -2rem;
+  color: #F63737;
+}
+
+.form__error-icon {
+  position: absolute;
+  bottom: 1.247rem;
+  right: 0;
+  width: 1.6rem;
+  top: 5rem;
+  display: none;
+}
+.form__error-icon--show {
+  display: block;
 }
 
 @media (max-width: 48em) {
@@ -2264,4 +2383,46 @@ input[type='number'] {
   .hero__box-outer {
     top: 9rem;
   }
+
+  .back-call__form-error{
+    position: absolute;
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    text-align: right;
+    right: 0;
+    bottom: -0.5rem;
+    color: #F63737;
+  }
+
+  .form__error-icon {
+    width: 1.6rem;
+    top: 6.6rem;
+  }
+
+  .form__error-icon--show {
+    display: block;
+  }
+
+  .header__basket-icon {
+    margin-top: -0.5rem;
+    margin-left: -2.1rem;
+  }
+
+  .header__basket {
+    transform: scale(0.95);
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .header__nav-open {
+    margin-top: 0.5rem;
+    margin-right: 0.2rem;
+  }
+  .header__nav-open--active{
+    filter: brightness(0%) saturate(0%) invert(100%);
+  }
+  
 }

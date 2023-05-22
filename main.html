@@ -43,7 +43,7 @@
           </button>
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link" href="services.html">Услуги</a>
+              <a class="header__nav-link" href="menu.html">Меню</a>
             </li>
             <li class="header__nav-item">
               <a class="header__nav-link" href="portfolio.html">Портфолио</a>
@@ -69,7 +69,7 @@
             aria-label="Номер телефона"
             >+7 (499) 136 29 23</a
           ><a class="header__basket" href="cart.html" aria-label="Корзина"
-            ><svg
+            ><svg class="header__basket-icon header__basket-icon--active"
               width="28"
               height="28"
               viewBox="0 0 28 28"
@@ -96,7 +96,7 @@
                 d="M17.3717 26.5419H10.3367C6.16004 26.5419 5.22671 24.0569 4.86504 21.8985L3.22004 11.8069C3.13837 11.3285 3.46504 10.8852 3.94337 10.8035C4.41004 10.7219 4.86504 11.0485 4.94671 11.5269L6.59171 21.6069C6.93004 23.6719 7.63004 24.7919 10.3367 24.7919H17.3717C20.37 24.7919 20.7084 23.7419 21.0934 21.7119L23.0534 11.5035C23.1467 11.0252 23.6017 10.7102 24.08 10.8152C24.5584 10.9085 24.8617 11.3635 24.7684 11.8419L22.8084 22.0502C22.3534 24.4185 21.595 26.5419 17.3717 26.5419Z"
                 fill="#434248"
               ></path></svg></a
-          ><button class="header__nav-open" id="menu-open">меню</button>
+          ><button class="header__nav-open" id="menu-open"><img src="./img/main/header-buttom.svg" alt="burger-buttom"></button>
         </div>
       </div>
       <script src="js/header.js"></script>
@@ -508,6 +508,7 @@
                           class="popular__add-icon"
                         />
                       </button>
+                      <div class="popular__card-box-popup">постное</div>
                     </div>
                     <div class="popular__card-box-title">
                       <picture class="popular__card-box-img"
@@ -586,6 +587,7 @@
                           class="popular__add-icon"
                         />
                       </button>
+                      <div class="popular__card-box-popup">постное</div>
                     </div>
                     <div class="popular__card-box-title">
                       <picture class="popular__card-box-img"
@@ -664,6 +666,7 @@
                           class="popular__add-icon"
                         />
                       </button>
+                      <div class="popular__card-box-popup">постное</div>
                     </div>
                     <div class="popular__card-box-title">
                       <picture class="popular__card-box-img"
@@ -742,6 +745,7 @@
                           class="popular__add-icon"
                         />
                       </button>
+                      <div class="popular__card-box-popup">постное</div>
                     </div>
                     <div class="popular__card-box-title">
                       <picture class="popular__card-box-img"
@@ -820,6 +824,7 @@
                           class="popular__add-icon"
                         />
                       </button>
+                      <div class="popular__card-box-popup">постное</div>
                     </div>
                     <div class="popular__card-box-title">
                       <picture class="popular__card-box-img"
@@ -898,6 +903,7 @@
                           class="popular__add-icon"
                         />
                       </button>
+                      <div class="popular__card-box-popup">постное</div>
                     </div>
                     <div class="popular__card-box-title">
                       <picture class="popular__card-box-img"
@@ -976,6 +982,7 @@
                           class="popular__add-icon"
                         />
                       </button>
+                      <div class="popular__card-box-popup">постное</div>
                     </div>
                     <div class="popular__card-box-title">
                       <picture class="popular__card-box-img"
@@ -1859,17 +1866,19 @@
                     name="name"
                     placeholder="Иван"
                   />
+                  <img src="./img/payment/payment-error-icon.svg" class="form__error-icon" alt="error-icon">
                   
                 </li>
                 <li class="back-call__form-item">
                   <label class="back-call__form-label" for="email">E-mail</label>
                   <input
                       class="back-call__form-input"
-                      type="email"
+                      type="text"
                       id="email"
                       name="email"
                       placeholder="example@mail.com"
                     />
+                    <img src="./img/payment/payment-error-icon.svg" class="form__error-icon" alt="error-icon">
                 </li>
                 <li class="back-call__form-item">
                   <label class="back-call__form-label" for="tel">Номер телефона</label>
@@ -1880,6 +1889,7 @@
                       name="tel"
                       placeholder="+7 (999)-99-99"
                     />
+                    <img src="./img/payment/payment-error-icon.svg" class="form__error-icon" alt="error-icon">
                 </li>
               </ul>
               <svg

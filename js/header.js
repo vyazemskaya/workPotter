@@ -3,8 +3,17 @@ const openMenu = document.getElementById('menu-open');
 const closeMenu = document.getElementById('menu-close');
 const links = document.querySelectorAll('.header__nav-link');
 
-openMenu.addEventListener('click', () => menu.classList.add('active'));
-closeMenu.addEventListener('click', () => menu.classList.remove('active'));
+openMenu.addEventListener('click', () => {
+  openMenu.style.opacity = '0';
+  openMenu.style.zIndex = '0';
+  menu.classList.add('active')
+});
+closeMenu.addEventListener('click', () => {
+  openMenu.style.opacity = '1';
+  openMenu.style.zIndex = '10';
+  menu.classList.remove('active');
+})
+
 links.forEach((el) =>
   el.addEventListener('click', () => menu.classList.remove('active'))
 );
