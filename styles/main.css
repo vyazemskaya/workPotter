@@ -54,6 +54,7 @@ body {
   padding: 0;
   color: var(--black);
   background-color: var(--white);
+  background: white;
 }
 input,
 textarea {
@@ -381,6 +382,10 @@ input[type='number'] {
 
 .hero__title--active{
   color: white
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .hero__banner {
@@ -1722,6 +1727,7 @@ input[type='number'] {
 
   main {
     overflow: hidden;
+    background-color: white;
   }
 
   .header__logo--footer {
@@ -1732,6 +1738,10 @@ input[type='number'] {
 
   .footer__box-top {
     padding: 0;
+  }
+
+  .footer__nav-list{
+    margin-top: 6rem
   }
 
   .footer__nav-title {
