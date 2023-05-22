@@ -24,7 +24,7 @@
     <header class="header">
       <div class="header__container container">
         <a class="header__logo" href="main.html" aria-label="Логотип"
-          ><img src="img/logo.png" alt="Potter Family"
+          ><img id="logo" src="./img/logo.png" alt="Potter Family"
         /></a>
         <nav class="header__nav" id="menu">
           <button class="header__nav-close" id="menu-close">
@@ -1140,7 +1140,6 @@
         </div>
       </section>
       <section class="reviews">
-        <a class="reviews__link" href="#">все отзывы</a>
         <p class="reviews__desc" data-content="ОТЗЫВЫ О НАС">ОТЗЫВЫ О НАС</p>
         <div class="reviews__slider swiper">
           <div class="swiper-wrapper">
@@ -1155,8 +1154,8 @@
                   незатратно провести время
                 </p>
                 <div class="reviews__card-box-rating">
-                  <a class="reviews__card-link" href="#">читать</a
-                  ><strong class="reviews__card-stars"
+                  <p class="reviews__card-date">01.02.23</p>
+                  <strong class="reviews__card-stars"
                     ><svg
                       class="active"
                       width="32"
@@ -1236,8 +1235,8 @@
                   незатратно провести время
                 </p>
                 <div class="reviews__card-box-rating">
-                  <a class="reviews__card-link" href="#">читать</a
-                  ><strong class="reviews__card-stars"
+                  <p class="reviews__card-date">01.02.23</p>
+                  <strong class="reviews__card-stars"
                     ><svg
                       class="active"
                       width="32"
@@ -1317,8 +1316,8 @@
                   незатратно провести время
                 </p>
                 <div class="reviews__card-box-rating">
-                  <a class="reviews__card-link" href="#">читать</a
-                  ><strong class="reviews__card-stars"
+                  <p class="reviews__card-date">01.02.23</p>
+                  <strong class="reviews__card-stars"
                     ><svg
                       class="active"
                       width="32"
@@ -1398,8 +1397,8 @@
                   незатратно провести время
                 </p>
                 <div class="reviews__card-box-rating">
-                  <a class="reviews__card-link" href="#">читать</a
-                  ><strong class="reviews__card-stars"
+                  <p class="reviews__card-date">01.02.23</p>
+                  <strong class="reviews__card-stars"
                     ><svg
                       class="active"
                       width="32"
@@ -1479,8 +1478,8 @@
                   незатратно провести время
                 </p>
                 <div class="reviews__card-box-rating">
-                  <a class="reviews__card-link" href="#">читать</a
-                  ><strong class="reviews__card-stars"
+                  <p class="reviews__card-date">01.02.23</p>
+                  <strong class="reviews__card-stars"
                     ><svg
                       class="active"
                       width="32"
@@ -1562,10 +1561,10 @@
             предпочтение, попробуй идею на вкус!
           </p>
         </div>
-        <div class="choice__slider swiper">
+        <div class="choice__slider swiper-container">
           <div class="swiper-wrapper">
             <div
-              class="choice__card swiper-slide choice__card-1"
+              class="choice__card choice__card-1"
               style="background-color: #c0eed6"
             >
               <h3 class="choice__card-title">Качественное обслуживание</h3>
@@ -1574,7 +1573,7 @@
               </p>
             </div>
             <div
-              class="choice__card swiper-slide choice__card-2"
+              class="choice__card choice__card-2"
               style="background-color: #fff3e6"
             >
               <h3 class="choice__card-title">МЕРОПРИЯТИЕ ПОД КЛЮЧ</h3>
@@ -1584,7 +1583,7 @@
               </p>
             </div>
             <div
-              class="choice__card swiper-slide choice__card-3"
+              class="choice__card choice__card-3"
               style="background-color: #ffe5e3"
             >
               <h3 class="choice__card-title">БОЛЬШОЙ ВЫБОР БЛЮД</h3>
@@ -1593,7 +1592,7 @@
               </p>
             </div>
             <div
-              class="choice__card swiper-slide choice__card-4"
+              class="choice__card choice__card-4"
               style="background-color: #d3d1dc"
             >
               <h3 class="choice__card-title">САМЫЕ ПРИЯТНЫЕ ЦЕНЫ</h3>
@@ -1852,37 +1851,35 @@
               </svg>
               <ul class="back-call__form-list">
                 <li class="back-call__form-item">
-                  <label class="back-call__form-label" for="name"
-                    ><input
-                      class="back-call__form-input"
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Ваше имя"
-                    /><span>Ваше имя</span></label
-                  >
+                  <label class="back-call__form-label" for="name">Ваше имя</label>
+                  <input
+                    class="back-call__form-input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Иван"
+                  />
+                  
                 </li>
                 <li class="back-call__form-item">
-                  <label class="back-call__form-label" for="email"
-                    ><input
+                  <label class="back-call__form-label" for="email">E-mail</label>
+                  <input
                       class="back-call__form-input"
                       type="email"
                       id="email"
                       name="email"
-                      placeholder="E-mail"
-                    /><span>E-mail</span></label
-                  >
+                      placeholder="example@mail.com"
+                    />
                 </li>
                 <li class="back-call__form-item">
-                  <label class="back-call__form-label" for="tel"
-                    ><input
+                  <label class="back-call__form-label" for="tel">Номер телефона</label>
+                    <input
                       class="back-call__form-input"
                       type="tel"
                       id="tel"
                       name="tel"
-                      placeholder="Номер телефона"
-                    /><span>Номер телефона</span></label
-                  >
+                      placeholder="+7 (999)-99-99"
+                    />
                 </li>
               </ul>
               <svg
@@ -2065,8 +2062,7 @@
               <div class="back-call__form-box">
                 <button class="back-call__form-btn">отправить</button>
                 <p class="back-call__form-btn-desc">
-                  Нажимая на кнопку “отправить” Вы соглашаетесь на обработку
-                  персональных данных
+                  Нажимая на кнопку “отправить”, Вы даете согласие на обработку персональных данных
                 </p>
               </div>
               <svg
