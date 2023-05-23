@@ -193,6 +193,8 @@ img
   .filter
     padding-bottom: 1.5rem
     border: 0.2rem solid $pf-black-secondary
+    &__button-bar
+      display: none
     &__title
       font-family: 'Gotham'
       font-style: normal
@@ -628,6 +630,9 @@ img
     100% 
       transform: translateX(-100%)
 
+.filter__head
+  display: none  
+
 @media (max-width: 48em)
   html
     font-size: 5px
@@ -707,8 +712,7 @@ img
       width: 68.6rem
       display: flex
       flex-direction: row
-    .filter
-      display: none
+      flex-wrap: wrap
     .search
       margin-right: 1.6rem
       margin-bottom: 6rem
@@ -859,3 +863,79 @@ img
       color: white
       top: 2.2rem
       left: 7.7rem
+
+
+    .filter
+      position: static
+      width: 75rem
+      margin-bottom: 3rem
+      position: relative
+      top: -17rem
+      height: 0
+      overflow: hidden
+      border: 0
+      background-color: white
+      z-index: 0
+      touch-events: none
+      transition: height 0.7s ease
+      &--active
+        z-index: 100
+        touch-events: auto
+        height: 104.5rem
+      &__button-bar
+        margin-top: 5rem
+        margin-bottom: 5rem
+        display: flex
+        justify-content: space-between
+        width: 61.6rem
+        margin-left: 3.2rem
+        margin-right: 3.2rem
+        &-accept
+          width: 29.8rem
+        &-close
+          width: 29.8rem
+          background-color: white
+          color: $pf-black
+          border: 0.2rem solid $pf-black-secondary
+          border-color: $pf-black-secondary
+      &__head
+        display: flex
+        justify-content: space-between
+        margin-top: 3.6rem
+        margin-left: 3.2rem
+        margin-right: 3.2rem
+        padding-bottom: 3rem
+        border-bottom: 0.2rem solid #7A7883
+        &-title
+          font-family: 'Montserrat'
+          font-style: normal
+          font-weight: 500
+          font-size: 3.2rem
+          line-height: 4rem
+        &-button
+          width: 2.66rem
+      &__item
+        width: 50%
+        height: 3rem
+        margin-bottom: 3rem
+      &__title
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        width: 100%
+        margin-bottom: 4.2rem
+      &__checker
+        width: 4.8rem
+        height: 4.8rem
+        &-icon
+          width: 3rem
+      &__item-title
+        width: 24.6rem
+        line-height: 3rem
+        font-size: 2.8rem
+      &__list:first-child
+        height: 20.4rem
+        margin-bottom: 6rem
+      &__list
+        display: flex
+        flex-wrap: wrap

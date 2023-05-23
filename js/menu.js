@@ -1,39 +1,4 @@
 //date-slider
-// let swiper
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-
-//   swiper = new Swiper('.swiper-container', {
-//     slidesPerView: 9,
-//     loop: false,
-//     spaceBetween: 3 * fontSize,
-//     slidesOffsetAfter: 26.5 * fontSize,
-//     effect: 'slide',
-//     speed: 550,
-//     nested: true, 
-//     freeMode: true, 
-//     freeModeMomentum: true, 
-//     freeModeMomentumRatio: 0.5, 
-//     freeModeMomentumBounce: true,
-//     freeModeMomentumBounceRatio: 0.3, 
-//   });
-// });
-
-// window.addEventListener('resize', function() {
-//   const windowWidth = window.innerWidth;
-
-//   if (windowWidth < 768) {
-//     swiper.params.slidesPerView = 3.7;
-//     swiper.params.spaceBetween = 1 * fontSize;
-//   } else {
-//     swiper.params.slidesPerView = 9;
-//     swiper.params.spaceBetween = 3 * fontSize;
-//   }
-
-//   swiper.update();
-// });
-
 let swiper;
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -101,3 +66,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+//filter popup
+const openBtn = document.querySelector('.menu__filter-button');
+const exitBtn = document.querySelector('.filter__button-bar-close');
+const closeBtn = document.querySelector('.filter__head-button');
+const acceptBtn = document.querySelector('.filter__button-bar-accept');
+const filter = document.querySelector('.filter');
+
+openBtn.addEventListener('click', ()=>{
+  filter.classList.add('filter--active');
+})
+
+closeBtn.addEventListener('click', ()=>{
+  filter.classList.remove('filter--active');
+})
+
+acceptBtn.addEventListener('click', ()=>{
+  filter.classList.remove('filter--active');
+})
+
+closeBtn.addEventListener('click', ()=>{
+  filter.classList.remove('filter--active');
+})

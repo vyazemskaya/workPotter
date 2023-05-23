@@ -215,6 +215,9 @@ img {
   padding-bottom: 1.5rem;
   border: 0.2rem solid rgba(67, 66, 72, 0.5);
 }
+.menu .filter__button-bar {
+  display: none;
+}
 .menu .filter__title {
   font-family: "Gotham";
   font-style: normal;
@@ -721,6 +724,10 @@ img {
     }
   }
 }
+.filter__head {
+  display: none;
+}
+
 @media (max-width: 48em) {
   html {
     font-size: 5px;
@@ -814,9 +821,7 @@ img {
     width: 68.6rem;
     display: flex;
     flex-direction: row;
-  }
-  .menu .filter {
-    display: none;
+    flex-wrap: wrap;
   }
   .menu .search {
     margin-right: 1.6rem;
@@ -1001,5 +1006,94 @@ img {
     color: white;
     top: 2.2rem;
     left: 7.7rem;
+  }
+  .menu .filter {
+    position: static;
+    width: 75rem;
+    margin-bottom: 3rem;
+    position: relative;
+    top: -17rem;
+    height: 0;
+    overflow: hidden;
+    border: 0;
+    background-color: white;
+    z-index: 0;
+    touch-events: none;
+    transition: height 0.7s ease;
+  }
+  .menu .filter--active {
+    z-index: 100;
+    touch-events: auto;
+    height: 104.5rem;
+  }
+  .menu .filter__button-bar {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 61.6rem;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+  }
+  .menu .filter__button-bar-accept {
+    width: 29.8rem;
+  }
+  .menu .filter__button-bar-close {
+    width: 29.8rem;
+    background-color: white;
+    color: #434248;
+    border: 0.2rem solid rgba(67, 66, 72, 0.5);
+    border-color: rgba(67, 66, 72, 0.5);
+  }
+  .menu .filter__head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.6rem;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.2rem solid #7A7883;
+  }
+  .menu .filter__head-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .menu .filter__head-button {
+    width: 2.66rem;
+  }
+  .menu .filter__item {
+    width: 50%;
+    height: 3rem;
+    margin-bottom: 3rem;
+  }
+  .menu .filter__title {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    width: 100%;
+    margin-bottom: 4.2rem;
+  }
+  .menu .filter__checker {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .menu .filter__checker-icon {
+    width: 3rem;
+  }
+  .menu .filter__item-title {
+    width: 24.6rem;
+    line-height: 3rem;
+    font-size: 2.8rem;
+  }
+  .menu .filter__list:first-child {
+    height: 20.4rem;
+    margin-bottom: 6rem;
+  }
+  .menu .filter__list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=menu.css.map */
