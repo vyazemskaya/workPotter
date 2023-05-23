@@ -941,6 +941,7 @@ input[type='number'] {
   color: white;
   top: -4rem;
   left: 1rem;
+  padding-left: 1.9rem;
 }
 
 .popular__card-box-popup::after{

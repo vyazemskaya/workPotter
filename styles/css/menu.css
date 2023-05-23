@@ -96,6 +96,7 @@ img {
   background-color: transparent;
 }
 .menu__paggination-icon {
+  cursor: pointer;
   width: 5rem !important;
   margin-left: 4rem;
   margin-top: 2rem;
