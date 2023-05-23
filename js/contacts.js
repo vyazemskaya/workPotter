@@ -17,7 +17,7 @@ const init = () => {
     {},
     {
       iconLayout: 'default#image',
-      iconImageHref: '../img/contacts/geo-icon.svg', 
+      iconImageHref: './img/contacts/geo-icon.svg', 
       iconImageSize: size,
       iconImageOffset: [-16, -32]
     }

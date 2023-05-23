@@ -23,8 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
       320: {
         slidesPerView: 3.7,
         spaceBetween: 10,
-
       }
+    },
+    navigation: {
+      nextEl: '.menu__paggination-icon',
     },
   });
 });

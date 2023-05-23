@@ -74,15 +74,16 @@ img
   &__list-wrapper
     border-top: 0.05rem solid $pf-black
     border-bottom: 0.05rem solid $pf-black
+    &::after
+      border-top: 0.05rem solid $pf-black
+      border-bottom: 0.05rem solid $pf-black
   &__list
     width: 156.4rem
-    height: 109.8rem
+    height: 109.6rem
     margin: 0 auto
     display: flex
     overflow: scroll
-    background-color: $pf-black
     border-left: 0.05rem solid $pf-black
-    border-right: 0.05rem solid $pf-black
     scrollbar-width: thin
     scrollbar-color: transparent transparent
     &::-webkit-scrollbar
@@ -95,13 +96,14 @@ img
   &__list-line
     display: flex
     flex-wrap: wrap
-    gap: 0.1rem
   .item
     width: 52rem
     display: flex
     flex-direction: column
     position: relative
     background: white
+    border-bottom: 0.1rem solid black
+    border-right: 0.1rem solid black
     &__info
       margin-left: 3rem
       margin-top: 3rem

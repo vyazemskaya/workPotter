@@ -132,6 +132,7 @@ img {
   position: absolute;
   top: 18rem;
   left: 17rem;
+  z-index: 10;
 }
 .menu .item--current .item__title {
   font-size: 2rem;
@@ -775,6 +776,7 @@ img {
     width: 8rem !important;
     margin-left: 4.5rem;
     margin-top: 2.5rem;
+    cursor: pointer;
   }
   .menu__paggination-icon-wrapper {
     right: 19.5rem;
