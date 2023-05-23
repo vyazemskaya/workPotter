@@ -964,8 +964,8 @@ input[type='number'] {
   max-width: 40rem;
   margin-bottom: 4.5rem;
   padding: 3rem 2.5rem;
-  background-color: var(--yellow-light);
-  box-shadow: 7px 7px 12px rgba(87, 87, 87, 0.08);
+  background-color: #FFF3E5;
+  box-shadow: 0.7rem 0.7rem 1.2rem rgba(87, 87, 87, 0.08);
 }
 .popular__card-box-rating {
   padding-right: 1.1rem;
@@ -1685,7 +1685,7 @@ input[type='number'] {
 .reviews__slider,
 .formats__slider,
 .popular__slider-box{
-  cursor: url('../../img/main/pagination-icon.svg'), auto;
+  cursor: url('./img/main/pagination-icon.svg'), auto;
 }
 
 .back-call__form-item--error{
