@@ -1,7 +1,7 @@
 @font-face {
   font-family: Gotham;
-  src: url(../../fonts/Gotham-book.woff2) format('woff2'),
-    url(../../fonts/Gotham-book.woff) format('woff');
+  src: url(../fonts/Gotham-book.woff2) format('woff2'),
+    url(../fonts/Gotham-book.woff) format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -221,6 +221,7 @@ input[type='number'] {
   width: 2.8rem;
   height: 2.8rem;
 }
+
 
 .header__basket-icon--active{
   fill: white;
@@ -880,7 +881,7 @@ input[type='number'] {
 }
 .popular__card:active,
 .popular__card:hover {
-  background-color: var(--yellow-light);
+  background-color: #F8F8F8;
 }
 .popular__card:active .popular__text-animate,
 .popular__card:hover .popular__text-animate {
@@ -940,6 +941,7 @@ input[type='number'] {
   color: white;
   top: -4rem;
   left: 1rem;
+  padding-left: 1.9rem;
 }
 
 .popular__card-box-popup::after{
@@ -964,8 +966,8 @@ input[type='number'] {
   max-width: 40rem;
   margin-bottom: 4.5rem;
   padding: 3rem 2.5rem;
-  background-color: var(--yellow-light);
-  box-shadow: 7px 7px 12px rgba(87, 87, 87, 0.08);
+  background-color: #FFF3E5;
+  box-shadow: 0.7rem 0.7rem 1.2rem rgba(87, 87, 87, 0.08);
 }
 .popular__card-box-rating {
   padding-right: 1.1rem;
@@ -1416,9 +1418,9 @@ input[type='number'] {
   justify-content: space-between;
   width: 100%;
   max-width: 32.8rem;
-  max-height: 20.8rem;
+  height: 20.8rem;
   padding: 2rem 3rem;
-  box-shadow: 15px 15px 50px rgba(87, 87, 87, 0.08);
+  box-shadow: 1.5rem 1.5rem 5rem rgba(87, 87, 87, 0.08);
   transition-property: opacity, transform;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
@@ -1677,6 +1679,11 @@ input[type='number'] {
   background-color: #434248;
 }
 
+.popular__card:hover .popular__card-box-compound {
+  background-color: #E1F2C5;
+  border-color: #E1F2C5;
+}
+
 .popular__cart-button-icon{
   width: 2.4rem;
   margin-right: 1.5rem
@@ -1685,7 +1692,7 @@ input[type='number'] {
 .reviews__slider,
 .formats__slider,
 .popular__slider-box{
-  cursor: url('../../img/main/pagination-icon.svg'), auto;
+  cursor: url('../img/main/pagination-icon.svg'), auto;
 }
 
 .back-call__form-item--error{
@@ -1715,6 +1722,11 @@ input[type='number'] {
 }
 .form__error-icon--show {
   display: block;
+}
+
+.header__basket-icon{
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
 @media (max-width: 48em) {
@@ -1947,6 +1959,7 @@ input[type='number'] {
     max-width: 100%;
     padding: 3.3rem 2.8rem;
     margin-bottom: 3rem;
+    box-shadow: 1.4rem 1.4rem 2.4rem rgba(87, 87, 87, 0.08);
   }
 
   .popular__card-rating {
@@ -2236,6 +2249,7 @@ input[type='number'] {
 
   .choice__card {
     position: static;
+    box-shadow: 0;
   }
 
   .choice__slider {
@@ -2415,10 +2429,15 @@ input[type='number'] {
   .form__error-icon--show {
     display: block;
   }
-
+ 
   .header__basket-icon {
-    margin-top: -0.5rem;
-    margin-left: -2.1rem;
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .header__nav-open{
+    width: 4rem;
+    height: 4rem;
   }
 
   .header__basket {

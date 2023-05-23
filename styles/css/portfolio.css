@@ -77,15 +77,17 @@ img {
   border-top: 0.05rem solid #434248;
   border-bottom: 0.05rem solid #434248;
 }
+.portfolio__list-wrapper::after {
+  border-top: 0.05rem solid #434248;
+  border-bottom: 0.05rem solid #434248;
+}
 .portfolio__list {
   width: 156.4rem;
-  height: 109.8rem;
+  height: 109.6rem;
   margin: 0 auto;
   display: flex;
   overflow: scroll;
-  background-color: #434248;
   border-left: 0.05rem solid #434248;
-  border-right: 0.05rem solid #434248;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
@@ -102,7 +104,6 @@ img {
 .portfolio__list-line {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.1rem;
 }
 .portfolio .item {
   width: 52rem;
@@ -110,6 +111,8 @@ img {
   flex-direction: column;
   position: relative;
   background: white;
+  border-bottom: 0.1rem solid black;
+  border-right: 0.1rem solid black;
 }
 .portfolio .item__info {
   margin-left: 3rem;

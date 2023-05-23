@@ -16,15 +16,17 @@ document.addEventListener('DOMContentLoaded', function () {
     freeModeMomentumBounce: true,
     freeModeMomentumBounceRatio: 0.3,
     breakpoints: {
-      768: {
+      769: {
         slidesPerView: 9.5,
         spaceBetween: 10,
       },
       320: {
         slidesPerView: 3.7,
         spaceBetween: 10,
-
       }
+    },
+    navigation: {
+      nextEl: '.menu__paggination-icon',
     },
   });
 });

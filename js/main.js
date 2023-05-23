@@ -250,7 +250,7 @@ const validation = (form) => {
     error.classList.add('back-call__form-error');
 
     if (value === '') {
-      setError(parent, error, errorIcon, 'Обязательное поле',errorInput);
+      setError(parent, error, errorIcon, 'Поле должно быть заполнено',errorInput);
       result = false;
     } else if (input.id === 'email') {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
