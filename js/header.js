@@ -3,10 +3,26 @@ const openMenu = document.getElementById('menu-open');
 const closeMenu = document.getElementById('menu-close');
 const links = document.querySelectorAll('.header__nav-link');
 
-openMenu.addEventListener('click', () => menu.classList.add('active'));
-closeMenu.addEventListener('click', () => menu.classList.remove('active'));
+openMenu.addEventListener('click', () => {
+  openMenu.style.opacity = '0';
+  openMenu.style.pointerEvents = 'none';
+  menu.classList.add('active');
+  document.body.classList.add('no-scroll');
+});
+
+closeMenu.addEventListener('click', () => {
+  openMenu.style.opacity = '1';
+  openMenu.style.pointerEvents = 'auto';
+  menu.classList.remove('active');
+  document.body.classList.remove('no-scroll');
+});
+
 links.forEach((el) =>
-  el.addEventListener('click', () => menu.classList.remove('active'))
+  el.addEventListener('click', () => {
+    openMenu.style.opacity = '1';
+    openMenu.style.pointerEvents = 'auto';
+    menu.classList.remove('active')
+  })
 );
 document.body.addEventListener('click', (e) => {
   if (

@@ -43,6 +43,35 @@ html
 img
   object-fit: contain
 
+.card-box-popup 
+  position: absolute
+  display: none
+  width: 14.4rem
+  height: 4.4rem
+  justify-content: center
+  align-items: center
+  background-color: $pf-green
+  border-radius: 0.1rem
+  font-size: 2rem
+  line-height: 4.8rem
+  color: white
+  top: 0.2rem
+  left: 3.7rem
+  &::after 
+    content: ''
+    background: $pf-green
+    border-radius: 0.1rem
+    width: 2rem
+    height: 2rem
+    transform: rotate(-45deg)
+    position: absolute
+    top: 100%
+    left: 50%
+    margin-top: -1rem
+    margin-left: -5.4rem
+
+
+
 .menu
   padding-top: 3.8rem
   padding-bottom: 23.8rem
@@ -164,6 +193,8 @@ img
   .filter
     padding-bottom: 1.5rem
     border: 0.2rem solid $pf-black-secondary
+    &__button-bar
+      display: none
     &__title
       font-family: 'Gotham'
       font-style: normal
@@ -599,6 +630,9 @@ img
     100% 
       transform: translateX(-100%)
 
+.filter__head
+  display: none  
+
 @media (max-width: 48em)
   html
     font-size: 5px
@@ -614,7 +648,7 @@ img
 
   .menu
     width: 68.6rem
-    padding-top: 3rem
+    padding-top: 3+19.3rem
     padding-bottom: 24rem
     &__content
       flex-direction: column
@@ -630,6 +664,7 @@ img
       line-height: 5.8rem
       position: absolute
       top: 44.2rem
+      width: auto
     &__filter-button
       display: flex
       width: 6.4rem
@@ -638,10 +673,10 @@ img
     &__paggination-icon
       width: 8rem !important
       margin-left: 4.5rem
-      margin-top: -0.7rem 
+      margin-top: 2.5rem
       &-wrapper
         right: 19.5rem
-      height: 15rem
+        height: 15rem
     .item
       width: 17.6rem
       &__title
@@ -677,8 +712,7 @@ img
       width: 68.6rem
       display: flex
       flex-direction: row
-    .filter
-      display: none
+      flex-wrap: wrap
     .search
       margin-right: 1.6rem
       margin-bottom: 6rem
@@ -814,3 +848,94 @@ img
         line-height: 3rem
     .order
       display: none
+
+    .card-box-popup 
+      position: absolute
+      display: none
+      width: 18.4rem
+      height: 5.4rem
+      justify-content: center
+      align-items: center
+      background-color: #7FAC37
+      border-radius: 0.1rem
+      font-size: 3rem
+      line-height: 4.8rem
+      color: white
+      top: 2.2rem
+      left: 7.7rem
+
+
+    .filter
+      position: static
+      width: 75rem
+      margin-bottom: 3rem
+      position: relative
+      top: -17rem
+      height: 0
+      overflow: hidden
+      border: 0
+      background-color: white
+      z-index: 0
+      touch-events: none
+      transition: height 0.7s ease
+      &--active
+        z-index: 100
+        touch-events: auto
+        height: 104.5rem
+      &__button-bar
+        margin-top: 5rem
+        margin-bottom: 5rem
+        display: flex
+        justify-content: space-between
+        width: 61.6rem
+        margin-left: 3.2rem
+        margin-right: 3.2rem
+        &-accept
+          width: 29.8rem
+        &-close
+          width: 29.8rem
+          background-color: white
+          color: $pf-black
+          border: 0.2rem solid $pf-black-secondary
+          border-color: $pf-black-secondary
+      &__head
+        display: flex
+        justify-content: space-between
+        margin-top: 3.6rem
+        margin-left: 3.2rem
+        margin-right: 3.2rem
+        padding-bottom: 3rem
+        border-bottom: 0.2rem solid #7A7883
+        &-title
+          font-family: 'Montserrat'
+          font-style: normal
+          font-weight: 500
+          font-size: 3.2rem
+          line-height: 4rem
+        &-button
+          width: 2.66rem
+      &__item
+        width: 50%
+        height: 3rem
+        margin-bottom: 3rem
+      &__title
+        font-weight: 400
+        font-size: 2.8rem
+        line-height: 3rem
+        width: 100%
+        margin-bottom: 4.2rem
+      &__checker
+        width: 4.8rem
+        height: 4.8rem
+        &-icon
+          width: 3rem
+      &__item-title
+        width: 24.6rem
+        line-height: 3rem
+        font-size: 2.8rem
+      &__list:first-child
+        height: 20.4rem
+        margin-bottom: 6rem
+      &__list
+        display: flex
+        flex-wrap: wrap

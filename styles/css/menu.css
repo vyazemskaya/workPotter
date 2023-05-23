@@ -41,6 +41,35 @@ img {
   object-fit: contain;
 }
 
+.card-box-popup {
+  position: absolute;
+  display: none;
+  width: 14.4rem;
+  height: 4.4rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #7FAC37;
+  border-radius: 0.1rem;
+  font-size: 2rem;
+  line-height: 4.8rem;
+  color: white;
+  top: 0.2rem;
+  left: 3.7rem;
+}
+.card-box-popup::after {
+  content: "";
+  background: #7FAC37;
+  border-radius: 0.1rem;
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: -1rem;
+  margin-left: -5.4rem;
+}
+
 .menu {
   padding-top: 3.8rem;
   padding-bottom: 23.8rem;
@@ -185,6 +214,9 @@ img {
 .menu .filter {
   padding-bottom: 1.5rem;
   border: 0.2rem solid rgba(67, 66, 72, 0.5);
+}
+.menu .filter__button-bar {
+  display: none;
 }
 .menu .filter__title {
   font-family: "Gotham";
@@ -692,6 +724,10 @@ img {
     }
   }
 }
+.filter__head {
+  display: none;
+}
+
 @media (max-width: 48em) {
   html {
     font-size: 5px;
@@ -708,7 +744,7 @@ img {
   }
   .menu {
     width: 68.6rem;
-    padding-top: 3rem;
+    padding-top: 22.3rem;
     padding-bottom: 24rem;
   }
   .menu__content {
@@ -727,6 +763,7 @@ img {
     line-height: 5.8rem;
     position: absolute;
     top: 44.2rem;
+    width: auto;
   }
   .menu__filter-button {
     display: flex;
@@ -737,11 +774,11 @@ img {
   .menu__paggination-icon {
     width: 8rem !important;
     margin-left: 4.5rem;
-    margin-top: -0.7rem;
-    height: 15rem;
+    margin-top: 2.5rem;
   }
   .menu__paggination-icon-wrapper {
     right: 19.5rem;
+    height: 15rem;
   }
   .menu .item {
     width: 17.6rem;
@@ -784,9 +821,7 @@ img {
     width: 68.6rem;
     display: flex;
     flex-direction: row;
-  }
-  .menu .filter {
-    display: none;
+    flex-wrap: wrap;
   }
   .menu .search {
     margin-right: 1.6rem;
@@ -956,5 +991,109 @@ img {
   }
   .menu .order {
     display: none;
+  }
+  .menu .card-box-popup {
+    position: absolute;
+    display: none;
+    width: 18.4rem;
+    height: 5.4rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #7FAC37;
+    border-radius: 0.1rem;
+    font-size: 3rem;
+    line-height: 4.8rem;
+    color: white;
+    top: 2.2rem;
+    left: 7.7rem;
+  }
+  .menu .filter {
+    position: static;
+    width: 75rem;
+    margin-bottom: 3rem;
+    position: relative;
+    top: -17rem;
+    height: 0;
+    overflow: hidden;
+    border: 0;
+    background-color: white;
+    z-index: 0;
+    touch-events: none;
+    transition: height 0.7s ease;
+  }
+  .menu .filter--active {
+    z-index: 100;
+    touch-events: auto;
+    height: 104.5rem;
+  }
+  .menu .filter__button-bar {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 61.6rem;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+  }
+  .menu .filter__button-bar-accept {
+    width: 29.8rem;
+  }
+  .menu .filter__button-bar-close {
+    width: 29.8rem;
+    background-color: white;
+    color: #434248;
+    border: 0.2rem solid rgba(67, 66, 72, 0.5);
+    border-color: rgba(67, 66, 72, 0.5);
+  }
+  .menu .filter__head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.6rem;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.2rem solid #7A7883;
+  }
+  .menu .filter__head-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .menu .filter__head-button {
+    width: 2.66rem;
+  }
+  .menu .filter__item {
+    width: 50%;
+    height: 3rem;
+    margin-bottom: 3rem;
+  }
+  .menu .filter__title {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    width: 100%;
+    margin-bottom: 4.2rem;
+  }
+  .menu .filter__checker {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .menu .filter__checker-icon {
+    width: 3rem;
+  }
+  .menu .filter__item-title {
+    width: 24.6rem;
+    line-height: 3rem;
+    font-size: 2.8rem;
+  }
+  .menu .filter__list:first-child {
+    height: 20.4rem;
+    margin-bottom: 6rem;
+  }
+  .menu .filter__list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=menu.css.map */

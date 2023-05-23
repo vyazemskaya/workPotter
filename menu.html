@@ -17,7 +17,7 @@
     <header class="header">
       <div class="header__container container">
         <a class="header__logo" href="main.html" aria-label="Логотип"
-          ><img src="img/logo.png" alt="Potter Family"
+          ><img id="logo" src="./img/logo.png" alt="Potter Family"
         /></a>
         <nav class="header__nav" id="menu">
           <button class="header__nav-close" id="menu-close">
@@ -36,7 +36,7 @@
           </button>
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link" href="services.html">Меню</a>
+              <a class="header__nav-link" href="menu.html">Меню</a>
             </li>
             <li class="header__nav-item">
               <a class="header__nav-link" href="portfolio.html">Портфолио</a>
@@ -62,7 +62,7 @@
             aria-label="Номер телефона"
             >+7 (499) 136 29 23</a
           ><a class="header__basket" href="cart.html" aria-label="Корзина"
-            ><svg
+            ><svg class="header__basket-icon header__basket-icon--active"
               width="28"
               height="28"
               viewBox="0 0 28 28"
@@ -89,7 +89,7 @@
                 d="M17.3717 26.5419H10.3367C6.16004 26.5419 5.22671 24.0569 4.86504 21.8985L3.22004 11.8069C3.13837 11.3285 3.46504 10.8852 3.94337 10.8035C4.41004 10.7219 4.86504 11.0485 4.94671 11.5269L6.59171 21.6069C6.93004 23.6719 7.63004 24.7919 10.3367 24.7919H17.3717C20.37 24.7919 20.7084 23.7419 21.0934 21.7119L23.0534 11.5035C23.1467 11.0252 23.6017 10.7102 24.08 10.8152C24.5584 10.9085 24.8617 11.3635 24.7684 11.8419L22.8084 22.0502C22.3534 24.4185 21.595 26.5419 17.3717 26.5419Z"
                 fill="#434248"
               ></path></svg></a
-          ><button class="header__nav-open" id="menu-open">меню</button>
+          ><button class="header__nav-open" id="menu-open"><img src="./img/main/header-buttom.svg" alt="burger-buttom"></button>
         </div>
       </div>
       <script src="js/header.js"></script>
@@ -203,6 +203,12 @@
               <img src="./img/menu/menu-filter-icon.svg" alt="menu-filter-icon" class="menu__filter-button-img">
             </div>
             <div class="menu__filter filter">
+              <div class="filter__head">
+                <span class="filter__head-title">ФИЛЬТРЫ</span>
+                <button class="filter__head-button">
+                  <img src="./img/menu/menu-close-icon.svg" alt="close-icon">
+                </button>
+              </div>
               <div class="filter__type">
                 <div class="filter__list">
                   <p class="filter__title">Тип</p>
@@ -431,6 +437,20 @@
                   </div>
                 </div>
               </div>
+              <div class="filter__button-bar">
+                <button class="card__cart-button filter__button-bar-close">
+                  применить
+                </button>
+
+                <button class="card__cart-button filter__button-bar-accept">
+                  <img
+                    class="card__cart-button-icon"
+                    src="./img/menu/menu-cart-icon.svg"
+                    alt="menu-cart-icon"
+                  />
+                  <span class="card__cart-button-label">сбросить</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -455,6 +475,119 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
+                    <div class="card-box-popup">постное</div>
+                  </div>
+                  <img
+                    class="card__image"
+                    src="./img/menu/menu-food-sample-1.png"
+                    alt="menu-food-img"
+                  />
+                  <p class="card__title">КОМПЛЕКСНЫЙ ОБЕД “СЫТНЫЙ”</p>
+                  <span class="card__category">русская кухня</span>
+                  <div class="card__nutrition-info">
+                    <div class="card__nutrition-item">
+                      <span class="card__nutrition-value">150</span>
+                      <span class="card__nutrition-unit">грамм</span>
+                    </div>
+                    <div class="card__nutrition-item">
+                      <span class="card__nutrition-value">500</span>
+                      <span class="card__nutrition-unit">калорий</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__box card__box--second">
+                  <div class="card__composition">
+                    <p class="card__composition-title">СОСТАВ</p>
+                    <p class="card__composition-item">
+                      <span class="card__composition-name"
+                        >Винегрет
+                        <span
+                          class="card__composition-name card__composition-name--gray"
+                          >(120г)<img
+                            class="card__composition-icon"
+                            src="./img/menu/menu-info-icon.svg"
+                            alt="menu-info-icon"
+                          /> </span
+                      ></span>
+                    </p>
+                    <p class="card__composition-item">
+                      <span class="card__composition-name"
+                        >Рассольник Ленинградский
+                        <span
+                          class="card__composition-name card__composition-name--gray"
+                          >(350г)<img
+                            class="card__composition-icon"
+                            src="./img/menu/menu-info-icon.svg"
+                            alt="menu-info-icon"
+                          /> </span
+                      ></span>
+                    </p>
+                    <p class="card__composition-item">
+                      <span class="card__composition-name"
+                        >Шницель свиной в панировке
+                        <span
+                          class="card__composition-name card__composition-name--gray"
+                          >(110г)<img
+                            class="card__composition-icon"
+                            src="./img/menu/menu-info-icon.svg"
+                            alt="menu-info-icon"
+                          /> </span
+                      ></span>
+                    </p>
+                    <p class="card__composition-item">
+                      <span class="card__composition-name"
+                        >Капуста тушенная Нежная со сливочным маслом
+                        <span
+                          class="card__composition-name card__composition-name--gray"
+                          >(150г)<img
+                            class="card__composition-icon"
+                            src="./img/menu/menu-info-icon.svg"
+                            alt="menu-info-icon"
+                          /> </span
+                      ></span>
+                    </p>
+                  </div>
+                  <p class="card__nutrition-summary">
+                    белки 6,3 г, жиры 11,9 г, углеводы 61,6 г
+                  </p>
+                  <div class="card__price-info">
+                    <div class="card__price-item">
+                      <span class="card__price-value">
+                        500<span class="card__price-rubles">₽</span>
+                      </span>
+                      <span class="card__price-label">стоимость</span>
+                    </div>
+                    <a class="card__cart-button">
+                      <img
+                        class="card__cart-button-icon"
+                        src="./img/menu/menu-cart-icon.svg"
+                        alt="menu-cart-icon"
+                      />
+                      <span class="card__cart-button-label">в корзину</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu__card card">
+                <div class="card__box">
+                  <div class="card__icon-group">
+                    <div class="card__icon-wrapper" id="icon">
+                      <img
+                        class="card__icon"
+                        src="./img/menu/menu-bread-icon.svg"
+                        alt="menu-bread-icon"
+                      />
+                      <span class="card__icon-query">?</span>
+                    </div>
+
+                    <span class="card__label">эконом</span>
+                    <img
+                      class="card__icon-pick"
+                      src="./img/menu/menu-pick-icon.svg"
+                      alt="menu-pick-icon"
+                    />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -566,6 +699,7 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -677,6 +811,7 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -788,6 +923,7 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -899,6 +1035,7 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -1010,6 +1147,7 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -1121,6 +1259,7 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -1232,6 +1371,7 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -1343,117 +1483,7 @@
                       src="./img/menu/menu-pick-icon.svg"
                       alt="menu-pick-icon"
                     />
-                  </div>
-                  <img
-                    class="card__image"
-                    src="./img/menu/menu-food-sample-1.png"
-                    alt="menu-food-img"
-                  />
-                  <p class="card__title">КОМПЛЕКСНЫЙ ОБЕД “СЫТНЫЙ”</p>
-                  <span class="card__category">русская кухня</span>
-                  <div class="card__nutrition-info">
-                    <div class="card__nutrition-item">
-                      <span class="card__nutrition-value">150</span>
-                      <span class="card__nutrition-unit">грамм</span>
-                    </div>
-                    <div class="card__nutrition-item">
-                      <span class="card__nutrition-value">500</span>
-                      <span class="card__nutrition-unit">калорий</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card__box card__box--second">
-                  <div class="card__composition">
-                    <p class="card__composition-title">СОСТАВ</p>
-                    <p class="card__composition-item">
-                      <span class="card__composition-name"
-                        >Винегрет
-                        <span
-                          class="card__composition-name card__composition-name--gray"
-                          >(120г)<img
-                            class="card__composition-icon"
-                            src="./img/menu/menu-info-icon.svg"
-                            alt="menu-info-icon"
-                          /> </span
-                      ></span>
-                    </p>
-                    <p class="card__composition-item">
-                      <span class="card__composition-name"
-                        >Рассольник Ленинградский
-                        <span
-                          class="card__composition-name card__composition-name--gray"
-                          >(350г)<img
-                            class="card__composition-icon"
-                            src="./img/menu/menu-info-icon.svg"
-                            alt="menu-info-icon"
-                          /> </span
-                      ></span>
-                    </p>
-                    <p class="card__composition-item">
-                      <span class="card__composition-name"
-                        >Шницель свиной в панировке
-                        <span
-                          class="card__composition-name card__composition-name--gray"
-                          >(110г)<img
-                            class="card__composition-icon"
-                            src="./img/menu/menu-info-icon.svg"
-                            alt="menu-info-icon"
-                          /> </span
-                      ></span>
-                    </p>
-                    <p class="card__composition-item">
-                      <span class="card__composition-name"
-                        >Капуста тушенная Нежная со сливочным маслом
-                        <span
-                          class="card__composition-name card__composition-name--gray"
-                          >(150г)<img
-                            class="card__composition-icon"
-                            src="./img/menu/menu-info-icon.svg"
-                            alt="menu-info-icon"
-                          /> </span
-                      ></span>
-                    </p>
-                  </div>
-                  <p class="card__nutrition-summary">
-                    белки 6,3 г, жиры 11,9 г, углеводы 61,6 г
-                  </p>
-                  <div class="card__price-info">
-                    <div class="card__price-item">
-                      <span class="card__price-value">
-                        500<span class="card__price-rubles">₽</span>
-                      </span>
-                      <span class="card__price-label">стоимость</span>
-                    </div>
-                    <a class="card__cart-button">
-                      <img
-                        class="card__cart-button-icon"
-                        src="./img/menu/menu-cart-icon.svg"
-                        alt="menu-cart-icon"
-                      />
-                      <span class="card__cart-button-label">в корзину</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="menu__card card">
-                <div class="card__box">
-                  <div class="card__icon-group">
-                    <div class="card__icon-wrapper">
-                      <img
-                        class="card__icon"
-                        src="./img/menu/menu-bread-icon.svg"
-                        alt="menu-bread-icon"
-                      />
-                      <span class="card__icon-query">?</span>
-                    </div>
-
-                    <span class="card__label">эконом</span>
-                    <img
-                      class="card__icon-pick"
-                      src="./img/menu/menu-pick-icon.svg"
-                      alt="menu-pick-icon"
-                    />
+                    <div class="card-box-popup">постное</div>
                   </div>
                   <img
                     class="card__image"
@@ -1643,13 +1673,15 @@
           ><img src="img/logo.png" alt="Potter Family"
         /></a>
         <nav class="footer__nav">
-          <h3 class="footer__nav-title">Меню</h3>
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
               <a class="footer__nav-link" href="main.html">Главная</a>
             </li>
             <li class="footer__nav-item">
-              <a class="footer__nav-link" href="services.html">Меню</a>
+              <a class="footer__nav-link" href="menu.html">Меню</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href="services.html">Услуги</a>
             </li>
             <li class="footer__nav-item">
               <a class="footer__nav-link" href="portfolio.html">Портфолио</a>
