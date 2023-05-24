@@ -37,7 +37,8 @@ html {
 }
 
 img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .payment {
@@ -252,6 +253,18 @@ img {
   padding-bottom: 0.8rem;
   letter-spacing: 0.065rem;
 }
+.payment .form__value::-webkit-input-placeholder {
+  color: rgba(67, 66, 72, 0.5);
+}
+.payment .form__value::-moz-placeholder {
+  color: rgba(67, 66, 72, 0.5);
+}
+.payment .form__value:-ms-input-placeholder {
+  color: rgba(67, 66, 72, 0.5);
+}
+.payment .form__value::-ms-input-placeholder {
+  color: rgba(67, 66, 72, 0.5);
+}
 .payment .form__value::placeholder {
   color: rgba(67, 66, 72, 0.5);
 }
@@ -458,4 +471,4 @@ img {
   .payment .form__button-img {
     width: 4rem;
   }
-}/*# sourceMappingURL=payment.css.map */
+}

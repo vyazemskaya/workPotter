@@ -37,7 +37,8 @@ html {
 }
 
 img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .contacts {
@@ -224,4 +225,4 @@ img {
     width: 10.4rem;
     padding-top: 2rem;
   }
-}/*# sourceMappingURL=contacts.css.map */
+}

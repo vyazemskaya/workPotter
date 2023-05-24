@@ -38,7 +38,8 @@ html {
 }
 
 img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .cart {
@@ -103,7 +104,8 @@ img {
 }
 .cart .item__img {
   width: 10rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-right: 2rem;
 }
 .cart .item__title {
@@ -394,4 +396,4 @@ img {
     top: -0.7rem;
     left: 0.9rem;
   }
-}/*# sourceMappingURL=cart.css.map */
+}

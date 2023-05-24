@@ -38,7 +38,8 @@ html {
 }
 
 img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .card-box-popup {
@@ -193,7 +194,10 @@ img {
 }
 .menu .search__placeholder-wrapper {
   position: absolute;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
   display: flex;
   top: 1.8rem;
@@ -507,6 +511,8 @@ img {
   margin-right: 1.5rem;
 }
 .menu .order {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin-left: 3.1rem;
   margin-top: 10.4rem;
@@ -690,7 +696,8 @@ img {
     color: rgba(67, 66, 72, 0.5019607843);
   }
   .card:hover .card__composition-icon {
-    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+            filter: brightness(0.5);
   }
   .card:hover .card__price-label {
     color: #434248;
@@ -715,7 +722,16 @@ img {
     font-weight: 400;
     font-size: 14.3696rem;
     line-height: 17.5rem;
-    animation: slideText 7s linear infinite;
+    -webkit-animation: slideText 7s linear infinite;
+            animation: slideText 7s linear infinite;
+  }
+  @-webkit-keyframes slideText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
   @keyframes slideText {
     0% {
@@ -1099,4 +1115,4 @@ img {
     display: flex;
     flex-wrap: wrap;
   }
-}/*# sourceMappingURL=menu.css.map */
+}
