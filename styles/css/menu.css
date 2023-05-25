@@ -778,12 +778,13 @@ img {
   .menu__paggination-icon {
     width: 8rem !important;
     margin-left: 4.5rem;
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
     cursor: pointer;
   }
   .menu__paggination-icon-wrapper {
-    right: 19.5rem;
-    height: 15rem;
+    right: -3.2rem;
+    top: -1rem;
+    height: 18rem;
   }
   .menu .item {
     width: 19.6rem;

@@ -62,18 +62,14 @@ function handleMouseOver(e) {
 }
 
 function handleResize() {
-  const screenWidth = window.innerWidth;
-
-  if (screenWidth > 768) {
     document.querySelectorAll('.rates__btn').forEach((btn) => {
       btn.addEventListener('mouseover', handleMouseOver);
       btn.addEventListener('touchstart', handleMouseOver);
     });
-  } else {
+
     document.querySelectorAll('.rates__btn').forEach((btn) => {
       btn.removeEventListener('mouseover', handleMouseOver);
     });
-  }
 }
 
 window.addEventListener('resize', handleResize);
