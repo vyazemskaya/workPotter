@@ -5,7 +5,6 @@ const links = document.querySelectorAll('.header__nav-link');
 
 openMenu.addEventListener('click', () => {
   openMenu.style.zIndex = '0';
-  openMenu.style.pointerEvents = 'none';
   menu.classList.add('active');
   document.body.classList.add('no-scroll');
 });
