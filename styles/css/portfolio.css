@@ -37,8 +37,7 @@ html {
 }
 
 img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .portfolio {
@@ -239,4 +238,4 @@ img {
     margin-left: 3rem;
     width: 62.6rem;
   }
-}
+}/*# sourceMappingURL=portfolio.css.map */

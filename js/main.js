@@ -67,6 +67,7 @@ function handleResize() {
   if (screenWidth > 768) {
     document.querySelectorAll('.rates__btn').forEach((btn) => {
       btn.addEventListener('mouseover', handleMouseOver);
+      btn.addEventListener('touchstart', handleMouseOver);
     });
   } else {
     document.querySelectorAll('.rates__btn').forEach((btn) => {

@@ -1156,6 +1156,7 @@ input[type='number'] {
 .formats__slider {
   min-height: 81.9rem;
   padding-left: 18rem;
+  overflow: visible
 }
 .formats__slider * {
   -webkit-user-select: none;

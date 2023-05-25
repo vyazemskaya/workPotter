@@ -37,8 +37,7 @@ html {
 }
 
 img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .about {
@@ -397,4 +396,4 @@ img {
   .swiper-slide {
     height: auto !important;
   }
-}
+}/*# sourceMappingURL=about.css.map */

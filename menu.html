@@ -109,7 +109,14 @@
               class="menu__paggination-icon"
             />
           </div>
+
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="menu__date-item item item--current">
+                <span class="item__title">Сегодня</span>
+                <span class="item__value">6</span>
+              </div>
+            </div>
             <div class="swiper-slide">
               <div class="menu__date-item item">
                 <span class="item__title">Завтра</span>
@@ -171,7 +178,7 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="menu__date-item item">
+              <div class="menu__date-item item item--current2">
                 <span class="item__title">Пятница</span>
                 <span class="item__value">17</span>
               </div>
@@ -184,12 +191,6 @@
             </div>
           </div>
         </div>
-
-        <div class="menu__date-item item item--current">
-          <span class="item__title">Сегодня</span>
-          <span class="item__value">6</span>
-        </div>
-
         <div class="menu__content">
           <div class="menu__search-bar">
             <form class="search">
@@ -204,13 +205,17 @@
               <input class="search__input" type="text" />
             </form>
             <div class="menu__filter-button">
-              <img src="./img/menu/menu-filter-icon.svg" alt="menu-filter-icon" class="menu__filter-button-img">
+              <img
+                src="./img/menu/menu-filter-icon.svg"
+                alt="menu-filter-icon"
+                class="menu__filter-button-img"
+              />
             </div>
             <div class="menu__filter filter">
               <div class="filter__head">
                 <span class="filter__head-title">ФИЛЬТРЫ</span>
                 <button class="filter__head-button">
-                  <img src="./img/menu/menu-close-icon.svg" alt="close-icon">
+                  <img src="./img/menu/menu-close-icon.svg" alt="close-icon" />
                 </button>
               </div>
               <div class="filter__type">

@@ -95,14 +95,14 @@ img
     cursor: pointer
     width: 5rem !important
     margin-left: 4rem
-    margin-top: 2rem
+    margin-top: 5rem
     &-wrapper
-      background: linear-gradient(270deg, #FFFFFF 52.41%, rgba(255, 255, 255, 0.2) 91.77%)
+      background: linear-gradient(270deg, rgba(255, 255, 255, 1) 42.41%, rgba(255, 255, 255, 0) 91.77%)
       width: 16rem
-      height: 10rem
+      height: 14rem
       position: absolute
-      right: 9.5rem
-      top: 0rem
+      right: -7rem
+      top: -3rem
       z-index: 3
   &__date-list
     position: relative
@@ -111,20 +111,19 @@ img
   &__date-line
     display: flex
   .item
-    width: 13.5rem
+    width: 14rem
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     border: 0.2rem solid $pf-black-secondary
+    cursor: pointer
+    transition: 0.6s ease-out
     &--current
       background-color: $pf-green
-      min-width: 15.5rem
-      border: 0
-      position: absolute
-      top: 18rem
-      left: 17rem
-      z-index: 10
+      border: 0.2rem solid $pf-green
+      position: relative
+      top: -0.8rem
       .item__title
         font-size: 2rem
         line-height: 2.4rem
@@ -580,10 +579,6 @@ img
       font-size: 1.6rem
       line-height: 1.9rem
 
-.swiper-container
-  position: relative
-  left: 16.5rem
-
 @media (hover: hover)
   .card:hover
     background-color: #F8F8F8
@@ -635,6 +630,11 @@ img
 .filter__head
   display: none  
 
+.swiper-container
+  position: relative
+.swiper-slide
+  overflow: visible !important
+
 @media (max-width: 48em)
   html
     font-size: 5px
@@ -643,8 +643,8 @@ img
     -webkit-text-size-adjust: none
 
   .swiper-container
+    position: relative
     margin-top: 1rem
-    left: 23rem
   .swiper-slide
     width: auto 
 
@@ -681,7 +681,7 @@ img
         right: 19.5rem
         height: 15rem
     .item
-      width: 17.6rem
+      width: 19.6rem
       &__title
         font-style: normal
         font-weight: 400
@@ -695,16 +695,11 @@ img
         line-height: 4.8rem
         margin-bottom: 2rem
       &--current
-        min-width: 21rem
-        border: 0
-        position: absolute
-        top: 22.4rem
-        left: 3.1rem
         z-index: 5
         .item__title
           font-style: normal
           font-weight: 400
-          font-size: 3.2rem
+          font-size: 2.8rem
           line-height: 2.8rem
           margin-top: 2.4rem
           margin-bottom: 1.6rem
