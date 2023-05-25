@@ -133,8 +133,8 @@
             </p>
           </div>
           <div class="hero__box-inner" id="banner-animate">
-            <video preload="auto" muted loop id="banner-video">
-              <source src="video/banner.mp4" type="video/mp4" />
+            <video preload="auto" muted loop id="banner-video" playsinline>
+              <source src="./video/banner.mp4" type="video/mp4" />
             </video>
             <p class="hero__desc">
               <span class="hero__desc-word-1">ОРГАНИЗУЕМ</span
@@ -420,8 +420,8 @@
           </li>
         </ul>
 
-        <div class="mobile-block">
-          <div class="mobile-block__cards-wrapper">
+        <!-- <div class="mobile-block">
+          
             <div class="mobile-block__card">
               <img
                 src="./img/main/card-img.png"
@@ -445,13 +445,12 @@
                 class="mobile-block__img"
               />
             </div>
-          </div>
-        </div>
+        </div> -->
 
         <p class="rates__desc">МИНИМАЛЬНАЯ СУММА ЧЕКА: ОТ 300 ₽.</p>
       </section>
       <section class="popular">
-        <h2 class="popular__title" id="title-popular">
+        <p class="popular__title" id="title-popular">
           <span class="popular__title-word"
             ><span class="popular__title-letter"
               ><span style="transition-delay: 0s">П</span></span
@@ -487,7 +486,7 @@
               ><span style="transition-delay: 0.2s">а</span></span
             ></span
           >
-        </h2>
+        </p>
         <div class="popular__slider-box">
           <div class="popular__slider swiper container">
             <div class="swiper-wrapper">
@@ -1046,7 +1045,13 @@
             </div>
           </div>
         </div>
+        <img
+          src="./img/main/pagination-icon.svg"
+          class="popular__pagination-mobile-icon"
+          alt=""
+        />
       </section>
+
       <section class="formats">
         <h2 class="formats__title container">ФОРМАТЫ МЕРОПРИЯТИЙ</h2>
         <div class="formats__slider swiper">
@@ -1149,7 +1154,13 @@
             </div>
           </div>
         </div>
+        <img
+          src="./img/main/pagination-icon.svg"
+          class="formats__pagination-mobile-icon"
+          alt=""
+        />
       </section>
+
       <section class="reviews">
         <p class="reviews__desc" data-content="ОТЗЫВЫ О НАС">ОТЗЫВЫ О НАС</p>
         <div class="reviews__slider swiper">
@@ -1235,6 +1246,7 @@
                 </div>
               </div>
             </div>
+
             <div class="reviews__card swiper-slide">
               <div class="reviews__card-box-review">
                 <strong class="reviews__card-user">ВИКТОР</strong>
@@ -1561,7 +1573,13 @@
             </div>
           </div>
         </div>
+        <img
+          src="./img/main/pagination-icon.svg"
+          class="reviews__pagination-mobile-icon"
+          alt=""
+        />
       </section>
+
       <section class="choice">
         <div class="container">
           <h2 class="choice__title">
@@ -2543,6 +2561,40 @@
           </div>
         </div>
       </section>
+
+      <!-- <div class="jopa">
+        <div class="swiper mobile-block">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="mobile-block__card">
+                <img
+                  src="./img/main/card-img.png"
+                  alt="card-food-img"
+                  class="mobile-block__img"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobile-block__card-center">
+                <img
+                  src="./img/main/card-img.png"
+                  alt="card-food-img"
+                  class="mobile-block__img"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobile-block__card">
+                <img
+                  src="./img/main/card-img.png"
+                  alt="card-food-img"
+                  class="mobile-block__img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </main>
     <footer class="footer container">
       <div class="footer__box-top">

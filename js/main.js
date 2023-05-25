@@ -8,37 +8,43 @@ const bannerVideo = document.getElementById('banner-video');
 const logo = document.getElementById('logo');
 const header = document.querySelector('.header');
 const headerBasketSvg = document.querySelector('.header__basket-icon');
-const basket = headerBasketSvg.querySelectorAll('path')
+const basket = headerBasketSvg.querySelectorAll('path');
 const heroTitle = document.querySelector('.hero__title');
 const burgerButton = document.querySelector('.header__nav-open');
+const video = document.getElementById('banner-video');
 
-let counter = 0
+let counter = 0;
+video.addEventListener('loadeddata', () => {
+  const observerBanner = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting && counter === 0) {
+        bannerBox.classList.add('active');
+        bannerBox.addEventListener(
+          'transitionstart',
+          () => {
+            setTimeout(() => {
+              logo.src = './img/main/logo-white.svg';
+              header.classList.add('header--active');
+              heroTitle.classList.add('hero__title--active');
+              burgerButton.classList.add('header__nav-open--active');
+              basket.forEach((element) => {
+                element.classList.add('header__basket-icon--active');
+              });
+            }, 300);
+            counter++;
+          },
+          { once: true }
+        );
 
-const observerBanner = new IntersectionObserver(
-  ([entry]) => {
-    if (entry.isIntersecting && counter === 0) {
-      bannerBox.classList.add('active');
-      bannerBox.addEventListener('transitionstart', () => {
-        setTimeout(() => {
-          logo.src = './img/main/logo-white.svg';
-          header.classList.add('header--active');
-          heroTitle.classList.add('hero__title--active');
-          burgerButton.classList.add('header__nav-open--active')
-          basket.forEach((element)=>{
-            element.classList.add('header__basket-icon--active');
-          })
-        }, 300);
-        counter++;
-      }, { once: true });
-
-      bannerVideo.play();
-    } 
-  },
-  {
-    threshold: [0.3],
-  }
-);
-observerBanner.observe(bannerBox);
+        bannerVideo.play();
+      }
+    },
+    {
+      threshold: [0.3],
+    }
+  );
+  observerBanner.observe(bannerBox);
+});
 
 window.addEventListener('load', () => {
   if (window.matchMedia('(max-width: 768px)').matches) {
@@ -56,28 +62,29 @@ function handleMouseOver(e) {
     el.classList.remove('active');
   });
 
-  [thisEl, document.querySelector(`[data-tab='${thisEl.id}']`)].forEach((el) => {
-    el.classList.add('active');
-  });
+  [thisEl, document.querySelector(`[data-tab='${thisEl.id}']`)].forEach(
+    (el) => {
+      el.classList.add('active');
+    }
+  );
 }
 
-function handleResize() {
-  const screenWidth = window.innerWidth;
+document.querySelectorAll('.rates__btn').forEach((btn) => {
+  btn.addEventListener('mouseover', handleMouseOver);
+  btn.addEventListener('touchstart', handleMouseOver);
+});
 
-  if (screenWidth > 768) {
-    document.querySelectorAll('.rates__btn').forEach((btn) => {
-      btn.addEventListener('mouseover', handleMouseOver);
-    });
-  } else {
-    document.querySelectorAll('.rates__btn').forEach((btn) => {
-      btn.removeEventListener('mouseover', handleMouseOver);
-    });
-  }
-}
-
-window.addEventListener('resize', handleResize);
-
-handleResize();
+//mobile slider
+const swiperMobile = new Swiper('.swiper.mobile-block', {
+  speed: 1000,
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
+    },
+  },
+});
 
 // Popular
 const swiperPopular = new Swiper('.popular__slider', {
@@ -95,7 +102,7 @@ const swiperPopular = new Swiper('.popular__slider', {
     769: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-    }
+    },
   },
 });
 
@@ -118,7 +125,6 @@ observerPopular.observe(popularTitle);
 // Formats
 
 const swiperFormats = new Swiper('.formats__slider', {
-  autoHeight: true,
   speed: 1000,
   breakpoints: {
     768: {
@@ -153,18 +159,17 @@ const swiperReviews = new Swiper('.reviews__slider', {
   },
 });
 
-
 //Choices
 let swiperChoice;
 
 const setSwiper = () => {
   const cards = document.querySelectorAll('.choice__card');
-  
+
   if (window.innerWidth <= 768) {
     cards.forEach((card) => {
       card.classList.add('swiper-slide');
     });
-    
+
     if (!swiperChoice) {
       swiperChoice = new Swiper('.choice__slider', {
         speed: 1000,
@@ -178,7 +183,7 @@ const setSwiper = () => {
     cards.forEach((card) => {
       card.classList.remove('swiper-slide');
     });
-    
+
     if (swiperChoice) {
       swiperChoice.destroy();
       swiperChoice = undefined;
@@ -186,19 +191,18 @@ const setSwiper = () => {
   }
 };
 
-
 document.addEventListener('DOMContentLoaded', setSwiper);
 window.addEventListener('resize', setSwiper);
 
 //:hover popup
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const target = document.querySelectorAll('.popular__card-rating');
-  
+
   target.forEach((element) => {
     const popupParent = element.parentNode;
     const popup = popupParent.querySelector('.popular__card-box-popup');
-    
+
     element.addEventListener('mouseover', () => {
       popup.style.display = 'flex';
     });
@@ -250,28 +254,59 @@ const validation = (form) => {
     error.classList.add('back-call__form-error');
 
     if (value === '') {
-      setError(parent, error, errorIcon, 'Поле должно быть заполнено',errorInput);
+      setError(
+        parent,
+        error,
+        errorIcon,
+        'Поле должно быть заполнено',
+        errorInput
+      );
       result = false;
     } else if (input.id === 'email') {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(value)) {
-        setError(parent, error, errorIcon, 'Неверный формат электронной почты',errorInput);
+        setError(
+          parent,
+          error,
+          errorIcon,
+          'Неверный формат электронной почты',
+          errorInput
+        );
         result = false;
       }
     } else if (input.id === 'tel') {
-      const phoneRegex = /^\+?\d{1,3}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+      const phoneRegex =
+        /^\+?\d{1,3}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
       if (!phoneRegex.test(value)) {
-        setError(parent, error, errorIcon, 'Неверный формат номера телефона',errorInput);
+        setError(
+          parent,
+          error,
+          errorIcon,
+          'Неверный формат номера телефона',
+          errorInput
+        );
         result = false;
       }
     } else if (input.id === 'name') {
       const numberRegex = /\d/;
       if (numberRegex.test(value)) {
-        setError(parent, error, errorIcon, 'Поле не может содержать цифры',errorInput);
+        setError(
+          parent,
+          error,
+          errorIcon,
+          'Поле не может содержать цифры',
+          errorInput
+        );
         result = false;
       }
     } else if (value.length < 2) {
-      setError(parent, error, errorIcon, 'Минимальная длина поля - 2 символа',errorInput);
+      setError(
+        parent,
+        error,
+        errorIcon,
+        'Минимальная длина поля - 2 символа',
+        errorInput
+      );
       result = false;
     }
   }

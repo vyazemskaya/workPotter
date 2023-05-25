@@ -18,11 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       769: {
         slidesPerView: 9.5,
-        spaceBetween: 10,
       },
       320: {
-        slidesPerView: 3.7,
-        spaceBetween: 10,
+        slidesPerView: 3.5,     
       }
     },
     navigation: {
@@ -30,6 +28,24 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 });
+
+//set swiper active element
+const elements = document.querySelectorAll('.menu__date-item');
+
+const currentClass = 'item--current';
+
+const setActive = (elements, target) => {
+  elements.forEach((item) => {
+    if(target !== item && item.classList.contains(currentClass)){
+      item.classList.remove(currentClass);
+      target.classList.add(currentClass);
+    }
+  });
+}
+
+elements.forEach((elem) => {
+  elem.addEventListener('click', () => setActive(elements, elem))
+})
 
 //checks for filters
 const checks = document.querySelectorAll('.filter__item')
@@ -91,3 +107,4 @@ acceptBtn.addEventListener('click', ()=>{
 closeBtn.addEventListener('click', ()=>{
   filter.classList.remove('filter--active');
 })
+
