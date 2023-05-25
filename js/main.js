@@ -61,20 +61,10 @@ function handleMouseOver(e) {
   });
 }
 
-function handleResize() {
     document.querySelectorAll('.rates__btn').forEach((btn) => {
       btn.addEventListener('mouseover', handleMouseOver);
       btn.addEventListener('touchstart', handleMouseOver);
-    });
-
-    document.querySelectorAll('.rates__btn').forEach((btn) => {
-      btn.removeEventListener('mouseover', handleMouseOver);
-    });
-}
-
-window.addEventListener('resize', handleResize);
-
-handleResize();
+    })
 
 // Popular
 const swiperPopular = new Swiper('.popular__slider', {
