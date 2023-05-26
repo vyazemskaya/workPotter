@@ -1,7 +1,7 @@
 const init = () => {
   const map = new ymaps.Map('root', {
     center: [55.807749, 37.570141],
-    zoom: 18,
+    zoom: 17,
     type: 'yandex#map',
     yandexMapDisablePoiInteractivity: true,
     controls: []
