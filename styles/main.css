@@ -445,6 +445,11 @@ input[type='number'] {
   transition: 1s;
   transition-timing-function: ease-in-out;
 }
+
+.popular__card-rating{
+  cursor: auto;
+}
+
 .hero__box-inner video {
   position: absolute;
   top: 0;

@@ -189,26 +189,17 @@ window.addEventListener('resize', setSwiper);
 
 //:hover popup
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const target = document.querySelectorAll('.popular__card-rating');
-
+  
   target.forEach((element) => {
     const popupParent = element.parentNode;
     const popup = popupParent.querySelector('.popular__card-box-popup');
-
-    element.addEventListener('mouseover', () => {
+    element.addEventListener('mouseover', (e) => {  
       popup.style.display = 'flex';
     });
 
-    element.addEventListener('mouseout', () => {
-      popup.style.display = 'none';
-    });
-
-    element.addEventListener('touchstart', () => {
-      popup.style.display = 'flex';
-    });
-
-    element.addEventListener('touchend', () => {
+    element.addEventListener('mouseout', (e) => {
       popup.style.display = 'none';
     });
   });
