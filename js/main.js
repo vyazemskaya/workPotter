@@ -16,7 +16,10 @@ const video = document.getElementById('banner-video');
 let counter = 0;
 video.addEventListener('loadedmetadata', () => {
   if (counter === 0) {
-    bannerBox.classList.add('active');
+    setTimeout(() => {
+      bannerBox.classList.add('active');
+    }, 1000);
+  
     setTimeout(() => {
       logo.src = './img/main/logo-white.svg';
       header.classList.add('header--active');

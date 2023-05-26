@@ -481,7 +481,7 @@ input[type='number'] {
 }
 .hero__box-inner.active,
 .hero__box-inner.active .hero__desc span {
-  transition-delay: 1s;
+  /* transition-delay: 1s; */
 }
 .hero__box-inner.active .hero__desc span {
   transform: translateX(0);
