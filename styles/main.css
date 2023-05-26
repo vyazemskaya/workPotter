@@ -442,8 +442,7 @@ input[type='number'] {
   z-index: 20;
   max-height: 12rem;
   transform: translateY(-64%);
-  transition-property: max-height, transform;
-  transition-duration: 1s;
+  transition: 1s;
   transition-timing-function: ease-in-out;
 }
 .hero__box-inner video {
