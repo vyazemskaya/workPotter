@@ -80,8 +80,8 @@ const swiperMobile = new Swiper('.swiper.mobile-block', {
   loop: true,
   breakpoints: {
     320: {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
+      slidesPerView: 1.4,
+      centerSlides: true
     },
   },
 });
