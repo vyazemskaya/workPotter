@@ -75,13 +75,16 @@ document.querySelectorAll('.rates__btn').forEach((btn) => {
 });
 
 //mobile slider
+const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
 const swiperMobile = new Swiper('.swiper.mobile-block', {
   speed: 1000,
   loop: true,
   breakpoints: {
     320: {
-      slidesPerView: 1.4,
-      centerSlides: true
+      slidesPerView: 1,
+      spaceBetween: 6*fontSize,
+      centeredSlides: true,
     },
   },
 });

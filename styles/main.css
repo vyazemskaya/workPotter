@@ -155,14 +155,15 @@ input[type='number'] {
   }
 }
 
-.jopa {
-  /* position: relative; */
+.mobile-block-wrapper {
   width: 100%;
   height: auto;
   overflow: hidden;
+  margin-left: -6.5rem;
+  display: none;
 }
 
-.jopa .swiper-slide {
+.mobile-block-wrapper .swiper-slide {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: 100%;
@@ -175,7 +176,7 @@ input[type='number'] {
   position: absolute;
   display: flex;
   width: 100%;
-  border: 0.1rem solid red;
+  padding: 0 14.4rem 0 14.4rem !important
 }
 
 .header {
@@ -1986,6 +1987,7 @@ input[type='number'] {
   }
 
   .rates__desc {
+    margin-top: 70rem;
     font-style: normal;
     font-weight: 500;
     font-size: 3.2rem;
@@ -2541,6 +2543,10 @@ input[type='number'] {
     right: 30rem;
     top: 115rem;
     z-index: 10;
+  }
+
+  .mobile-block-wrapper{
+    display: block;
   }
 
 }
