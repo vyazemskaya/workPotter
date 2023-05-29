@@ -533,14 +533,17 @@ input[type='number'] {
 
 .hero__desc-word-1 {
   top: -26.5rem;
+  left: 0; /* Изменено на свойство left */
 }
 
 .hero__desc-word-2 {
   top: -13.7rem;
+  left: 0; /* Изменено на свойство left */
 }
 
 .hero__desc-word-3 {
   top: 7.2rem;
+  left: 0; /* Изменено на свойство left */
 }
 
 .hero__desc-word-4 {
@@ -651,8 +654,8 @@ input[type='number'] {
 }
 @media (max-width: 48em) {
   .hero__box-inner {
-    max-height: 8rem;
-    transform: translateY(-70%);
+    max-height: 10.5rem;
+    top: 61rem;
   }
   .hero__title {
     bottom: 1rem;
@@ -670,18 +673,18 @@ input[type='number'] {
   }
   .hero__desc-word-1 {
     margin-bottom: 1.53rem;
-    transform: translateX(-8.8rem);
+    
   }
   .hero__desc-word-2 {
     margin-bottom: 1.816rem;
-    transform: translateX(-2rem);
+    
   }
   .hero__desc-word-3 {
     margin-bottom: 1.892rem;
-    transform: translateX(0.8rem);
+    
   }
   .hero__desc-word-4 {
-    transform: translateX(6.9rem);
+    
   }
   .hero__desc-word-4 a {
     display: none;
@@ -701,7 +704,7 @@ input[type='number'] {
   .hero__content-desc span:first-child {
     margin-right: 2rem;
     font-size: 5.2rem;
-    line-height: 6.4rem;
+    line-height: 6.4rem
   }
   .hero__content-desc span:last-child {
     font-size: 3.2rem;
@@ -2502,11 +2505,6 @@ input[type='number'] {
 
   .back-call__contacts-item:not(:last-child) {
     margin-bottom: 3.5rem;
-  }
-
-  .hero__box-inner {
-    /* margin-top: 0rem; */
-    top: 61rem;
   }
 
   .hero__box-outer {
