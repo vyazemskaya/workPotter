@@ -14,25 +14,25 @@ const burgerButton = document.querySelector('.header__nav-open');
 const video = document.getElementById('banner-video');
 
 let counter = 0;
-// video.addEventListener('loadedmetadata', () => {
-//   if (counter === 0) {
-//     setTimeout(() => {
-//       bannerBox.classList.add('active');
-//     }, 1000);
+video.addEventListener('loadedmetadata', () => {
+  if (counter === 0) {
+    setTimeout(() => {
+      bannerBox.classList.add('active');
+    }, 1000);
   
-//     setTimeout(() => {
-//       logo.src = './img/main/logo-white.svg';
-//       header.classList.add('header--active');
-//       heroTitle.classList.add('hero__title--active');
-//       burgerButton.classList.add('header__nav-open--active');
-//       basket.forEach((element) => {
-//         element.classList.add('header__basket-icon--active');
-//       });
-//     }, 1400);
-//     counter++;
-//   }
-//   bannerVideo.play();
-// });
+    setTimeout(() => {
+      logo.src = './img/main/logo-white.svg';
+      header.classList.add('header--active');
+      heroTitle.classList.add('hero__title--active');
+      burgerButton.classList.add('header__nav-open--active');
+      basket.forEach((element) => {
+        element.classList.add('header__basket-icon--active');
+      });
+    }, 1400);
+    counter++;
+  }
+  bannerVideo.play();
+});
 
 window.addEventListener('load', () => {
   if (window.matchMedia('(max-width: 768px)').matches) {
