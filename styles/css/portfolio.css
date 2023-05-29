@@ -190,7 +190,7 @@ img {
   }
   .portfolio__list {
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
     gap: 0;
     background-color: transparent;
     border-left: 0;
@@ -200,7 +200,7 @@ img {
   .portfolio .item {
     margin: 0 auto;
     padding: 0;
-    width: 68.6rem;
+    width: 60rem;
     border-left: 0.05rem solid #434248;
     border-right: 0.05rem solid #434248;
     border-bottom: 0.05rem solid #434248;
@@ -209,33 +209,33 @@ img {
     border-bottom: 0;
   }
   .portfolio .item__info {
-    width: 62.6rem;
+    width: 53.7rem;
     margin-top: 2.4rem;
-    margin-bottom: 8.5rem;
+    margin-bottom: 3.5rem;
     margin-left: 3rem;
   }
   .portfolio .item__type {
     font-weight: 400;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     line-height: 3rem;
     margin-right: 2rem;
   }
   .portfolio .item__date {
     font-weight: 500;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     line-height: 4rem;
   }
   .portfolio .item__title {
     font-weight: 500;
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     line-height: 4rem;
-    margin-bottom: 8.7rem;
+    margin-bottom: 4.7rem;
     letter-spacing: -0.07rem;
-    width: 62rem;
+    width: 43rem;
     margin-left: 3rem;
   }
   .portfolio .item__img {
     margin-left: 3rem;
-    width: 62.6rem;
+    width: 54.6rem;
   }
 }/*# sourceMappingURL=portfolio.css.map */
