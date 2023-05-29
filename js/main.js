@@ -14,36 +14,24 @@ const burgerButton = document.querySelector('.header__nav-open');
 const video = document.getElementById('banner-video');
 
 let counter = 0;
-video.addEventListener('loadeddata', () => {
-  const observerBanner = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting && counter === 0) {
-        bannerBox.classList.add('active');
-        bannerBox.addEventListener(
-          'transitionstart',
-          () => {
-            setTimeout(() => {
-              logo.src = './img/main/logo-white.svg';
-              header.classList.add('header--active');
-              heroTitle.classList.add('hero__title--active');
-              burgerButton.classList.add('header__nav-open--active');
-              basket.forEach((element) => {
-                element.classList.add('header__basket-icon--active');
-              });
-            }, 300);
-            counter++;
-          },
-          { once: true }
-        );
-
-        bannerVideo.play();
-      }
-    },
-    {
-      threshold: [0.3],
-    }
-  );
-  observerBanner.observe(bannerBox);
+video.addEventListener('loadedmetadata', () => {
+  if (counter === 0) {
+    setTimeout(() => {
+      bannerBox.classList.add('active');
+    }, 1000);
+  
+    setTimeout(() => {
+      logo.src = './img/main/logo-white.svg';
+      header.classList.add('header--active');
+      heroTitle.classList.add('hero__title--active');
+      burgerButton.classList.add('header__nav-open--active');
+      basket.forEach((element) => {
+        element.classList.add('header__basket-icon--active');
+      });
+    }, 1400);
+    counter++;
+  }
+  bannerVideo.play();
 });
 
 window.addEventListener('load', () => {
@@ -75,13 +63,18 @@ document.querySelectorAll('.rates__btn').forEach((btn) => {
 });
 
 //mobile slider
+const fontSize = parseFloat(
+  getComputedStyle(document.documentElement).fontSize
+);
+
 const swiperMobile = new Swiper('.swiper.mobile-block', {
   speed: 1000,
   loop: true,
   breakpoints: {
     320: {
-      slidesPerView: 'auto',
-      slidesPerGroup: 1,
+      slidesPerView: 1,
+      spaceBetween: 6 * fontSize,
+      centeredSlides: true,
     },
   },
 });
@@ -196,26 +189,17 @@ window.addEventListener('resize', setSwiper);
 
 //:hover popup
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const target = document.querySelectorAll('.popular__card-rating');
-
+  
   target.forEach((element) => {
     const popupParent = element.parentNode;
     const popup = popupParent.querySelector('.popular__card-box-popup');
-
-    element.addEventListener('mouseover', () => {
+    element.addEventListener('mouseover', (e) => {  
       popup.style.display = 'flex';
     });
 
-    element.addEventListener('mouseout', () => {
-      popup.style.display = 'none';
-    });
-
-    element.addEventListener('touchstart', () => {
-      popup.style.display = 'flex';
-    });
-
-    element.addEventListener('touchend', () => {
+    element.addEventListener('mouseout', (e) => {
       popup.style.display = 'none';
     });
   });
