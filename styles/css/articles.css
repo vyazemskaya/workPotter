@@ -1,0 +1,315 @@
+@font-face {
+  font-family: Gotham;
+  src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-medium.woff2) format("woff2"), url(../fonts/Montserrat-medium.woff) format("woff");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-regular.woff2) format("woff2"), url(../fonts/Montserrat-regular.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Gotham, sans-serif;
+  font-size: 0.5208335vw;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-animation: 1s infinite bugfix;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  object-fit: contain;
+}
+
+.articles {
+  padding-top: 3rem;
+  padding-bottom: 18rem;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.articles__header {
+  margin: 0 auto;
+  width: 156rem;
+  display: flex;
+  gap: 27.4rem;
+  margin-bottom: 5rem;
+  align-items: flex-end;
+}
+.articles__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 7.3rem;
+  color: #434248;
+  text-transform: uppercase;
+}
+.articles__subtitle {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  width: 62.9rem;
+}
+.articles__list-wrapper {
+  border-top: 0.05rem solid #434248;
+  border-bottom: 0.05rem solid #434248;
+}
+.articles__list-wrapper::after {
+  border-top: 0.05rem solid #434248;
+  border-bottom: 0.05rem solid #434248;
+}
+.articles__list {
+  width: 156.4rem;
+  height: 109.6rem;
+  margin: 0 auto;
+  display: flex;
+  overflow: scroll;
+  border-left: 0.05rem solid #434248;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.articles__list::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+.articles__list::-webkit-scrollbar-thumb {
+  display: none;
+}
+.articles__list::-webkit-scrollbar-button {
+  display: none;
+}
+.articles__list-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+.articles .item {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: white;
+  border-bottom: 0.1rem solid black;
+  border-right: 0.1rem solid black;
+}
+.articles .item__info {
+  margin-left: 3rem;
+  margin-top: 2.8rem;
+  width: 46rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles .item__tag {
+  padding: 1rem 2rem;
+  border: 0.1rem solid #E9743F;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.articles .item__tag span {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #E9743F;
+}
+.articles .item__type {
+  margin-right: 2rem;
+  color: rgba(67, 66, 72, 0.5);
+}
+.articles .item__type--amount {
+  margin-right: 0rem;
+}
+.articles .item__date {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #434248;
+}
+.articles .item__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.5rem;
+  margin-left: 3rem;
+  text-transform: uppercase;
+}
+.articles .item__subtitle {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: rgba(67, 66, 72, 0.5);
+  margin-left: 3rem;
+  margin-bottom: 6rem;
+}
+.articles .item__img {
+  margin-left: 3rem;
+  width: 46rem;
+  margin-bottom: 3rem;
+}
+.articles .item__time {
+  display: flex;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  gap: 1rem;
+  align-items: center;
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: rgba(67, 66, 72, 0.5);
+}
+.articles .item__time span {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgba(67, 66, 72, 0.5019607843);
+  border-radius: 2rem;
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: 1.3333333333vw;
+    -webkit-text-size-adjust: none;
+  }
+  .articles {
+    padding-top: 22.3rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .articles__header {
+    width: 68.6rem;
+    gap: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 6.5rem;
+  }
+  .articles__subtitle {
+    width: 58rem;
+    margin: 0rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .articles__title {
+    letter-spacing: -0.1rem;
+    margin: 0rem;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+  }
+  .articles__list {
+    margin: 0 auto;
+    width: 80%;
+    gap: 0;
+    background-color: transparent;
+    border-left: 0;
+    border-right: 0;
+    height: 203.4rem;
+  }
+  .articles .item {
+    margin: 0 auto;
+    padding: 0;
+    width: 60rem;
+    border-left: 0.05rem solid #434248;
+    border-right: 0.05rem solid #434248;
+    border-bottom: 0.05rem solid #434248;
+  }
+  .articles .item:last-child {
+    border-bottom: 0;
+  }
+  .articles .item__info {
+    width: 53.7rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    margin-left: 3rem;
+  }
+  .articles .item__type {
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-right: 2rem;
+  }
+  .articles .item__tag {
+    padding: 2rem 3.2rem;
+    border: 0.2rem solid #E9743F;
+    border-radius: 4rem;
+    cursor: pointer;
+  }
+  .articles .item__tag span {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3rem;
+    color: #E9743F;
+  }
+  .articles .item__date {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .articles .item__title {
+    font-weight: 500;
+    font-size: 2.6rem;
+    line-height: 4rem;
+    margin-bottom: 3rem;
+    letter-spacing: -0.07rem;
+    width: 43rem;
+    margin-left: 3rem;
+  }
+  .articles .item__subtitle {
+    margin-bottom: 5rem;
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+  .articles .item__time {
+    font-size: 2.8rem;
+    line-height: 3rem;
+    gap: 2rem;
+  }
+  .articles .item__time span {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 4rem;
+  }
+  .articles .item__img {
+    margin-left: 2.55rem;
+    width: 54.6rem;
+    margin-bottom: 6rem;
+  }
+}/*# sourceMappingURL=articles.css.map */
