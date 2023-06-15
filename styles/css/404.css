@@ -1,0 +1,131 @@
+@font-face {
+  font-family: Gotham;
+  src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-medium.woff2) format("woff2"), url(../fonts/Montserrat-medium.woff) format("woff");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-regular.woff2) format("woff2"), url(../fonts/Montserrat-regular.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Gotham, sans-serif;
+  font-size: 0.5208335vw;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-animation: 1s infinite bugfix;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  object-fit: contain;
+}
+
+.error {
+  margin: 0 auto;
+  width: 100%;
+}
+.error__content {
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rem;
+  align-items: center;
+}
+.error__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45.7rem;
+  width: fit-content;
+}
+.error__title span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20rem;
+  line-height: 24.4rem;
+  text-transform: uppercase;
+  color: #434248;
+}
+.error__title img {
+  height: 100%;
+}
+.error__subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  text-transform: uppercase;
+  color: #434248;
+  margin-bottom: 4rem;
+}
+.error__link {
+  width: fit-content;
+  padding: 1.2rem 2.4rem;
+  background-color: #fff;
+  border: 0.1rem solid #434248;
+  border-radius: 3rem;
+}
+.error__link span {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #434248;
+}
+
+@media (max-width: 48em) {
+  html {
+    font-size: 5px;
+    font-size: 1.5625vw;
+    font-size: 1.3333333333vw;
+    -webkit-text-size-adjust: none;
+  }
+  .error__content {
+    margin-top: 22rem;
+    margin-bottom: 24rem;
+  }
+  .error__title {
+    height: 29.4rem;
+    width: fit-content;
+    margin-bottom: 3rem;
+  }
+  .error__subtitle {
+    line-height: 4.9rem;
+    width: 44.4rem;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+  .error__link {
+    padding: 2.8rem 5.4rem;
+    border: 0.2rem solid #434248;
+    border-radius: 6rem;
+  }
+  .error__link span {
+    font-size: 2.8rem;
+    line-height: 3rem;
+  }
+}/*# sourceMappingURL=404.css.map */
