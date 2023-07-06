@@ -1,0 +1,282 @@
+@font-face 
+  font-family: Gotham
+  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
+  font-display: swap
+  font-weight: 500
+  font-style: normal
+
+@font-face 
+  font-family: Montserrat
+  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
+  font-display: swap
+  font-weight: 400
+  font-style: normal
+
+$pf-black: #434248
+$pf-black-secondary: rgba(67, 66, 72, 0.5)
+$pf-orange: #E9743F
+$pf-beige: #FFF3E5
+
+*,
+::after,
+::before 
+  box-sizing: border-box
+
+html 
+  font-family: Gotham, sans-serif
+  font-size: 0.5208335vw
+  font-style: normal
+  font-weight: 400
+  -webkit-animation: 1s infinite bugfix
+  line-height: 1.2
+  margin: 0
+  padding: 0
+
+img
+  object-fit: contain
+
+li
+  list-style-type: disc
+
+.portfolio-det
+  padding-top: 3rem
+  padding-bottom: 23.8rem
+  margin: 0 auto
+  width: 156rem
+  display: flex
+  flex-wrap: wrap
+  &__head
+    width: 100%
+    display: flex
+    align-items: flex-end
+    flex-direction: row
+    margin-bottom: 5rem
+  &__block-info
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    justify-content: flex-start
+    width: fit-content
+  &__type
+    width: fit-content
+    padding: 1rem 2rem
+    color: #E9743F
+    border: 0.1rem solid #E9743F
+    border-radius: 2rem
+    margin-right: 47.2rem
+  &__block-info-value
+    padding-left: 1.5rem
+    position: relative
+    &::before 
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0.7rem
+      background: #434248
+      border-radius: 10rem
+      width: 0.5rem
+      height: 0.5rem  
+  &__title 
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 4rem
+    line-height: 4.9rem
+    text-transform: uppercase
+    color: #434248
+    width: 83.5rem
+    margin-bottom: -1rem
+  &__section-left
+    width: 55.3rem
+  &__info
+    display: flex
+    gap: 1rem
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 2rem
+    line-height: 2.4rem
+    text-transform: uppercase
+    color: #434248
+    align-items: center
+    margin-right: 25.4rem
+    span
+      text-transform: lowercase
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 2rem
+      line-height: 2.4rem
+      color: rgba(67, 66, 72, 0.5)
+  &__section-head
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-content: flex-start
+  &__date 
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 2rem
+    line-height: 2.4rem
+    text-transform: uppercase
+    color: #434248
+
+    width: fit-content
+    height: fit-content
+    padding: 1rem 1.6rem
+    color: #434248
+    border: 0.1rem solid #434248
+    border-radius: 3rem
+    margin-left: auto
+  &__hero-img
+    margin: 0 auto
+    height: 45.4rem
+    margin-bottom: 6rem
+    img
+      height: 100%
+  &__content
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 8rem
+  &__content-section
+    width: 100%
+    display: flex
+  &__section-subtitle
+    width: 55.3rem
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 2rem
+    line-height: 2.4rem
+    text-transform: uppercase
+    color: #434248
+    margin-top: 0.9rem
+  &__section-title
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 2rem
+    line-height: 2.4rem
+    text-transform: uppercase
+    color: #434248
+
+    width: 72.9rem
+    margin-bottom: 4rem
+  &__section-col
+    font-family: 'Gotham'
+    font-style: normal
+    font-weight: 400
+    font-size: 1.6rem
+    line-height: 1.9rem
+    color: #434248
+
+    flex-wrap: wrap
+    display: flex
+    width: 33rem
+    flex-direction: column
+    gap: 1.8rem
+  &__section-main
+    display: flex
+    width: 100%
+    gap: 5rem
+  &__section-img-block
+    display: flex
+    margin-top: 4rem
+    gap: 2rem
+  &__img-box-one
+    height: 30.7rem
+    width: 72.4rem
+    img
+      height: 100%
+      object-fit: cover
+  &__img-box-two
+    height: 30.7rem
+    width: 26.3rem
+    img
+      height: 100%
+      object-fit: cover
+  &__img-box-three
+    height: 63.8rem
+    width: 62.8rem
+    margin-bottom: 4rem
+    img
+      height: 100%
+      object-fit: cover
+  &__img-box-four
+    margin-top: 65.4rem
+    width: 51.3rem
+    height: 37.5rem
+    img
+      height: 100%
+      object-fit: cover
+  &__img-box-five
+    height: 22.4rem
+    width: 30.8rem
+    margin-left: auto
+    img
+      height: 100%
+      object-fit: cover
+  &__company
+    display: flex
+    flex-direction: column
+    gap: 0.8rem
+  &__company-name
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    font-size: 2rem
+    line-height: 2.4rem
+    text-transform: uppercase
+    color: #434248
+  &__company-wrapper
+    display: flex
+    gap: 1.5rem
+    align-items: center
+  &__logo
+    width: 8rem
+    height: 8rem
+    img
+      width: 100%
+      object-fit: cover
+  &__company-type
+    font-family: 'Gotham'
+    font-style: normal
+    font-weight: 400
+    font-size: 1.6rem
+    line-height: 1.9rem
+    color: rgba(67, 66, 72, 0.5)
+  &__item
+    margin-left: 2.5rem  
+
+
+
+
+
+    
+    
+  
+@media (max-width: 48em)
+  html
+    font-size: 5px
+    font-size: 1.5625vw
+    font-size: 1.3333333333vw
+    -webkit-text-size-adjust: none
+
+  .article-det
+    width: 68.6rem
+    padding-top: 3+19.3rem
+    padding-bottom: 58.4rem
+    &__head
+      flex-direction: column
+      margin-bottom: 7rem
+    
