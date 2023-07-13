@@ -14,7 +14,7 @@ const burgerButton = document.querySelector('.header__nav-open');
 const video = document.getElementById('banner-video');
 
 let counter = 0;
-video.addEventListener('loadedmetadata', () => {
+video?.addEventListener('loadedmetadata', () => {
   if (counter === 0) {
     setTimeout(() => {
       bannerBox.classList.add('active');
@@ -113,7 +113,10 @@ const observerPopular = new IntersectionObserver(
     threshold: [0.4],
   }
 );
-observerPopular.observe(popularTitle);
+if(popularTitle) {
+  observerPopular.observe(popularTitle);
+}
+
 
 // Formats
 
