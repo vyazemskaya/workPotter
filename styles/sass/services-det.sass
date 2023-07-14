@@ -381,12 +381,12 @@ li
   .services-det
     padding-top: 22.4rem
     padding-bottom: 0rem
-    width: 68.6rem
     &__head
       flex-direction: column
       align-items: flex-start
       gap: 4rem
-      margin-bottom: 4rem
+      margin-bottom: 5rem
+      width: 68.6rem
     &__block-info
       gap: 2rem
       order: 2
@@ -418,12 +418,15 @@ li
         white-space: nowrap
     &__hero-img
       height: 43.8rem
+      width: 68.6rem
       img
         object-fit: cover
     &__content-section
       flex-direction: column
       position: relative
-
+    &__content
+      gap: 11.5rem
+      width: 68.6rem
     &__date
       position: absolute
       right: 0
@@ -466,21 +469,21 @@ li
       line-height: normal
       text-transform: uppercase
       width: 100%
-    &__section-paragraph
-      font-family: Gotham
-      font-size: 2.8rem
-      font-style: normal
-      font-weight: 400
-      line-height: 110%
+
     &__section-main
       display: flex
       gap: 3.2rem
       flex-direction: column
     &__section-paragraph
       width: 100%
+      font-family: Gotham
+      font-size: 3.2rem
+      font-style: normal
+      font-weight: 400
+      line-height: 120%
     &__section-col
       width: 100%
-      gap: 3.2rem
+      gap: 3.5rem
 
     &__section-subtitle
       font-family: Montserrat
@@ -489,7 +492,7 @@ li
       font-weight: 500
       line-height: normal
       text-transform: uppercase
-      margin-bottom: 3rem
+      margin-bottom: 3.2rem
     &__section-left
       width: 100%
     &__img-box-four
@@ -507,3 +510,97 @@ li
     &__img-box-three
       width: 100%
       height: 48.2rem
+    &__section-list
+      margin-top: 7rem
+      gap: 4.4rem 8.7rem
+    &__section-item
+      gap: 2.95rem
+      align-items: flex-start
+      padding: 0
+      padding-bottom: 1.6rem
+      width: 100%
+      span
+        color: #434248
+        font-family: Montserrat
+        font-size: 7rem
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        text-transform: uppercase
+        width: 8.6rem
+
+      p
+        color: #434248
+        padding-top: 1.6rem
+        font-family: Gotham
+        font-size: 2.8rem
+        font-style: normal
+        font-weight: 400
+        line-height: 110%
+        width: 80%
+    &__content
+      margin-bottom: 24rem
+    &__feature-list
+      display: flex
+      width: 68.6rem
+      flex-direction: column
+    &__feature-item
+      padding: 3rem 3.2rem
+      width: 100%
+      border-left: 0.1rem solid #434248
+
+      &:not(:first-child)
+        width: 100%
+      &:not(:last-child)
+        width: 100%
+      &:last-child
+        border-right: 0.1rem solid #434248
+        padding-bottom: 0
+        p
+          padding-bottom: 3rem
+          border-bottom: 0.1rem solid #434248
+      &::after
+        content: ""
+        width: 4.6rem
+        height: 3rem
+        background: #fff
+        position: absolute
+        top: -0.2rem
+        right: -1.5rem
+        z-index: 10
+      &::before
+        content: ""
+        width: 4.6rem
+        height: 3rem
+        background: #fff
+        position: absolute
+        top: -0.2rem
+        left: -1.5rem
+        z-index: 10
+
+      span
+        width: 10rem
+        height: 10rem
+        margin-bottom: 10rem
+        img
+          width: 5rem
+          height: 5rem
+
+      strong
+        color: #434248
+        font-family: Gotham
+        font-size: 3.2rem
+        font-style: normal
+        font-weight: 400
+        line-height: 120%
+        margin-bottom: 3rem
+      p
+        color: #434248
+        font-family: Gotham
+        font-size: 2.8rem
+        font-style: normal
+        font-weight: 400
+        line-height: 110%
+        width: 99%
+    .back-call
+      margin-bottom: 18.1rem

@@ -435,13 +435,13 @@ li {
   .services-det {
     padding-top: 22.4rem;
     padding-bottom: 0rem;
-    width: 68.6rem;
   }
   .services-det__head {
     flex-direction: column;
     align-items: flex-start;
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    width: 68.6rem;
   }
   .services-det__block-info {
     gap: 2rem;
@@ -478,6 +478,7 @@ li {
   }
   .services-det__hero-img {
     height: 43.8rem;
+    width: 68.6rem;
   }
   .services-det__hero-img img {
     object-fit: cover;
@@ -485,6 +486,10 @@ li {
   .services-det__content-section {
     flex-direction: column;
     position: relative;
+  }
+  .services-det__content {
+    gap: 11.5rem;
+    width: 68.6rem;
   }
   .services-det__date {
     position: absolute;
@@ -535,13 +540,6 @@ li {
     text-transform: uppercase;
     width: 100%;
   }
-  .services-det__section-paragraph {
-    font-family: Gotham;
-    font-size: 2.8rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 110%;
-  }
   .services-det__section-main {
     display: flex;
     gap: 3.2rem;
@@ -549,10 +547,15 @@ li {
   }
   .services-det__section-paragraph {
     width: 100%;
+    font-family: Gotham;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
   }
   .services-det__section-col {
     width: 100%;
-    gap: 3.2rem;
+    gap: 3.5rem;
   }
   .services-det__section-subtitle {
     font-family: Montserrat;
@@ -561,7 +564,7 @@ li {
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
-    margin-bottom: 3rem;
+    margin-bottom: 3.2rem;
   }
   .services-det__section-left {
     width: 100%;
@@ -584,5 +587,113 @@ li {
   .services-det__img-box-three {
     width: 100%;
     height: 48.2rem;
+  }
+  .services-det__section-list {
+    margin-top: 7rem;
+    gap: 4.4rem 8.7rem;
+  }
+  .services-det__section-item {
+    gap: 2.95rem;
+    align-items: flex-start;
+    padding: 0;
+    padding-bottom: 1.6rem;
+    width: 100%;
+  }
+  .services-det__section-item span {
+    color: #434248;
+    font-family: Montserrat;
+    font-size: 7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 8.6rem;
+  }
+  .services-det__section-item p {
+    color: #434248;
+    padding-top: 1.6rem;
+    font-family: Gotham;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    width: 80%;
+  }
+  .services-det__content {
+    margin-bottom: 24rem;
+  }
+  .services-det__feature-list {
+    display: flex;
+    width: 68.6rem;
+    flex-direction: column;
+  }
+  .services-det__feature-item {
+    padding: 3rem 3.2rem;
+    width: 100%;
+    border-left: 0.1rem solid #434248;
+  }
+  .services-det__feature-item:not(:first-child) {
+    width: 100%;
+  }
+  .services-det__feature-item:not(:last-child) {
+    width: 100%;
+  }
+  .services-det__feature-item:last-child {
+    border-right: 0.1rem solid #434248;
+    padding-bottom: 0;
+  }
+  .services-det__feature-item:last-child p {
+    padding-bottom: 3rem;
+    border-bottom: 0.1rem solid #434248;
+  }
+  .services-det__feature-item::after {
+    content: "";
+    width: 4.6rem;
+    height: 3rem;
+    background: #fff;
+    position: absolute;
+    top: -0.2rem;
+    right: -1.5rem;
+    z-index: 10;
+  }
+  .services-det__feature-item::before {
+    content: "";
+    width: 4.6rem;
+    height: 3rem;
+    background: #fff;
+    position: absolute;
+    top: -0.2rem;
+    left: -1.5rem;
+    z-index: 10;
+  }
+  .services-det__feature-item span {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 10rem;
+  }
+  .services-det__feature-item span img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .services-det__feature-item strong {
+    color: #434248;
+    font-family: Gotham;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 3rem;
+  }
+  .services-det__feature-item p {
+    color: #434248;
+    font-family: Gotham;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    width: 99%;
+  }
+  .services-det .back-call {
+    margin-bottom: 18.1rem;
   }
 }/*# sourceMappingURL=services-det.css.map */
