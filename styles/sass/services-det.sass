@@ -42,21 +42,28 @@ html
 img
   object-fit: contain
 
-.portfolio-det
+li
+  list-style-type: none !important
+
+.services-det
   padding-top: 3rem
-  padding-bottom: 23.8rem
+  padding-bottom: 0rem
   margin: 0 auto
-  width: 156rem
+  width: 100%
+  // width: 156rem
   display: flex
   flex-wrap: wrap
+  .back-call
+    margin-bottom: 0rem
   li
     list-style-type: disc
   &__head
-    width: 100%
+    width: 156rem
+    margin: 0 auto
     display: flex
     align-items: flex-end
     flex-direction: row
-    margin-bottom: 5rem
+    margin-bottom: 4rem
   &__img-box-four--mobile
     display: none
   &__block-info
@@ -87,16 +94,18 @@ img
       height: 0.5rem
   &__title
     font-family: 'Montserrat'
+    font-size: 6rem
     font-style: normal
     font-weight: 400
-    font-size: 4rem
-    line-height: 4.9rem
+    line-height: normal
     text-transform: uppercase
-    color: #434248
-    width: 83.5rem
+    width: 95rem
     margin-bottom: -1rem
   &__section-left
     width: 55.3rem
+  .back-call
+    width: 100%
+    margin-bottom: 20.1rem
   &__info
     display: flex
     gap: 1rem
@@ -141,17 +150,27 @@ img
   &__hero-img
     margin: 0 auto
     height: 45.4rem
-    margin-bottom: 6rem
+    margin-bottom: 5.5rem
     img
       height: 100%
   &__content
-    width: 100%
+    width: 156rem
+    margin: 0 auto
     display: flex
     flex-direction: column
-    gap: 8rem
+    gap: 12rem
+    margin-bottom: 20rem
   &__content-section
     width: 100%
     display: flex
+    .services-det__title
+      color: #434248
+      font-family: Montserrat
+      font-size: 4rem
+      font-style: normal
+      font-weight: 400
+      line-height: normal
+      text-transform: uppercase
   &__section-subtitle
     width: 55.3rem
     font-family: 'Montserrat'
@@ -180,12 +199,13 @@ img
     font-size: 1.6rem
     line-height: 1.9rem
     color: #434248
-
     flex-wrap: wrap
     display: flex
     width: 33rem
     flex-direction: column
-    gap: 1.8rem
+    gap: 2.5rem
+    &--max-width
+      width: 88%
   &__section-main
     display: flex
     width: 100%
@@ -258,7 +278,98 @@ img
     color: rgba(67, 66, 72, 0.5)
   &__item
     margin-left: 2.5rem
-  
+  &__section-list
+    margin-top: 9rem
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    gap: 6rem 8.7rem
+  &__section-item
+    width: 46rem
+    display: flex
+    gap: 2.8rem
+    align-items: center
+    padding-bottom: 1.8rem
+    border-bottom: 0.1rem solid #434248
+    span
+      color: #434248
+      font-family: Montserrat
+      font-size: 4rem
+      font-style: normal
+      font-weight: 400
+      line-height: normal
+      text-transform: uppercase
+    p
+      color: #434248
+      width: 39.1rem
+      font-family: Gotham
+      font-size: 1.6rem
+      font-style: normal
+      font-weight: 400
+      line-height: 1.9rem
+  &__feature-list
+    display: flex
+    width: 156rem
+    margin: 0 auto
+    margin-bottom: 24rem
+  &__section-paragraph
+    color: #434248
+    font-family: Gotham
+    font-size: 2rem
+    font-style: normal
+    font-weight: 400
+    line-height: 120%
+  &__feature-item
+    width: 38.2rem
+    position: relative
+    padding: 3rem
+    display: flex
+    flex-direction: column
+    border-top: 0.1rem solid #434248
+    &::after
+      content: ''
+      width: 3rem
+      height: 3rem
+      background: #fff
+      position: absolute
+      top: -1.5rem
+      right: -1.5rem
+      z-index: 10
+    &:not(:first-child)
+      width: 39.3rem
+    &:not(:last-child)
+      border-right: 0.1rem solid #434248
+
+    span
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      background: #E9743F
+      width: 7rem
+      height: 7rem
+      margin-bottom: 5rem
+      img
+        width: 3.5rem
+        height: 3.5rem
+    strong
+      color: #434248
+      font-family: Gotham
+      font-size: 2rem
+      font-style: normal
+      font-weight: 400
+      line-height: 120%
+      margin-bottom: 1.5rem
+    p
+      color: #434248
+      font-family: Gotham
+      font-size: 1.6rem
+      font-style: normal
+      font-weight: 400
+      line-height: 118.75%
+
+.footer__box-top
+  border-top: 0rem !important
 
 @media (max-width: 48em)
   html
@@ -267,15 +378,15 @@ img
     font-size: 1.3333333333vw
     -webkit-text-size-adjust: none
 
-  .portfolio-det
+  .services-det
     padding-top: 22.4rem
     padding-bottom: 0rem
-    width: 68.6rem
     &__head
       flex-direction: column
       align-items: flex-start
       gap: 4rem
-      margin-bottom: 4rem
+      margin-bottom: 5rem
+      width: 68.6rem
     &__block-info
       gap: 2rem
       order: 2
@@ -307,11 +418,15 @@ img
         white-space: nowrap
     &__hero-img
       height: 43.8rem
+      width: 68.6rem
       img
         object-fit: cover
     &__content-section
       flex-direction: column
       position: relative
+    &__content
+      gap: 11.5rem
+      width: 68.6rem
     &__date
       position: absolute
       right: 0
@@ -354,21 +469,22 @@ img
       line-height: normal
       text-transform: uppercase
       width: 100%
-    &__section-paragraph
-      font-family: Gotham
-      font-size: 2.8rem
-      font-style: normal
-      font-weight: 400
-      line-height: 110%
+
     &__section-main
       display: flex
       gap: 3.2rem
       flex-direction: column
     &__section-paragraph
       width: 100%
+      font-family: Gotham
+      font-size: 3.2rem
+      font-style: normal
+      font-weight: 400
+      line-height: 120%
     &__section-col
       width: 100%
-      gap: 3.2rem
+      gap: 3.5rem
+
     &__section-subtitle
       font-family: Montserrat
       font-size: 3.2rem
@@ -376,7 +492,7 @@ img
       font-weight: 500
       line-height: normal
       text-transform: uppercase
-      margin-bottom: 3rem
+      margin-bottom: 3.2rem
     &__section-left
       width: 100%
     &__img-box-four
@@ -394,3 +510,97 @@ img
     &__img-box-three
       width: 100%
       height: 48.2rem
+    &__section-list
+      margin-top: 7rem
+      gap: 4.4rem 8.7rem
+    &__section-item
+      gap: 2.95rem
+      align-items: flex-start
+      padding: 0
+      padding-bottom: 1.6rem
+      width: 100%
+      span
+        color: #434248
+        font-family: Montserrat
+        font-size: 7rem
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        text-transform: uppercase
+        width: 8.6rem
+
+      p
+        color: #434248
+        padding-top: 1.6rem
+        font-family: Gotham
+        font-size: 2.8rem
+        font-style: normal
+        font-weight: 400
+        line-height: 110%
+        width: 80%
+    &__content
+      margin-bottom: 24rem
+    &__feature-list
+      display: flex
+      width: 68.6rem
+      flex-direction: column
+    &__feature-item
+      padding: 3rem 3.2rem
+      width: 100%
+      border-left: 0.1rem solid #434248
+
+      &:not(:first-child)
+        width: 100%
+      &:not(:last-child)
+        width: 100%
+      &:last-child
+        border-right: 0.1rem solid #434248
+        padding-bottom: 0
+        p
+          padding-bottom: 3rem
+          border-bottom: 0.1rem solid #434248
+      &::after
+        content: ""
+        width: 4.6rem
+        height: 3rem
+        background: #fff
+        position: absolute
+        top: -0.2rem
+        right: -1.5rem
+        z-index: 10
+      &::before
+        content: ""
+        width: 4.6rem
+        height: 3rem
+        background: #fff
+        position: absolute
+        top: -0.2rem
+        left: -1.5rem
+        z-index: 10
+
+      span
+        width: 10rem
+        height: 10rem
+        margin-bottom: 10rem
+        img
+          width: 5rem
+          height: 5rem
+
+      strong
+        color: #434248
+        font-family: Gotham
+        font-size: 3.2rem
+        font-style: normal
+        font-weight: 400
+        line-height: 120%
+        margin-bottom: 3rem
+      p
+        color: #434248
+        font-family: Gotham
+        font-size: 2.8rem
+        font-style: normal
+        font-weight: 400
+        line-height: 110%
+        width: 99%
+    .back-call
+      margin-bottom: 18.1rem

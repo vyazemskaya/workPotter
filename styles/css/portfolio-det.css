@@ -40,10 +40,6 @@ img {
   object-fit: contain;
 }
 
-li {
-  list-style-type: disc;
-}
-
 .portfolio-det {
   padding-top: 3rem;
   padding-bottom: 23.8rem;
@@ -52,12 +48,18 @@ li {
   display: flex;
   flex-wrap: wrap;
 }
+.portfolio-det li {
+  list-style-type: disc;
+}
 .portfolio-det__head {
   width: 100%;
   display: flex;
   align-items: flex-end;
   flex-direction: row;
   margin-bottom: 5rem;
+}
+.portfolio-det__img-box-four--mobile {
+  display: none;
 }
 .portfolio-det__block-info {
   display: flex;
@@ -299,13 +301,157 @@ li {
     font-size: 1.3333333333vw;
     -webkit-text-size-adjust: none;
   }
-  .article-det {
+  .portfolio-det {
+    padding-top: 22.4rem;
+    padding-bottom: 0rem;
     width: 68.6rem;
-    padding-top: 22.3rem;
-    padding-bottom: 58.4rem;
   }
-  .article-det__head {
+  .portfolio-det__head {
     flex-direction: column;
-    margin-bottom: 7rem;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+  .portfolio-det__block-info {
+    gap: 2rem;
+    order: 2;
+    width: 100%;
+  }
+  .portfolio-det__title {
+    order: 1;
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .portfolio-det__info {
+    gap: 2rem;
+    font-family: Montserrat;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .portfolio-det__info span {
+    color: rgba(67, 66, 72, 0.5);
+    font-family: Gotham;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    white-space: nowrap;
+  }
+  .portfolio-det__hero-img {
+    height: 43.8rem;
+  }
+  .portfolio-det__hero-img img {
+    object-fit: cover;
+  }
+  .portfolio-det__content-section {
+    flex-direction: column;
+    position: relative;
+  }
+  .portfolio-det__date {
+    position: absolute;
+    right: 0;
+    top: 0rem;
+    font-family: Montserrat;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 2rem 3.2rem;
+    border-radius: 6rem;
+  }
+  .portfolio-det__logo {
+    width: 12rem;
+    height: 12rem;
+  }
+  .portfolio-det__company-name {
+    font-family: Montserrat;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .portfolio-det__company-wrapper {
+    margin-bottom: 6rem;
+  }
+  .portfolio-det__company-type {
+    font-family: Gotham;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    width: 27.6rem;
+  }
+  .portfolio-det__company {
+    gap: 1.6rem;
+  }
+  .portfolio-det__section-title {
+    color: #434248;
+    font-family: Montserrat;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .portfolio-det__section-paragraph {
+    font-family: Gotham;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+  }
+  .portfolio-det__section-main {
+    display: flex;
+    gap: 3.2rem;
+    flex-direction: column;
+  }
+  .portfolio-det__section-paragraph {
+    width: 100%;
+  }
+  .portfolio-det__section-col {
+    width: 100%;
+    gap: 3.2rem;
+  }
+  .portfolio-det__section-subtitle {
+    font-family: Montserrat;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+  .portfolio-det__section-left {
+    width: 100%;
+  }
+  .portfolio-det__img-box-four {
+    display: none;
+  }
+  .portfolio-det__img-box-four--mobile {
+    display: flex;
+    width: 48.6rem;
+    height: 32.6rem;
+    margin-top: 0rem;
+  }
+  .portfolio-det__img-box-five {
+    width: 18rem;
+    height: 32.6rem;
+    position: relative;
+    top: -35.8rem;
+  }
+  .portfolio-det__img-box-three {
+    width: 100%;
+    height: 48.2rem;
   }
 }/*# sourceMappingURL=portfolio-det.css.map */
