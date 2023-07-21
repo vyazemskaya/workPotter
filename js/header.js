@@ -49,6 +49,6 @@ cartBtn.addEventListener('click', (event) => {
   cartModal.classList.toggle(activeClass);
 });
 
-closeModalBtn.addEventListener('click', () => {
+closeModalBtn?.addEventListener('click', () => {
   cartModal.classList.toggle(activeClass);
 });

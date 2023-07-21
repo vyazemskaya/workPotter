@@ -188,7 +188,7 @@ main {
   background-color: transparent;
   color: #434248;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .header--active {
@@ -196,9 +196,9 @@ main {
 }
 
 .header__container {
-  display: flex;
-  position: relative;
+  display: flex;  
   align-items: flex-start;
+  position: relative;
   justify-content: space-between;
 }
 .header__box-right,
@@ -401,6 +401,7 @@ main {
   margin-right: 4rem;
 }
 .hero {
+  margin-top: 16rem;
   margin-bottom: 14.4rem;
 }
 
@@ -1960,6 +1961,7 @@ main {
   }
 
   .hero {
+    margin-top: 0;
     margin-bottom: 10.4rem;
   }
   .rates {
