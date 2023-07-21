@@ -47,6 +47,33 @@ img {
   margin: 0 auto;
   width: 156rem;
 }
+.cart__empty {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.cart__empty-message {
+  color: #434248;
+  font-family: Gotham;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.cart__empty-link {
+  width: fit-content;
+  border-radius: 3rem;
+  border: 0.1rem solid #434248;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+}
+.cart__empty-link span {
+  font-family: Gotham;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.9rem;
+}
 .cart__title {
   font-family: "Montserrat";
   font-style: normal;
@@ -244,6 +271,30 @@ img {
     width: 68.6rem;
     padding-top: 22.3rem;
     padding-bottom: 24rem;
+  }
+  .cart__empty {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+  .cart__empty-message {
+    ont-family: Gotham;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .cart__empty-link {
+    border-radius: 6rem;
+    border: 0.1rem solid #434248;
+    padding: 2.8rem 5.4rem;
+    cursor: pointer;
+  }
+  .cart__empty-link span {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
   }
   .cart__title {
     font-style: normal;

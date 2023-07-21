@@ -1,18 +1,18 @@
-@font-face 
+@font-face
   font-family: Gotham
   src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
   font-display: swap
   font-weight: 400
   font-style: normal
 
-@font-face 
+@font-face
   font-family: Montserrat
   src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
   font-display: swap
   font-weight: 500
   font-style: normal
 
-@font-face 
+@font-face
   font-family: Montserrat
   src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
   font-display: swap
@@ -27,10 +27,10 @@ $pf-green: #7FAC37
 $pf-gray: #434248
 *,
 ::after,
-::before 
+::before
   box-sizing: border-box
 
-html 
+html
   font-family: Gotham, sans-serif
   font-size: 0.5208335vw
   font-style: normal
@@ -43,7 +43,7 @@ html
 img
   object-fit: contain
 
-.card-box-popup 
+.card-box-popup
   position: absolute
   display: none
   width: 14.4rem
@@ -57,7 +57,7 @@ img
   color: white
   top: 0.2rem
   left: 3.7rem
-  &::after 
+  &::after
     content: ''
     background: $pf-green
     border-radius: 0.1rem
@@ -69,8 +69,6 @@ img
     left: 50%
     margin-top: -1rem
     margin-left: -5.4rem
-
-
 
 .menu
   padding-top: 3.8rem
@@ -87,9 +85,9 @@ img
   &__list
     height: 140rem
     overflow: scroll
-    &::-webkit-scrollbar 
+    &::-webkit-scrollbar
       width: 0rem
-    &::-webkit-scrollbar-thumb 
+    &::-webkit-scrollbar-thumb
       background-color: transparent
   &__paggination-icon
     cursor: pointer
@@ -149,7 +147,7 @@ img
       font-family: 'Montserrat'
       font-style: normal
       font-weight: 400
-      font-size: 4rem 
+      font-size: 4rem
       line-height: 4.9rem
       color: $pf-gray
       margin-bottom: 0.5rem
@@ -184,7 +182,7 @@ img
       margin-right: 1.5rem
       margin-right: 1.7rem
     &__placeholder
-      font-family: 'Gotham' 
+      font-family: 'Gotham'
       font-style: normal
       font-weight: 400
       font-size: 1.6rem
@@ -213,13 +211,29 @@ img
       align-items: center
       margin-bottom: 1.5rem
       cursor: pointer
-      &--checked
-        .filter__checker-icon
-          display: block
-      &--checked
-        .filter__checker
-          background-color:  $pf-orange
-          border: 0.2rem solid $pf-orange
+      align-items: center
+      input
+        display: none
+      input:checked + .filter__item-title::before
+        border: 0.2rem solid #E9743F
+        background-color: #E9743F
+        background-image: url('../../img/menu/menu-choose-icon.svg')
+        background-repeat: no-repeat
+        background-position: center
+        opacity: 1
+    &__item-title
+      cursor: pointer
+      display: flex
+      align-items: center
+      gap: 1rem
+      &::before
+        content: ""
+        display: block
+        width: 2.9rem
+        opacity: 0.6
+        height: 2.8rem
+        border: 0.2rem solid rgba(67, 66, 72, 1)
+
     &__checker
       width: 2.75rem
       height: 2.8rem
@@ -517,7 +531,7 @@ img
         font-size: 1.5rem
         line-height: 1.9rem
       &__buttons
-        padding: 1.2rem 2.4rem 
+        padding: 1.2rem 2.4rem
         border: 0.1rem solid $pf-black
         display: flex
       &__counter
@@ -604,7 +618,7 @@ img
     box-shadow: 0.7rem 0.7rem 1.2rem 0rem #57575714
   .card__box--second:hover
     box-shadow: none
- 
+
   .card:hover::before
     content: "ПРАВИЛЬНОЕ ПИТАНИЕ"
     position: absolute
@@ -621,14 +635,14 @@ img
     line-height: 17.5rem
     animation: slideText 7s linear infinite
 
-  @keyframes slideText 
-    0% 
+  @keyframes slideText
+    0%
       transform: translateX(100%)
-    100% 
+    100%
       transform: translateX(-100%)
 
 .filter__head
-  display: none  
+  display: none
 
 .swiper-container
   position: relative
@@ -646,7 +660,7 @@ img
     position: relative
     margin-top: 1rem
   .swiper-slide
-    width: auto 
+    width: auto
 
   .menu
     width: 68.6rem
@@ -725,7 +739,7 @@ img
         width: 3.6rem
       &__input
         height: 8rem
-        width:60.6rem
+        width: 60.6rem
     .card
       flex-direction: column
       width: 68.6rem
@@ -848,7 +862,7 @@ img
     .order
       display: none
 
-    .card-box-popup 
+    .card-box-popup
       position: absolute
       display: none
       width: 18.4rem
@@ -863,7 +877,6 @@ img
       top: 2.2rem
       left: 7.7rem
 
-
     .filter
       position: static
       width: 75rem
@@ -877,6 +890,12 @@ img
       z-index: 0
       touch-events: none
       transition: height 0.7s ease
+      &__item-title
+        gap: 2rem
+        &::before
+          width: 4.8rem
+          height: 4.8rem
+          background-size: 65%
       &--active
         z-index: 100
         touch-events: auto

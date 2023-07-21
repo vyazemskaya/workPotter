@@ -18,6 +18,8 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="styles/main.css" />
+
+    <link rel="stylesheet" href="styles/css/cart-modal.css" />
     <script src="js/main.js" defer="defer"></script>
   </head>
   <body>
@@ -102,9 +104,74 @@
             <img src="./img/main/header-buttom.svg" alt="burger-buttom" />
           </button>
         </div>
+        <div class="cart-modal">
+          <div class="cart-modal__head">
+            <div class="cart-modal__title">
+              <strong>Корзина</strong><span>(2)</span>
+            </div>
+
+            <button class="cart-modal__remove-all">
+              <img src="./img/cart/cross.svg" alt="" />
+            </button>
+          </div>
+
+          <ul class="cart-modal__list">
+            <li class="cart-modal__item">
+              <div class="cart-modal__img">
+                <img src="./img/cart/cart-item-img.png" alt="" />
+              </div>
+              <div class="cart-modal__item-left-section">
+                <p>Комплексный обед “Сытный”</p>
+                <span>Х1</span>
+              </div>
+              <div class="cart-modal__item-right-section">
+                <div class="cart-modal__item-price">
+                  <strong>500</strong><span>₽</span>
+                </div>
+                <button>
+                  <img src="./img/cart/cross.svg" alt="" />
+                </button>
+              </div>
+            </li>
+
+            <li class="cart-modal__item">
+              <div class="cart-modal__img">
+                <img src="./img/cart/cart-item-img.png" alt="" />
+              </div>
+              <div class="cart-modal__item-left-section">
+                <p>Комплексный обед “Сытный”</p>
+                <span>Х1</span>
+              </div>
+              <div class="cart-modal__item-right-section">
+                <div class="cart-modal__item-price">
+                  <strong>500</strong><span>₽</span>
+                </div>
+                <button>
+                  <img src="./img/cart/cross.svg" alt="" />
+                </button>
+              </div>
+            </li>
+          </ul>
+
+          <div class="cart-modal__summary">
+            <span class="cart-modal__summary-text">Сумма</span>
+            <div class="cart-modal__item-price">
+              <strong>10 000</strong><span>₽</span>
+            </div>
+          </div>
+
+          <a href="/cart.html" class="cart-modal__cart-link">
+            <div class="cart-modal__cart-img">
+              <img src="./img/menu/menu-cart-icon.svg" alt="" />
+            </div>
+            <span>перейти в корзину</span>
+          </a>
+        </div>
       </div>
+
       <script src="js/header.js"></script>
     </header>
+
     <main>
       <section class="hero">
         <div class="hero__banner" id="banner">
@@ -431,7 +498,7 @@
                   />
                 </div>
               </div>
-  
+
               <div class="swiper-slide">
                 <div class="mobile-block__card">
                   <img
@@ -441,7 +508,7 @@
                   />
                 </div>
               </div>
-  
+
               <div class="swiper-slide">
                 <div class="mobile-block__card-center">
                   <img
@@ -451,7 +518,7 @@
                   />
                 </div>
               </div>
-  
+
               <div class="swiper-slide">
                 <div class="mobile-block__card">
                   <img
@@ -461,8 +528,6 @@
                   />
                 </div>
               </div>
-  
-              
             </div>
           </div>
         </div>
@@ -1223,8 +1288,9 @@
                         d="M15.0489 0.927052C15.3483 0.00574148 16.6517 0.00573981 16.9511 0.92705L19.8167 9.74671C19.9506 10.1587 20.3346 10.4377 20.7678 10.4377L30.0413 10.4377C31.0101 10.4377 31.4128 11.6773 30.6291 12.2467L23.1267 17.6976C22.7762 17.9522 22.6295 18.4036 22.7634 18.8156L25.6291 27.6353C25.9284 28.5566 24.8739 29.3227 24.0902 28.7533L16.5878 23.3024C16.2373 23.0478 15.7627 23.0478 15.4122 23.3024L7.90976 28.7533C7.12605 29.3227 6.07157 28.5566 6.37092 27.6353L9.2366 18.8156C9.37048 18.4036 9.22382 17.9522 8.87333 17.6976L1.37088 12.2467C0.587169 11.6773 0.989943 10.4377 1.95867 10.4377H11.2322C11.6654 10.4377 12.0494 10.1587 12.1833 9.74671L15.0489 0.927052Z"
                         fill="#434248"
                         fill-opacity="0.3"
-                      ></path></svg
-                    ><svg
+                      ></path>
+                    </svg>
+                    <svg
                       class="active"
                       width="32"
                       height="29"
@@ -2581,7 +2647,6 @@
           </div>
         </div>
       </section>
-
     </main>
     <footer class="footer container">
       <div class="footer__box-top">

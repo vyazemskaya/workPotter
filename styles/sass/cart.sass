@@ -1,18 +1,18 @@
-@font-face 
+@font-face
   font-family: Gotham
   src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
   font-display: swap
   font-weight: 400
   font-style: normal
 
-@font-face 
+@font-face
   font-family: Montserrat
   src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
   font-display: swap
   font-weight: 500
   font-style: normal
 
-@font-face 
+@font-face
   font-family: Montserrat
   src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
   font-display: swap
@@ -24,10 +24,10 @@ $pf-black-secondary: rgba(67, 66, 72, 0.5)
 
 *,
 ::after,
-::before 
+::before
   box-sizing: border-box
 
-html 
+html
   font-family: Gotham, sans-serif
   font-size: 0.5208335vw
   font-style: normal
@@ -45,6 +45,29 @@ img
   padding-bottom: 23.8rem
   margin: 0 auto
   width: 156rem
+  &__empty
+    display: flex
+    flex-direction: column
+    gap: 4rem
+  &__empty-message
+    color: #434248
+    font-family: Gotham
+    font-size: 2rem
+    font-style: normal
+    font-weight: 400
+    line-height: 120%
+  &__empty-link
+    width: fit-content
+    border-radius: 3rem
+    border: 0.1rem solid #434248
+    padding: 1.2rem 2.4rem
+    cursor: pointer
+    span
+      font-family: Gotham
+      font-size: 1.6rem
+      font-style: normal
+      font-weight: 400
+      line-height: 1.9rem
   &__title
     font-family: 'Montserrat'
     font-style: normal
@@ -125,7 +148,7 @@ img
       &--second
         margin-right: 9.65rem
       &::after
-        content: '₽' 
+        content: '₽'
         font-family: 'Montserrat'
         font-size: 1.6rem
         line-height: 1.9rem
@@ -185,7 +208,7 @@ img
     // padding: 0.95rem 6.75rem
     width: 30.2rem
     height: 4.3rem
-    background-color: $pf-black 
+    background-color: $pf-black
     display: flex
     align-items: center
     justify-content: center
@@ -217,6 +240,26 @@ img
     width: 68.6rem
     padding-top: 3+19.3rem
     padding-bottom: 24rem
+    &__empty
+      display: flex
+      flex-direction: column
+      gap: 6rem
+    &__empty-message
+      ont-family: Gotham
+      font-size: 3.2rem
+      font-style: normal
+      font-weight: 400
+      line-height: 120%
+    &__empty-link
+      border-radius: 6rem
+      border: 0.1rem solid #434248
+      padding: 2.8rem 5.4rem
+      cursor: pointer
+      span
+        font-size: 2.8rem
+        font-style: normal
+        font-weight: 400
+        line-height: 110%
     &__title
       font-style: normal
       font-weight: 400

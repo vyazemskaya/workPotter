@@ -180,12 +180,12 @@ input[type='number'] {
 }
 
 .header {
-  position: relative;
   z-index: 50;
   padding: 2rem 0;
   background-color: transparent;
   color: #434248;
   width: 100%;
+  position: relative;
 }
 
 .header--active {
@@ -194,6 +194,7 @@ input[type='number'] {
 
 .header__container {
   display: flex;
+  position: relative;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -2332,6 +2333,16 @@ input[type='number'] {
     overflow: visible;
   }
 
+  .choice__slider {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .choice .swiper-wrapper {
+    height: 31rem;
+  }
+
   .choice__title {
     font-style: normal;
     font-weight: 400;
@@ -2584,6 +2595,24 @@ input[type='number'] {
   .mobile-block-wrapper {
     display: block;
   }
+}
+
+.swiper-slide {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
+.swiper {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
+.menu .swiper-wrapper {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
 }
 
 @media (hover: hover) {

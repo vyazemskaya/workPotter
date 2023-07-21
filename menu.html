@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="another website" />
     <title>Potter Family - Меню</title>
-    <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/css/cart-modal.css" />
     <link rel="stylesheet" href="styles/css/menu.css" />
     <link
       rel="stylesheet"
@@ -95,7 +96,71 @@
             <img src="./img/main/header-buttom.svg" alt="burger-buttom" />
           </button>
         </div>
+        <div class="cart-modal">
+          <div class="cart-modal__head">
+            <div class="cart-modal__title">
+              <strong>Корзина</strong><span>(2)</span>
+            </div>
+
+            <button class="cart-modal__remove-all">
+              <img src="./img/cart/cross.svg" alt="" />
+            </button>
+          </div>
+
+          <ul class="cart-modal__list">
+            <li class="cart-modal__item">
+              <div class="cart-modal__img">
+                <img src="./img/cart/cart-item-img.png" alt="" />
+              </div>
+              <div class="cart-modal__item-left-section">
+                <p>Комплексный обед “Сытный”</p>
+                <span>Х1</span>
+              </div>
+              <div class="cart-modal__item-right-section">
+                <div class="cart-modal__item-price">
+                  <strong>500</strong><span>₽</span>
+                </div>
+                <button>
+                  <img src="./img/cart/cross.svg" alt="" />
+                </button>
+              </div>
+            </li>
+
+            <li class="cart-modal__item">
+              <div class="cart-modal__img">
+                <img src="./img/cart/cart-item-img.png" alt="" />
+              </div>
+              <div class="cart-modal__item-left-section">
+                <p>Комплексный обед “Сытный”</p>
+                <span>Х1</span>
+              </div>
+              <div class="cart-modal__item-right-section">
+                <div class="cart-modal__item-price">
+                  <strong>500</strong><span>₽</span>
+                </div>
+                <button>
+                  <img src="./img/cart/cross.svg" alt="" />
+                </button>
+              </div>
+            </li>
+          </ul>
+
+          <div class="cart-modal__summary">
+            <span class="cart-modal__summary-text">Сумма</span>
+            <div class="cart-modal__item-price">
+              <strong>10 000</strong><span>₽</span>
+            </div>
+          </div>
+
+          <a href="/cart.html" class="cart-modal__cart-link">
+            <div class="cart-modal__cart-img">
+              <img src="./img/menu/menu-cart-icon.svg" alt="" />
+            </div>
+            <span>перейти в корзину</span>
+          </a>
+        </div>
       </div>
+
       <script src="js/header.js"></script>
     </header>
 
@@ -222,227 +287,107 @@
                 <div class="filter__list">
                   <p class="filter__title">Тип</p>
 
-                  <div class="filter__item filter__item--checked">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Новое</span>
+                  <div class="filter__item">
+                    <input type="checkbox" id="1611">
+                    <label for='1611' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Острое</span>
+                    <input type="checkbox" id="1511">
+                    <label for='1511' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Постное</span>
+                    <input type="checkbox" id="1411">
+                    <label for='1411' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Фитнес</span>
+                    <input type="checkbox" id="1311">
+                    <label for='1311' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Вегетарианское</span>
+                    <input type="checkbox" id="1211">
+                    <label for='1211' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Популярное</span>
+                    <input type="checkbox" id="1211">
+                    <label for='1211' class="filter__item-title">Новое</label>
                   </div>
                 </div>
 
                 <div class="filter__list">
                   <p class="filter__title">Категории</p>
-                  <div class="filter__item filter__item--checked">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Комплексные обеды</span>
+                  <div class="filter__item">
+                    <input type="checkbox" id="1171">
+                    <label for='1171' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Натуральные соки</span>
+                    <input type="checkbox" id="1161">
+                    <label for='1161' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Завтраки</span>
+                    <input type="checkbox" id="1151">
+                    <label for='1151' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Блины</span>
+                    <input type="checkbox" id="1141">
+                    <label for='1141' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Бутерброды</span>
+                    <input type="checkbox" id="1131">
+                    <label for='1131' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Холодные закуски</span>
+                    <input type="checkbox" id="1121">
+                    <label for='1121' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Первые блюда</span>
+                    <input type="checkbox" id="1119">
+                    <label for='1119' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Блюда гриль</span>
+                    <input type="checkbox" id="1118">
+                    <label for='1118' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Вторые блюда</span>
+                    <input type="checkbox" id="1117">
+                    <label for='1117' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Овощные блюда</span>
+                    <input type="checkbox" id="1116">
+                    <label for='1116' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Соусы</span>
+                    <input type="checkbox" id="1115">
+                    <label for='1115' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Выпечка</span>
+                    <input type="checkbox" id="1114">
+                    <label for='1114' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Фрукты</span>
+                    <input type="checkbox" id="1113">
+                    <label for='1113' class="filter__item-title">Новое</label>
                   </div>
 
                   <div class="filter__item">
-                    <div class="filter__checker">
-                      <img
-                        class="filter__checker-icon"
-                        src="./img/menu/menu-choose-icon.svg"
-                        alt="menu-pick-icon"
-                      />
-                    </div>
-                    <span class="filter__item-title">Напитки</span>
+                    <input type="checkbox" id="1112">
+                    <label for='1112' class="filter__item-title">Новое</label>
                   </div>
                 </div>
               </div>
