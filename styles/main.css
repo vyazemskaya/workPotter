@@ -178,6 +178,9 @@ input[type='number'] {
   width: 100%;
   padding: 0 14.4rem 0 14.4rem !important;
 }
+main {
+  overflow: hidden;
+}
 
 .header {
   z-index: 50;
