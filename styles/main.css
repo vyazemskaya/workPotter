@@ -128,6 +128,11 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+.main {
+  padding-top: 0rem;
+}
+
 .container {
   width: 156rem;
   margin: 0 auto;
@@ -180,6 +185,7 @@ input[type='number'] {
 }
 main {
   overflow: hidden;
+  padding-top: 18rem;
 }
 
 .header {
@@ -1848,6 +1854,7 @@ main {
   main {
     overflow: hidden;
     background-color: white;
+    padding-top: 0rem;
   }
 
   .header__logo--footer {
