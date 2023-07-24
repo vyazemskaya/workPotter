@@ -298,6 +298,7 @@ main {
   .header__nav.active {
     opacity: 1;
     left: 0;
+    top: -3rem;
     pointer-events: auto;
   }
   .header__nav-list {
