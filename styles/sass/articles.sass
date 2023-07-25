@@ -1,46 +1,12 @@
-@font-face 
-  font-family: Gotham
-  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
-  font-display: swap
-  font-weight: 400
-  font-style: normal
-
-@font-face 
-  font-family: Montserrat
-  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
-  font-display: swap
-  font-weight: 500
-  font-style: normal
-
-@font-face 
-  font-family: Montserrat
-  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
-  font-display: swap
-  font-weight: 400
-  font-style: normal
-
 $pf-black: #434248
 $pf-black-secondary: rgba(67, 66, 72, 0.5)
 $pf-orange: #E9743F
 $pf-beige: #FFF3E5
-
-*,
-::after,
-::before 
-  box-sizing: border-box
-
-html 
-  font-family: Gotham, sans-serif
-  font-size: 0.5208335vw
-  font-style: normal
-  font-weight: 400
-  -webkit-animation: 1s infinite bugfix
-  line-height: 1.2
-  margin: 0
-  padding: 0
-
-img
-  object-fit: contain
+$pf-beige: #FFF3E5
+$pf-green: #7fac37
+$pf-black-tertiary: #43424840
+$pf-error: #F63737
+$pf-gray: #D2D2D2
 
 .articles
   padding-top: 3rem
@@ -89,9 +55,9 @@ img
     &::-webkit-scrollbar
       width: 0
       display: none
-    &::-webkit-scrollbar-thumb 
+    &::-webkit-scrollbar-thumb
       display: none
-    &::-webkit-scrollbar-button 
+    &::-webkit-scrollbar-button
       display: none
   &__list-line
     display: flex
@@ -128,7 +94,7 @@ img
     &__type
       margin-right: 2rem
       color: $pf-black-secondary
-      &--amount 
+      &--amount
         margin-right: 0rem
     &__date
       font-family: 'Montserrat'
@@ -173,7 +139,7 @@ img
       line-height: 1.9rem
       color: rgba(67, 66, 72, 0.5)
 
-      span 
+      span
         width: 0.5rem
         height: 0.5rem
         background-color: #43424880
