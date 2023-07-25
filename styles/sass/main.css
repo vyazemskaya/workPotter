@@ -1,23 +1,23 @@
 @font-face {
   font-family: Gotham;
-  src: url(../fonts/Gotham-book.woff2) format('woff2'),
-    url(../fonts/Gotham-book.woff) format('woff');
+  src: url(../../fonts/Gotham-book.woff2) format('woff2'),
+    url(../../fonts/Gotham-book.woff) format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Montserrat;
-  src: url(../fonts/Montserrat-medium.woff2) format('woff2'),
-    url(../fonts/Montserrat-medium.woff) format('woff');
+  src: url(../../fonts/Montserrat-medium.woff2) format('woff2'),
+    url(../../fonts/Montserrat-medium.woff) format('woff');
   font-display: swap;
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: Montserrat;
-  src: url(../fonts/Montserrat-regular.woff2) format('woff2'),
-    url(../fonts/Montserrat-regular.woff) format('woff');
+  src: url(../../fonts/Montserrat-regular.woff2) format('woff2'),
+    url(../../fonts/Montserrat-regular.woff) format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -1213,7 +1213,7 @@ main {
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
-.popular__text-animate::after {
+.main .popular__text-animate::after {
   content: ' ' attr(data-content);
 }
 .formats {
@@ -1325,12 +1325,12 @@ main {
   min-height: 125.7rem;
   padding-top: 11.5rem;
   padding-bottom: 20rem;
-  background-image: url(../img/reviews/1.webp);
+  background-image: url(../../img/reviews/1.webp);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.reviews__desc {
+.main .reviews__desc {
   position: absolute;
   white-space: nowrap;
   top: 49.5rem;
@@ -1791,7 +1791,7 @@ main {
 .reviews__slider,
 .formats__slider,
 .popular__slider-box {
-  cursor: url('../img/main/pagination-icon.svg') 45 45, auto;
+  cursor: url('../../img/main/pagination-icon.svg') 45 45, auto;
 }
 
 .formats__card-btn:hover,

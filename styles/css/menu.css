@@ -1,46 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: Gotham;
-  src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url(../fonts/Montserrat-medium.woff2) format("woff2"), url(../fonts/Montserrat-medium.woff) format("woff");
-  font-display: swap;
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url(../fonts/Montserrat-regular.woff2) format("woff2"), url(../fonts/Montserrat-regular.woff) format("woff");
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: Gotham, sans-serif;
-  font-size: 0.5208335vw;
-  font-style: normal;
-  font-weight: 400;
-  -webkit-animation: 1s infinite bugfix;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  object-fit: contain;
-}
-
 .card-box-popup {
   position: absolute;
   display: none;
@@ -48,7 +6,7 @@ img {
   height: 4.4rem;
   justify-content: center;
   align-items: center;
-  background-color: #7FAC37;
+  background-color: #7fac37;
   border-radius: 0.1rem;
   font-size: 2rem;
   line-height: 4.8rem;
@@ -58,7 +16,7 @@ img {
 }
 .card-box-popup::after {
   content: "";
-  background: #7FAC37;
+  background: #7fac37;
   border-radius: 0.1rem;
   width: 2rem;
   height: 2rem;
@@ -76,6 +34,34 @@ img {
   margin: 0 auto;
   width: 156rem;
   overflow: hidden;
+}
+.menu .card:hover::before {
+  content: "ПРАВИЛЬНОЕ ПИТАНИЕ";
+  position: absolute;
+  white-space: nowrap;
+  top: 5rem;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  color: #E9743F;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14.3696rem;
+  line-height: 17.5rem;
+  animation: slideText 7s linear infinite;
+}
+.menu .filter__head {
+  display: none;
+}
+.menu .swiper-container {
+  position: relative;
+}
+.menu .swiper-slide {
+  overflow: visible !important;
+}
+.menu .menu-swiper {
+  padding-top: 1rem;
 }
 .menu__filter-button {
   display: none;
@@ -99,7 +85,7 @@ img {
   cursor: pointer;
   width: 5rem !important;
   margin-left: 4rem;
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 .menu__paggination-icon-wrapper {
   background: linear-gradient(270deg, rgb(255, 255, 255) 42.41%, rgba(255, 255, 255, 0) 91.77%);
@@ -129,8 +115,8 @@ img {
   transition: 0.6s ease-out;
 }
 .menu .item--current {
-  background-color: #7FAC37;
-  border: 0.2rem solid #7FAC37;
+  background-color: #7fac37;
+  border: 0.2rem solid #7fac37;
   position: relative;
   top: -0.8rem;
 }
@@ -154,7 +140,7 @@ img {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  color: #7FAC37;
+  color: #7fac37;
   margin-top: 1.2rem;
   margin-bottom: 0.5rem;
 }
@@ -164,7 +150,7 @@ img {
   font-weight: 400;
   font-size: 4rem;
   line-height: 4.9rem;
-  color: #434248;
+  color: #D2D2D2;
   margin-bottom: 0.5rem;
 }
 .menu__content {
@@ -381,7 +367,7 @@ img {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  color: #7FAC37;
+  color: #7fac37;
   margin-bottom: 1.4rem;
 }
 .menu .card__nutrition-info {
@@ -681,54 +667,45 @@ img {
 }
 
 @media (hover: hover) {
-  .card:hover {
+  .menu .swiper-container {
+    position: relative;
+    margin-top: 1rem;
+  }
+  .menu .swiper-slide {
+    width: auto;
+  }
+  .menu .card:hover {
     background-color: #F8F8F8;
     box-shadow: 0.7rem 0.7rem 1.2rem 0rem rgba(87, 87, 87, 0.0784313725);
   }
-  .card:hover .card__composition {
+  .menu .card__composition {
     background-color: #E1F2C5;
     border: 0.1rem solid #E1F2C5;
     color: #434248;
   }
-  .card:hover .card__nutrition-summary {
+  .menu .card__nutrition-summary {
     color: #434248;
   }
-  .card:hover .card__price-value {
+  .menu .card__price-value {
     color: #434248;
   }
-  .card:hover .card__price-rubles {
+  .menu .card__price-rubles {
     color: #434248;
   }
-  .card:hover .card__composition-name--gray {
+  .menu .card__composition-name--gray {
     color: rgba(67, 66, 72, 0.5019607843);
   }
-  .card:hover .card__composition-icon {
+  .menu .card__composition-icon {
     filter: brightness(0.5);
   }
-  .card:hover .card__price-label {
+  .menu .card__price-label {
     color: #434248;
   }
-  .card__box:hover {
+  .menu .card__box:hover {
     box-shadow: 0.7rem 0.7rem 1.2rem 0rem rgba(87, 87, 87, 0.0784313725);
   }
-  .card__box--second:hover {
+  .menu .card__box--second:hover {
     box-shadow: none;
-  }
-  .card:hover::before {
-    content: "ПРАВИЛЬНОЕ ПИТАНИЕ";
-    position: absolute;
-    white-space: nowrap;
-    top: 5rem;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    color: #E9743F;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14.3696rem;
-    line-height: 17.5rem;
-    animation: slideText 7s linear infinite;
   }
   @keyframes slideText {
     0% {
@@ -739,32 +716,7 @@ img {
     }
   }
 }
-.filter__head {
-  display: none;
-}
-
-.swiper-container {
-  position: relative;
-}
-
-.swiper-slide {
-  overflow: visible !important;
-}
-
 @media (max-width: 48em) {
-  html {
-    font-size: 5px;
-    font-size: 1.5625vw;
-    font-size: 1.3333333333vw;
-    -webkit-text-size-adjust: none;
-  }
-  .swiper-container {
-    position: relative;
-    margin-top: 1rem;
-  }
-  .swiper-slide {
-    width: auto;
-  }
   .menu {
     width: 68.6rem;
     padding-top: 22.3rem;
@@ -802,7 +754,7 @@ img {
   }
   .menu__paggination-icon-wrapper {
     right: -3.2rem;
-    top: -1rem;
+    top: 0rem;
     height: 18rem;
   }
   .menu .item {

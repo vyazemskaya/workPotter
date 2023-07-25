@@ -1,50 +1,18 @@
-@font-face {
-  font-family: Gotham;
-  src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url(../fonts/Montserrat-medium.woff2) format("woff2"), url(../fonts/Montserrat-medium.woff) format("woff");
-  font-display: swap;
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url(../fonts/Montserrat-regular.woff2) format("woff2"), url(../fonts/Montserrat-regular.woff) format("woff");
-  font-display: swap;
-  font-weight: 400;
-  font-style: normal;
-}
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: Gotham, sans-serif;
-  font-size: 0.5208335vw;
-  font-style: normal;
-  font-weight: 400;
-  -webkit-animation: 1s infinite bugfix;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  object-fit: contain;
-}
-
 .about {
   padding-top: 3rem;
   padding-bottom: 23.8rem;
   margin: 0 auto;
   width: 156rem;
+}
+.about .swiper-wrapper {
+  width: 102.9rem;
+  gap: 10rem 3.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.about .swiper-slide {
+  height: auto !important;
 }
 .about__paggination-icon {
   display: none;
@@ -207,17 +175,6 @@ img {
   font-size: 1.6rem;
   line-height: 1.9rem;
   color: rgba(67, 66, 72, 0.5);
-}
-
-.swiper-wrapper {
-  width: 102.9rem;
-  gap: 10rem 3.7rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-}
-.swiper-slide {
-  height: auto !important;
 }
 
 @media (max-width: 48em) {
@@ -385,8 +342,6 @@ img {
     font-size: 2.8rem;
     line-height: 3rem;
   }
-}
-@media (max-width: 48em) {
   .swiper-wrapper {
     gap: 0;
     display: flex;

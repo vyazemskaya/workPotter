@@ -1,47 +1,12 @@
-@font-face
-  font-family: Gotham
-  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
-  font-display: swap
-  font-weight: 400
-  font-style: normal
-
-@font-face
-  font-family: Montserrat
-  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
-  font-display: swap
-  font-weight: 500
-  font-style: normal
-
-@font-face
-  font-family: Montserrat
-  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
-  font-display: swap
-  font-weight: 400
-  font-style: normal
-
 $pf-black: #434248
 $pf-black-secondary: rgba(67, 66, 72, 0.5)
 $pf-orange: #E9743F
 $pf-beige: #FFF3E5
-$pf-green: #7FAC37
-$pf-gray: #434248
-*,
-::after,
-::before
-  box-sizing: border-box
-
-html
-  font-family: Gotham, sans-serif
-  font-size: 0.5208335vw
-  font-style: normal
-  font-weight: 400
-  -webkit-animation: 1s infinite bugfix
-  line-height: 1.2
-  margin: 0
-  padding: 0
-
-img
-  object-fit: contain
+$pf-beige: #FFF3E5
+$pf-black-tertiary: #43424840
+$pf-error: #F63737
+$pf-gray: #D2D2D2
+$pf-green: #7fac37
 
 .card-box-popup
   position: absolute
@@ -76,6 +41,33 @@ img
   margin: 0 auto
   width: 156rem
   overflow: hidden
+
+  .card:hover::before
+    content: "ПРАВИЛЬНОЕ ПИТАНИЕ"
+    position: absolute
+    white-space: nowrap
+    top: 5rem
+    left: -100%
+    width: 200%
+    height: 100%
+    color: $pf-orange
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    font-size: 14.3696rem
+    line-height: 17.5rem
+    animation: slideText 7s linear infinite
+
+  .filter__head
+    display: none
+
+  .swiper-container
+    position: relative
+  .swiper-slide
+    overflow: visible !important
+
+  .menu-swiper
+    padding-top: 1rem
   &__filter-button
     display: none
     justify-content: center
@@ -93,7 +85,7 @@ img
     cursor: pointer
     width: 5rem !important
     margin-left: 4rem
-    margin-top: 5rem
+    margin-top: 6rem
     &-wrapper
       background: linear-gradient(270deg, rgba(255, 255, 255, 1) 42.41%, rgba(255, 255, 255, 0) 91.77%)
       width: 16rem
@@ -594,9 +586,15 @@ img
       line-height: 1.9rem
 
 @media (hover: hover)
-  .card:hover
-    background-color: #F8F8F8
-    box-shadow: 0.7rem 0.7rem 1.2rem 0rem #57575714
+  .menu
+    .swiper-container
+      position: relative
+      margin-top: 1rem
+    .swiper-slide
+      width: auto
+    .card:hover
+      background-color: #F8F8F8
+      box-shadow: 0.7rem 0.7rem 1.2rem 0rem #57575714
     .card__composition
       background-color: #E1F2C5
       border: 0.1rem solid #E1F2C5
@@ -614,53 +612,18 @@ img
     .card__price-label
       color: $pf-black
 
-  .card__box:hover
-    box-shadow: 0.7rem 0.7rem 1.2rem 0rem #57575714
-  .card__box--second:hover
-    box-shadow: none
+    .card__box:hover
+      box-shadow: 0.7rem 0.7rem 1.2rem 0rem #57575714
+    .card__box--second:hover
+      box-shadow: none
 
-  .card:hover::before
-    content: "ПРАВИЛЬНОЕ ПИТАНИЕ"
-    position: absolute
-    white-space: nowrap
-    top: 5rem
-    left: -100%
-    width: 200%
-    height: 100%
-    color: $pf-orange
-    font-family: 'Montserrat'
-    font-style: normal
-    font-weight: 400
-    font-size: 14.3696rem
-    line-height: 17.5rem
-    animation: slideText 7s linear infinite
-
-  @keyframes slideText
-    0%
-      transform: translateX(100%)
-    100%
-      transform: translateX(-100%)
-
-.filter__head
-  display: none
-
-.swiper-container
-  position: relative
-.swiper-slide
-  overflow: visible !important
+    @keyframes slideText
+      0%
+        transform: translateX(100%)
+      100%
+        transform: translateX(-100%)
 
 @media (max-width: 48em)
-  html
-    font-size: 5px
-    font-size: 1.5625vw
-    font-size: 1.3333333333vw
-    -webkit-text-size-adjust: none
-
-  .swiper-container
-    position: relative
-    margin-top: 1rem
-  .swiper-slide
-    width: auto
 
   .menu
     width: 68.6rem
@@ -693,7 +656,7 @@ img
       cursor: pointer
       &-wrapper
         right: -3.2rem
-        top: -1rem
+        top: 0rem
         height: 18rem
     .item
       width: 19.6rem

@@ -1,52 +1,28 @@
-@font-face 
-  font-family: Gotham
-  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
-  font-display: swap
-  font-weight: 400
-  font-style: normal
-
-@font-face 
-  font-family: Montserrat
-  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
-  font-display: swap
-  font-weight: 500
-  font-style: normal
-
-@font-face 
-  font-family: Montserrat
-  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
-  font-display: swap
-  font-weight: 400
-  font-style: normal
-
 $pf-black: #434248
 $pf-black-secondary: rgba(67, 66, 72, 0.5)
 $pf-orange: #E9743F
 $pf-beige: #FFF3E5
-
-*,
-::after,
-::before 
-  box-sizing: border-box
-
-html 
-  font-family: Gotham, sans-serif
-  font-size: 0.5208335vw
-  font-style: normal
-  font-weight: 400
-  -webkit-animation: 1s infinite bugfix
-  line-height: 1.2
-  margin: 0
-  padding: 0
-
-img
-  object-fit: contain
+$pf-beige: #FFF3E5
+$pf-black-tertiary: #43424840
+$pf-error: #F63737
+$pf-gray: #D2D2D2
+$pf-green: #7fac37
 
 .about
   padding-top: 3rem
   padding-bottom: 23.8rem
   margin: 0 auto
   width: 156rem
+  .swiper
+    &-wrapper
+      width: 102.9rem
+      gap: 10rem 3.7rem
+      display: flex
+      flex-wrap: wrap
+      margin: 0
+    &-slide
+      height: auto !important
+
   &__paggination-icon
     display: none
   &__title
@@ -160,7 +136,7 @@ img
       font-size: 6rem
       line-height: 7.3rem
       margin-bottom: 6rem
-      width: 60.8rem  
+      width: 60.8rem
     &__discription
       font-family: 'Gotham'
       font-style: normal
@@ -188,17 +164,6 @@ img
       font-size: 1.6rem
       line-height: 1.9rem
       color: $pf-black-secondary
-
-.swiper
-  &-wrapper
-    width: 102.9rem
-    gap: 10rem 3.7rem
-    display: flex
-    flex-wrap: wrap
-    margin: 0
-  &-slide
-    height: auto !important
-
 
 @media (max-width: 48em)
 
@@ -330,7 +295,7 @@ img
         border-radius: 6rem
         font-style: normal
         font-weight: 400
-        font-size:2.8rem
+        font-size: 2.8rem
         line-height: 3rem
         margin-bottom: 3rem
       &__button-subtitles
@@ -339,7 +304,7 @@ img
         font-weight: 400
         font-size: 2.8rem
         line-height: 3rem
-  
+
   .swiper
     &-wrapper
       gap: 0
@@ -348,7 +313,3 @@ img
       width: 68.6rem
     &-slide
       height: auto !important
-
-
-
-      

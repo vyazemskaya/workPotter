@@ -1,46 +1,12 @@
-@font-face
-  font-family: Gotham
-  src: url(../../fonts/Gotham-book.woff2) format('woff2'), url(../../fonts/Gotham-book.woff) format('woff')
-  font-display: swap
-  font-weight: 400
-  font-style: normal
-
-@font-face
-  font-family: Montserrat
-  src: url(../fonts/Montserrat-medium.woff2) format('woff2'), url(../fonts/Montserrat-medium.woff) format('woff')
-  font-display: swap
-  font-weight: 500
-  font-style: normal
-
-@font-face
-  font-family: Montserrat
-  src: url(../fonts/Montserrat-regular.woff2) format('woff2'), url(../fonts/Montserrat-regular.woff) format('woff')
-  font-display: swap
-  font-weight: 400
-  font-style: normal
-
 $pf-black: #434248
 $pf-black-secondary: rgba(67, 66, 72, 0.5)
 $pf-orange: #E9743F
 $pf-beige: #FFF3E5
-
-*,
-::after,
-::before
-  box-sizing: border-box
-
-html
-  font-family: Gotham, sans-serif
-  font-size: 0.5208335vw
-  font-style: normal
-  font-weight: 400
-  -webkit-animation: 1s infinite bugfix
-  line-height: 1.2
-  margin: 0
-  padding: 0
-
-img
-  object-fit: contain
+$pf-beige: #FFF3E5
+$pf-black-tertiary: #43424840
+$pf-error: #F63737
+$pf-gray: #D2D2D2
+$pf-green: #7fac37
 
 .portfolio-det
   padding-top: 3rem
@@ -258,7 +224,6 @@ img
     color: rgba(67, 66, 72, 0.5)
   &__item
     margin-left: 2.5rem
-  
 
 @media (max-width: 48em)
   html
