@@ -40,7 +40,6 @@ $pf-green: #7fac37
   padding-bottom: 23.8rem
   margin: 0 auto
   width: 156rem
-  overflow: hidden
 
   .card:hover::before
     content: "ПРАВИЛЬНОЕ ПИТАНИЕ"
@@ -74,13 +73,6 @@ $pf-green: #7fac37
     align-items: center
   &__filter-button-img
     width: 3.6rem
-  &__list
-    height: 140rem
-    overflow: scroll
-    &::-webkit-scrollbar
-      width: 0rem
-    &::-webkit-scrollbar-thumb
-      background-color: transparent
   &__paggination-icon
     cursor: pointer
     width: 5rem !important
@@ -146,6 +138,7 @@ $pf-green: #7fac37
   &__content
     margin-top: 5.8rem
     display: flex
+    position: relative
   &__search-bar
     width: 36.2rem
     display: flex
@@ -451,7 +444,8 @@ $pf-green: #7fac37
       width: 2.4rem
       margin-right: 1.5rem
   .order
-    height: fit-content
+    position: sticky
+    top: 2rem
     margin-left: 3.1rem
     margin-top: 10.4rem
     padding: 4rem 3rem
@@ -460,6 +454,8 @@ $pf-green: #7fac37
     flex-direction: column
     align-items: flex-start
     color: $pf-black
+    height: 58.8rem
+
     &__title
       font-family: 'Montserrat'
       font-style: normal
@@ -484,6 +480,7 @@ $pf-green: #7fac37
         width: 30.2rem
         display: flex
         flex-direction: column
+
       &__info
         display: flex
         justify-content: space-between
@@ -631,18 +628,16 @@ $pf-green: #7fac37
     padding-bottom: 24rem
     &__content
       flex-direction: column
+      
     &__list
       width: 68.6rem
-      height: 246rem
-      overflow: scroll
-      overflow-x: visible
     &__title
       font-style: normal
       font-weight: 400
       font-size: 4.8rem
       line-height: 5.8rem
       position: absolute
-      top: 44.2rem
+      top: 0rem
       width: auto
     &__filter-button
       display: flex
@@ -684,8 +679,9 @@ $pf-green: #7fac37
         .item__value
           margin-bottom: 4rem
     &__search-bar
+      margin: 0 auto
       margin-top: 11rem
-      width: 68.6rem
+      width: 68rem
       display: flex
       flex-direction: row
       flex-wrap: wrap
@@ -702,7 +698,7 @@ $pf-green: #7fac37
         width: 3.6rem
       &__input
         height: 8rem
-        width: 60.6rem
+        width: 59.8rem
     .card
       flex-direction: column
       width: 68.6rem
@@ -841,18 +837,17 @@ $pf-green: #7fac37
       left: 7.7rem
 
     .filter
-      position: static
-      width: 75rem
-      margin-bottom: 3rem
       position: relative
+      width: 100%
+      margin-bottom: 3rem
       top: -17rem
-      height: 0
+      max-height: 0
       overflow: hidden
       border: 0
       background-color: white
       z-index: 0
       touch-events: none
-      transition: height 0.7s ease
+      transition: max-height 0.7s ease
       &__item-title
         gap: 2rem
         &::before
@@ -862,7 +857,7 @@ $pf-green: #7fac37
       &--active
         z-index: 100
         touch-events: auto
-        height: 104.5rem
+        max-height: 130rem
       &__button-bar
         margin-top: 5rem
         margin-bottom: 5rem
