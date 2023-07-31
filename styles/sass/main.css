@@ -133,6 +133,11 @@ ul {
   padding-top: 0rem;
 }
 
+.main .card-box-popup {
+  top: -0.3rem;
+  left: 2.4rem;
+}
+
 .container {
   width: 156rem;
   margin: 0 auto;
@@ -202,7 +207,7 @@ main {
 }
 
 .header__container {
-  display: flex;  
+  display: flex;
   align-items: flex-start;
   position: relative;
   justify-content: space-between;

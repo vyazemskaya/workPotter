@@ -155,63 +155,97 @@
           </a>
         </div>
       </div>
-
-      
     </header>
 
     <main>
       <section class="cart">
         <p class="cart__title">КОРЗИНА</p>
-        <!-- <ul class="cart__list">
+        <ul class="cart__list">
+          <li class="cart__item item item--hide">
+            <span class="item__list-title">Блюдо</span>
+            <span class="item__list-title">Цена</span>
+            <span class="item__list-title">Количество</span>
+            <span class="item__list-title">Сумма</span>
+          </li>
 
-        <li class="cart__item item item--hide">
-          <span class="item__list-title">Блюдо</span>
-          <span class="item__list-title">Цена</span>
-          <span class="item__list-title">Количество</span>
-          <span class="item__list-title">Сумма</span>
-        </li>
+          <li class="cart__item item">
+            <div class="item__img">
+              <img src="./img/cart/cart-item-img.png" alt="card-item-img" />
+            </div>
 
-        <li class="cart__item item">
-          <img src="./img/cart/cart-item-img.png" alt="card-item-img" class="item__img">
-          <p class="item__title">Комплексный обед “Сытный”</p>
-          <span class="item__price">500<span class="item__price-count">шт.</span></span>
-          
-          <div class="item__buttons">
-            <img alt="minus-one-button" class="item__minus" src="./img/cart/minus-button.svg">
-            <span class="item__counter">01</span>
-            <img alt="plus-one-button" class="item__plus" src="./img/cart/plus-button.svg">
-          </div>
-           <span class="item__price item__price--second">500</span>
-          <img src="./img/cart/cross.svg" alt="delete-button" class="item__remove">
-        </li>
+            <p class="item__title">Комплексный обед “Сытный”</p>
+            <span class="item__price"
+              >500<span class="item__price-count">шт.</span></span
+            >
 
-        <li class="cart__item item">
-          <img src="./img/cart/cart-item2-img.png" alt="card-item-img" class="item__img">
-          <p class="item__title">Фирменное комбо с пастой</p>
-          <span class="item__price">1000<span class="item__price-count">шт.</span></span>
-          <div class="item__buttons">
-            <img alt="minus-one-button" class="item__minus" src="./img/cart/minus-button.svg">
-            <span class="item__counter">10</span>
-            <img alt="plus-one-button" class="item__plus" src="./img/cart/plus-button.svg">
-          </div>
-           <span class="item__price item__price--second">10 000</span>
-          <img src="./img/cart/cross.svg" alt="delete-button" class="item__remove">
-        </li>
-      </ul>
+            <div class="item__buttons">
+              <img
+                alt="minus-one-button"
+                class="item__minus"
+                src="./img/cart/minus-button.svg"
+              />
+              <span class="item__counter">01</span>
+              <img
+                alt="plus-one-button"
+                class="item__plus"
+                src="./img/cart/plus-button.svg"
+              />
+            </div>
+            <span class="item__price item__price--second">500</span>
+            <img
+              src="./img/cart/cross.svg"
+              alt="delete-button"
+              class="item__remove"
+            />
+          </li>
 
-      <div class="cart__confirm-order">
-        <p class="cart__total-price">
-          ИТОГО:
-          <span class="item__price">10 500</span>
-        </p>
-        <a class="cart__confirm-button" href="payment.html">
-          <img src="./img/cart/card-button-img.svg" alt="cart-img" class="cart__button-img">
-          <span class="cart__button-text">оформить заказ</span>
-        </a>
-      </div> -->
+          <li class="cart__item item">
+            <div class="item__img">
+              <img src="./img/cart/cart-item2-img.png" alt="card-item-img" />
+            </div>
+            <p class="item__title">Фирменное комбо с пастой</p>
+            <span class="item__price"
+              >1000<span class="item__price-count">шт.</span></span
+            >
+            <div class="item__buttons">
+              <img
+                alt="minus-one-button"
+                class="item__minus"
+                src="./img/cart/minus-button.svg"
+              />
+              <span class="item__counter">10</span>
+              <img
+                alt="plus-one-button"
+                class="item__plus"
+                src="./img/cart/plus-button.svg"
+              />
+            </div>
+            <span class="item__price item__price--second">10 000</span>
+            <img
+              src="./img/cart/cross.svg"
+              alt="delete-button"
+              class="item__remove"
+            />
+          </li>
+        </ul>
+
+        <div class="cart__confirm-order">
+          <p class="cart__total-price">
+            ИТОГО:
+            <span class="item__price">10 500</span>
+          </p>
+          <a class="cart__confirm-button" href="payment.html">
+            <img
+              src="./img/cart/card-button-img.svg"
+              alt="cart-img"
+              class="cart__button-img"
+            />
+            <span class="cart__button-text">оформить заказ</span>
+          </a>
+        </div>
 
         <!-- Если карзина пустая, открывается этот блок, остальные скрываются как выше -->
-        <div class="cart__empty">
+        <!-- <div class="cart__empty">
           <p class="cart__empty-message">
             Ваша корзина пуста. Но в нашем меню вы можете подобрать блюдо для
             любого мероприятия!
@@ -219,7 +253,7 @@
           <a href="/menu.html" class="cart__empty-link"
             ><span>перейти в меню</span></a
           >
-        </div>
+        </div> -->
       </section>
     </main>
 

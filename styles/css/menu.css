@@ -33,7 +33,6 @@
   padding-bottom: 23.8rem;
   margin: 0 auto;
   width: 156rem;
-  overflow: hidden;
 }
 .menu .card:hover::before {
   content: "ПРАВИЛЬНОЕ ПИТАНИЕ";
@@ -70,16 +69,6 @@
 }
 .menu__filter-button-img {
   width: 3.6rem;
-}
-.menu__list {
-  height: 140rem;
-  overflow: scroll;
-}
-.menu__list::-webkit-scrollbar {
-  width: 0rem;
-}
-.menu__list::-webkit-scrollbar-thumb {
-  background-color: transparent;
 }
 .menu__paggination-icon {
   cursor: pointer;
@@ -156,6 +145,7 @@
 .menu__content {
   margin-top: 5.8rem;
   display: flex;
+  position: relative;
 }
 .menu__search-bar {
   width: 36.2rem;
@@ -511,7 +501,8 @@
   margin-right: 1.5rem;
 }
 .menu .order {
-  height: fit-content;
+  position: sticky;
+  top: 2rem;
   margin-left: 3.1rem;
   margin-top: 10.4rem;
   padding: 4rem 3rem;
@@ -520,6 +511,7 @@
   flex-direction: column;
   align-items: flex-start;
   color: #434248;
+  height: 58.8rem;
 }
 .menu .order__title {
   font-family: "Montserrat";
@@ -727,9 +719,6 @@
   }
   .menu__list {
     width: 68.6rem;
-    height: 246rem;
-    overflow: scroll;
-    overflow-x: visible;
   }
   .menu__title {
     font-style: normal;
@@ -737,7 +726,7 @@
     font-size: 4.8rem;
     line-height: 5.8rem;
     position: absolute;
-    top: 44.2rem;
+    top: 0rem;
     width: auto;
   }
   .menu__filter-button {
@@ -789,8 +778,9 @@
     margin-bottom: 4rem;
   }
   .menu__search-bar {
+    margin: 0 auto;
     margin-top: 11rem;
-    width: 68.6rem;
+    width: 68rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -812,7 +802,7 @@
   }
   .menu .search__input {
     height: 8rem;
-    width: 60.6rem;
+    width: 59.8rem;
   }
   .menu .card {
     flex-direction: column;
@@ -980,18 +970,17 @@
     left: 7.7rem;
   }
   .menu .filter {
-    position: static;
-    width: 75rem;
-    margin-bottom: 3rem;
     position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
     top: -17rem;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     border: 0;
     background-color: white;
     z-index: 0;
     touch-events: none;
-    transition: height 0.7s ease;
+    transition: max-height 0.7s ease;
   }
   .menu .filter__item-title {
     gap: 2rem;
@@ -1004,7 +993,7 @@
   .menu .filter--active {
     z-index: 100;
     touch-events: auto;
-    height: 104.5rem;
+    max-height: 130rem;
   }
   .menu .filter__button-bar {
     margin-top: 5rem;
