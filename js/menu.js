@@ -4,20 +4,14 @@ let swiperMenu;
 document.addEventListener('DOMContentLoaded', function () {
   if (typeof Swiper !== 'undefined') {
     swiperMenu = new Swiper('.menu-swiper', {
-      loop: false,
-      spaceBetween: 30,
-      slidesOffsetAfter: 26.5 * fontSize,
-      effect: 'slide',
       speed: 550,
       nested: true,
-      freeMode: true,
-      freeModeMomentum: true,
-      freeModeMomentumRatio: 0.5,
-      freeModeMomentumBounce: true,
-      freeModeMomentumBounceRatio: 0.3,
+      freeMode: false,
+      edgeSwipeThreshold: false, // Предотвратить перетаскивание слайдов за край
       breakpoints: {
         769: {
           slidesPerView: 9.5,
+          slidesPerGroup: 1,
         },
         320: {
           slidesPerView: 3.5,
@@ -62,8 +56,8 @@ const searchInput = document.querySelector('.search__input');
 const placeholder = document.querySelector('.search__placeholder-wrapper');
 
 if (searchInput) {
-  searchInput.addEventListener('input', function () {
-    if (searchInput.value !== '') {
+  searchInput.addEventListener('input', () => {
+    if (searchInput.value.length > 0) {
       placeholder.style.opacity = 0;
     } else {
       placeholder.style.opacity = 1;
@@ -97,7 +91,7 @@ const filter = document.querySelector('.filter');
 
 if (openBtn) {
   openBtn.addEventListener('click', () => {
-    filter.classList.add('filter--active');
+    filter.classList.toggle('filter--active');
   });
 }
 
