@@ -40,7 +40,6 @@ $pf-green: #7fac37
   padding-bottom: 23.8rem
   margin: 0 auto
   width: 156rem
-
   .card:hover::before
     content: "ПРАВИЛЬНОЕ ПИТАНИЕ"
     position: absolute
@@ -242,7 +241,7 @@ $pf-green: #7fac37
     white-space: nowrap
     width: 77.3rem
   .card
-    width: 76.2rem
+    width: fit-content
     background-color: $pf-orange
     display: flex
     padding: 1.5rem
@@ -628,7 +627,7 @@ $pf-green: #7fac37
     padding-bottom: 24rem
     &__content
       flex-direction: column
-      
+
     &__list
       width: 68.6rem
     &__title
@@ -729,8 +728,13 @@ $pf-green: #7fac37
       &__icon-pick
         width: 4.4rem
       &__image
-        width: 16rem
+        width: 15rem
+        height: 15rem
+        border-radius: 50%
+        overflow: hidden
         margin-bottom: 3rem
+        img
+          object-fit: cover
       &__title
         font-style: normal
         font-weight: 500
@@ -835,7 +839,6 @@ $pf-green: #7fac37
       color: white
       top: 2.2rem
       left: 7.7rem
-
     .filter
       position: relative
       width: 100%
@@ -915,3 +918,60 @@ $pf-green: #7fac37
       &__list
         display: flex
         flex-wrap: wrap
+
+.card
+  width: fit-content
+  background-color: $pf-orange
+  display: flex
+  padding: 1.5rem
+  position: relative
+  z-index: 1
+  overflow: hidden
+  &__box
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-color: $pf-beige
+    margin-right: 1.7rem
+    z-index: 1
+    padding-left: 2rem
+    padding-right: 2rem
+    &--second
+      margin-right: 0
+      background-color: transparent
+      align-items: flex-start
+      z-index: 1
+      padding: 0
+  &__icon-group
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__icon-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: white
+    border-radius: 3rem
+    width: 5.7rem
+    height: 5.7rem
+    cursor: default
+  &__icon
+    width: 3.6rem
+    margin-bottom: 0.312rem
+    position: relative
+    top: 0.1rem
+  &__icon-query
+    font-family: 'Gotham'
+    font-style: normal
+    font-weight: 400
+    font-size: 1.6rem
+    line-height: 1.5rem
+    color: $pf-black
+    position: relative
+    bottom: 0.7rem
+    right: 0.15rem
+  &__icon-pick
+    width: 2.8rem
+    margin-left: 5.7-2.8rem
+    cursor: default

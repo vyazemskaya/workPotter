@@ -1141,6 +1141,8 @@ img {
 .cart-modal__img {
   width: 8rem;
   height: 8rem;
+  overflow: hidden;
+  border-radius: 50%;
 }
 .cart-modal__item-left-section {
   display: flex;
@@ -1524,9 +1526,17 @@ img {
   }
   .cart__list .item__img {
     width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
     margin-right: 1.7rem;
     margin-bottom: 2rem;
     order: 1;
+  }
+  .cart__list .item__img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   .cart__list .item__title {
     width: 40.8rem;
@@ -1973,6 +1983,11 @@ ul {
 
 .main {
   padding-top: 0rem;
+}
+
+.main .card-box-popup {
+  top: -0.3rem;
+  left: 2.4rem;
 }
 
 .container {
@@ -4811,7 +4826,7 @@ main {
   width: 77.3rem;
 }
 .menu .card {
-  width: 76.2rem;
+  width: fit-content;
   background-color: #E9743F;
   display: flex;
   padding: 1.5rem;
@@ -5386,8 +5401,14 @@ main {
     width: 4.4rem;
   }
   .menu .card__image {
-    width: 16rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
     margin-bottom: 3rem;
+  }
+  .menu .card__image img {
+    object-fit: cover;
   }
   .menu .card__title {
     font-style: normal;
@@ -5609,6 +5630,70 @@ main {
     display: flex;
     flex-wrap: wrap;
   }
+}
+.card {
+  width: fit-content;
+  background-color: #E9743F;
+  display: flex;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.card__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF3E5;
+  margin-right: 1.7rem;
+  z-index: 1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.card__box--second {
+  margin-right: 0;
+  background-color: transparent;
+  align-items: flex-start;
+  z-index: 1;
+  padding: 0;
+}
+.card__icon-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 3rem;
+  width: 5.7rem;
+  height: 5.7rem;
+  cursor: default;
+}
+.card__icon {
+  width: 3.6rem;
+  margin-bottom: 0.312rem;
+  position: relative;
+  top: 0.1rem;
+}
+.card__icon-query {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  color: #434248;
+  position: relative;
+  bottom: 0.7rem;
+  right: 0.15rem;
+}
+.card__icon-pick {
+  width: 2.8rem;
+  margin-left: 2.9rem;
+  cursor: default;
 }
 .payment {
   padding-top: 3rem;
