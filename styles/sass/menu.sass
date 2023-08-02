@@ -264,8 +264,14 @@ $pf-green: #7fac37
     &__icon-group
       display: flex
       align-items: center
+      justify-content: space-between
+      width: 100%
+    &__icon-pick-wrapper
+      display: flex
+      align-content: center
       justify-content: center
-      margin-top: 2rem
+      width: 5.7rem
+      height: 5.7rem
     &__icon-wrapper
       display: flex
       flex-direction: column
@@ -275,7 +281,6 @@ $pf-green: #7fac37
       border-radius: 3rem
       width: 5.7rem
       height: 5.7rem
-      margin-right: 6.5rem
     &__icon
       width: 3.6rem
       margin-bottom: 0.312rem
@@ -298,7 +303,6 @@ $pf-green: #7fac37
       font-weight: 400
       font-size: 1.6rem
       line-height: 1.9rem
-      margin-right: 9.3rem
     &__icon-pick
       width: 2.8rem
     &__image
@@ -374,8 +378,6 @@ $pf-green: #7fac37
       font-size: 1.6rem
       line-height: 1.9rem
       letter-spacing: 0.037rem
-      &--gray
-        color: #FFFFFFA6
     &__composition-icon
       display: inline
       width: 1.406rem
@@ -387,13 +389,13 @@ $pf-green: #7fac37
       font-size: 1.6rem
       line-height: 1.9rem
       color: white
-      margin-bottom: 9rem
       letter-spacing: 0.037rem
     &__price-info
       display: flex
       justify-content: space-between
       align-items: flex-end
       width: 37.1rem
+      margin-top: auto
     &__price-item
       margin-left: 1.3rem
       display: flex
@@ -581,6 +583,12 @@ $pf-green: #7fac37
       font-size: 1.6rem
       line-height: 1.9rem
 
+.card__composition-name--gray
+  svg
+    margin-left: 0.5rem
+    width: 1.5rem
+    height: 1.5rem
+
 @media (hover: hover)
   .menu
     .swiper-container
@@ -591,18 +599,21 @@ $pf-green: #7fac37
     .card:hover
       background-color: #F8F8F8
       box-shadow: 0.7rem 0.7rem 1.2rem 0rem #57575714
-    .card__composition
-      background-color: #E1F2C5
-      border: 0.1rem solid #E1F2C5
-      color: $pf-black
+      .card__composition-name--gray
+        svg
+          path
+            fill: #43424880
+      .card__composition
+        background-color: #E1F2C5
+        border: 0.1rem solid #E1F2C5
+        color: $pf-black
     .card__nutrition-summary
       color: $pf-black
     .card__price-value
       color: $pf-black
     .card__price-rubles
       color: $pf-black
-    .card__composition-name--gray
-      color: #43424880
+
     .card__composition-icon
       filter: brightness(0.5)
     .card__price-label
@@ -620,6 +631,11 @@ $pf-green: #7fac37
         transform: translateX(-100%)
 
 @media (max-width: 48em)
+  .card__composition-name--gray
+    svg
+      margin-left: 1.1rem
+      width: 2.8rem
+      height: 2.8rem
 
   .menu
     width: 68.6rem
@@ -705,9 +721,9 @@ $pf-green: #7fac37
       &__box
         width: 100%
         margin: 0
-        padding: 0
-      &__icon-group
-        margin-top: 4rem
+        padding: 4rem 3rem
+        &--second
+          padding: 0
       &__icon-wrapper
         width: 10rem
         height: 10rem
@@ -727,6 +743,7 @@ $pf-green: #7fac37
         margin-right: 17.1rem
       &__icon-pick
         width: 4.4rem
+        margin: 0
       &__image
         width: 15rem
         height: 15rem
@@ -792,7 +809,6 @@ $pf-green: #7fac37
       &__price-info
         width: 100%
         margin: 0
-        margin-bottom: 8rem
       &__price-item
         margin: 0
       &__price-value
@@ -934,8 +950,7 @@ $pf-green: #7fac37
     background-color: $pf-beige
     margin-right: 1.7rem
     z-index: 1
-    padding-left: 2rem
-    padding-right: 2rem
+    padding: 2rem
     &--second
       margin-right: 0
       background-color: transparent
@@ -946,6 +961,7 @@ $pf-green: #7fac37
     display: flex
     align-items: center
     justify-content: space-between
+    width: 100%
   &__icon-wrapper
     display: flex
     flex-direction: column
@@ -973,5 +989,10 @@ $pf-green: #7fac37
     right: 0.15rem
   &__icon-pick
     width: 2.8rem
-    margin-left: 5.7-2.8rem
     cursor: default
+  &__icon-pick-wrapper
+    display: flex
+    align-content: center
+    justify-content: center
+    width: 5.7rem
+    height: 5.7rem
