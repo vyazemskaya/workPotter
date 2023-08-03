@@ -19,6 +19,8 @@
   line-height: 120%;
 }
 .cart__empty-link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 3rem;
   border: 0.1rem solid #434248;
@@ -40,17 +42,6 @@
   line-height: 7.3rem;
   color: #434248;
   margin-bottom: 2.4rem;
-}
-.cart__title:after {
-  content: "(2)";
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 4rem;
-  line-height: 4.9rem;
-  position: relative;
-  left: 0.9rem;
-  top: -0.7rem;
 }
 .cart__list {
   display: flex;
@@ -88,7 +79,8 @@
 }
 .cart .item__img {
   width: 10rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-right: 2rem;
 }
 .cart .item__title {
@@ -403,4 +395,4 @@
     top: -0.7rem;
     left: 0.9rem;
   }
-}/*# sourceMappingURL=cart.css.map */
+}

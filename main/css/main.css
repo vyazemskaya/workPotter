@@ -1282,17 +1282,6 @@ img {
   color: #434248;
   margin-bottom: 2.4rem;
 }
-.cart__title:after {
-  content: "(2)";
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 4rem;
-  line-height: 4.9rem;
-  position: relative;
-  left: 0.9rem;
-  top: -0.7rem;
-}
 .cart__list {
   display: flex;
   align-items: center;
@@ -1459,6 +1448,27 @@ img {
   letter-spacing: 0.035rem;
 }
 
+.cart__title {
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+}
+.cart__title span {
+  display: block;
+  color: #434248;
+  font-family: Montserrat;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
 @media (max-width: 48em) {
   html {
     font-size: 5px;
@@ -1502,13 +1512,6 @@ img {
     line-height: 5.8rem;
     margin-bottom: 6rem;
     letter-spacing: -0.09rem;
-  }
-  .cart__title::after {
-    font-weight: 500;
-    font-size: 3.2rem;
-    line-height: 4rem;
-    left: 1rem;
-    top: -0.4rem;
   }
   .cart__list {
     align-items: flex-start;
@@ -4593,6 +4596,9 @@ main {
   margin: 0 auto;
   width: 156rem;
 }
+.menu__list {
+  width: 76.2rem;
+}
 .menu .card:hover::before {
   content: "ПРАВИЛЬНОЕ ПИТАНИЕ";
   position: absolute;
@@ -4826,7 +4832,7 @@ main {
   width: 77.3rem;
 }
 .menu .card {
-  width: fit-content;
+  width: 100%;
   background-color: #E9743F;
   display: flex;
   padding: 1.5rem;
@@ -4837,6 +4843,7 @@ main {
 }
 .menu .card__box {
   display: flex;
+  width: 34.1rem;
   flex-direction: column;
   align-items: center;
   background-color: #FFF3E5;
@@ -4848,12 +4855,20 @@ main {
   background-color: transparent;
   align-items: flex-start;
   z-index: 1;
+  width: 37.1rem;
 }
 .menu .card__icon-group {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu .card__icon-pick-wrapper {
+  display: flex;
+  align-content: center;
   justify-content: center;
-  margin-top: 2rem;
+  width: 5.7rem;
+  height: 5.7rem;
 }
 .menu .card__icon-wrapper {
   display: flex;
@@ -4864,7 +4879,6 @@ main {
   border-radius: 3rem;
   width: 5.7rem;
   height: 5.7rem;
-  margin-right: 6.5rem;
 }
 .menu .card__icon {
   width: 3.6rem;
@@ -4890,7 +4904,6 @@ main {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  margin-right: 9.3rem;
 }
 .menu .card__icon-pick {
   width: 2.8rem;
@@ -4908,6 +4921,7 @@ main {
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
   color: #434248;
+  width: 90%;
 }
 .menu .card__category {
   text-align: center;
@@ -4951,6 +4965,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  width: 100%;
   justify-content: flex-start;
   border: 0.1rem solid white;
   margin-bottom: 2rem;
@@ -4980,9 +4995,6 @@ main {
   line-height: 1.9rem;
   letter-spacing: 0.037rem;
 }
-.menu .card__composition-name--gray {
-  color: rgba(255, 255, 255, 0.6509803922);
-}
 .menu .card__composition-icon {
   display: inline;
   width: 1.406rem;
@@ -4995,14 +5007,14 @@ main {
   font-size: 1.6rem;
   line-height: 1.9rem;
   color: white;
-  margin-bottom: 9rem;
   letter-spacing: 0.037rem;
 }
 .menu .card__price-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 37.1rem;
+  width: 100%;
+  margin-top: auto;
 }
 .menu .card__price-item {
   margin-left: 1.3rem;
@@ -5217,6 +5229,12 @@ main {
   line-height: 1.9rem;
 }
 
+.card__composition-name--gray svg {
+  margin-left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 @media (hover: hover) {
   .menu .swiper-container {
     position: relative;
@@ -5229,7 +5247,10 @@ main {
     background-color: #F8F8F8;
     box-shadow: 0.7rem 0.7rem 1.2rem 0rem rgba(87, 87, 87, 0.0784313725);
   }
-  .menu .card__composition {
+  .menu .card:hover .card__composition-name--gray svg path {
+    fill: rgba(67, 66, 72, 0.5019607843);
+  }
+  .menu .card:hover .card__composition {
     background-color: #E1F2C5;
     border: 0.1rem solid #E1F2C5;
     color: #434248;
@@ -5242,9 +5263,6 @@ main {
   }
   .menu .card__price-rubles {
     color: #434248;
-  }
-  .menu .card__composition-name--gray {
-    color: rgba(67, 66, 72, 0.5019607843);
   }
   .menu .card__composition-icon {
     filter: brightness(0.5);
@@ -5268,6 +5286,11 @@ main {
   }
 }
 @media (max-width: 48em) {
+  .card__composition-name--gray svg {
+    margin-left: 1.1rem;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
   .menu {
     width: 68.6rem;
     padding-top: 22.3rem;
@@ -5365,16 +5388,17 @@ main {
   }
   .menu .card {
     flex-direction: column;
-    width: 68.6rem;
+    width: 100%;
     padding: 3rem;
   }
   .menu .card__box {
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 4rem 3rem;
   }
-  .menu .card__icon-group {
-    margin-top: 4rem;
+  .menu .card__box--second {
+    padding: 0;
+    width: 100%;
   }
   .menu .card__icon-wrapper {
     width: 10rem;
@@ -5399,6 +5423,7 @@ main {
   }
   .menu .card__icon-pick {
     width: 4.4rem;
+    margin: 0;
   }
   .menu .card__image {
     width: 15rem;
@@ -5478,7 +5503,6 @@ main {
   .menu .card__price-info {
     width: 100%;
     margin: 0;
-    margin-bottom: 8rem;
   }
   .menu .card__price-item {
     margin: 0;
@@ -5631,7 +5655,7 @@ main {
     flex-wrap: wrap;
   }
 }
-.card {
+.main .card {
   width: fit-content;
   background-color: #E9743F;
   display: flex;
@@ -5640,29 +5664,29 @@ main {
   z-index: 1;
   overflow: hidden;
 }
-.card__box {
+.main .card__box {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #FFF3E5;
   margin-right: 1.7rem;
   z-index: 1;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
 }
-.card__box--second {
+.main .card__box--second {
   margin-right: 0;
   background-color: transparent;
   align-items: flex-start;
   z-index: 1;
   padding: 0;
 }
-.card__icon-group {
+.main .card__icon-group {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
-.card__icon-wrapper {
+.main .card__icon-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5673,13 +5697,13 @@ main {
   height: 5.7rem;
   cursor: default;
 }
-.card__icon {
+.main .card__icon {
   width: 3.6rem;
   margin-bottom: 0.312rem;
   position: relative;
   top: 0.1rem;
 }
-.card__icon-query {
+.main .card__icon-query {
   font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
@@ -5690,10 +5714,16 @@ main {
   bottom: 0.7rem;
   right: 0.15rem;
 }
-.card__icon-pick {
+.main .card__icon-pick {
   width: 2.8rem;
-  margin-left: 2.9rem;
   cursor: default;
+}
+.main .card__icon-pick-wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 5.7rem;
+  height: 5.7rem;
 }
 .payment {
   padding-top: 3rem;

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         320: {
           slidesPerView: 3.5,
+          spaceBetween: 70,
         },
       },
       navigation: {
