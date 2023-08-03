@@ -4596,6 +4596,9 @@ main {
   margin: 0 auto;
   width: 156rem;
 }
+.menu__list {
+  width: 76.2rem;
+}
 .menu .card:hover::before {
   content: "ПРАВИЛЬНОЕ ПИТАНИЕ";
   position: absolute;
@@ -4829,7 +4832,7 @@ main {
   width: 77.3rem;
 }
 .menu .card {
-  width: fit-content;
+  width: 100%;
   background-color: #E9743F;
   display: flex;
   padding: 1.5rem;
@@ -4840,6 +4843,7 @@ main {
 }
 .menu .card__box {
   display: flex;
+  width: 34.1rem;
   flex-direction: column;
   align-items: center;
   background-color: #FFF3E5;
@@ -4851,6 +4855,7 @@ main {
   background-color: transparent;
   align-items: flex-start;
   z-index: 1;
+  width: 37.1rem;
 }
 .menu .card__icon-group {
   display: flex;
@@ -4916,6 +4921,7 @@ main {
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
   color: #434248;
+  width: 90%;
 }
 .menu .card__category {
   text-align: center;
@@ -4959,6 +4965,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  width: 100%;
   justify-content: flex-start;
   border: 0.1rem solid white;
   margin-bottom: 2rem;
@@ -5006,7 +5013,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 37.1rem;
+  width: 100%;
   margin-top: auto;
 }
 .menu .card__price-item {
@@ -5381,7 +5388,7 @@ main {
   }
   .menu .card {
     flex-direction: column;
-    width: 68.6rem;
+    width: 100%;
     padding: 3rem;
   }
   .menu .card__box {
@@ -5391,6 +5398,7 @@ main {
   }
   .menu .card__box--second {
     padding: 0;
+    width: 100%;
   }
   .menu .card__icon-wrapper {
     width: 10rem;
@@ -5647,7 +5655,7 @@ main {
     flex-wrap: wrap;
   }
 }
-.card {
+.main .card {
   width: fit-content;
   background-color: #E9743F;
   display: flex;
@@ -5656,7 +5664,7 @@ main {
   z-index: 1;
   overflow: hidden;
 }
-.card__box {
+.main .card__box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5665,20 +5673,20 @@ main {
   z-index: 1;
   padding: 2rem;
 }
-.card__box--second {
+.main .card__box--second {
   margin-right: 0;
   background-color: transparent;
   align-items: flex-start;
   z-index: 1;
   padding: 0;
 }
-.card__icon-group {
+.main .card__icon-group {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-.card__icon-wrapper {
+.main .card__icon-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -5689,13 +5697,13 @@ main {
   height: 5.7rem;
   cursor: default;
 }
-.card__icon {
+.main .card__icon {
   width: 3.6rem;
   margin-bottom: 0.312rem;
   position: relative;
   top: 0.1rem;
 }
-.card__icon-query {
+.main .card__icon-query {
   font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
@@ -5706,11 +5714,11 @@ main {
   bottom: 0.7rem;
   right: 0.15rem;
 }
-.card__icon-pick {
+.main .card__icon-pick {
   width: 2.8rem;
   cursor: default;
 }
-.card__icon-pick-wrapper {
+.main .card__icon-pick-wrapper {
   display: flex;
   align-content: center;
   justify-content: center;

@@ -52,8 +52,15 @@ if (cartBtn) {
     cartModal.classList.toggle(activeClass);
   });
 }
-if (closeModalBtn) {
-  closeModalBtn.addEventListener('click', () => {
-    cartModal.classList.remove(activeClass);
+
+if (cartModal && closeModalBtn) {
+  cartModal.addEventListener('click', (event) => {
+    if (
+      event.target === closeModalBtn ||
+      event.target.closest('.cart-modal__remove-all')
+    ) {
+      event.preventDefault();
+      cartModal.classList.remove(activeClass);
+    }
   });
 }

@@ -40,6 +40,8 @@ $pf-green: #7fac37
   padding-bottom: 23.8rem
   margin: 0 auto
   width: 156rem
+  &__list
+    width: 76.2rem
   .card:hover::before
     content: "ПРАВИЛЬНОЕ ПИТАНИЕ"
     position: absolute
@@ -241,7 +243,7 @@ $pf-green: #7fac37
     white-space: nowrap
     width: 77.3rem
   .card
-    width: fit-content
+    width: 100%
     background-color: $pf-orange
     display: flex
     padding: 1.5rem
@@ -251,6 +253,7 @@ $pf-green: #7fac37
     margin-bottom: 3.7rem
     &__box
       display: flex
+      width: 34.1rem
       flex-direction: column
       align-items: center
       background-color: $pf-beige
@@ -261,6 +264,7 @@ $pf-green: #7fac37
         background-color: transparent
         align-items: flex-start
         z-index: 1
+        width: 37.1rem
     &__icon-group
       display: flex
       align-items: center
@@ -317,6 +321,7 @@ $pf-green: #7fac37
       line-height: 2.4rem
       margin-bottom: 0.8rem
       color: $pf-black
+      width: 90%
     &__category
       text-align: center
       font-family: 'Gotham'
@@ -354,6 +359,7 @@ $pf-green: #7fac37
       display: flex
       flex-direction: column
       padding: 2rem
+      width: 100%
       justify-content: flex-start
       border: 0.1rem solid white
       margin-bottom: 2rem
@@ -394,7 +400,7 @@ $pf-green: #7fac37
       display: flex
       justify-content: space-between
       align-items: flex-end
-      width: 37.1rem
+      width: 100%
       margin-top: auto
     &__price-item
       margin-left: 1.3rem
@@ -716,7 +722,7 @@ $pf-green: #7fac37
         width: 59.8rem
     .card
       flex-direction: column
-      width: 68.6rem
+      width: 100%
       padding: 3rem
       &__box
         width: 100%
@@ -724,6 +730,7 @@ $pf-green: #7fac37
         padding: 4rem 3rem
         &--second
           padding: 0
+          width: 100%
       &__icon-wrapper
         width: 10rem
         height: 10rem
@@ -935,64 +942,65 @@ $pf-green: #7fac37
         display: flex
         flex-wrap: wrap
 
-.card
-  width: fit-content
-  background-color: $pf-orange
-  display: flex
-  padding: 1.5rem
-  position: relative
-  z-index: 1
-  overflow: hidden
-  &__box
+.main
+  .card
+    width: fit-content
+    background-color: $pf-orange
     display: flex
-    flex-direction: column
-    align-items: center
-    background-color: $pf-beige
-    margin-right: 1.7rem
+    padding: 1.5rem
+    position: relative
     z-index: 1
-    padding: 2rem
-    &--second
-      margin-right: 0
-      background-color: transparent
-      align-items: flex-start
+    overflow: hidden
+    &__box
+      display: flex
+      flex-direction: column
+      align-items: center
+      background-color: $pf-beige
+      margin-right: 1.7rem
       z-index: 1
-      padding: 0
-  &__icon-group
-    display: flex
-    align-items: center
-    justify-content: space-between
-    width: 100%
-  &__icon-wrapper
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    background-color: white
-    border-radius: 3rem
-    width: 5.7rem
-    height: 5.7rem
-    cursor: default
-  &__icon
-    width: 3.6rem
-    margin-bottom: 0.312rem
-    position: relative
-    top: 0.1rem
-  &__icon-query
-    font-family: 'Gotham'
-    font-style: normal
-    font-weight: 400
-    font-size: 1.6rem
-    line-height: 1.5rem
-    color: $pf-black
-    position: relative
-    bottom: 0.7rem
-    right: 0.15rem
-  &__icon-pick
-    width: 2.8rem
-    cursor: default
-  &__icon-pick-wrapper
-    display: flex
-    align-content: center
-    justify-content: center
-    width: 5.7rem
-    height: 5.7rem
+      padding: 2rem
+      &--second
+        margin-right: 0
+        background-color: transparent
+        align-items: flex-start
+        z-index: 1
+        padding: 0
+    &__icon-group
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+    &__icon-wrapper
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      background-color: white
+      border-radius: 3rem
+      width: 5.7rem
+      height: 5.7rem
+      cursor: default
+    &__icon
+      width: 3.6rem
+      margin-bottom: 0.312rem
+      position: relative
+      top: 0.1rem
+    &__icon-query
+      font-family: 'Gotham'
+      font-style: normal
+      font-weight: 400
+      font-size: 1.6rem
+      line-height: 1.5rem
+      color: $pf-black
+      position: relative
+      bottom: 0.7rem
+      right: 0.15rem
+    &__icon-pick
+      width: 2.8rem
+      cursor: default
+    &__icon-pick-wrapper
+      display: flex
+      align-content: center
+      justify-content: center
+      width: 5.7rem
+      height: 5.7rem
