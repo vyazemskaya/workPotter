@@ -476,7 +476,7 @@ img {
   .swiper-wrapper {
     gap: 0;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
     width: 68.6rem;
   }
   .swiper-slide {
@@ -2272,11 +2272,11 @@ main {
 }
 
 .footer__nav-item:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer__contact-item:not(:last-child) {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .footer__socials-list {
@@ -2970,6 +2970,9 @@ main {
 .popular__card-box-main {
   width: 100%;
   max-width: 40rem;
+  min-height: 44.1rem;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4.5rem;
   padding: 3rem 2.5rem;
   background-color: #fff3e5;
@@ -2991,6 +2994,7 @@ main {
 
 .popular__card-box-weight {
   padding: 0 3.5rem;
+  margin-top: auto;
 }
 
 .popular__card-box-compound {
@@ -3087,6 +3091,7 @@ main {
 
 .popular__card-title {
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .popular__card-title-desc {
@@ -4644,7 +4649,7 @@ main {
 .menu__paggination-icon-wrapper {
   background: linear-gradient(270deg, rgb(255, 255, 255) 42.41%, rgba(255, 255, 255, 0) 91.77%);
   width: 16rem;
-  height: 14rem;
+  height: 15rem;
   position: absolute;
   right: -7rem;
   top: -3rem;
@@ -4906,13 +4911,24 @@ main {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 .menu .card__icon-pick {
   width: 2.8rem;
 }
 .menu .card__image {
   width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  overflow: hidden;
   margin-bottom: 1.8rem;
+}
+.menu .card__image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .menu .card__title {
   text-align: center;
@@ -5074,10 +5090,8 @@ main {
   margin-right: 1.5rem;
 }
 .menu .order {
-  position: sticky;
-  top: 2rem;
+  transition: 0.4s;
   margin-left: 3.1rem;
-  margin-top: 10.4rem;
   padding: 4rem 3rem;
   background-color: #FFF3E5;
   display: flex;
@@ -5085,6 +5099,7 @@ main {
   align-items: flex-start;
   color: #434248;
   height: fit-content;
+  z-index: 1;
 }
 .menu .order__title {
   font-family: "Montserrat";
@@ -5665,6 +5680,11 @@ main {
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+.main .card__label {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 .main .card__box {
   display: flex;

@@ -1,4 +1,4 @@
-if (typeof ymaps !== 'undefined') {
+if (typeof ymaps !== 'undefined' && typeof ymaps !== 'null') {
   const init = () => {
     const map = new ymaps.Map('root', {
       center: [55.807749, 37.570141],
