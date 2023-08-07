@@ -82,7 +82,7 @@ $pf-green: #7fac37
     &-wrapper
       background: linear-gradient(270deg, rgba(255, 255, 255, 1) 42.41%, rgba(255, 255, 255, 0) 91.77%)
       width: 16rem
-      height: 14rem
+      height: 15rem
       position: absolute
       right: -7rem
       top: -3rem
@@ -309,11 +309,22 @@ $pf-green: #7fac37
       font-weight: 400
       font-size: 1.6rem
       line-height: 1.9rem
+      width: 100%
+      text-align: center
+      margin-bottom: 2rem
     &__icon-pick
       width: 2.8rem
     &__image
       width: 15rem
+      height: 15rem
+      border-radius: 50%
+      overflow: hidden
       margin-bottom: 1.8rem
+      img
+        object-fit: cover
+        height: 100%
+        width: 100%
+
     &__title
       text-align: center
       font-family: 'Montserrat'
@@ -453,10 +464,8 @@ $pf-green: #7fac37
       width: 2.4rem
       margin-right: 1.5rem
   .order
-    position: sticky
-    top: 2rem
+    transition: 0.4s
     margin-left: 3.1rem
-    margin-top: 10.4rem
     padding: 4rem 3rem
     background-color: $pf-beige
     display: flex
@@ -464,6 +473,7 @@ $pf-green: #7fac37
     align-items: flex-start
     color: $pf-black
     height: fit-content
+    z-index: 1
 
     &__title
       font-family: 'Montserrat'
@@ -953,6 +963,10 @@ $pf-green: #7fac37
     position: relative
     z-index: 1
     overflow: hidden
+    &__label
+      width: 100%
+      text-align: center
+      margin-bottom: 2rem
     &__box
       display: flex
       flex-direction: column

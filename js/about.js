@@ -1,11 +1,14 @@
-const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+const fontSize = parseFloat(
+  getComputedStyle(document.documentElement).fontSize
+);
 
-const rootSwiper = () => {
-  const ROOT = document.querySelector('#root');
-  const checkScreenResolution = () => {
-    const screenWidth = window.innerWidth;
-    return screenWidth < 785;
-  };
+const checkScreenResolution = () => {
+  const screenWidth = window.innerWidth;
+  return screenWidth < 785;
+};
+
+const initSwiper = () => {
+  const ROOT = document.querySelector('#slider-mob');
   if (ROOT) {
     const resolution = checkScreenResolution();
     const swiperInstance = ROOT.swiper;
@@ -14,7 +17,10 @@ const rootSwiper = () => {
       ROOT.classList.add('swiper');
       ROOT.classList.add('mySwiper');
       if (typeof Swiper !== 'undefined') {
-        const swiper = new Swiper('.mySwiper', {});
+        const swiper = new Swiper('.mySwiper', {
+          slidesPerView: 1,
+          slidesPerGroup: 1
+        });
       }
     } else if (!resolution && swiperInstance) {
       swiperInstance.destroy();
@@ -24,20 +30,18 @@ const rootSwiper = () => {
   }
 };
 
-if (rootSwiper()) {
-  const debounce = (func, delay) => {
-    let timerId;
-    return (...args) => {
-      clearTimeout(timerId);
-      timerId = setTimeout(() => {
-        func(...args);
-      }, delay);
-    };
+const debounce = (func, delay) => {
+  let timerId;
+  return (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      func(...args);
+    }, delay);
   };
+};
 
-  const handleScreenResize = debounce(rootSwiper, 200);
+const handleScreenResize = debounce(initSwiper, 200);
 
-  window.addEventListener('resize', handleScreenResize);
+window.addEventListener('resize', handleScreenResize);
 
-  rootSwiper();
-}
+initSwiper();
