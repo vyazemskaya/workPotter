@@ -116,9 +116,10 @@ if (closeBtn) {
 
 var sidebar = document.querySelector('.sidebar');
 var content = document.querySelector('.content');
-var floatSidebar = FloatSidebar({
+if (sidebar && content)
+  var floatSidebar = FloatSidebar({
     sidebar: sidebar,
     relative: content,
     topSpacing: 40,
-    bottomSpacing: 40
-});
+    bottomSpacing: 40,
+  });
