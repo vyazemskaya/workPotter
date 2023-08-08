@@ -82,7 +82,7 @@ $pf-green: #7fac37
     &-wrapper
       background: linear-gradient(270deg, rgba(255, 255, 255, 1) 42.41%, rgba(255, 255, 255, 0) 91.77%)
       width: 16rem
-      height: 14rem
+      height: 15rem
       position: absolute
       right: -7rem
       top: -3rem
@@ -113,6 +113,7 @@ $pf-green: #7fac37
         color: white
         margin-top: 0.95rem
         margin-bottom: 0.2rem
+        text-transform: uppercase
       .item__value
         font-weight: 400
         color: white
@@ -254,6 +255,7 @@ $pf-green: #7fac37
     &__box
       display: flex
       width: 34.1rem
+      height: 35rem
       flex-direction: column
       align-items: center
       background-color: $pf-beige
@@ -309,11 +311,22 @@ $pf-green: #7fac37
       font-weight: 400
       font-size: 1.6rem
       line-height: 1.9rem
+      width: 100%
+      text-align: center
+      margin-bottom: 2rem
     &__icon-pick
       width: 2.8rem
     &__image
       width: 15rem
+      height: 15rem
+      border-radius: 50%
+      overflow: hidden
       margin-bottom: 1.8rem
+      img
+        object-fit: cover
+        height: 100%
+        width: 100%
+
     &__title
       text-align: center
       font-family: 'Montserrat'
@@ -338,6 +351,7 @@ $pf-green: #7fac37
       justify-content: space-between
       align-items: center
       width: 24.1rem
+      margin-top: auto
     &__nutrition-item
       display: flex
       flex-direction: column
@@ -453,10 +467,8 @@ $pf-green: #7fac37
       width: 2.4rem
       margin-right: 1.5rem
   .order
-    position: sticky
-    top: 2rem
+    transition: 0.4s
     margin-left: 3.1rem
-    margin-top: 10.4rem
     padding: 4rem 3rem
     background-color: $pf-beige
     display: flex
@@ -464,6 +476,7 @@ $pf-green: #7fac37
     align-items: flex-start
     color: $pf-black
     height: fit-content
+    z-index: 1
 
     &__title
       font-family: 'Montserrat'
@@ -476,7 +489,24 @@ $pf-green: #7fac37
       border-top: 0.1rem solid $pf-black-secondary
       display: flex
       flex-direction: column
-      margin-bottom: 2.5rem
+      overflow-y: scroll
+      height: 41rem
+      padding-right: 2rem
+      &::-webkit-scrollbar
+        width: 0.2rem
+
+      /* Область, на которой находится полоса прокрутки */
+      &::-webkit-scrollbar-track
+        background: transparent
+
+      /* Стиль полосы прокрутки */
+      &::-webkit-scrollbar-thumb
+        background: rgba(67, 66, 72, 0.3)
+        
+
+      /* Стиль полосы прокрутки при наведении */
+      &::-webkit-scrollbar-thumb:hover
+        background: rgba(67, 66, 72, 0.5)
     .item
       border: 0
       width: 30.2rem
@@ -484,7 +514,8 @@ $pf-green: #7fac37
       flex-direction: column
       padding-top: 2.5rem
       padding-bottom: 3rem
-      border-bottom: 0.1rem solid $pf-black-secondary
+      &:not(:last-child) 
+        border-bottom: 0.1rem solid $pf-black-secondary
       &__content
         width: 30.2rem
         display: flex
@@ -547,7 +578,7 @@ $pf-green: #7fac37
         width: 1.6rem
         cursor: pointer
     &__total-price
-      width: 30.2rem
+      width: 100%
       display: flex
       justify-content: space-between
       margin: 0 auto
@@ -557,6 +588,10 @@ $pf-green: #7fac37
       font-size: 4rem
       line-height: 4.9rem
       margin-bottom: 2.5rem
+      padding-left: 1rem
+      padding-right: 1rem
+      padding-top: 2rem
+      border-top: 0.1rem solid rgba(67, 66, 72, 0.5)
     &__price
       font-family: 'Montserrat'
       font-style: normal
@@ -729,6 +764,7 @@ $pf-green: #7fac37
       &__box
         width: 100%
         margin: 0
+        height: auto
         padding: 4rem 3rem
         &--second
           padding: 0
@@ -773,7 +809,7 @@ $pf-green: #7fac37
         margin-bottom: 4rem
       &__nutrition-info
         width: 46.6rem
-        margin-bottom: 4rem
+        margin-top: 2rem
       &__nutrition-value
         font-style: normal
         font-weight: 500
@@ -879,11 +915,11 @@ $pf-green: #7fac37
       &__item-title
         gap: 2rem
         &::before
-          width: 4.8rem
-          height: 4.8rem
+          min-width: 4.8rem
+          min-height: 4.8rem
           background-size: 65%
       &--active
-        z-index: 100
+        z-index: 6
         touch-events: auto
         max-height: 130rem
       &__button-bar
@@ -953,14 +989,20 @@ $pf-green: #7fac37
     position: relative
     z-index: 1
     overflow: hidden
+    &__label
+      width: 100%
+      text-align: center
+      margin-bottom: 2rem
     &__box
       display: flex
+      
       flex-direction: column
       align-items: center
       background-color: $pf-beige
       margin-right: 1.7rem
       z-index: 1
       padding: 2rem
+      padding-top: 3rem
       &--second
         margin-right: 0
         background-color: transparent
@@ -1006,3 +1048,6 @@ $pf-green: #7fac37
       justify-content: center
       width: 5.7rem
       height: 5.7rem
+
+.menu .card__title
+  text-transform: uppercase

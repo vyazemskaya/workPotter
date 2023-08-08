@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (typeof Swiper !== 'undefined') {
     swiperMenu = new Swiper('.menu-swiper', {
       speed: 550,
-      nested: true,
-      freeMode: false,
-      edgeSwipeThreshold: false, // Предотвратить перетаскивание слайдов за край
       breakpoints: {
         769: {
           slidesPerView: 9.5,
@@ -113,3 +110,13 @@ if (closeBtn) {
     filter.classList.remove('filter--active');
   });
 }
+
+var sidebar = document.querySelector('.sidebar');
+var content = document.querySelector('.content');
+if (sidebar && content)
+  var floatSidebar = FloatSidebar({
+    sidebar: sidebar,
+    relative: content,
+    topSpacing: 40,
+   
+  });
