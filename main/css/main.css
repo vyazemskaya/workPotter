@@ -2334,7 +2334,7 @@ main {
   overflow: hidden;
   width: 100%;
   max-width: 192rem;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .hero__box-inner,
@@ -2546,6 +2546,9 @@ main {
 }
 
 @media (max-width: 48em) {
+  .hero__banner {
+    height: calc(var(--vh, 1vh) * 95);
+  }
   .hero__title {
     bottom: 1rem;
     left: 3.2rem;

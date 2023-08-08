@@ -209,12 +209,10 @@ const locoScroll = new LocomotiveScroll({
   smoothMobile: true,
   mobile: {
     breakpoint: 0,
-    smooth: true,
     getDirection: true,
   },
   tablet: {
     breakpoint: 0,
-    smooth: true,
     getDirection: true,
   },
 });
