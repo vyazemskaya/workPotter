@@ -9,50 +9,103 @@ const basket = headerBasketSvg.querySelectorAll('path');
 const heroTitle = document.querySelector('.hero__title');
 const burgerButton = document.querySelector('.header__nav-open');
 const video = document.getElementById('banner-video');
+const x = window.matchMedia('(min-width: 768px)');
 
-let counter = 0;
-let scrolled = false;
-if (bannerVideo) {
-  bannerVideo.play();
-}
+gsap.registerPlugin(ScrollTrigger);
 
-const videoHandler = () => {
-  if (!scrolled) {
-    if (video) {
-      if (counter === 0) {
-        setTimeout(() => {
-          bannerBox.classList.add('active');
-        }, 1000);
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector('.smooth-scroll'),
+  smooth: true,
+  scroller: '.smooth-scroll',
+});
 
-        if (window.innerWidth < 769) {
-          setTimeout(() => {
-            logo.src = './img/main/logo-white.svg';
-          }, 800);
+locoScroll.on('scroll', ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy('.smooth-scroll', {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+  pinType: document.querySelector('.smooth-scroll').style.transform
+    ? 'transform'
+    : 'fixed',
+});
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: '.hero__box-inner',
+      scroller: '.smooth-scroll',
+      scrub: !0,
+      start: () => 'top top',
+      end: () => 'bottom top',
+      invalidateOnRefresh: !0,
+      pin: '.hero__banner',
+      overwrite: 'auto',
+      // pinSpacing: false,
+      // markers: true,
+      anticipatePin: 1,
+      toggleActions: 'play play resume play',
+      onToggle: (self) => {
+        if (!self.isActive) {
         } else {
-          setTimeout(() => {
-            logo.src = './img/main/logo-white.svg';
-          }, 1400);
         }
-
-        setTimeout(() => {
-          logo.src = './img/main/logo-white.svg';
-          header.classList.add('header--active');
-          heroTitle.classList.add('hero__title--active');
-          burgerButton.classList.add('header__nav-open--active');
-          basket.forEach((element) => {
-            element.classList.add('header__basket-icon--active');
-          });
-        }, 1400);
-        counter++;
-      }
-    }
-    scrolled = true;
-  }
-
-  window.removeEventListener('scroll', videoHandler);
-};
-
-window.addEventListener('scroll', videoHandler);
+      },
+      onEnter: (e) => {
+        gsap.fromTo(
+          '.hero__box-inner',
+          {
+            'clip-path': 'inset(50% 0%)',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'clip-path': x.matches ? 'inset(45% 0%)' : 'inset(46% 0%)',
+            delay: 0.6,
+          }
+        );
+      },
+      onLeave: (e) => {
+        e.refresh();
+      },
+    },
+    ease: 'none',
+  })
+  .fromTo(
+    '.hero__box-inner',
+    {
+      'clip-path': x.matches ? 'inset(45% 0%)' : 'inset(46% 0%)',
+    },
+    {
+      'clip-path': 'inset(0% 0%)',
+    },
+    '0'
+  );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.hero__box-inner',
+    scrub: !0,
+    scroller: '.smooth-scroll',
+    start: () => '5% top',
+    end: () => 'bottom top',
+    invalidateOnRefresh: !0,
+    overwrite: 'auto',
+    onEnter: (e) => {
+      document.getElementById('banner-video').play();
+    },
+  },
+  ease: 'none',
+});
 
 window.addEventListener('load', () => {
   if (window.matchMedia('(max-width: 768px)').matches) {
@@ -61,6 +114,31 @@ window.addEventListener('load', () => {
     });
   }
 });
+
+window.addEventListener('resize', function () {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero__box-inner',
+      scrub: !0,
+      scroller: '.smooth-scroll',
+      start: () => 'top top',
+      end: () => 'bottom top',
+      invalidateOnRefresh: !0,
+      pin: '.hero__banner',
+      // pinSpacing: false,
+      // anticipatePin: 1,
+      overwrite: 'auto',
+    },
+    ease: 'none',
+  });
+
+  ScrollTrigger.refresh();
+});
+
+ScrollTrigger.addEventListener('refresh', () => {
+  locoScroll.update();
+});
+ScrollTrigger.refresh();
 
 // Rates
 function handleMouseOver(e) {
