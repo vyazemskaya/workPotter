@@ -205,6 +205,18 @@ const locoScroll = new LocomotiveScroll({
   el: document.querySelector('.smooth-scroll'),
   smooth: true,
   scroller: '.smooth-scroll',
+  getDirection: true,
+  smoothMobile: true,
+  mobile: {
+    breakpoint: 0,
+    smooth: true,
+    getDirection: true,
+  },
+  tablet: {
+    breakpoint: 0,
+    smooth: true,
+    getDirection: true,
+  },
 });
 
 locoScroll.on('scroll', ScrollTrigger.update);
