@@ -1,6 +1,4 @@
-const fontSize = parseFloat(
-  getComputedStyle(document.documentElement).fontSize
-);
+const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
 const rootSwiper = () => {
   const ROOT = document.querySelector('#root');

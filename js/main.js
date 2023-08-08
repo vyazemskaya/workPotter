@@ -11,12 +11,23 @@ const burgerButton = document.querySelector('.header__nav-open');
 const video = document.getElementById('banner-video');
 const x = window.matchMedia('(min-width: 768px)');
 
+// gsap animations (scroll trigger)
 gsap.registerPlugin(ScrollTrigger);
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector('.smooth-scroll'),
   smooth: true,
   scroller: '.smooth-scroll',
+  getDirection: true,
+  smoothMobile: true,
+  mobile: {
+    breakpoint: 0,
+    getDirection: true,
+  },
+  tablet: {
+    breakpoint: 0,
+    getDirection: true,
+  },
 });
 
 locoScroll.on('scroll', ScrollTrigger.update);
@@ -51,13 +62,18 @@ gsap
       invalidateOnRefresh: !0,
       pin: '.hero__banner',
       overwrite: 'auto',
-      // pinSpacing: false,
-      // markers: true,
-      anticipatePin: 1,
-      toggleActions: 'play play resume play',
-      onToggle: (self) => {
-        if (!self.isActive) {
+      onUpdate: (self) => {
+        if (self.progress >= 0.7) {
+          document.documentElement.classList.add('_revealed');
+          logo.src = './img/main/logo-white.svg';
         } else {
+          document.documentElement.classList.remove('_revealed');
+          logo.src = './img/logo.png';
+        }
+        if (self.progress >= 0.6) {
+          heroTitle.classList.add('_revealed');
+        } else {
+          heroTitle.classList.remove('_revealed');
         }
       },
       onEnter: (e) => {
@@ -74,10 +90,64 @@ gsap
             delay: 0.6,
           }
         );
+        gsap.fromTo(
+          '.hero__desc-word-1',
+          {
+            'margin-right': x.matches ? '45rem' : '13rem',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'margin-right': x.matches ? '40rem' : '10rem',
+            delay: 0.6,
+          }
+        );
+        gsap.fromTo(
+          '.hero__desc-word-2',
+          {
+            'margin-right': x.matches ? '25rem' : '10rem',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'margin-right': x.matches ? '20rem' : '5rem',
+            delay: 0.6,
+          }
+        );
+        gsap.fromTo(
+          '.hero__desc-word-3',
+          {
+            'margin-left': x.matches ? '12rem' : '10rem',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'margin-left': x.matches ? '10rem' : '5rem',
+            delay: 0.6,
+          }
+        );
+        gsap.fromTo(
+          '.hero__desc-word-4',
+          {
+            'margin-left': x.matches ? '12rem' : '15rem',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'margin-left': x.matches ? '10rem' : '10rem',
+            delay: 0.6,
+          }
+        );
       },
       onLeave: (e) => {
         e.refresh();
+        header.style.transform = 'translateY(-100%)';
       },
+      onEnterBack: (e) => (header.style.transform = 'translateY(0)'),
     },
     ease: 'none',
   })
@@ -88,6 +158,46 @@ gsap
     },
     {
       'clip-path': 'inset(0% 0%)',
+    },
+    '0'
+  )
+  .fromTo(
+    '.hero__desc-word-1',
+    {
+      'margin-right': x.matches ? '40rem' : '10rem',
+    },
+    {
+      'margin-right': '0',
+    },
+    '0'
+  )
+  .fromTo(
+    '.hero__desc-word-2',
+    {
+      'margin-right': x.matches ? '20rem' : '5rem',
+    },
+    {
+      'margin-right': '0',
+    },
+    '0'
+  )
+  .fromTo(
+    '.hero__desc-word-3',
+    {
+      'margin-left': x.matches ? '10rem' : '5rem',
+    },
+    {
+      'margin-left': '0',
+    },
+    '0'
+  )
+  .fromTo(
+    '.hero__desc-word-4',
+    {
+      'margin-left': x.matches ? '10rem' : '10rem',
+    },
+    {
+      'margin-left': '0',
     },
     '0'
   );
@@ -125,8 +235,6 @@ window.addEventListener('resize', function () {
       end: () => 'bottom top',
       invalidateOnRefresh: !0,
       pin: '.hero__banner',
-      // pinSpacing: false,
-      // anticipatePin: 1,
       overwrite: 'auto',
     },
     ease: 'none',
