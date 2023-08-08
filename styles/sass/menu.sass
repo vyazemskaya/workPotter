@@ -492,6 +492,21 @@ $pf-green: #7fac37
       overflow-y: scroll
       height: 41rem
       padding-right: 2rem
+      &::-webkit-scrollbar
+        width: 0.2rem
+
+      /* Область, на которой находится полоса прокрутки */
+      &::-webkit-scrollbar-track
+        background: transparent
+
+      /* Стиль полосы прокрутки */
+      &::-webkit-scrollbar-thumb
+        background: rgba(67, 66, 72, 0.3)
+        
+
+      /* Стиль полосы прокрутки при наведении */
+      &::-webkit-scrollbar-thumb:hover
+        background: rgba(67, 66, 72, 0.5)
     .item
       border: 0
       width: 30.2rem

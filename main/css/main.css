@@ -5120,6 +5120,21 @@ main {
   overflow-y: scroll;
   height: 41rem;
   padding-right: 2rem;
+  /* Область, на которой находится полоса прокрутки */
+  /* Стиль полосы прокрутки */
+  /* Стиль полосы прокрутки при наведении */
+}
+.menu .order__list::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.menu .order__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.menu .order__list::-webkit-scrollbar-thumb {
+  background: rgba(67, 66, 72, 0.3);
+}
+.menu .order__list::-webkit-scrollbar-thumb:hover {
+  background: rgba(67, 66, 72, 0.5);
 }
 .menu .order .item {
   border: 0;
