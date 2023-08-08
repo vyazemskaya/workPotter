@@ -2970,7 +2970,7 @@ main {
 .popular__card-box-main {
   width: 100%;
   max-width: 40rem;
-  min-height: 44.1rem;
+  min-height: 39.1rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 4.5rem;
@@ -3000,6 +3000,7 @@ main {
 .popular__card-box-compound {
   margin-bottom: 1.5rem;
   border: 0.2rem solid var(--white);
+  min-height: 10rem;
   padding: 1.5rem 2.5rem;
   transition-property: border-color;
   transition-duration: 0.4s;
@@ -4685,6 +4686,7 @@ main {
   color: white;
   margin-top: 0.95rem;
   margin-bottom: 0.2rem;
+  text-transform: uppercase;
 }
 .menu .item--current .item__value {
   font-weight: 400;
@@ -4849,6 +4851,7 @@ main {
 .menu .card__box {
   display: flex;
   width: 34.1rem;
+  height: 35rem;
   flex-direction: column;
   align-items: center;
   background-color: #FFF3E5;
@@ -4956,6 +4959,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 24.1rem;
+  margin-top: auto;
 }
 .menu .card__nutrition-item {
   display: flex;
@@ -5113,7 +5117,9 @@ main {
   border-top: 0.1rem solid rgba(67, 66, 72, 0.5);
   display: flex;
   flex-direction: column;
-  margin-bottom: 2.5rem;
+  overflow-y: scroll;
+  height: 41rem;
+  padding-right: 2rem;
 }
 .menu .order .item {
   border: 0;
@@ -5122,6 +5128,8 @@ main {
   flex-direction: column;
   padding-top: 2.5rem;
   padding-bottom: 3rem;
+}
+.menu .order .item:not(:last-child) {
   border-bottom: 0.1rem solid rgba(67, 66, 72, 0.5);
 }
 .menu .order .item__content {
@@ -5196,7 +5204,7 @@ main {
   cursor: pointer;
 }
 .menu .order__total-price {
-  width: 30.2rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -5206,6 +5214,10 @@ main {
   font-size: 4rem;
   line-height: 4.9rem;
   margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  border-top: 0.1rem solid rgba(67, 66, 72, 0.5);
 }
 .menu .order__price {
   font-family: "Montserrat";
@@ -5411,6 +5423,7 @@ main {
   .menu .card__box {
     width: 100%;
     margin: 0;
+    height: auto;
     padding: 4rem 3rem;
   }
   .menu .card__box--second {
@@ -5466,7 +5479,7 @@ main {
   }
   .menu .card__nutrition-info {
     width: 46.6rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
   }
   .menu .card__nutrition-value {
     font-style: normal;
@@ -5592,12 +5605,12 @@ main {
     gap: 2rem;
   }
   .menu .filter__item-title::before {
-    width: 4.8rem;
-    height: 4.8rem;
+    min-width: 4.8rem;
+    min-height: 4.8rem;
     background-size: 65%;
   }
   .menu .filter--active {
-    z-index: 100;
+    z-index: 6;
     touch-events: auto;
     max-height: 130rem;
   }
@@ -5694,6 +5707,7 @@ main {
   margin-right: 1.7rem;
   z-index: 1;
   padding: 2rem;
+  padding-top: 3rem;
 }
 .main .card__box--second {
   margin-right: 0;
@@ -5747,6 +5761,10 @@ main {
   width: 5.7rem;
   height: 5.7rem;
 }
+
+.menu .card__title {
+  text-transform: uppercase;
+}
 .payment {
   padding-top: 3rem;
   padding-bottom: 23.8rem;
@@ -5774,8 +5792,17 @@ main {
   background-color: #FFF3E5;
 }
 .payment .order__img {
+  min-width: 8rem;
   width: 8rem;
+  height: 8rem;
   margin-right: 2rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.payment .order__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .payment .order__date {
   margin-left: 3rem;
@@ -6048,7 +6075,9 @@ main {
     left: -0.1rem;
   }
   .payment .order__img {
+    min-width: 12rem;
     width: 12rem;
+    height: 12rem;
   }
   .payment .order__price {
     font-weight: 500;

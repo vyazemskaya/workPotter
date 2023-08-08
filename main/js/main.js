@@ -530,9 +530,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (typeof Swiper !== 'undefined') {
     swiperMenu = new Swiper('.menu-swiper', {
       speed: 550,
-      nested: true,
-      freeMode: false,
-      edgeSwipeThreshold: false, // Предотвратить перетаскивание слайдов за край
       breakpoints: {
         769: {
           slidesPerView: 9.5,
@@ -646,7 +643,7 @@ if (sidebar && content)
     sidebar: sidebar,
     relative: content,
     topSpacing: 40,
-    bottomSpacing: 40,
+   
   });
 
 const btn = document.querySelector('#btn');
