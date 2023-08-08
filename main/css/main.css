@@ -2409,7 +2409,7 @@ main {
   display: inline-flex;
   flex-direction: column;
   z-index: 5;
-  padding-bottom: 4rem;
+  padding: 4rem 0;
 }
 
 .hero__desc,
@@ -2417,7 +2417,7 @@ main {
   text-align: center;
   font-weight: 400;
   font-size: 14.3rem;
-  line-height: 16.5rem;
+  line-height: 15.5rem;
   transition-property: transform;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
