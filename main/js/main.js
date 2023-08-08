@@ -205,50 +205,190 @@ const basket = headerBasketSvg.querySelectorAll('path');
 const heroTitle = document.querySelector('.hero__title');
 const burgerButton = document.querySelector('.header__nav-open');
 const video = document.getElementById('banner-video');
+const x = window.matchMedia('(min-width: 768px)');
 
-let counter = 0;
-let scrolled = false;
-if (bannerVideo) {
-  bannerVideo.play();
-}
+// gsap animations (scroll trigger)
+gsap.registerPlugin(ScrollTrigger);
 
-const videoHandler = () => {
-  if (!scrolled) {
-    if (video) {
-      if (counter === 0) {
-        setTimeout(() => {
-          bannerBox.classList.add('active');
-        }, 1000);
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector('.smooth-scroll'),
+  smooth: true,
+  scroller: '.smooth-scroll',
+  getDirection: true,
+  smoothMobile: true,
+  mobile: {
+    breakpoint: 0,
+    getDirection: true,
+  },
+  tablet: {
+    breakpoint: 0,
+    getDirection: true,
+  },
+});
 
-        if (window.innerWidth < 769) {
-          setTimeout(() => {
-            logo.src = './img/main/logo-white.svg';
-          }, 800);
-        } else {
-          setTimeout(() => {
-            logo.src = './img/main/logo-white.svg';
-          }, 1400);
-        }
+locoScroll.on('scroll', ScrollTrigger.update);
 
-        setTimeout(() => {
+ScrollTrigger.scrollerProxy('.smooth-scroll', {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+  pinType: document.querySelector('.smooth-scroll').style.transform
+    ? 'transform'
+    : 'fixed',
+});
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: '.hero__box-inner',
+      scroller: '.smooth-scroll',
+      scrub: !0,
+      start: () => 'top top',
+      end: () => 'bottom top',
+      invalidateOnRefresh: !0,
+      pin: '.hero__banner',
+      overwrite: 'auto',
+      onUpdate: (self) => {
+        if (self.progress >= 0.7) {
+          document.documentElement.classList.add('_revealed');
           logo.src = './img/main/logo-white.svg';
-          header.classList.add('header--active');
-          heroTitle.classList.add('hero__title--active');
-          burgerButton.classList.add('header__nav-open--active');
-          basket.forEach((element) => {
-            element.classList.add('header__basket-icon--active');
-          });
-        }, 1400);
-        counter++;
-      }
-    }
-    scrolled = true;
-  }
-
-  window.removeEventListener('scroll', videoHandler);
-};
-
-window.addEventListener('scroll', videoHandler);
+        } else {
+          document.documentElement.classList.remove('_revealed');
+          logo.src = './img/logo.png';
+        }
+        if (self.progress >= 0.6) {
+          heroTitle.classList.add('_revealed');
+        } else {
+          heroTitle.classList.remove('_revealed');
+        }
+      },
+      onEnter: (e) => {
+        gsap.fromTo(
+          '.hero__box-inner',
+          {
+            'clip-path': 'inset(50% 0%)',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'clip-path': x.matches ? 'inset(45% 0%)' : 'inset(46% 0%)',
+            delay: 0.6,
+          }
+        );
+        gsap.fromTo(
+          '.hero__desc-word-1',
+          {
+            'margin-right': x.matches ? '15rem' : '13rem',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'margin-right': x.matches ? '10rem' : '10rem',
+            delay: 0.6,
+          }
+        );
+        gsap.fromTo(
+          '.hero__desc-word-2',
+          {
+            'margin-left': x.matches ? '15rem' : '20rem',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'margin-left': x.matches ? '10rem' : '15rem',
+            delay: 0.6,
+          }
+        );
+        gsap.fromTo(
+          '.hero__desc-word-3',
+          {
+            'margin-right': x.matches ? '12rem' : '20rem',
+            alpha: 0,
+          },
+          {
+            duration: 1,
+            alpha: 1,
+            'margin-right': x.matches ? '10rem' : '5rem',
+            delay: 0.6,
+          }
+        );
+      },
+      onLeave: (e) => {
+        e.refresh();
+        header.style.transform = 'translateY(-100%)';
+      },
+      onEnterBack: (e) => (header.style.transform = 'translateY(0)'),
+    },
+    ease: 'none',
+  })
+  .fromTo(
+    '.hero__box-inner',
+    {
+      'clip-path': x.matches ? 'inset(45% 0%)' : 'inset(46% 0%)',
+    },
+    {
+      'clip-path': 'inset(0% 0%)',
+    },
+    '0'
+  )
+  .fromTo(
+    '.hero__desc-word-1',
+    {
+      'margin-right': x.matches ? '10rem' : '10rem',
+    },
+    {
+      'margin-right': '0',
+    },
+    '0'
+  )
+  .fromTo(
+    '.hero__desc-word-2',
+    {
+      'margin-left': x.matches ? '10rem' : '15rem',
+    },
+    {
+      'margin-left': '0',
+    },
+    '0'
+  )
+  .fromTo(
+    '.hero__desc-word-3',
+    {
+      'margin-right': x.matches ? '10rem' : '5rem',
+    },
+    {
+      'margin-right': '0',
+    },
+    '0'
+  );
+gsap.timeline({
+  scrollTrigger: {
+    trigger: '.hero__box-inner',
+    scrub: !0,
+    scroller: '.smooth-scroll',
+    start: () => '5% top',
+    end: () => 'bottom top',
+    invalidateOnRefresh: !0,
+    overwrite: 'auto',
+    onEnter: (e) => {
+      document.getElementById('banner-video').play();
+    },
+  },
+  ease: 'none',
+});
 
 window.addEventListener('load', () => {
   if (window.matchMedia('(max-width: 768px)').matches) {
@@ -257,6 +397,29 @@ window.addEventListener('load', () => {
     });
   }
 });
+
+window.addEventListener('resize', function () {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero__box-inner',
+      scrub: !0,
+      scroller: '.smooth-scroll',
+      start: () => 'top top',
+      end: () => 'bottom top',
+      invalidateOnRefresh: !0,
+      pin: '.hero__banner',
+      overwrite: 'auto',
+    },
+    ease: 'none',
+  });
+
+  ScrollTrigger.refresh();
+});
+
+ScrollTrigger.addEventListener('refresh', () => {
+  locoScroll.update();
+});
+ScrollTrigger.refresh();
 
 // Rates
 function handleMouseOver(e) {
