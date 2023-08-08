@@ -278,52 +278,39 @@ gsap
         gsap.fromTo(
           '.hero__desc-word-1',
           {
-            'margin-right': x.matches ? '45rem' : '13rem',
+            'margin-right': x.matches ? '15rem' : '13rem',
             alpha: 0,
           },
           {
             duration: 1,
             alpha: 1,
-            'margin-right': x.matches ? '40rem' : '10rem',
+            'margin-right': x.matches ? '10rem' : '10rem',
             delay: 0.6,
           }
         );
         gsap.fromTo(
           '.hero__desc-word-2',
           {
-            'margin-right': x.matches ? '25rem' : '10rem',
+            'margin-left': x.matches ? '15rem' : '20rem',
             alpha: 0,
           },
           {
             duration: 1,
             alpha: 1,
-            'margin-right': x.matches ? '20rem' : '5rem',
+            'margin-left': x.matches ? '10rem' : '15rem',
             delay: 0.6,
           }
         );
         gsap.fromTo(
           '.hero__desc-word-3',
           {
-            'margin-left': x.matches ? '12rem' : '10rem',
+            'margin-right': x.matches ? '12rem' : '20rem',
             alpha: 0,
           },
           {
             duration: 1,
             alpha: 1,
-            'margin-left': x.matches ? '10rem' : '5rem',
-            delay: 0.6,
-          }
-        );
-        gsap.fromTo(
-          '.hero__desc-word-4',
-          {
-            'margin-left': x.matches ? '12rem' : '15rem',
-            alpha: 0,
-          },
-          {
-            duration: 1,
-            alpha: 1,
-            'margin-left': x.matches ? '10rem' : '10rem',
+            'margin-right': x.matches ? '10rem' : '5rem',
             delay: 0.6,
           }
         );
@@ -349,7 +336,7 @@ gsap
   .fromTo(
     '.hero__desc-word-1',
     {
-      'margin-right': x.matches ? '40rem' : '10rem',
+      'margin-right': x.matches ? '10rem' : '10rem',
     },
     {
       'margin-right': '0',
@@ -359,30 +346,20 @@ gsap
   .fromTo(
     '.hero__desc-word-2',
     {
-      'margin-right': x.matches ? '20rem' : '5rem',
+      'margin-left': x.matches ? '10rem' : '15rem',
     },
     {
-      'margin-right': '0',
+      'margin-left': '0',
     },
     '0'
   )
   .fromTo(
     '.hero__desc-word-3',
     {
-      'margin-left': x.matches ? '10rem' : '5rem',
+      'margin-right': x.matches ? '10rem' : '5rem',
     },
     {
-      'margin-left': '0',
-    },
-    '0'
-  )
-  .fromTo(
-    '.hero__desc-word-4',
-    {
-      'margin-left': x.matches ? '10rem' : '10rem',
-    },
-    {
-      'margin-left': '0',
+      'margin-right': '0',
     },
     '0'
   );

@@ -2378,20 +2378,20 @@ main {
   color: var(--white);
 }
 
-.hero__box-inner .hero__desc-word-4 a {
+.hero__box-inner .hero__desc-word-3 a {
   border-color: var(--white);
 }
 
-.hero__box-inner .hero__desc-word-4 a::after {
+.hero__box-inner .hero__desc-word-3 a::after {
   background-color: var(--white);
 }
 
-.hero__box-inner .hero__desc-word-4 a svg > path {
+.hero__box-inner .hero__desc-word-3 a svg > path {
   stroke: var(--white);
 }
 
-.hero__box-inner .hero__desc-word-4 a:active svg > path,
-.hero__box-inner .hero__desc-word-4 a:hover svg > path {
+.hero__box-inner .hero__desc-word-3 a:active svg > path,
+.hero__box-inner .hero__desc-word-3 a:hover svg > path {
   stroke: var(--black);
 }
 
@@ -2435,21 +2435,17 @@ main {
 
 .hero__desc-word-3 {
   top: 7.2rem;
+  flex-direction: column-reverse;
   left: 0; /* Изменено на свойство left */
 }
 
-.hero__desc-word-4 {
-  justify-content: center;
-  top: 7.9rem;
-}
-
-.hero__desc-word-4,
-.hero__desc-word-4 a {
+.hero__desc-word-3,
+.hero__desc-word-3 a {
   display: inline-flex;
   align-items: center;
 }
 
-.hero__desc-word-4 a {
+.hero__desc-word-3 a {
   position: relative;
   justify-content: center;
   width: 14rem;
@@ -2458,12 +2454,12 @@ main {
   border: 1px solid var(--black);
 }
 
-.hero__desc-word-4 a,
-.hero__desc-word-4 a::after {
+.hero__desc-word-3 a,
+.hero__desc-word-3 a::after {
   border-radius: 100%;
 }
 
-.hero__desc-word-4 a::after {
+.hero__desc-word-3 a::after {
   position: absolute;
   content: '';
   top: 0;
@@ -2478,26 +2474,26 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-.hero__desc-word-4 a svg {
+.hero__desc-word-3 a svg {
   position: relative;
   width: 4.9rem;
   height: 4.4rem;
   z-index: 2;
 }
 
-.hero__desc-word-4 a svg > path {
+.hero__desc-word-3 a svg > path {
   transition-property: stroke;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
 
-.hero__desc-word-4 a:active::after,
-.hero__desc-word-4 a:hover::after {
+.hero__desc-word-3 a:active::after,
+.hero__desc-word-3 a:hover::after {
   transform: scale(1);
 }
 
-.hero__desc-word-4 a:active svg > path,
-.hero__desc-word-4 a:hover svg > path {
+.hero__desc-word-3 a:active svg > path,
+.hero__desc-word-3 a:hover svg > path {
   stroke: var(--white);
 }
 
@@ -2569,10 +2565,7 @@ main {
   .hero__desc-word-2 {
     margin-bottom: 1.816rem;
   }
-  .hero__desc-word-3 {
-    margin-bottom: 1.892rem;
-  }
-  .hero__desc-word-4 a {
+  .hero__desc-word-3 a {
     display: none;
   }
   .hero__content {
