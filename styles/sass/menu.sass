@@ -113,6 +113,7 @@ $pf-green: #7fac37
         color: white
         margin-top: 0.95rem
         margin-bottom: 0.2rem
+        text-transform: uppercase
       .item__value
         font-weight: 400
         color: white
@@ -254,6 +255,7 @@ $pf-green: #7fac37
     &__box
       display: flex
       width: 34.1rem
+      height: 35rem
       flex-direction: column
       align-items: center
       background-color: $pf-beige
@@ -349,6 +351,7 @@ $pf-green: #7fac37
       justify-content: space-between
       align-items: center
       width: 24.1rem
+      margin-top: auto
     &__nutrition-item
       display: flex
       flex-direction: column
@@ -486,7 +489,9 @@ $pf-green: #7fac37
       border-top: 0.1rem solid $pf-black-secondary
       display: flex
       flex-direction: column
-      margin-bottom: 2.5rem
+      overflow-y: scroll
+      height: 41rem
+      padding-right: 2rem
     .item
       border: 0
       width: 30.2rem
@@ -494,7 +499,8 @@ $pf-green: #7fac37
       flex-direction: column
       padding-top: 2.5rem
       padding-bottom: 3rem
-      border-bottom: 0.1rem solid $pf-black-secondary
+      &:not(:last-child) 
+        border-bottom: 0.1rem solid $pf-black-secondary
       &__content
         width: 30.2rem
         display: flex
@@ -557,7 +563,7 @@ $pf-green: #7fac37
         width: 1.6rem
         cursor: pointer
     &__total-price
-      width: 30.2rem
+      width: 100%
       display: flex
       justify-content: space-between
       margin: 0 auto
@@ -567,6 +573,10 @@ $pf-green: #7fac37
       font-size: 4rem
       line-height: 4.9rem
       margin-bottom: 2.5rem
+      padding-left: 1rem
+      padding-right: 1rem
+      padding-top: 2rem
+      border-top: 0.1rem solid rgba(67, 66, 72, 0.5)
     &__price
       font-family: 'Montserrat'
       font-style: normal
@@ -739,6 +749,7 @@ $pf-green: #7fac37
       &__box
         width: 100%
         margin: 0
+        height: auto
         padding: 4rem 3rem
         &--second
           padding: 0
@@ -783,7 +794,7 @@ $pf-green: #7fac37
         margin-bottom: 4rem
       &__nutrition-info
         width: 46.6rem
-        margin-bottom: 4rem
+        margin-top: 2rem
       &__nutrition-value
         font-style: normal
         font-weight: 500
@@ -889,11 +900,11 @@ $pf-green: #7fac37
       &__item-title
         gap: 2rem
         &::before
-          width: 4.8rem
-          height: 4.8rem
+          min-width: 4.8rem
+          min-height: 4.8rem
           background-size: 65%
       &--active
-        z-index: 100
+        z-index: 6
         touch-events: auto
         max-height: 130rem
       &__button-bar
@@ -969,12 +980,14 @@ $pf-green: #7fac37
       margin-bottom: 2rem
     &__box
       display: flex
+      
       flex-direction: column
       align-items: center
       background-color: $pf-beige
       margin-right: 1.7rem
       z-index: 1
       padding: 2rem
+      padding-top: 3rem
       &--second
         margin-right: 0
         background-color: transparent
@@ -1020,3 +1033,6 @@ $pf-green: #7fac37
       justify-content: center
       width: 5.7rem
       height: 5.7rem
+
+.menu .card__title
+  text-transform: uppercase
