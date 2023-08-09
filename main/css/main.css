@@ -169,6 +169,12 @@ img {
 }
 .about__img {
   width: 36.2rem;
+  height: 89rem;
+}
+.about__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about__img-mobile {
   display: none;
@@ -338,8 +344,14 @@ img {
   }
   .about__img-mobile {
     width: 68.6rem;
+    height: 28.6rem;
     display: block;
     margin-bottom: 6rem;
+  }
+  .about__img-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .about__title {
     font-style: normal;
