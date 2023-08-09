@@ -236,8 +236,14 @@ img {
 }
 .about .mission__img {
   width: 101.9rem;
+  height: 95rem;
   position: relative;
   right: -11.3rem;
+}
+.about .mission__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about .mission__img-text {
   position: absolute;
@@ -432,6 +438,7 @@ img {
     left: 0;
     right: 0;
     width: 75rem;
+    height: 70.8rem;
     margin-bottom: 19rem;
   }
   .about .mission__img-text {
@@ -572,6 +579,8 @@ img {
   margin-bottom: 6rem;
 }
 .article-det__hero-img img {
+  width: 100%;
+  object-fit: cover;
   height: 100%;
 }
 .article-det__content {
@@ -638,6 +647,7 @@ img {
 }
 .article-det__img-box-one img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .article-det__img-box-two {
@@ -646,6 +656,7 @@ img {
 }
 .article-det__img-box-two img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .article-det__img-box-three {
@@ -655,6 +666,7 @@ img {
 }
 .article-det__img-box-three img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .article-det__img-box-four {
@@ -664,6 +676,7 @@ img {
 }
 .article-det__img-box-four img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .article-det__img-box-five {
@@ -673,6 +686,7 @@ img {
 }
 .article-det__img-box-five img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -945,7 +959,13 @@ img {
 .articles .item__img {
   margin-left: 3rem;
   width: 46rem;
+  height: 18.3rem;
   margin-bottom: 3rem;
+}
+.articles .item__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .articles .item__time {
   display: flex;
@@ -1079,7 +1099,8 @@ img {
   }
   .articles .item__img {
     margin-left: 2.55rem;
-    width: 54.6rem;
+    width: 54.5rem;
+    height: 22.2rem;
     margin-bottom: 6rem;
   }
 }
