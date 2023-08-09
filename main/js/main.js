@@ -421,6 +421,38 @@ if (video) {
     locoScroll.update();
   });
   ScrollTrigger.refresh();
+}
+
+// Rates
+function handleMouseOver(e) {
+  const thisEl = e.currentTarget;
+
+  document.querySelectorAll('.rates__btn, [data-tab]').forEach((el) => {
+    el.classList.remove('active');
+  });
+
+  window.addEventListener('resize', function () {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.hero__box-inner',
+        scrub: !0,
+        scroller: '.smooth-scroll',
+        start: () => 'top top',
+        end: () => 'bottom top',
+        invalidateOnRefresh: !0,
+        pin: '.hero__banner',
+        overwrite: 'auto',
+      },
+      ease: 'none',
+    });
+
+    ScrollTrigger.refresh();
+  });
+
+  ScrollTrigger.addEventListener('refresh', () => {
+    locoScroll.update();
+  });
+  ScrollTrigger.refresh();
 
   // Rates
   function handleMouseOver(e) {
