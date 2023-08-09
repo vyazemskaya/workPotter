@@ -1,23 +1,20 @@
 @font-face {
   font-family: Gotham;
-  src: url(../../fonts/Gotham-book.woff2) format('woff2'),
-    url(../../fonts/Gotham-book.woff) format('woff');
+  src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Montserrat;
-  src: url(../fonts/Montserrat-medium.woff2) format('woff2'),
-    url(../fonts/Montserrat-medium.woff) format('woff');
+  src: url(../fonts/Montserrat-medium.woff2) format("woff2"), url(../fonts/Montserrat-medium.woff) format("woff");
   font-display: swap;
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: Montserrat;
-  src: url(../fonts/Montserrat-regular.woff2) format('woff2'),
-    url(../fonts/Montserrat-regular.woff) format('woff');
+  src: url(../fonts/Montserrat-regular.woff2) format("woff2"), url(../fonts/Montserrat-regular.woff) format("woff");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -63,7 +60,7 @@ img {
   width: fit-content;
 }
 .error__title span {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 20rem;
@@ -75,7 +72,7 @@ img {
   height: 100%;
 }
 .error__subtitle {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -92,7 +89,7 @@ img {
   border-radius: 3rem;
 }
 .error__link span {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -153,7 +150,7 @@ img {
 }
 .about__title {
   color: #434248;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 14.3rem;
@@ -163,7 +160,7 @@ img {
 .about__discription {
   width: 116.1rem;
   color: #434248;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -172,6 +169,12 @@ img {
 }
 .about__img {
   width: 36.2rem;
+  height: 89rem;
+}
+.about__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about__img-mobile {
   display: none;
@@ -187,7 +190,7 @@ img {
   flex-direction: column;
 }
 .about__subtitle {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -210,7 +213,7 @@ img {
   margin-bottom: 3.5rem;
 }
 .about .item__title {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -219,7 +222,7 @@ img {
 .about .item__discription {
   margin-top: 5rem;
   width: 45rem;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -233,14 +236,20 @@ img {
 }
 .about .mission__img {
   width: 101.9rem;
+  height: 95rem;
   position: relative;
   right: -11.3rem;
+}
+.about .mission__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about .mission__img-text {
   position: absolute;
   right: 14.8rem;
   bottom: 4rem;
-  background-color: #fff3e5;
+  background-color: #FFF3E5;
   width: 64.6rem;
 }
 .about .mission__icon {
@@ -255,7 +264,7 @@ img {
   margin-left: 6.2rem;
   margin-top: 1.95rem;
   margin-bottom: 3.5rem;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -264,15 +273,15 @@ img {
 .about .mission__author {
   margin-left: 6.2rem;
   padding-bottom: 7rem;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
 }
 .about .mission__title {
-  color: #e9743f;
-  font-family: 'Montserrat';
+  color: #E9743F;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
@@ -281,7 +290,7 @@ img {
   width: 60.8rem;
 }
 .about .mission__discription {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -303,7 +312,7 @@ img {
 }
 .about .mission__button-subtitles {
   margin-left: 3.4rem;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -321,7 +330,7 @@ img {
 }
 @media (max-width: 48em) and (hover: hover) {
   .item {
-    cursor: url('../../img/shared/pagination-icon');
+    cursor: url("../../img/shared/pagination-icon");
   }
 }
 @media (max-width: 48em) {
@@ -341,8 +350,14 @@ img {
   }
   .about__img-mobile {
     width: 68.6rem;
+    height: 28.6rem;
     display: block;
     margin-bottom: 6rem;
+  }
+  .about__img-mobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .about__title {
     font-style: normal;
@@ -423,6 +438,7 @@ img {
     left: 0;
     right: 0;
     width: 75rem;
+    height: 70.8rem;
     margin-bottom: 19rem;
   }
   .about .mission__img-text {
@@ -436,7 +452,7 @@ img {
     margin: 0;
   }
   .about .mission__quote {
-    font-family: 'Gotham';
+    font-family: "Gotham";
     font-style: normal;
     font-weight: 400;
     font-size: 3.2rem;
@@ -479,7 +495,7 @@ img {
   .swiper-wrapper {
     gap: 0;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
     width: 68.6rem;
   }
   .swiper-slide {
@@ -511,8 +527,8 @@ img {
 .article-det__type {
   width: fit-content;
   padding: 1rem 2rem;
-  color: #e9743f;
-  border: 0.1rem solid #e9743f;
+  color: #E9743F;
+  border: 0.1rem solid #E9743F;
   border-radius: 2rem;
   margin-right: 47.2rem;
 }
@@ -521,7 +537,7 @@ img {
   position: relative;
 }
 .article-det__block-info-value::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -532,7 +548,7 @@ img {
   height: 0.5rem;
 }
 .article-det__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -543,7 +559,7 @@ img {
   margin-bottom: -1rem;
 }
 .article-det__date {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -563,6 +579,8 @@ img {
   margin-bottom: 6rem;
 }
 .article-det__hero-img img {
+  width: 100%;
+  object-fit: cover;
   height: 100%;
 }
 .article-det__content {
@@ -577,7 +595,7 @@ img {
 }
 .article-det__section-subtitle {
   width: 55.3rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -587,7 +605,7 @@ img {
   margin-top: 0.9rem;
 }
 .article-det__section-title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -598,7 +616,7 @@ img {
   margin-bottom: 4rem;
 }
 .article-det__section-col {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -629,6 +647,7 @@ img {
 }
 .article-det__img-box-one img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .article-det__img-box-two {
@@ -637,6 +656,7 @@ img {
 }
 .article-det__img-box-two img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .article-det__img-box-three {
@@ -646,6 +666,7 @@ img {
 }
 .article-det__img-box-three img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .article-det__img-box-four {
@@ -655,6 +676,7 @@ img {
 }
 .article-det__img-box-four img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .article-det__img-box-five {
@@ -664,6 +686,7 @@ img {
 }
 .article-det__img-box-five img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -704,13 +727,13 @@ img {
   .article-det__type {
     margin: 0;
     padding: 2rem 3.2rem;
-    font-family: 'Gotham';
+    font-family: "Gotham";
     font-style: normal;
     font-weight: 400;
     font-size: 2.8rem;
     line-height: 3rem;
     border-radius: 4rem;
-    color: #e9743f;
+    color: #E9743F;
   }
   .article-det__block-info {
     margin: 0;
@@ -718,7 +741,7 @@ img {
   }
   .article-det__block-info-value {
     padding-left: 3rem;
-    font-family: 'Gotham';
+    font-family: "Gotham";
     font-style: normal;
     font-weight: 400;
     font-size: 2.8rem;
@@ -818,7 +841,7 @@ img {
   align-items: flex-end;
 }
 .articles__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
@@ -827,7 +850,7 @@ img {
   text-transform: uppercase;
 }
 .articles__subtitle {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -886,17 +909,17 @@ img {
 }
 .articles .item__tag {
   padding: 1rem 2rem;
-  border: 0.1rem solid #e9743f;
+  border: 0.1rem solid #E9743F;
   border-radius: 2rem;
   cursor: pointer;
 }
 .articles .item__tag span {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  color: #e9743f;
+  color: #E9743F;
 }
 .articles .item__type {
   margin-right: 2rem;
@@ -906,7 +929,7 @@ img {
   margin-right: 0rem;
 }
 .articles .item__date {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -914,7 +937,7 @@ img {
   color: #434248;
 }
 .articles .item__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -924,7 +947,7 @@ img {
   text-transform: uppercase;
 }
 .articles .item__subtitle {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -936,7 +959,13 @@ img {
 .articles .item__img {
   margin-left: 3rem;
   width: 46rem;
+  height: 18.3rem;
   margin-bottom: 3rem;
+}
+.articles .item__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .articles .item__time {
   display: flex;
@@ -944,7 +973,7 @@ img {
   margin-bottom: 3rem;
   gap: 1rem;
   align-items: center;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -1027,17 +1056,17 @@ img {
   }
   .articles .item__tag {
     padding: 2rem 3.2rem;
-    border: 0.2rem solid #e9743f;
+    border: 0.2rem solid #E9743F;
     border-radius: 4rem;
     cursor: pointer;
   }
   .articles .item__tag span {
-    font-family: 'Gotham';
+    font-family: "Gotham";
     font-style: normal;
     font-weight: 400;
     font-size: 2.8rem;
     line-height: 3rem;
-    color: #e9743f;
+    color: #E9743F;
   }
   .articles .item__date {
     font-weight: 500;
@@ -1070,7 +1099,8 @@ img {
   }
   .articles .item__img {
     margin-left: 2.55rem;
-    width: 54.6rem;
+    width: 54.5rem;
+    height: 22.2rem;
     margin-bottom: 6rem;
   }
 }
@@ -1231,7 +1261,7 @@ img {
   margin-left: auto;
 }
 .cart-modal__cart-link span {
-  color: #fff;
+  color: #FFF;
   font-family: Gotham;
   font-size: 1.6rem;
   font-style: normal;
@@ -1277,7 +1307,7 @@ img {
   line-height: 1.9rem;
 }
 .cart__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
@@ -1303,7 +1333,7 @@ img {
 }
 .cart .item__list-title {
   color: rgba(67, 66, 72, 0.5);
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -1325,7 +1355,7 @@ img {
   margin-right: 2rem;
 }
 .cart .item__title {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -1344,7 +1374,7 @@ img {
   display: none;
 }
 .cart .item__price {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -1359,8 +1389,8 @@ img {
   margin-right: 9.65rem;
 }
 .cart .item__price::after {
-  content: '₽';
-  font-family: 'Montserrat';
+  content: "₽";
+  font-family: "Montserrat";
   font-size: 1.6rem;
   line-height: 1.9rem;
   top: -0.5rem;
@@ -1376,7 +1406,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -1399,7 +1429,7 @@ img {
   cursor: pointer;
 }
 .cart__total-price {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -1442,7 +1472,7 @@ img {
   margin-right: 1.625rem;
 }
 .cart__button-text {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -1678,7 +1708,7 @@ img {
   margin-bottom: 9.1rem;
 }
 .contacts__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
@@ -1716,7 +1746,7 @@ img {
   margin-top: 1.2rem;
 }
 .contacts .item__info {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -1737,7 +1767,7 @@ img {
   margin-left: 14rem;
 }
 .contacts__subtitle {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -1847,24 +1877,21 @@ img {
 @charset "UTF-8";
 @font-face {
   font-family: Gotham;
-  src: url(../../fonts/Gotham-book.woff2) format('woff2'),
-    url(../../fonts/Gotham-book.woff) format('woff');
+  src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Montserrat;
-  src: url(../../fonts/Montserrat-medium.woff2) format('woff2'),
-    url(../../fonts/Montserrat-medium.woff) format('woff');
+  src: url(../../fonts/Montserrat-medium.woff2) format("woff2"), url(../../fonts/Montserrat-medium.woff) format("woff");
   font-display: swap;
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: Montserrat;
-  src: url(../../fonts/Montserrat-regular.woff2) format('woff2'),
-    url(../../fonts/Montserrat-regular.woff) format('woff');
+  src: url(../../fonts/Montserrat-regular.woff2) format("woff2"), url(../../fonts/Montserrat-regular.woff) format("woff");
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -1892,17 +1919,6 @@ html {
   line-height: 1.2;
   margin: 0;
   padding: 0;
-}
-
-html._revealed .header {
-  color: white;
-}
-html._revealed .header__basket-icon path {
-  fill: white;
-}
-html._revealed .header__nav-open {
-  webkit-filter: brightness(0%) saturate(0%) invert(100%);
-  filter: brightness(0%) saturate(0%) invert(100%);
 }
 
 body {
@@ -2001,6 +2017,31 @@ ul {
   list-style: none;
 }
 
+html._revealed .header {
+  color: white;
+}
+
+html._revealed .header__basket-icon path {
+  fill: white;
+}
+
+html._revealed .header__nav-open {
+  webkit-filter: brightness(0%) saturate(0%) invert(100%);
+  filter: brightness(0%) saturate(0%) invert(100%);
+}
+
+.has-scroll-init .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease;
+}
+
+.has-scroll-init main {
+  padding: 0;
+}
+
 .main {
   padding-top: 0rem;
 }
@@ -2015,13 +2056,13 @@ ul {
   margin: 0 auto;
 }
 
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type='number'] {
+input[type=number] {
   -moz-appearance: textfield;
 }
 
@@ -2065,6 +2106,7 @@ input[type='number'] {
 
 main {
   overflow: hidden;
+  padding-top: 18rem;
 }
 
 .header {
@@ -2073,11 +2115,11 @@ main {
   background-color: transparent;
   color: #434248;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: all 0.3s ease;
+  position: absolute;
+}
+
+.header--active {
+  color: white;
 }
 
 .header__container {
@@ -2143,7 +2185,7 @@ main {
   height: 2.8rem;
 }
 
-.header__basket-icon {
+.header__basket-icon--active {
   fill: white;
 }
 
@@ -2156,6 +2198,7 @@ main {
 @media (max-width: 48em) {
   .header {
     width: 100%;
+    position: absolute;
     padding: 2.7rem 0;
     z-index: 100;
   }
@@ -2171,7 +2214,7 @@ main {
     position: absolute;
     opacity: 0;
     left: -100%;
-    top: 0;
+    top: -3rem;
     width: 100%;
     height: 100vh;
     background-color: var(--black);
@@ -2184,7 +2227,6 @@ main {
   .header__nav.active {
     opacity: 1;
     left: 0;
-    top: -3rem;
     pointer-events: auto;
   }
   .header__nav-list {
@@ -2287,11 +2329,11 @@ main {
 }
 
 .footer__nav-item:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer__contact-item:not(:last-child) {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .footer__socials-list {
@@ -2317,7 +2359,8 @@ main {
   font-family: Montserrat, sans-serif;
 }
 
-.hero__title {
+.hero__title,
+.hero__mouse {
   z-index: 98;
 }
 
@@ -2327,24 +2370,16 @@ main {
 
 .hero__mouse {
   position: absolute;
-  z-index: 98;
-  bottom: 5.5rem;
+  bottom: 8.5rem;
   right: 18rem;
   width: 4rem;
   height: 7rem;
   border: 2px solid #434248;
   border-radius: 6rem;
-  transition: border 0.3s ease;
-}
-.hero__mouse._revealed {
-  border: 2px solid #ffffff;
-}
-.hero__mouse._revealed::before {
-  background-color: #ffffff;
 }
 
 .hero__mouse::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 1rem;
   left: 50%;
@@ -2356,8 +2391,16 @@ main {
   transform: translateX(-50%);
   animation: wheel 3s infinite;
   -webkit-animation: wheel 3s infinite;
-  transition: background-color 0.3s ease;
 }
+
+.hero__mouse._revealed {
+  border: 2px solid #ffffff;
+}
+
+.hero__mouse._revealed::before {
+  background-color: #ffffff;
+}
+
 @keyframes wheel {
   to {
     top: 6rem;
@@ -2370,7 +2413,6 @@ main {
     opacity: 0;
   }
 }
-
 .no-scroll {
   overflow: hidden;
 }
@@ -2420,6 +2462,10 @@ main {
   background-position: 50% 50%;
 }
 
+.hero__box-inner .hero__desc {
+  transform: translateY(-0.3rem);
+}
+
 .hero__box-inner .hero__desc span {
   color: var(--white);
 }
@@ -2439,6 +2485,20 @@ main {
 .hero__box-inner .hero__desc-word-3 a:active svg > path,
 .hero__box-inner .hero__desc-word-3 a:hover svg > path {
   stroke: var(--black);
+}
+
+.hero__box-inner.active {
+  transform: translateY(-50%);
+  max-height: 205.7rem;
+}
+
+.hero__box-inner.active,
+.hero__box-inner.active .hero__desc span {
+  /* transition-delay: 1s; */
+}
+
+.hero__box-inner.active .hero__desc span {
+  transform: translateX(0);
 }
 
 .hero__title {
@@ -2463,7 +2523,7 @@ main {
   text-align: center;
   font-weight: 400;
   font-size: 14.3rem;
-  line-height: 15.5rem;
+  line-height: 16.5rem;
   transition-property: transform;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
@@ -2507,7 +2567,7 @@ main {
 
 .hero__desc-word-3 a::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   z-index: 1;
@@ -2561,7 +2621,7 @@ main {
 
 .hero__content-item:not(:last-child)::after {
   display: block;
-  content: '';
+  content: "";
   width: 6rem;
   height: 0.1rem;
   margin: 0 3.2rem;
@@ -2746,47 +2806,47 @@ main {
   transition-timing-function: ease-in-out;
 }
 
-.rates__img-box[data-tab='light'] .rates__img-1 {
+.rates__img-box[data-tab=light] .rates__img-1 {
   top: 0;
   left: 4.6rem;
 }
 
-.rates__img-box[data-tab='light'] .rates__img-2 {
+.rates__img-box[data-tab=light] .rates__img-2 {
   bottom: 0;
   left: 24.6rem;
 }
 
-.rates__img-box[data-tab='light'] .rates__img-3 {
+.rates__img-box[data-tab=light] .rates__img-3 {
   top: 20.7rem;
   right: 16.8rem;
 }
 
-.rates__img-box[data-tab='classic'] .rates__img-1 {
+.rates__img-box[data-tab=classic] .rates__img-1 {
   top: 0;
   right: 4.6rem;
 }
 
-.rates__img-box[data-tab='classic'] .rates__img-2 {
+.rates__img-box[data-tab=classic] .rates__img-2 {
   bottom: 0;
   right: 24.6rem;
 }
 
-.rates__img-box[data-tab='classic'] .rates__img-3 {
+.rates__img-box[data-tab=classic] .rates__img-3 {
   top: 20.7rem;
   left: 16.8rem;
 }
 
-.rates__img-box[data-tab='gourmet'] .rates__img-1 {
+.rates__img-box[data-tab=gourmet] .rates__img-1 {
   bottom: 0;
   left: 4.6rem;
 }
 
-.rates__img-box[data-tab='gourmet'] .rates__img-2 {
+.rates__img-box[data-tab=gourmet] .rates__img-2 {
   bottom: 0;
   right: 24.6rem;
 }
 
-.rates__img-box[data-tab='gourmet'] .rates__img-3 {
+.rates__img-box[data-tab=gourmet] .rates__img-3 {
   top: 20.7rem;
   left: 20rem;
 }
@@ -2886,7 +2946,7 @@ main {
 
 .popular__slider-box::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   z-index: 1;
@@ -2988,7 +3048,7 @@ main {
 }
 
 .popular__card-box-popup::after {
-  content: '';
+  content: "";
   background: #7fac37;
   border-radius: 0.1rem;
   width: 2rem;
@@ -3008,6 +3068,9 @@ main {
 .popular__card-box-main {
   width: 100%;
   max-width: 40rem;
+  min-height: 39.1rem;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 4.5rem;
   padding: 3rem 2.5rem;
   background-color: #fff3e5;
@@ -3029,11 +3092,13 @@ main {
 
 .popular__card-box-weight {
   padding: 0 3.5rem;
+  margin-top: auto;
 }
 
 .popular__card-box-compound {
   margin-bottom: 1.5rem;
   border: 0.2rem solid var(--white);
+  min-height: 10rem;
   padding: 1.5rem 2.5rem;
   transition-property: border-color;
   transition-duration: 0.4s;
@@ -3125,6 +3190,7 @@ main {
 
 .popular__card-title {
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .popular__card-title-desc {
@@ -3207,7 +3273,7 @@ main {
 }
 
 .main .popular__text-animate::after {
-  content: ' ' attr(data-content);
+  content: " " attr(data-content);
 }
 
 .formats {
@@ -3242,7 +3308,7 @@ main {
 
 .formats__slider::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 21.4rem;
   left: 0;
   width: 100%;
@@ -3356,7 +3422,7 @@ main {
 }
 
 .reviews__desc::after {
-  content: ' ' attr(data-content);
+  content: " " attr(data-content);
 }
 
 @-webkit-keyframes marquee {
@@ -3417,7 +3483,7 @@ main {
 
 .reviews__card::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 2.5em;
   left: 50%;
   opacity: 0.5;
@@ -3619,7 +3685,7 @@ main {
 
 .back-call::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   z-index: 1;
@@ -3718,7 +3784,7 @@ main {
 
 .back-call__form::after,
 .back-call__form:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 100%;
@@ -3874,7 +3940,7 @@ main {
 .reviews__slider,
 .formats__slider,
 .popular__slider-box {
-  cursor: url('../../img/main/pagination-icon.svg') 45 45, auto;
+  cursor: url("../../img/main/pagination-icon.svg") 45 45, auto;
 }
 
 .formats__card-btn:hover,
@@ -3888,7 +3954,7 @@ main {
 
 .back-call__form-error {
   position: absolute;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
@@ -3918,7 +3984,7 @@ main {
 }
 
 .reviews__card-date {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 3rem;
@@ -3952,7 +4018,7 @@ main {
     margin-top: 6rem;
   }
   .footer__nav-title {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 3.1rem;
@@ -3978,7 +4044,7 @@ main {
     margin-bottom: 5.6rem;
   }
   .footer__contact-title {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 3.2rem;
@@ -4035,7 +4101,7 @@ main {
   }
   .hero {
     margin-top: 0;
-    margin-bottom: 22.4rem;
+    margin-bottom: 10.4rem;
   }
   .rates {
     padding-top: 0rem;
@@ -4045,14 +4111,14 @@ main {
   }
   .rates__btn,
   .rates__btn * {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 5.2rem;
     line-height: 6.2rem;
   }
   .rates__title {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 3.2rem;
@@ -4106,7 +4172,7 @@ main {
   }
   .popular__title {
     margin: 0 auto 6rem;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 7rem;
@@ -4323,7 +4389,7 @@ main {
     letter-spacing: 0.07rem;
   }
   .reviews__card-date {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 3.2rem;
@@ -4456,7 +4522,7 @@ main {
     padding: 4.8rem 4rem 3rem 4rem;
   }
   .back-call__form-label {
-    font-family: 'Gotham';
+    font-family: "Gotham";
     font-style: normal;
     font-weight: 400;
     font-size: 2.4rem;
@@ -4505,7 +4571,7 @@ main {
   }
   .back-call__form-error {
     position: absolute;
-    font-family: 'Gotham';
+    font-family: "Gotham";
     font-style: normal;
     font-weight: 400;
     font-size: 1.4rem;
@@ -4595,6 +4661,94 @@ main {
     color: #e8885b;
   }
 }
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction=horizontal] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction=horizontal] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
 @charset "UTF-8";
 .card-box-popup {
   position: absolute;
@@ -4612,7 +4766,7 @@ main {
   left: 3.7rem;
 }
 .card-box-popup::after {
-  content: '';
+  content: "";
   background: #7fac37;
   border-radius: 0.1rem;
   width: 2rem;
@@ -4635,15 +4789,15 @@ main {
   width: 76.2rem;
 }
 .menu .card:hover::before {
-  content: 'ПРАВИЛЬНОЕ ПИТАНИЕ';
+  content: "ПРАВИЛЬНОЕ ПИТАНИЕ";
   position: absolute;
   white-space: nowrap;
   top: 5rem;
   left: -100%;
   width: 200%;
   height: 100%;
-  color: #e9743f;
-  font-family: 'Montserrat';
+  color: #E9743F;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 14.3696rem;
@@ -4662,6 +4816,9 @@ main {
 .menu .menu-swiper {
   padding-top: 1rem;
 }
+.menu .menu-swiper .item__title {
+  text-transform: capitalize !important;
+}
 .menu__filter-button {
   display: none;
   justify-content: center;
@@ -4677,13 +4834,9 @@ main {
   margin-top: 6rem;
 }
 .menu__paggination-icon-wrapper {
-  background: linear-gradient(
-    270deg,
-    rgb(255, 255, 255) 42.41%,
-    rgba(255, 255, 255, 0) 91.77%
-  );
+  background: linear-gradient(270deg, rgb(255, 255, 255) 42.41%, rgba(255, 255, 255, 0) 91.77%);
   width: 16rem;
-  height: 14rem;
+  height: 15rem;
   position: absolute;
   right: -7rem;
   top: -3rem;
@@ -4719,6 +4872,7 @@ main {
   color: white;
   margin-top: 0.95rem;
   margin-bottom: 0.2rem;
+  text-transform: uppercase;
 }
 .menu .item--current .item__value {
   font-weight: 400;
@@ -4728,7 +4882,7 @@ main {
   margin-bottom: 2.2rem;
 }
 .menu .item__title {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -4738,12 +4892,12 @@ main {
   margin-bottom: 0.5rem;
 }
 .menu .item__value {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
   line-height: 4.9rem;
-  color: #d2d2d2;
+  color: #D2D2D2;
   margin-bottom: 0.5rem;
 }
 .menu__content {
@@ -4752,7 +4906,9 @@ main {
   position: relative;
 }
 .menu__search-bar {
+  min-width: 36.2rem;
   width: 36.2rem;
+  min-width: 36.2rem;
   display: flex;
   flex-direction: column;
   margin-right: 3.6rem;
@@ -4784,7 +4940,7 @@ main {
   margin-right: 1.7rem;
 }
 .menu .search__placeholder {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -4800,7 +4956,7 @@ main {
   display: none;
 }
 .menu .filter__title {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -4824,9 +4980,9 @@ main {
   display: none;
 }
 .menu .filter__item input:checked + .filter__item-title::before {
-  border: 0.2rem solid #e9743f;
-  background-color: #e9743f;
-  background-image: url('../../img/menu/menu-choose-icon.svg');
+  border: 0.2rem solid #E9743F;
+  background-color: #E9743F;
+  background-image: url("../../img/menu/menu-choose-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   opacity: 1;
@@ -4838,7 +4994,7 @@ main {
   gap: 1rem;
 }
 .menu .filter__item-title::before {
-  content: '';
+  content: "";
   display: block;
   width: 2.9rem;
   opacity: 0.6;
@@ -4860,7 +5016,7 @@ main {
   display: none;
 }
 .menu__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
@@ -4872,7 +5028,7 @@ main {
 }
 .menu .card {
   width: 100%;
-  background-color: #e9743f;
+  background-color: #E9743F;
   display: flex;
   padding: 1.5rem;
   position: relative;
@@ -4883,9 +5039,10 @@ main {
 .menu .card__box {
   display: flex;
   width: 34.1rem;
+  height: 35rem;
   flex-direction: column;
   align-items: center;
-  background-color: #fff3e5;
+  background-color: #FFF3E5;
   margin-right: 1.7rem;
   padding: 2rem;
   z-index: 1;
@@ -4928,7 +5085,7 @@ main {
   top: 0.1rem;
 }
 .menu .card__icon-query {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -4940,22 +5097,33 @@ main {
 }
 .menu .card__label {
   color: rgba(67, 66, 72, 0.5);
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 .menu .card__icon-pick {
   width: 2.8rem;
 }
 .menu .card__image {
   width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  overflow: hidden;
   margin-bottom: 1.8rem;
+}
+.menu .card__image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .menu .card__title {
   text-align: center;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -4966,7 +5134,7 @@ main {
 }
 .menu .card__category {
   text-align: center;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -4979,6 +5147,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 24.1rem;
+  margin-top: auto;
 }
 .menu .card__nutrition-item {
   display: flex;
@@ -4986,7 +5155,7 @@ main {
   align-items: center;
 }
 .menu .card__nutrition-value {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -4995,7 +5164,7 @@ main {
   margin-bottom: 0.4rem;
 }
 .menu .card__nutrition-unit {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5013,7 +5182,7 @@ main {
   color: white;
 }
 .menu .card__composition-title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -5029,7 +5198,7 @@ main {
   margin-bottom: 0rem;
 }
 .menu .card__composition-name {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5042,7 +5211,7 @@ main {
   margin-left: 0.547rem;
 }
 .menu .card__nutrition-summary {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5064,7 +5233,7 @@ main {
   align-items: flex-start;
 }
 .menu .card__price-value {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -5073,7 +5242,7 @@ main {
   color: white;
 }
 .menu .card__price-rubles {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -5084,7 +5253,7 @@ main {
   right: -1.5rem;
 }
 .menu .card__price-label {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5101,7 +5270,7 @@ main {
   background-color: #434248;
 }
 .menu .card__cart-button-label {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5113,20 +5282,20 @@ main {
   margin-right: 1.5rem;
 }
 .menu .order {
-  position: sticky;
-  top: 2rem;
+  transition: 0.4s;
   margin-left: 3.1rem;
-  margin-top: 10.4rem;
+  min-width: 36.2rem;
   padding: 4rem 3rem;
-  background-color: #fff3e5;
+  background-color: #FFF3E5;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: #434248;
   height: fit-content;
+  z-index: 1;
 }
 .menu .order__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -5137,7 +5306,26 @@ main {
   border-top: 0.1rem solid rgba(67, 66, 72, 0.5);
   display: flex;
   flex-direction: column;
-  margin-bottom: 2.5rem;
+  overflow-y: scroll;
+  width: 100%;
+  min-height: 10rem;
+  max-height: 41rem;
+  padding-right: 2rem;
+  /* Область, на которой находится полоса прокрутки */
+  /* Стиль полосы прокрутки */
+  /* Стиль полосы прокрутки при наведении */
+}
+.menu .order__list::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.menu .order__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.menu .order__list::-webkit-scrollbar-thumb {
+  background: rgba(67, 66, 72, 0.3);
+}
+.menu .order__list::-webkit-scrollbar-thumb:hover {
+  background: rgba(67, 66, 72, 0.5);
 }
 .menu .order .item {
   border: 0;
@@ -5146,6 +5334,8 @@ main {
   flex-direction: column;
   padding-top: 2.5rem;
   padding-bottom: 3rem;
+}
+.menu .order .item:not(:last-child) {
   border-bottom: 0.1rem solid rgba(67, 66, 72, 0.5);
 }
 .menu .order .item__content {
@@ -5162,7 +5352,7 @@ main {
 .menu .order .item__title {
   margin: 0;
   color: #434248;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -5180,7 +5370,7 @@ main {
   align-items: flex-end;
 }
 .menu .order .item__price-value {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -5191,7 +5381,7 @@ main {
   position: absolute;
   top: -0.3rem;
   right: -1.4rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
@@ -5205,7 +5395,7 @@ main {
 .menu .order .item__counter {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5220,19 +5410,23 @@ main {
   cursor: pointer;
 }
 .menu .order__total-price {
-  width: 30.2rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
   line-height: 4.9rem;
   margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  border-top: 0.1rem solid rgba(67, 66, 72, 0.5);
 }
 .menu .order__price {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -5240,7 +5434,7 @@ main {
   position: relative;
 }
 .menu .order__price-rubles {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -5263,7 +5457,7 @@ main {
 }
 .menu .order__cart-button-label {
   color: white;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5285,15 +5479,15 @@ main {
     width: auto;
   }
   .menu .card:hover {
-    background-color: #f8f8f8;
+    background-color: #F8F8F8;
     box-shadow: 0.7rem 0.7rem 1.2rem 0rem rgba(87, 87, 87, 0.0784313725);
   }
   .menu .card:hover .card__composition-name--gray svg path {
     fill: rgba(67, 66, 72, 0.5019607843);
   }
   .menu .card:hover .card__composition {
-    background-color: #e1f2c5;
-    border: 0.1rem solid #e1f2c5;
+    background-color: #E1F2C5;
+    border: 0.1rem solid #E1F2C5;
     color: #434248;
   }
   .menu .card__nutrition-summary {
@@ -5404,6 +5598,7 @@ main {
     margin: 0 auto;
     margin-top: 11rem;
     width: 68rem;
+    min-width: 68rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -5435,6 +5630,7 @@ main {
   .menu .card__box {
     width: 100%;
     margin: 0;
+    height: auto;
     padding: 4rem 3rem;
   }
   .menu .card__box--second {
@@ -5490,7 +5686,7 @@ main {
   }
   .menu .card__nutrition-info {
     width: 46.6rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
   }
   .menu .card__nutrition-value {
     font-style: normal;
@@ -5591,7 +5787,7 @@ main {
     height: 5.4rem;
     justify-content: center;
     align-items: center;
-    background-color: #7fac37;
+    background-color: #7FAC37;
     border-radius: 0.1rem;
     font-size: 3rem;
     line-height: 4.8rem;
@@ -5616,12 +5812,12 @@ main {
     gap: 2rem;
   }
   .menu .filter__item-title::before {
-    width: 4.8rem;
-    height: 4.8rem;
+    min-width: 4.8rem;
+    min-height: 4.8rem;
     background-size: 65%;
   }
   .menu .filter--active {
-    z-index: 100;
+    z-index: 6;
     touch-events: auto;
     max-height: 130rem;
   }
@@ -5651,10 +5847,10 @@ main {
     margin-left: 3.2rem;
     margin-right: 3.2rem;
     padding-bottom: 3rem;
-    border-bottom: 0.2rem solid #7a7883;
+    border-bottom: 0.2rem solid #7A7883;
   }
   .menu .filter__head-title {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 3.2rem;
@@ -5698,21 +5894,27 @@ main {
 }
 .main .card {
   width: fit-content;
-  background-color: #e9743f;
+  background-color: #E9743F;
   display: flex;
   padding: 1.5rem;
   position: relative;
   z-index: 1;
   overflow: hidden;
 }
+.main .card__label {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .main .card__box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff3e5;
+  background-color: #FFF3E5;
   margin-right: 1.7rem;
   z-index: 1;
   padding: 2rem;
+  padding-top: 3rem;
 }
 .main .card__box--second {
   margin-right: 0;
@@ -5745,7 +5947,7 @@ main {
   top: 0.1rem;
 }
 .main .card__icon-query {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5766,6 +5968,10 @@ main {
   width: 5.7rem;
   height: 5.7rem;
 }
+
+.menu .card__title {
+  text-transform: uppercase;
+}
 .payment {
   padding-top: 3rem;
   padding-bottom: 23.8rem;
@@ -5775,7 +5981,7 @@ main {
   flex-direction: column;
 }
 .payment__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
@@ -5790,15 +5996,24 @@ main {
   width: 62.8rem;
   display: flex;
   flex-direction: column;
-  background-color: #fff3e5;
+  background-color: #FFF3E5;
 }
 .payment .order__img {
+  min-width: 8rem;
   width: 8rem;
+  height: 8rem;
   margin-right: 2rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.payment .order__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .payment .order__date {
   margin-left: 3rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -5811,7 +6026,7 @@ main {
   letter-spacing: 0.03rem;
 }
 .payment .order__count {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -5819,7 +6034,7 @@ main {
 }
 .payment .order__price {
   color: #434248;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -5833,7 +6048,7 @@ main {
 }
 .payment .order__price-ruble {
   font-weight: 500;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 1.4rem;
   line-height: 1.9rem;
   top: -0.5rem;
@@ -5893,7 +6108,7 @@ main {
   margin-bottom: 4rem;
 }
 .payment .order__summary {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -5901,7 +6116,7 @@ main {
   color: #434248;
 }
 .payment .order__total-price {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -5943,11 +6158,11 @@ main {
   position: relative;
 }
 .payment .form__item--error {
-  border-bottom: 0.1rem solid #f63737;
+  border-bottom: 0.1rem solid #F63737;
 }
 .payment .form__error {
   position: absolute;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
@@ -5955,10 +6170,10 @@ main {
   text-align: right;
   right: 0;
   bottom: -2rem;
-  color: #f63737;
+  color: #F63737;
 }
 .payment .form__title {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
@@ -5970,7 +6185,7 @@ main {
   margin-bottom: 1.4rem;
 }
 .payment .form__value {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -6006,7 +6221,7 @@ main {
   margin-right: 1.625rem;
 }
 .payment .form__button-text {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -6067,7 +6282,9 @@ main {
     left: -0.1rem;
   }
   .payment .order__img {
+    min-width: 12rem;
     width: 12rem;
+    height: 12rem;
   }
   .payment .order__price {
     font-weight: 500;
@@ -6156,7 +6373,7 @@ main {
     width: 68.6rem;
   }
   .payment .form__title {
-    font-family: 'Gotham';
+    font-family: "Gotham";
     font-style: normal;
     font-weight: 400;
     font-size: 2.4rem;
@@ -6218,8 +6435,8 @@ main {
 .portfolio-det__type {
   width: fit-content;
   padding: 1rem 2rem;
-  color: #e9743f;
-  border: 0.1rem solid #e9743f;
+  color: #E9743F;
+  border: 0.1rem solid #E9743F;
   border-radius: 2rem;
   margin-right: 47.2rem;
 }
@@ -6228,7 +6445,7 @@ main {
   position: relative;
 }
 .portfolio-det__block-info-value::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -6239,7 +6456,7 @@ main {
   height: 0.5rem;
 }
 .portfolio-det__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -6255,7 +6472,7 @@ main {
 .portfolio-det__info {
   display: flex;
   gap: 1rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6267,7 +6484,7 @@ main {
 }
 .portfolio-det__info span {
   text-transform: lowercase;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -6281,7 +6498,7 @@ main {
   align-content: flex-start;
 }
 .portfolio-det__date {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6299,10 +6516,13 @@ main {
 .portfolio-det__hero-img {
   margin: 0 auto;
   height: 45.4rem;
+  width: 100%;
   margin-bottom: 6rem;
 }
 .portfolio-det__hero-img img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .portfolio-det__content {
   width: 100%;
@@ -6316,7 +6536,7 @@ main {
 }
 .portfolio-det__section-subtitle {
   width: 55.3rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6326,7 +6546,7 @@ main {
   margin-top: 0.9rem;
 }
 .portfolio-det__section-title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6337,7 +6557,7 @@ main {
   margin-bottom: 4rem;
 }
 .portfolio-det__section-col {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -6382,6 +6602,7 @@ main {
 }
 .portfolio-det__img-box-three img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .portfolio-det__img-box-four {
@@ -6391,6 +6612,7 @@ main {
 }
 .portfolio-det__img-box-four img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .portfolio-det__img-box-five {
@@ -6400,6 +6622,7 @@ main {
 }
 .portfolio-det__img-box-five img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .portfolio-det__company {
@@ -6408,7 +6631,7 @@ main {
   gap: 0.8rem;
 }
 .portfolio-det__company-name {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6430,7 +6653,7 @@ main {
   object-fit: cover;
 }
 .portfolio-det__company-type {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -6619,7 +6842,7 @@ main {
   align-items: flex-end;
 }
 .portfolio__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
@@ -6627,7 +6850,7 @@ main {
   color: #434248;
 }
 .portfolio__subtitle {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -6694,7 +6917,7 @@ main {
   margin-right: 0rem;
 }
 .portfolio .item__date {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6702,7 +6925,7 @@ main {
   color: #434248;
 }
 .portfolio .item__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6713,7 +6936,14 @@ main {
 .portfolio .item__img {
   margin-left: 3rem;
   width: 46rem;
+  height: 24.3rem;
+  overflow: hidden;
   margin-bottom: 3rem;
+}
+.portfolio .item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 48em) {
@@ -6799,7 +7029,8 @@ main {
   }
   .portfolio .item__img {
     margin-left: 3rem;
-    width: 54.6rem;
+    width: 53.6rem;
+    height: 28rem;
   }
 }
 li {
@@ -6841,8 +7072,8 @@ li {
 .services-det__type {
   width: fit-content;
   padding: 1rem 2rem;
-  color: #e9743f;
-  border: 0.1rem solid #e9743f;
+  color: #E9743F;
+  border: 0.1rem solid #E9743F;
   border-radius: 2rem;
   margin-right: 47.2rem;
 }
@@ -6851,7 +7082,7 @@ li {
   position: relative;
 }
 .services-det__block-info-value::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -6862,7 +7093,7 @@ li {
   height: 0.5rem;
 }
 .services-det__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 6rem;
   font-style: normal;
   font-weight: 400;
@@ -6881,7 +7112,7 @@ li {
 .services-det__info {
   display: flex;
   gap: 1rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6893,7 +7124,7 @@ li {
 }
 .services-det__info span {
   text-transform: lowercase;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
@@ -6907,7 +7138,7 @@ li {
   align-content: flex-start;
 }
 .services-det__date {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6924,6 +7155,7 @@ li {
 }
 .services-det__hero-img {
   margin: 0 auto;
+  width: 100%;
   height: 45.4rem;
   margin-bottom: 5.5rem;
 }
@@ -6953,7 +7185,7 @@ li {
 }
 .services-det__section-subtitle {
   width: 55.3rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6963,7 +7195,7 @@ li {
   margin-top: 0.9rem;
 }
 .services-det__section-title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -6974,7 +7206,7 @@ li {
   margin-bottom: 4rem;
 }
 .services-det__section-col {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -7048,7 +7280,7 @@ li {
   gap: 0.8rem;
 }
 .services-det__company-name {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -7070,7 +7302,7 @@ li {
   object-fit: cover;
 }
 .services-det__company-type {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -7136,7 +7368,7 @@ li {
   border-top: 0.1rem solid #434248;
 }
 .services-det__feature-item::after {
-  content: '';
+  content: "";
   width: 3rem;
   height: 3rem;
   background: #fff;
@@ -7156,7 +7388,7 @@ li {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #e9743f;
+  background: #E9743F;
   width: 7rem;
   height: 7rem;
   margin-bottom: 5rem;
@@ -7356,7 +7588,7 @@ li {
   }
   .services-det__section-item {
     gap: 2.95rem;
-    align-items: flex-start;
+    align-items: center;
     padding: 0;
     padding-bottom: 1.6rem;
     width: 100%;
@@ -7373,7 +7605,6 @@ li {
   }
   .services-det__section-item p {
     color: #434248;
-    padding-top: 1.6rem;
     font-family: Gotham;
     font-size: 2.8rem;
     font-style: normal;
@@ -7409,7 +7640,7 @@ li {
     border-bottom: 0.1rem solid #434248;
   }
   .services-det__feature-item::after {
-    content: '';
+    content: "";
     width: 4.6rem;
     height: 3rem;
     background: #fff;
@@ -7419,7 +7650,7 @@ li {
     z-index: 10;
   }
   .services-det__feature-item::before {
-    content: '';
+    content: "";
     width: 4.6rem;
     height: 3rem;
     background: #fff;
@@ -7480,7 +7711,7 @@ li {
   left: 45.5rem;
 }
 .services__title-fragment {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 14.3rem;
@@ -7503,7 +7734,7 @@ li {
   right: 0rem;
   position: absolute;
   width: 22.233rem;
-  border: 1px solid #d2d2d2;
+  border: 1px solid #D2D2D2;
   display: flex;
   padding-top: 7.335rem;
   padding-bottom: 7.335rem;
@@ -7517,8 +7748,8 @@ li {
   padding-bottom: 12.5rem;
 }
 .services__img-box {
-  border-top: 1px solid #d2d2d2;
-  border-bottom: 1px solid #d2d2d2;
+  border-top: 1px solid #D2D2D2;
+  border-bottom: 1px solid #D2D2D2;
   width: 22.233rem;
   height: 18.14rem;
   position: absolute;
@@ -7535,21 +7766,33 @@ li {
 }
 .services__backgraund-img--first {
   width: 17.038rem;
+  height: 18.1836rem;
+}
+.services__backgraund-img--first img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .services__backgraund-img--second {
   width: 31.015rem;
+  height: 31.8rem;
+}
+.services__backgraund-img--second img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .services__discription {
   margin-left: 45.5rem;
   padding-top: 2.75rem;
-  border-top: 0.1rem solid #d2d2d2;
+  border-top: 0.1rem solid #D2D2D2;
   width: 110.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .services__subtitle {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
@@ -7558,7 +7801,7 @@ li {
   color: #434248;
 }
 .services__guarantees {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -7579,7 +7822,7 @@ li {
   border-radius: 10rem;
   background-color: #434248;
   color: white;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -7607,7 +7850,7 @@ li {
 }
 .services .slider__subtitle {
   margin: 0 auto;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -7617,7 +7860,7 @@ li {
 }
 .services .slider__title {
   margin: 0 auto;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 6rem;
@@ -7626,7 +7869,7 @@ li {
   padding-right: 4.4rem;
 }
 .services .slider__line {
-  cursor: url('../../img/shared/pagination-icon.svg'), auto;
+  cursor: url("../../img/shared/pagination-icon.svg"), auto;
 }
 .services .slider .swiper-container {
   display: flex;
@@ -7658,10 +7901,16 @@ li {
 }
 .services .slider .card__img {
   width: 39.9rem;
+  height: 39.9rem;
   margin-bottom: 3rem;
 }
+.services .slider .card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .services .slider .card__title {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 4rem;
@@ -7670,7 +7919,7 @@ li {
   width: 38.9rem;
 }
 .services .slider .card__subtitle {
-  font-family: 'Gotham';
+  font-family: "Gotham";
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
@@ -7740,6 +7989,7 @@ li {
     display: block;
     position: relative;
     width: 29rem;
+    height: 18.2rem;
   }
   .services__subtitle {
     font-weight: 500;
@@ -7807,7 +8057,13 @@ li {
   }
   .services .slider .card__img {
     width: 68.6rem;
+    height: 72rem;
     margin-bottom: 2.8rem;
+  }
+  .services .slider .card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .services .slider .card__title {
     font-weight: 400;
@@ -7821,87 +8077,4 @@ li {
     font-size: 2.8rem;
     line-height: 3rem;
   }
-}
-
-/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
-  overflow: hidden;
-}
-
-html.has-scroll-dragging {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.has-scroll-smooth body {
-  overflow: hidden;
-}
-
-.has-scroll-smooth [data-scroll-container] {
-  min-height: 100vh;
-}
-
-[data-scroll-direction='horizontal'] [data-scroll-container] {
-  height: 100vh;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-[data-scroll-direction='horizontal'] [data-scroll-section] {
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  height: 100%;
-}
-
-.c-scrollbar {
-  position: absolute !important;
-  right: 0;
-  top: 0;
-  width: 11px;
-  height: 100%;
-  transform-origin: center right;
-  transition: transform 0.3s, opacity 0.3s;
-  opacity: 0;
-}
-.c-scrollbar:hover {
-  transform: scaleX(1.45);
-}
-.c-scrollbar:hover,
-.has-scroll-scrolling .c-scrollbar,
-.has-scroll-dragging .c-scrollbar {
-  opacity: 1;
-}
-[data-scroll-direction='horizontal'] .c-scrollbar {
-  width: 100%;
-  height: 10px;
-  top: auto;
-  bottom: 0;
-  transform: scaleY(1);
-}
-[data-scroll-direction='horizontal'] .c-scrollbar:hover {
-  transform: scaleY(1.3);
-}
-
-.c-scrollbar_thumb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.5;
-  width: 7px;
-  border-radius: 10px;
-  margin: 2px;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-.has-scroll-dragging .c-scrollbar_thumb {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-[data-scroll-direction='horizontal'] .c-scrollbar_thumb {
-  right: auto;
-  bottom: 0;
 }

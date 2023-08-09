@@ -13,220 +13,222 @@ const video = document.getElementById('banner-video');
 const x = window.matchMedia('(min-width: 768px)');
 
 // gsap animations (scroll trigger)
-gsap.registerPlugin(ScrollTrigger);
+if (video) {
+  gsap.registerPlugin(ScrollTrigger);
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector('.smooth-scroll'),
-  smooth: true,
-  scroller: '.smooth-scroll',
-  getDirection: true,
-  smoothMobile: true,
-  mobile: {
-    breakpoint: 0,
-    getDirection: true,
-  },
-  tablet: {
-    breakpoint: 0,
-    getDirection: true,
-  },
-});
-
-locoScroll.on('scroll', ScrollTrigger.update);
-
-ScrollTrigger.scrollerProxy('.smooth-scroll', {
-  scrollTop(value) {
-    return arguments.length
-      ? locoScroll.scrollTo(value, 0, 0)
-      : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      top: 0,
-      left: 0,
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
-  },
-  pinType: document.querySelector('.smooth-scroll').style.transform
-    ? 'transform'
-    : 'fixed',
-});
-
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: '.hero__box-inner',
-      scroller: '.smooth-scroll',
-      scrub: !0,
-      start: () => 'top top',
-      end: () => 'bottom top',
-      invalidateOnRefresh: !0,
-      pin: '.hero__banner',
-      overwrite: 'auto',
-      onUpdate: (self) => {
-        if (self.progress >= 0.7) {
-          document.documentElement.classList.add('_revealed');
-          logo.src = './img/main/logo-white.svg';
-        } else {
-          document.documentElement.classList.remove('_revealed');
-          logo.src = './img/logo.png';
-        }
-        if (self.progress >= 0.6) {
-          heroTitle.classList.add('_revealed');
-          heroAnchor.classList.add('_revealed');
-        } else {
-          heroTitle.classList.remove('_revealed');
-          heroAnchor.classList.remove('_revealed');
-        }
-      },
-      onEnter: (e) => {
-        gsap.fromTo(
-          '.hero__box-inner',
-          {
-            'clip-path': 'inset(50% 0%)',
-            alpha: 0,
-          },
-          {
-            duration: 1,
-            alpha: 1,
-            'clip-path': x.matches ? 'inset(45% 0%)' : 'inset(46% 0%)',
-            delay: 0.6,
-          }
-        );
-        gsap.fromTo(
-          '.hero__desc-word-1',
-          {
-            'margin-right': x.matches ? '15rem' : '13rem',
-            alpha: 0,
-          },
-          {
-            duration: 1,
-            alpha: 1,
-            'margin-right': x.matches ? '10rem' : '10rem',
-            delay: 0.6,
-          }
-        );
-        gsap.fromTo(
-          '.hero__desc-word-2',
-          {
-            'margin-left': x.matches ? '15rem' : '20rem',
-            alpha: 0,
-          },
-          {
-            duration: 1,
-            alpha: 1,
-            'margin-left': x.matches ? '10rem' : '15rem',
-            delay: 0.6,
-          }
-        );
-        gsap.fromTo(
-          '.hero__desc-word-3',
-          {
-            'margin-right': x.matches ? '12rem' : '20rem',
-            alpha: 0,
-          },
-          {
-            duration: 1,
-            alpha: 1,
-            'margin-right': x.matches ? '10rem' : '5rem',
-            delay: 0.6,
-          }
-        );
-      },
-      onLeave: (e) => {
-        e.refresh();
-        header.style.transform = 'translateY(-100%)';
-      },
-      onEnterBack: (e) => (header.style.transform = 'translateY(0)'),
-    },
-    ease: 'none',
-  })
-  .fromTo(
-    '.hero__box-inner',
-    {
-      'clip-path': x.matches ? 'inset(45% 0%)' : 'inset(46% 0%)',
-    },
-    {
-      'clip-path': 'inset(0% 0%)',
-    },
-    '0'
-  )
-  .fromTo(
-    '.hero__desc-word-1',
-    {
-      'margin-right': x.matches ? '10rem' : '10rem',
-    },
-    {
-      'margin-right': '0',
-    },
-    '0'
-  )
-  .fromTo(
-    '.hero__desc-word-2',
-    {
-      'margin-left': x.matches ? '10rem' : '15rem',
-    },
-    {
-      'margin-left': '0',
-    },
-    '0'
-  )
-  .fromTo(
-    '.hero__desc-word-3',
-    {
-      'margin-right': x.matches ? '10rem' : '5rem',
-    },
-    {
-      'margin-right': '0',
-    },
-    '0'
-  );
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.hero__box-inner',
-    scrub: !0,
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector('.smooth-scroll'),
+    smooth: true,
     scroller: '.smooth-scroll',
-    start: () => '5% top',
-    end: () => 'bottom top',
-    invalidateOnRefresh: !0,
-    overwrite: 'auto',
-    onEnter: (e) => {
-      document.getElementById('banner-video').play();
+    getDirection: true,
+    smoothMobile: true,
+    mobile: {
+      breakpoint: 0,
+      getDirection: true,
     },
-  },
-  ease: 'none',
-});
+    tablet: {
+      breakpoint: 0,
+      getDirection: true,
+    },
+  });
 
-window.addEventListener('load', () => {
-  if (window.matchMedia('(max-width: 768px)').matches) {
-    const swiperHero = new Swiper('.hero__content-list', {
-      slidesPerView: 'auto',
-    });
-  }
-});
+  locoScroll.on('scroll', ScrollTrigger.update);
 
-window.addEventListener('resize', function () {
+  ScrollTrigger.scrollerProxy('.smooth-scroll', {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+    pinType: document.querySelector('.smooth-scroll').style.transform
+      ? 'transform'
+      : 'fixed',
+  });
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: '.hero__box-inner',
+        scroller: '.smooth-scroll',
+        scrub: !0,
+        start: () => 'top top',
+        end: () => 'bottom top',
+        invalidateOnRefresh: !0,
+        pin: '.hero__banner',
+        overwrite: 'auto',
+        onUpdate: (self) => {
+          if (self.progress >= 0.7) {
+            document.documentElement.classList.add('_revealed');
+            logo.src = './img/main/logo-white.svg';
+          } else {
+            document.documentElement.classList.remove('_revealed');
+            logo.src = './img/logo.png';
+          }
+          if (self.progress >= 0.6) {
+            heroTitle.classList.add('_revealed');
+            heroAnchor.classList.add('_revealed');
+          } else {
+            heroTitle.classList.remove('_revealed');
+            heroAnchor.classList.remove('_revealed');
+          }
+        },
+        onEnter: (e) => {
+          gsap.fromTo(
+            '.hero__box-inner',
+            {
+              'clip-path': 'inset(50% 0%)',
+              alpha: 0,
+            },
+            {
+              duration: 1,
+              alpha: 1,
+              'clip-path': x.matches ? 'inset(45% 0%)' : 'inset(46% 0%)',
+              delay: 0.6,
+            }
+          );
+          gsap.fromTo(
+            '.hero__desc-word-1',
+            {
+              'margin-right': x.matches ? '15rem' : '13rem',
+              alpha: 0,
+            },
+            {
+              duration: 1,
+              alpha: 1,
+              'margin-right': x.matches ? '10rem' : '10rem',
+              delay: 0.6,
+            }
+          );
+          gsap.fromTo(
+            '.hero__desc-word-2',
+            {
+              'margin-left': x.matches ? '15rem' : '20rem',
+              alpha: 0,
+            },
+            {
+              duration: 1,
+              alpha: 1,
+              'margin-left': x.matches ? '10rem' : '15rem',
+              delay: 0.6,
+            }
+          );
+          gsap.fromTo(
+            '.hero__desc-word-3',
+            {
+              'margin-right': x.matches ? '12rem' : '20rem',
+              alpha: 0,
+            },
+            {
+              duration: 1,
+              alpha: 1,
+              'margin-right': x.matches ? '10rem' : '5rem',
+              delay: 0.6,
+            }
+          );
+        },
+        onLeave: (e) => {
+          e.refresh();
+          header.style.transform = 'translateY(-100%)';
+        },
+        onEnterBack: (e) => (header.style.transform = 'translateY(0)'),
+      },
+      ease: 'none',
+    })
+    .fromTo(
+      '.hero__box-inner',
+      {
+        'clip-path': x.matches ? 'inset(45% 0%)' : 'inset(46% 0%)',
+      },
+      {
+        'clip-path': 'inset(0% 0%)',
+      },
+      '0'
+    )
+    .fromTo(
+      '.hero__desc-word-1',
+      {
+        'margin-right': x.matches ? '10rem' : '10rem',
+      },
+      {
+        'margin-right': '0',
+      },
+      '0'
+    )
+    .fromTo(
+      '.hero__desc-word-2',
+      {
+        'margin-left': x.matches ? '10rem' : '15rem',
+      },
+      {
+        'margin-left': '0',
+      },
+      '0'
+    )
+    .fromTo(
+      '.hero__desc-word-3',
+      {
+        'margin-right': x.matches ? '10rem' : '5rem',
+      },
+      {
+        'margin-right': '0',
+      },
+      '0'
+    );
   gsap.timeline({
     scrollTrigger: {
       trigger: '.hero__box-inner',
       scrub: !0,
       scroller: '.smooth-scroll',
-      start: () => 'top top',
+      start: () => '5% top',
       end: () => 'bottom top',
       invalidateOnRefresh: !0,
-      pin: '.hero__banner',
       overwrite: 'auto',
+      onEnter: (e) => {
+        document.getElementById('banner-video').play();
+      },
     },
     ease: 'none',
   });
 
-  ScrollTrigger.refresh();
-});
+  window.addEventListener('load', () => {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      const swiperHero = new Swiper('.hero__content-list', {
+        slidesPerView: 'auto',
+      });
+    }
+  });
 
-ScrollTrigger.addEventListener('refresh', () => {
-  locoScroll.update();
-});
-ScrollTrigger.refresh();
+  window.addEventListener('resize', function () {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.hero__box-inner',
+        scrub: !0,
+        scroller: '.smooth-scroll',
+        start: () => 'top top',
+        end: () => 'bottom top',
+        invalidateOnRefresh: !0,
+        pin: '.hero__banner',
+        overwrite: 'auto',
+      },
+      ease: 'none',
+    });
+
+    ScrollTrigger.refresh();
+  });
+
+  ScrollTrigger.addEventListener('refresh', () => {
+    locoScroll.update();
+  });
+  ScrollTrigger.refresh();
+}
 
 // Rates
 function handleMouseOver(e) {
@@ -236,18 +238,49 @@ function handleMouseOver(e) {
     el.classList.remove('active');
   });
 
-  [thisEl, document.querySelector(`[data-tab='${thisEl.id}']`)].forEach(
-    (el) => {
-      el.classList.add('active');
-    }
-  );
+  window.addEventListener('resize', function () {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.hero__box-inner',
+        scrub: !0,
+        scroller: '.smooth-scroll',
+        start: () => 'top top',
+        end: () => 'bottom top',
+        invalidateOnRefresh: !0,
+        pin: '.hero__banner',
+        overwrite: 'auto',
+      },
+      ease: 'none',
+    });
+
+    ScrollTrigger.refresh();
+  });
+
+  ScrollTrigger.addEventListener('refresh', () => {
+    locoScroll.update();
+  });
+  ScrollTrigger.refresh();
+
+  // Rates
+  function handleMouseOver(e) {
+    const thisEl = e.currentTarget;
+
+    document.querySelectorAll('.rates__btn, [data-tab]').forEach((el) => {
+      el.classList.remove('active');
+    });
+
+    [thisEl, document.querySelector(`[data-tab='${thisEl.id}']`)].forEach(
+      (el) => {
+        el.classList.add('active');
+      }
+    );
+  }
+
+  document.querySelectorAll('.rates__btn').forEach((btn) => {
+    btn.addEventListener('mouseover', handleMouseOver);
+    btn.addEventListener('touchstart', handleMouseOver);
+  });
 }
-
-document.querySelectorAll('.rates__btn').forEach((btn) => {
-  btn.addEventListener('mouseover', handleMouseOver);
-  btn.addEventListener('touchstart', handleMouseOver);
-});
-
 //mobile slider
 if (typeof Swiper !== 'undefined') {
   const swiperMobile = new Swiper('.swiper.mobile-block', {
