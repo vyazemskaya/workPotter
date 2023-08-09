@@ -163,37 +163,6 @@ if (links) {
       menu.classList.remove('active');
   });
 }
-
-//работа с обработкой модально окна для карзины.
-const cartBtn = document.querySelector('.header__basket');
-const cartModal = document.querySelector('.cart-modal');
-const closeModalBtn = document.querySelector('.cart-modal__remove-all');
-
-const activeClass = 'cart-modal--open';
-if (cartBtn) {
-  cartBtn.addEventListener('click', (event) => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 769) {
-      return;
-    }
-
-    event.preventDefault();
-    cartModal.classList.toggle(activeClass);
-  });
-}
-
-if (cartModal && closeModalBtn) {
-  cartModal.addEventListener('click', (event) => {
-    if (
-      event.target === closeModalBtn ||
-      event.target.closest('.cart-modal__remove-all')
-    ) {
-      event.preventDefault();
-      cartModal.classList.remove(activeClass);
-    }
-  });
-}
-
 // Banner
 const banner = document.getElementById('banner');
 const bannerBox = document.getElementById('banner-animate');
@@ -424,7 +393,7 @@ if (video) {
     locoScroll.update();
   });
   ScrollTrigger.refresh();
-}
+
 
 // Rates
 function handleMouseOver(e) {
@@ -456,7 +425,7 @@ function handleMouseOver(e) {
     locoScroll.update();
   });
   ScrollTrigger.refresh();
-
+}
   // Rates
   function handleMouseOver(e) {
     const thisEl = e.currentTarget;
