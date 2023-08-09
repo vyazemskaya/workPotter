@@ -228,7 +228,7 @@ if (video) {
     locoScroll.update();
   });
   ScrollTrigger.refresh();
-}
+
 
 // Rates
 function handleMouseOver(e) {
@@ -260,7 +260,7 @@ function handleMouseOver(e) {
     locoScroll.update();
   });
   ScrollTrigger.refresh();
-
+}
   // Rates
   function handleMouseOver(e) {
     const thisEl = e.currentTarget;
