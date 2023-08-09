@@ -6845,7 +6845,8 @@ main {
   }
   .portfolio .item__img {
     margin-left: 3rem;
-    width: 54.6rem;
+    width: 53.6rem;
+    height: 28rem;
   }
 }
 li {
