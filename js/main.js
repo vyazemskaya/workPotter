@@ -7,6 +7,7 @@ const header = document.querySelector('.header');
 const headerBasketSvg = document.querySelector('.header__basket-icon');
 const basket = headerBasketSvg.querySelectorAll('path');
 const heroTitle = document.querySelector('.hero__title');
+const heroAnchor = document.querySelector('.hero__mouse');
 const burgerButton = document.querySelector('.header__nav-open');
 const video = document.getElementById('banner-video');
 const x = window.matchMedia('(min-width: 768px)');
@@ -72,8 +73,10 @@ gsap
         }
         if (self.progress >= 0.6) {
           heroTitle.classList.add('_revealed');
+          heroAnchor.classList.add('_revealed');
         } else {
           heroTitle.classList.remove('_revealed');
+          heroAnchor.classList.remove('_revealed');
         }
       },
       onEnter: (e) => {

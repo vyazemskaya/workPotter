@@ -433,6 +433,42 @@ main {
   color: white;
 }
 
+.hero__mouse {
+  position: absolute;
+  bottom: 8.5rem;
+  right: 18rem;
+  width: 4rem;
+  height: 7rem;
+  border: 2px solid #434248;
+  border-radius: 6rem;
+}
+.hero__mouse::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: #434248;
+  border-radius: 50%;
+  opacity: 1;
+  transform: translateX(-50%);
+  animation: wheel 3s infinite;
+  -webkit-animation: wheel 3s infinite;
+}
+@keyframes wheel {
+  to {
+    top: 6rem;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    top: 6rem;
+    opacity: 0;
+  }
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -670,6 +706,9 @@ main {
   opacity: 0.4;
 }
 @media (max-width: 48em) {
+  .hero__mouse {
+    display: none;
+  }
   .hero__box-inner {
     max-height: 10.5rem;
     top: 61rem;

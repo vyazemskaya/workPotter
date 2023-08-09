@@ -479,7 +479,7 @@ img {
   .swiper-wrapper {
     gap: 0;
     display: flex;
-    flex-wrap: nowrap !important;
+    flex-wrap: nowrap;
     width: 68.6rem;
   }
   .swiper-slide {
@@ -2065,18 +2065,6 @@ input[type='number'] {
 
 main {
   overflow: hidden;
-  padding-top: 18rem;
-}
-
-.has-scroll-init .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: all 0.3s ease;
-}
-.has-scroll-init main {
-  padding: 0;
 }
 
 .header {
@@ -2085,7 +2073,11 @@ main {
   background-color: transparent;
   color: #434248;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease;
 }
 
 .header__container {
@@ -2295,11 +2287,11 @@ main {
 }
 
 .footer__nav-item:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer__contact-item:not(:last-child) {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .footer__socials-list {
@@ -2331,6 +2323,52 @@ main {
 
 .hero__title._revealed {
   color: white;
+}
+
+.hero__mouse {
+  position: absolute;
+  z-index: 98;
+  bottom: 5.5rem;
+  right: 18rem;
+  width: 4rem;
+  height: 7rem;
+  border: 2px solid #434248;
+  border-radius: 6rem;
+  transition: border 0.3s ease;
+}
+.hero__mouse._revealed {
+  border: 2px solid #ffffff;
+}
+.hero__mouse._revealed::before {
+  background-color: #ffffff;
+}
+
+.hero__mouse::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: #434248;
+  border-radius: 50%;
+  opacity: 1;
+  transform: translateX(-50%);
+  animation: wheel 3s infinite;
+  -webkit-animation: wheel 3s infinite;
+  transition: background-color 0.3s ease;
+}
+@keyframes wheel {
+  to {
+    top: 6rem;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    top: 6rem;
+    opacity: 0;
+  }
 }
 
 .no-scroll {
@@ -2550,6 +2588,9 @@ main {
 }
 
 @media (max-width: 48em) {
+  .hero__mouse {
+    display: none;
+  }
   .hero__banner {
     height: calc(var(--vh, 1vh) * 95);
   }
@@ -2967,9 +3008,6 @@ main {
 .popular__card-box-main {
   width: 100%;
   max-width: 40rem;
-  min-height: 39.1rem;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 4.5rem;
   padding: 3rem 2.5rem;
   background-color: #fff3e5;
@@ -2991,13 +3029,11 @@ main {
 
 .popular__card-box-weight {
   padding: 0 3.5rem;
-  margin-top: auto;
 }
 
 .popular__card-box-compound {
   margin-bottom: 1.5rem;
   border: 0.2rem solid var(--white);
-  min-height: 10rem;
   padding: 1.5rem 2.5rem;
   transition-property: border-color;
   transition-duration: 0.4s;
@@ -3089,7 +3125,6 @@ main {
 
 .popular__card-title {
   margin-bottom: 0.75rem;
-  text-align: center;
 }
 
 .popular__card-title-desc {
@@ -4648,7 +4683,7 @@ main {
     rgba(255, 255, 255, 0) 91.77%
   );
   width: 16rem;
-  height: 15rem;
+  height: 14rem;
   position: absolute;
   right: -7rem;
   top: -3rem;
@@ -4684,7 +4719,6 @@ main {
   color: white;
   margin-top: 0.95rem;
   margin-bottom: 0.2rem;
-  text-transform: uppercase;
 }
 .menu .item--current .item__value {
   font-weight: 400;
@@ -4849,7 +4883,6 @@ main {
 .menu .card__box {
   display: flex;
   width: 34.1rem;
-  height: 35rem;
   flex-direction: column;
   align-items: center;
   background-color: #fff3e5;
@@ -4912,24 +4945,13 @@ main {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
 }
 .menu .card__icon-pick {
   width: 2.8rem;
 }
 .menu .card__image {
   width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  overflow: hidden;
   margin-bottom: 1.8rem;
-}
-.menu .card__image img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
 }
 .menu .card__title {
   text-align: center;
@@ -4957,7 +4979,6 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 24.1rem;
-  margin-top: auto;
 }
 .menu .card__nutrition-item {
   display: flex;
@@ -5092,8 +5113,10 @@ main {
   margin-right: 1.5rem;
 }
 .menu .order {
-  transition: 0.4s;
+  position: sticky;
+  top: 2rem;
   margin-left: 3.1rem;
+  margin-top: 10.4rem;
   padding: 4rem 3rem;
   background-color: #fff3e5;
   display: flex;
@@ -5101,7 +5124,6 @@ main {
   align-items: flex-start;
   color: #434248;
   height: fit-content;
-  z-index: 1;
 }
 .menu .order__title {
   font-family: 'Montserrat';
@@ -5115,24 +5137,7 @@ main {
   border-top: 0.1rem solid rgba(67, 66, 72, 0.5);
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  height: 41rem;
-  padding-right: 2rem;
-  /* Область, на которой находится полоса прокрутки */
-  /* Стиль полосы прокрутки */
-  /* Стиль полосы прокрутки при наведении */
-}
-.menu .order__list::-webkit-scrollbar {
-  width: 0.2rem;
-}
-.menu .order__list::-webkit-scrollbar-track {
-  background: transparent;
-}
-.menu .order__list::-webkit-scrollbar-thumb {
-  background: rgba(67, 66, 72, 0.3);
-}
-.menu .order__list::-webkit-scrollbar-thumb:hover {
-  background: rgba(67, 66, 72, 0.5);
+  margin-bottom: 2.5rem;
 }
 .menu .order .item {
   border: 0;
@@ -5141,8 +5146,6 @@ main {
   flex-direction: column;
   padding-top: 2.5rem;
   padding-bottom: 3rem;
-}
-.menu .order .item:not(:last-child) {
   border-bottom: 0.1rem solid rgba(67, 66, 72, 0.5);
 }
 .menu .order .item__content {
@@ -5217,7 +5220,7 @@ main {
   cursor: pointer;
 }
 .menu .order__total-price {
-  width: 100%;
+  width: 30.2rem;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -5227,10 +5230,6 @@ main {
   font-size: 4rem;
   line-height: 4.9rem;
   margin-bottom: 2.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2rem;
-  border-top: 0.1rem solid rgba(67, 66, 72, 0.5);
 }
 .menu .order__price {
   font-family: 'Montserrat';
@@ -5436,7 +5435,6 @@ main {
   .menu .card__box {
     width: 100%;
     margin: 0;
-    height: auto;
     padding: 4rem 3rem;
   }
   .menu .card__box--second {
@@ -5492,7 +5490,7 @@ main {
   }
   .menu .card__nutrition-info {
     width: 46.6rem;
-    margin-top: 2rem;
+    margin-bottom: 4rem;
   }
   .menu .card__nutrition-value {
     font-style: normal;
@@ -5618,12 +5616,12 @@ main {
     gap: 2rem;
   }
   .menu .filter__item-title::before {
-    min-width: 4.8rem;
-    min-height: 4.8rem;
+    width: 4.8rem;
+    height: 4.8rem;
     background-size: 65%;
   }
   .menu .filter--active {
-    z-index: 6;
+    z-index: 100;
     touch-events: auto;
     max-height: 130rem;
   }
@@ -5707,11 +5705,6 @@ main {
   z-index: 1;
   overflow: hidden;
 }
-.main .card__label {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-}
 .main .card__box {
   display: flex;
   flex-direction: column;
@@ -5720,7 +5713,6 @@ main {
   margin-right: 1.7rem;
   z-index: 1;
   padding: 2rem;
-  padding-top: 3rem;
 }
 .main .card__box--second {
   margin-right: 0;
@@ -5774,10 +5766,6 @@ main {
   width: 5.7rem;
   height: 5.7rem;
 }
-
-.menu .card__title {
-  text-transform: uppercase;
-}
 .payment {
   padding-top: 3rem;
   padding-bottom: 23.8rem;
@@ -5805,17 +5793,8 @@ main {
   background-color: #fff3e5;
 }
 .payment .order__img {
-  min-width: 8rem;
   width: 8rem;
-  height: 8rem;
   margin-right: 2rem;
-  overflow: hidden;
-  border-radius: 50%;
-}
-.payment .order__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .payment .order__date {
   margin-left: 3rem;
@@ -6088,9 +6067,7 @@ main {
     left: -0.1rem;
   }
   .payment .order__img {
-    min-width: 12rem;
     width: 12rem;
-    height: 12rem;
   }
   .payment .order__price {
     font-weight: 500;
