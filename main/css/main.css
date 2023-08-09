@@ -5124,7 +5124,7 @@ main {
   flex-direction: column;
   overflow-y: scroll;
   width: 100%;
-  max-height: 10rem;
+  min-height: 10rem;
   max-height: 41rem;
   padding-right: 2rem;
   /* Область, на которой находится полоса прокрутки */
@@ -6332,10 +6332,13 @@ main {
 .portfolio-det__hero-img {
   margin: 0 auto;
   height: 45.4rem;
+  width: 100%;
   margin-bottom: 6rem;
 }
 .portfolio-det__hero-img img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .portfolio-det__content {
   width: 100%;
@@ -6415,6 +6418,7 @@ main {
 }
 .portfolio-det__img-box-three img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .portfolio-det__img-box-four {
@@ -6424,6 +6428,7 @@ main {
 }
 .portfolio-det__img-box-four img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .portfolio-det__img-box-five {
@@ -6433,6 +6438,7 @@ main {
 }
 .portfolio-det__img-box-five img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .portfolio-det__company {
@@ -6746,7 +6752,14 @@ main {
 .portfolio .item__img {
   margin-left: 3rem;
   width: 46rem;
+  height: 24.3rem;
+  overflow: hidden;
   margin-bottom: 3rem;
+}
+.portfolio .item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 48em) {
@@ -7568,9 +7581,21 @@ li {
 }
 .services__backgraund-img--first {
   width: 17.038rem;
+  height: 18.1836rem;
+}
+.services__backgraund-img--first img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .services__backgraund-img--second {
   width: 31.015rem;
+  height: 31.8rem;
+}
+.services__backgraund-img--second img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .services__discription {
   margin-left: 45.5rem;
@@ -7691,7 +7716,13 @@ li {
 }
 .services .slider .card__img {
   width: 39.9rem;
+  height: 39.9rem;
   margin-bottom: 3rem;
+}
+.services .slider .card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .services .slider .card__title {
   font-family: "Montserrat";
@@ -7773,6 +7804,7 @@ li {
     display: block;
     position: relative;
     width: 29rem;
+    height: 18.2rem;
   }
   .services__subtitle {
     font-weight: 500;
@@ -7840,7 +7872,13 @@ li {
   }
   .services .slider .card__img {
     width: 68.6rem;
+    height: 72rem;
     margin-bottom: 2.8rem;
+  }
+  .services .slider .card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .services .slider .card__title {
     font-weight: 400;
