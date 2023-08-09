@@ -4722,6 +4722,7 @@ main {
   position: relative;
 }
 .menu__search-bar {
+  min-width: 36.2rem;
   width: 36.2rem;
   min-width: 36.2rem;
   display: flex;

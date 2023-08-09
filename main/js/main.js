@@ -431,18 +431,49 @@ function handleMouseOver(e) {
     el.classList.remove('active');
   });
 
-  [thisEl, document.querySelector(`[data-tab='${thisEl.id}']`)].forEach(
-    (el) => {
-      el.classList.add('active');
-    }
-  );
+  window.addEventListener('resize', function () {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '.hero__box-inner',
+        scrub: !0,
+        scroller: '.smooth-scroll',
+        start: () => 'top top',
+        end: () => 'bottom top',
+        invalidateOnRefresh: !0,
+        pin: '.hero__banner',
+        overwrite: 'auto',
+      },
+      ease: 'none',
+    });
+
+    ScrollTrigger.refresh();
+  });
+
+  ScrollTrigger.addEventListener('refresh', () => {
+    locoScroll.update();
+  });
+  ScrollTrigger.refresh();
+
+  // Rates
+  function handleMouseOver(e) {
+    const thisEl = e.currentTarget;
+
+    document.querySelectorAll('.rates__btn, [data-tab]').forEach((el) => {
+      el.classList.remove('active');
+    });
+
+    [thisEl, document.querySelector(`[data-tab='${thisEl.id}']`)].forEach(
+      (el) => {
+        el.classList.add('active');
+      }
+    );
+  }
+
+  document.querySelectorAll('.rates__btn').forEach((btn) => {
+    btn.addEventListener('mouseover', handleMouseOver);
+    btn.addEventListener('touchstart', handleMouseOver);
+  });
 }
-
-document.querySelectorAll('.rates__btn').forEach((btn) => {
-  btn.addEventListener('mouseover', handleMouseOver);
-  btn.addEventListener('touchstart', handleMouseOver);
-});
-
 //mobile slider
 if (typeof Swiper !== 'undefined') {
   const swiperMobile = new Swiper('.swiper.mobile-block', {
