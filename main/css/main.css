@@ -6494,6 +6494,11 @@ html.has-scroll-dragging {
 }
 .portfolio-det__section-left {
   width: 55.3rem;
+  min-width: 55.3rem;
+}
+.portfolio-det__section-right {
+  width: 100.7rem;
+  min-width: 100.7rem;
 }
 .portfolio-det__info {
   display: flex;
@@ -6673,6 +6678,9 @@ html.has-scroll-dragging {
 .portfolio-det__logo {
   width: 8rem;
   height: 8rem;
+  min-width: 8rem;
+  min-height: 8rem;
+  overflow: hidden;
 }
 .portfolio-det__logo img {
   width: 100%;
@@ -7903,13 +7911,16 @@ li {
   z-index: 5;
   position: relative;
 }
-.services .slider .card--second {
+.services .slider .card--1 {
+  padding-top: 0rem;
+}
+.services .slider .card--2 {
   padding-top: 15rem;
 }
-.services .slider .card--third {
+.services .slider .card--3 {
   padding-top: 30rem;
 }
-.services .slider .card--fourth {
+.services .slider .card--4 {
   padding-top: 15rem;
 }
 .services .slider .card__img {
