@@ -108,7 +108,9 @@ $pf-green: #7fac37
       object-fit: cover
     &__qouts-wrapper
       width: 101.9rem
-      height: 95rem
+      padding-top: 58rem
+      padding-left: 4.5rem
+      padding-bottom: 4rem
       position: relative
       left: 18.3rem
 
@@ -123,9 +125,8 @@ $pf-green: #7fac37
         height: 100%
         object-fit: cover
     &__img-text
-      position: absolute
-      left: 4.5rem
-      bottom: 4rem
+      position: relative
+      z-index: 5
       background-color: $pf-beige
       width: 64.6rem
     &__icon
@@ -201,7 +202,6 @@ $pf-green: #7fac37
     .item
       cursor: url('../../img/shared/pagination-icon')
 
-
   .about
     width: 68.6rem
     padding-top: 3+19.3rem
@@ -273,12 +273,12 @@ $pf-green: #7fac37
       position: relative
       flex-direction: column
       &__qouts-wrapper
-        height: 78rem
-        width: 110%
         left: 0
+        padding-top: 17rem
+        padding-left: 3.5rem
+        padding-bottom: 4rem
+        width: 110%
       &__img-text
-        left: 3.5rem
-        top: 16rem
         width: 68.6rem
         height: fit-content
 
@@ -322,7 +322,7 @@ $pf-green: #7fac37
         line-height: 3rem
       &__button-wrapper
         position: absolute
-        top: 152rem
+        top: 160rem
         display: flex
         justify-content: center
         flex-direction: column
