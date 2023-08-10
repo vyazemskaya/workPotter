@@ -137,7 +137,8 @@ html._revealed .header__basket-icon path {
 }
 html._revealed .header__nav-open {
   webkit-filter: brightness(0%) saturate(0%) invert(100%);
-  filter: brightness(0%) saturate(0%) invert(100%);
+  -webkit-filter: brightness(0%) saturate(0%) invert(100%);
+          filter: brightness(0%) saturate(0%) invert(100%);
 }
 
 .has-scroll-init .header {
@@ -280,6 +281,23 @@ main {
 .header__basket {
   width: 2.8rem;
   height: 2.8rem;
+  position: relative;
+}
+
+.header__basket-count {
+  min-width: 1.7rem;
+  min-height: 1.7rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 50%;
+  background-color: #E9743F;
+  color: white;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  
+  position: absolute;
+  top:0rem;
+  left:1.1rem;
 }
 
 .header__basket-icon--active {
@@ -524,7 +542,8 @@ main {
   top: 0;
   margin: 0px;
   padding: 0;
-  clip-path: inset(50% 0%);
+  -webkit-clip-path: inset(50% 0%);
+          clip-path: inset(50% 0%);
   inset: 0px auto auto 0px;
   opacity: 1;
   overflow: hidden;
