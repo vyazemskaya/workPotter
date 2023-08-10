@@ -287,17 +287,27 @@ main {
 .header__basket-count {
   min-width: 1.7rem;
   min-height: 1.7rem;
-  padding: 0.1rem 0.5rem;
   border-radius: 50%;
   background-color: #E9743F;
-  color: white;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 500;
+
   
   position: absolute;
   top:0rem;
   left:1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+
+  span {
+    color: white;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+
+  }
 }
 
 .header__basket-icon--active {
@@ -2670,14 +2680,32 @@ main {
     width: 14.4rem;
   }
 
+  .header__basket-count {
+    min-width: 3.4rem;
+    min-height: 3.4rem;
+
+    position: absolute;
+    left:1.4rem;
+    padding: 0.4rem;
+  
+    span {
+      color: white;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   .popular__pagination-mobile-icon {
-    top: 395rem;
+    top: 415rem;
     left: 30.4rem;
     z-index: 10;
   }
 
   .formats__pagination-mobile-icon {
-    top: 564rem;
+    top: 585rem;
     right: 3rem;
     z-index: 10;
   }
