@@ -504,10 +504,14 @@ if (typeof Swiper !== 'undefined') {
     speed: 1000,
     breakpoints: {
       768: {
-        slidesPerView: 'auto',
+        slidesPerView: 3.2,
         slidesPerGroup: 1,
         spaceBetween: '3.4%',
       },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      }
     },
   });
 
