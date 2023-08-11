@@ -823,7 +823,6 @@ main {
 }
 .rates {
   position: relative;
-  min-height: 84.8rem;
   padding-top: 16.9rem;
 }
 .rates,
@@ -1100,7 +1099,6 @@ main {
 .footer__social {
   width: 4.5rem;
   height: 4.5rem; 
-  cursor: pointer;
 }
 
 .footer__social img {
@@ -1376,17 +1374,37 @@ main {
 .formats__card-img-box {
   display: block;
   margin-bottom: 2.45rem;
-  max-width: 61.7rem;
-  max-height: 60.4rem;
-  height: auto;
 }
-.formats__card-img {
-  height: 100%;
+.formats__card-img-1,
+.formats__card-img-4 {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 55.1rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  vertical-align: bottom;
 }
-
+.formats__card-img-2,
+.formats__card-img-5 {
+  width: 100%;
+  height: 41.6rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  vertical-align: bottom;
+}
+.formats__card-img-3,
+.formats__card-img-6 {
+  width: 100%;
+  height: 60.4rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  vertical-align: bottom;
+}
 .formats__card-title {
   width: 100%;
   max-width: 44rem;
@@ -1477,15 +1495,19 @@ main {
   min-height: 76.2rem;
   padding: 8rem 3.5rem 3rem;
   background-color: var(--yellow-light);
+}
+
+.reviews__slider .swiper-slide {
   transform: rotate(0);
   transition-property: transform;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
-.reviews__card.swiper-slide-next {
+
+.reviews__slider .swiper-slide-next {
   transform: rotate(-15deg);
 }
-.reviews__card.swiper-slide-prev {
+.reviews__slider .swiper-slide-prev {
   transform: rotate(15deg);
 }
 .reviews__card::after {
@@ -1613,6 +1635,7 @@ main {
 .choice__card-1 {
   transform: rotate(-4.1deg) !important;
   top: 2.6rem;
+  background-color: #c0eed6;
   left: 11.9rem;
 }
 .choice__card-1:active,
@@ -1623,6 +1646,7 @@ main {
   transform: rotate(6.03deg) !important;
   top: 5.7rem;
   right: 48rem;
+  background-color: #fff3e6
 }
 .choice__card-2:active,
 .choice__card-2:hover {
@@ -1632,6 +1656,7 @@ main {
   transform: rotate(-2.4deg) !important;
   bottom: 4.8rem;
   left: 38.1rem;
+  background-color: #ffe5e3
 }
 .choice__card-3 * {
   color: var(--orange) !important;
@@ -1643,6 +1668,7 @@ main {
 .choice__card-4 {
   transform: rotate(-4.7deg) !important;
   bottom: 22.8rem;
+  background-color: #d3d1dc;
   right: 23.9rem;
 }
 .choice__card-4:active,
@@ -1973,17 +1999,6 @@ main {
     margin-bottom: 2.3rem;
   }
 
-  .formats__card-img-box {
-    max-width: 68.6rem;
-    width: 68.6rem;
-    height: 47.4rem;
-  }
-
-  .formats__card-img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
   .footer__nav {
     margin-bottom: 6rem;
   }
@@ -2025,18 +2040,18 @@ main {
     letter-spacing: 0.07rem;
   }
 
+  .footer__social {
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-bottom: 4rem;
+  }
+
   .footer__socials-list {
     display: flex;
     flex-direction: column;
     padding: 0rem;
     align-items: flex-start;
     margin-bottom: 3.8rem;
-  }
-
-  .footer__social {
-    width: 10rem;
-    height: 10rem;
-    margin-bottom: 4rem
   }
 
   .footer__link-policy {
@@ -2150,7 +2165,6 @@ main {
   }
 
   .rates__desc {
-    margin-top: 70rem;
     font-style: normal;
     font-weight: 500;
     font-size: 3.2rem;
@@ -2340,11 +2354,15 @@ main {
     padding-left: 0rem;
   }
 
-  .formats__card {
-    max-width: 100%;
-    width: 100%;
+  .formats__card-1,
+  .formats__card-2,
+  .formats__card-3,
+  .formats__card-4,
+  .formats__card-5,
+  .formats__card-6 {
+    max-width: 68.6rem;
     margin-left: 3.2rem;
-    padding-right: 3.2rem;
+    margin-right: 3.2rem;
   }
 
   .formats__card-title {
@@ -2687,6 +2705,13 @@ main {
     width: 14.4rem;
   }
 
+  .reviews__slider .swiper-slide-next {
+    transform: rotate(0);
+  }
+  .reviews__slider .swiper-slide-prev {
+    transform: rotate(0);
+  }
+
   .header__basket-count {
     min-width: 3.4rem;
     min-height: 3.4rem;
@@ -2706,7 +2731,7 @@ main {
   }
 
   .popular__pagination-mobile-icon {
-    top: 415rem;
+    top: 345rem;
     left: 30.4rem;
     z-index: 10;
   }
@@ -2714,7 +2739,7 @@ main {
   
 
   .formats__pagination-mobile-icon {
-    top: 610rem;
+    top: 518rem;
     right: 3rem;
     z-index: 10;
   }

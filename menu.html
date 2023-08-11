@@ -340,7 +340,11 @@
           <div class="menu__list-wrapper content">
             <p class="menu__title">КОМПЛЕКСНЫЕ ОБЕДЫ</p>
             <div class="menu__list">
-              <div class="menu__card card">
+              <!-- блок для пустого результата поиска -->
+              <div class="menu__empty">
+                <p>По вашему запросу ничего не найдено</p>
+              </div>
+              <!-- <div class="menu__card card">
                 <div class="card__box">
                   <div class="card__image">
                     <img
@@ -1695,7 +1699,7 @@
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -1703,7 +1707,9 @@
             <div class="order">
               <p class="order__title">ВАШ ЗАКАЗ 07.02</p>
               <div class="order__list">
-                <div class="order__item item">
+                <!-- блок для пустой корзины -->
+                <div class="order__empty">Ваша корзина пуста</div>
+                <!-- <div class="order__item item">
                   <div class="item__content">
                     <div class="item__info">
                       <p class="item__title">Фирменное комбо с пастой</p>
@@ -1825,7 +1831,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <p class="order__total-price">
                 ИТОГО:
