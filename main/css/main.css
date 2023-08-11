@@ -6543,6 +6543,13 @@ html.has-scroll-dragging {
     width: 4rem;
   }
 }
+.swiper__portfolio-det {
+  width: 100rem;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 20rem;
+}
+
 .portfolio-det {
   padding-top: 3rem;
   padding-bottom: 23.8rem;
@@ -6553,6 +6560,15 @@ html.has-scroll-dragging {
 }
 .portfolio-det li {
   list-style-type: disc;
+}
+.portfolio-det__card {
+  width: 100%;
+  height: 73rem;
+}
+.portfolio-det__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .portfolio-det__head {
   width: 100%;
@@ -6823,6 +6839,14 @@ html.has-scroll-dragging {
     padding-bottom: 0rem;
     width: 68.6rem;
   }
+  .portfolio-det__section-right {
+    width: 100%;
+    min-width: auto;
+  }
+  .portfolio-det__card {
+    width: 100%;
+    height: 45rem;
+  }
   .portfolio-det__head {
     flex-direction: column;
     align-items: flex-start;
@@ -6970,6 +6994,10 @@ html.has-scroll-dragging {
   .portfolio-det__img-box-three {
     width: 100%;
     height: 48.2rem;
+  }
+  .swiper__portfolio-det {
+    width: 100%;
+    margin-bottom: 16rem;
   }
 }
 .portfolio {
@@ -7253,6 +7281,8 @@ li {
   margin-bottom: -1rem;
 }
 .services-det__section-left {
+  min-width: 55.3rem;
+  max-width: 55.3rem;
   width: 55.3rem;
 }
 .services-det .back-call {
@@ -7319,7 +7349,7 @@ li {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 12rem;
+  gap: 4rem;
   margin-bottom: 20rem;
 }
 .services-det__content-section {
@@ -7336,7 +7366,7 @@ li {
   text-transform: uppercase;
 }
 .services-det__section-subtitle {
-  width: 55.3rem;
+  width: 100%;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -7546,6 +7576,8 @@ li {
   margin-bottom: 5rem;
 }
 .services-det__feature-item span img {
+  min-width: 3.5rem;
+  min-height: 3.5rem;
   width: 3.5rem;
   height: 3.5rem;
 }
