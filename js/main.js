@@ -281,20 +281,8 @@ function handleMouseOver(e) {
     btn.addEventListener('touchstart', handleMouseOver);
   });
 }
-//mobile slider
-if (typeof Swiper !== 'undefined') {
-  const swiperMobile = new Swiper('.swiper.mobile-block', {
-    speed: 1000,
-    loop: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 6 * fontSize,
-        centeredSlides: true,
-      },
-    },
-  });
 
+if (typeof Swiper !== 'undefined') {
   // Popular
   const swiperPopular = new Swiper('.popular__slider', {
     loop: true,
@@ -338,7 +326,7 @@ if (typeof Swiper !== 'undefined') {
   const swiperFormats = new Swiper('.formats__slider', {
     speed: 1000,
     breakpoints: {
-      768: {
+      769: {
         slidesPerView: 3.2,
         slidesPerGroup: 1,
         spaceBetween: '3.4%',
@@ -356,7 +344,7 @@ if (typeof Swiper !== 'undefined') {
     spaceBetween: '10%',
     breakpoints: {
       768: {
-        slidesPerView: 'auto',
+        slidesPerView: 2,
         slidesPerGroup: 1,
         spaceBetween: '10%',
       },
