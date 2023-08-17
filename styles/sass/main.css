@@ -824,6 +824,7 @@ main {
 .rates {
   position: relative;
   padding-top: 16.9rem;
+  min-height: 84.8rem;
 }
 .rates,
 .rates__list {
@@ -2097,6 +2098,7 @@ main {
   }
   .rates {
     padding-top: 0rem;
+    min-height: auto;
   }
 
   .rates__img-box {
