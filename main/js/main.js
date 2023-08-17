@@ -459,7 +459,11 @@ if (typeof Swiper !== 'undefined') {
       prevSlideMessage: 'Назад',
       nextSlideMessage: 'Вперёд',
     },
-    speed: 1000,
+    autoplay: {
+      delay: 6000, // Задержка между слайдами в миллисекундах
+      disableOnInteraction: true, // Авто движение не остановится при взаимодействии пользователя
+    },
+    speed: 1300,
     breakpoints: {
       769: {
         slidesPerView: 3,
@@ -490,6 +494,7 @@ if (popularTitle) {
 if (typeof Swiper !== 'undefined') {
   const swiperFormats = new Swiper('.formats__slider', {
     speed: 1000,
+    loop: true,
     breakpoints: {
       769: {
         slidesPerView: 3.2,
@@ -505,8 +510,12 @@ if (typeof Swiper !== 'undefined') {
 
   // Reviews
   const swiperReviews = new Swiper('.reviews__slider', {
-    speed: 1000,
     spaceBetween: '10%',
+    autoplay: {
+      delay: 6000, // Задержка между слайдами в миллисекундах
+      disableOnInteraction: true, // Авто движение не остановится при взаимодействии пользователя
+    },
+    speed: 1300,
     breakpoints: {
       768: {
         slidesPerView: 2,
