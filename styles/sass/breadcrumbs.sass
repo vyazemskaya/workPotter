@@ -1,0 +1,65 @@
+$darkBlue: #1e283f
+$darkGrey: #797979
+
+.breadcrumbs
+	margin-bottom: 5.7rem
+	display: flex
+	align-items: center
+	font-size: 1.8rem
+	line-height: 1.25
+
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+
+		&:not(:last-child)
+			margin-right: 2.4rem
+
+			&::after
+				content: '/'
+				position: absolute
+				right: -1.66rem
+				font-size: 2rem
+				line-height: 1.25
+				color: $darkBlue
+				top: 0
+
+		&:last-child
+			&__item-link
+				color: $darkGrey
+
+		&-link
+			color: $darkBlue
+			position: relative
+			align-items: center
+			display: flex
+			svg
+				width: 2.5rem
+				height: 2.5rem
+				position: relative
+				bottom: 0.2rem
+				-o-object-fit: contain
+				object-fit: contain
+
+@media (max-width: 48em)
+	.breadcrumbs
+		margin-bottom: 2.7rem
+		&__item-link svg
+			width: 3rem
+			height: 3rem
+		&__item-link
+			font-size: 2.2rem
+			&::after
+				font-size: 2.2rem
+		&__item:not(:last-child)::after
+			content: "/"
+			position: absolute
+			right: -1.6rem
+			font-size: 2rem
+			line-height: 1.25
+			color: #1e283f
+			top: 0.3rem
+		&-link
+			svg
+				position: static

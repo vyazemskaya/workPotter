@@ -283,20 +283,8 @@ if (video) {
     btn.addEventListener('touchstart', handleMouseOver);
   });
 }
-//mobile slider
-if (typeof Swiper !== 'undefined') {
-  const swiperMobile = new Swiper('.swiper.mobile-block', {
-    speed: 1000,
-    loop: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 6 * fontSize,
-        centeredSlides: true,
-      },
-    },
-  });
 
+if (typeof Swiper !== 'undefined') {
   // Popular
   const swiperPopular = new Swiper('.popular__slider', {
     loop: true,
@@ -308,7 +296,11 @@ if (typeof Swiper !== 'undefined') {
       prevSlideMessage: 'Назад',
       nextSlideMessage: 'Вперёд',
     },
-    speed: 1000,
+    autoplay: {
+      delay: 6000, // Задержка между слайдами в миллисекундах
+      disableOnInteraction: true, // Авто движение не остановится при взаимодействии пользователя
+    },
+    speed: 1300,
     breakpoints: {
       769: {
         slidesPerView: 3,
@@ -339,22 +331,31 @@ if (popularTitle) {
 if (typeof Swiper !== 'undefined') {
   const swiperFormats = new Swiper('.formats__slider', {
     speed: 1000,
+    loop: true,
     breakpoints: {
-      768: {
-        slidesPerView: 'auto',
+      769: {
+        slidesPerView: 3.2,
         slidesPerGroup: 1,
         spaceBetween: '3.4%',
       },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      }
     },
   });
 
   // Reviews
   const swiperReviews = new Swiper('.reviews__slider', {
-    speed: 1000,
     spaceBetween: '10%',
+    autoplay: {
+      delay: 6000, // Задержка между слайдами в миллисекундах
+      disableOnInteraction: true, // Авто движение не остановится при взаимодействии пользователя
+    },
+    speed: 1300,
     breakpoints: {
       768: {
-        slidesPerView: 'auto',
+        slidesPerView: 2,
         slidesPerGroup: 1,
         spaceBetween: '10%',
       },

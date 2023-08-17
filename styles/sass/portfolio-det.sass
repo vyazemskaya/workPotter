@@ -8,6 +8,11 @@ $pf-error: #F63737
 $pf-gray: #D2D2D2
 $pf-green: #7fac37
 
+.swiper__portfolio-det
+  width: 100rem
+  margin: 0 auto
+  overflow: hidden
+  margin-top: 10rem
 .portfolio-det
   padding-top: 3rem
   padding-bottom: 23.8rem
@@ -17,6 +22,14 @@ $pf-green: #7fac37
   flex-wrap: wrap
   li
     list-style-type: disc
+  &__card
+    width: 100%
+    height: 73rem
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
   &__head
     width: 100%
     display: flex
@@ -63,6 +76,10 @@ $pf-green: #7fac37
     margin-bottom: -1rem
   &__section-left
     width: 55.3rem
+    min-width: 55.3rem
+  &__section-right
+    width: 100.7rem
+    min-width: 100.7rem
   &__info
     display: flex
     gap: 1rem
@@ -117,7 +134,6 @@ $pf-green: #7fac37
     width: 100%
     display: flex
     flex-direction: column
-    gap: 8rem
   &__content-section
     width: 100%
     display: flex
@@ -197,7 +213,7 @@ $pf-green: #7fac37
     margin-left: auto
     img
       height: 100%
-      width: 100% 
+      width: 100%
       object-fit: cover
   &__company
     display: flex
@@ -218,6 +234,9 @@ $pf-green: #7fac37
   &__logo
     width: 8rem
     height: 8rem
+    min-width: 8rem
+    min-height: 8rem
+    overflow: hidden
     img
       width: 100%
       object-fit: cover
@@ -242,6 +261,12 @@ $pf-green: #7fac37
     padding-top: 22.4rem
     padding-bottom: 0rem
     width: 68.6rem
+    &__section-right
+      width: 100%
+      min-width: auto
+    &__card
+      width: 100%
+      height: 45rem
     &__head
       flex-direction: column
       align-items: flex-start
@@ -365,3 +390,7 @@ $pf-green: #7fac37
     &__img-box-three
       width: 100%
       height: 48.2rem
+
+  .swiper__portfolio-det
+    width: 100%
+    margin-bottom: 16rem

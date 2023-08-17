@@ -137,7 +137,8 @@ html._revealed .header__basket-icon path {
 }
 html._revealed .header__nav-open {
   webkit-filter: brightness(0%) saturate(0%) invert(100%);
-  filter: brightness(0%) saturate(0%) invert(100%);
+  -webkit-filter: brightness(0%) saturate(0%) invert(100%);
+          filter: brightness(0%) saturate(0%) invert(100%);
 }
 
 .has-scroll-init .header {
@@ -280,6 +281,33 @@ main {
 .header__basket {
   width: 2.8rem;
   height: 2.8rem;
+  position: relative;
+}
+
+.header__basket-count {
+  min-width: 1.7rem;
+  min-height: 1.7rem;
+  border-radius: 50%;
+  background-color: #E9743F;
+
+  
+  position: absolute;
+  top:0rem;
+  left:1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+
+  span {
+    color: white;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+
+  }
 }
 
 .header__basket-icon--active {
@@ -390,6 +418,7 @@ main {
 }
 .footer__box-bottom {
   padding: 3.95rem 0 4rem;
+  align-items: center;
 }
 .footer__contact-title,
 .footer__nav-title {
@@ -524,7 +553,8 @@ main {
   top: 0;
   margin: 0px;
   padding: 0;
-  clip-path: inset(50% 0%);
+  -webkit-clip-path: inset(50% 0%);
+          clip-path: inset(50% 0%);
   inset: 0px auto auto 0px;
   opacity: 1;
   overflow: hidden;
@@ -793,8 +823,8 @@ main {
 }
 .rates {
   position: relative;
-  min-height: 84.8rem;
   padding-top: 16.9rem;
+  min-height: 84.8rem;
 }
 .rates,
 .rates__list {
@@ -1065,6 +1095,18 @@ main {
 .popular__card-rating-ques {
   position: relative;
   top: -0.5rem;
+}
+
+.footer__social {
+  width: 4.5rem;
+  height: 4.5rem; 
+}
+
+.footer__social img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .popular__card-box-popup {
@@ -1454,15 +1496,19 @@ main {
   min-height: 76.2rem;
   padding: 8rem 3.5rem 3rem;
   background-color: var(--yellow-light);
+}
+
+.reviews__slider .swiper-slide {
   transform: rotate(0);
   transition-property: transform;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
-.reviews__card.swiper-slide-next {
+
+.reviews__slider .swiper-slide-next {
   transform: rotate(-15deg);
 }
-.reviews__card.swiper-slide-prev {
+.reviews__slider .swiper-slide-prev {
   transform: rotate(15deg);
 }
 .reviews__card::after {
@@ -1590,6 +1636,7 @@ main {
 .choice__card-1 {
   transform: rotate(-4.1deg) !important;
   top: 2.6rem;
+  background-color: #c0eed6;
   left: 11.9rem;
 }
 .choice__card-1:active,
@@ -1600,6 +1647,7 @@ main {
   transform: rotate(6.03deg) !important;
   top: 5.7rem;
   right: 48rem;
+  background-color: #fff3e6
 }
 .choice__card-2:active,
 .choice__card-2:hover {
@@ -1609,6 +1657,7 @@ main {
   transform: rotate(-2.4deg) !important;
   bottom: 4.8rem;
   left: 38.1rem;
+  background-color: #ffe5e3
 }
 .choice__card-3 * {
   color: var(--orange) !important;
@@ -1620,6 +1669,7 @@ main {
 .choice__card-4 {
   transform: rotate(-4.7deg) !important;
   bottom: 22.8rem;
+  background-color: #d3d1dc;
   right: 23.9rem;
 }
 .choice__card-4:active,
@@ -1991,6 +2041,12 @@ main {
     letter-spacing: 0.07rem;
   }
 
+  .footer__social {
+    width: 8.5rem;
+    height: 8.5rem;
+    margin-bottom: 4rem;
+  }
+
   .footer__socials-list {
     display: flex;
     flex-direction: column;
@@ -2042,6 +2098,7 @@ main {
   }
   .rates {
     padding-top: 0rem;
+    min-height: auto;
   }
 
   .rates__img-box {
@@ -2110,7 +2167,6 @@ main {
   }
 
   .rates__desc {
-    margin-top: 70rem;
     font-style: normal;
     font-weight: 500;
     font-size: 3.2rem;
@@ -2651,14 +2707,41 @@ main {
     width: 14.4rem;
   }
 
+  .reviews__slider .swiper-slide-next {
+    transform: rotate(0);
+  }
+  .reviews__slider .swiper-slide-prev {
+    transform: rotate(0);
+  }
+
+  .header__basket-count {
+    min-width: 3.4rem;
+    min-height: 3.4rem;
+
+    position: absolute;
+    left:1.4rem;
+    padding: 0.4rem;
+  
+    span {
+      color: white;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   .popular__pagination-mobile-icon {
-    top: 395rem;
+    top: 345rem;
     left: 30.4rem;
     z-index: 10;
   }
 
+  
+
   .formats__pagination-mobile-icon {
-    top: 564rem;
+    top: 518rem;
     right: 3rem;
     z-index: 10;
   }

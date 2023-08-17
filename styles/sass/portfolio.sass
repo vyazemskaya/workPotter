@@ -45,20 +45,9 @@ $pf-green: #7fac37
       border-bottom: 0.05rem solid $pf-black
   &__list
     width: 156.4rem
-    height: 109.6rem
     margin: 0 auto
     display: flex
-    overflow: scroll
     border-left: 0.05rem solid $pf-black
-    scrollbar-width: thin
-    scrollbar-color: transparent transparent
-    &::-webkit-scrollbar
-      width: 0
-      display: none
-    &::-webkit-scrollbar-thumb
-      display: none
-    &::-webkit-scrollbar-button
-      display: none
   &__list-line
     display: flex
     flex-wrap: wrap
@@ -105,11 +94,21 @@ $pf-green: #7fac37
       height: 24.3rem
       overflow: hidden
       margin-bottom: 3rem
+      position: relative
 
       img
         width: 100%
         height: 100%
         object-fit: cover
+        z-index: 2
+    &__logo-img
+      position: absolute
+      width: 6rem
+      height: 6rem
+      bottom: 0.5rem
+      right: 0.5rem
+      z-index: 3
+
 
 @media (max-width: 48em)
   html
@@ -149,7 +148,6 @@ $pf-green: #7fac37
       background-color: transparent
       border-left: 0
       border-right: 0
-      height: 203.4rem
     .item
       margin: 0 auto
       padding: 0
@@ -185,3 +183,10 @@ $pf-green: #7fac37
         margin-left: 3rem
         width: 53.6rem
         height: 28rem
+      &__logo-img
+        position: absolute
+        width: 8rem
+        height: 8rem
+        bottom: 1rem
+        right: 1rem
+        z-index: 3
