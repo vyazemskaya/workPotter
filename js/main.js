@@ -341,7 +341,7 @@ if (typeof Swiper !== 'undefined') {
       320: {
         slidesPerView: 1,
         spaceBetween: 0,
-      }
+      },
     },
   });
 
