@@ -1361,7 +1361,7 @@ img {
   width: 2.4rem;
   height: 2.4rem;
 }
- 
+@charset "UTF-8";
 .cart {
   padding-top: 3rem;
   padding-bottom: 23.8rem;
@@ -1972,7 +1972,7 @@ img {
     padding-top: 2rem;
   }
 }
- 
+@charset "UTF-8";
 @font-face {
   font-family: Gotham;
   src: url(../../fonts/Gotham-book.woff2) format("woff2"), url(../../fonts/Gotham-book.woff) format("woff");
@@ -4918,7 +4918,7 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0;
 }
- 
+@charset "UTF-8";
 .card-box-popup {
   position: absolute;
   display: none;
@@ -5088,7 +5088,6 @@ html.has-scroll-dragging {
   margin-top: 5.8rem;
   display: flex;
   position: relative;
-  justify-content: space-between;
 }
 .menu__search-bar {
   min-width: 36.2rem;
