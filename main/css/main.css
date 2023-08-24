@@ -3008,7 +3008,7 @@ main {
 }
 
 .rates__img-3 {
-  width: 21.9rem;
+  width: 16.9rem;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -5088,7 +5088,6 @@ html.has-scroll-dragging {
   margin-top: 5.8rem;
   display: flex;
   position: relative;
-  justify-content: space-between;
 }
 .menu__search-bar {
   min-width: 36.2rem;
@@ -7290,7 +7289,7 @@ li {
   padding-top: 3rem;
   padding-bottom: 0rem;
   margin: 0 auto;
-  width: 100%;
+  width: 156rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -7301,7 +7300,7 @@ li {
   list-style-type: disc;
 }
 .services-det__head {
-  width: 156rem;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: flex-end;
@@ -7406,7 +7405,7 @@ li {
 }
 .services-det__hero-img {
   margin: 0 auto;
-  width: 156rem;
+  width: 100%;
   height: 45.4rem;
   margin-bottom: 5.5rem;
 }
@@ -7416,7 +7415,7 @@ li {
   height: 100%;
 }
 .services-det__content {
-  width: 156rem;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -7682,6 +7681,7 @@ li {
   .services-det {
     padding-top: 22.4rem;
     padding-bottom: 0rem;
+    width: 100%;
   }
   .services-det__head {
     flex-direction: column;
@@ -7693,7 +7693,7 @@ li {
   .services-det__block-info {
     gap: 2rem;
     order: 2;
-    width: 100%;
+    width: 68.6rem;
   }
   .services-det__title {
     order: 1;
@@ -7722,6 +7722,10 @@ li {
     font-weight: 400;
     line-height: 120%;
     white-space: nowrap;
+  }
+  .services-det .breadcrumbs__container {
+    width: 68.6rem;
+    margin: 0 auto;
   }
   .services-det__hero-img {
     height: 43.8rem;
