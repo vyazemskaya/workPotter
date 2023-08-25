@@ -217,13 +217,14 @@ if (video) {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: '.hero__box-inner',
-          scroller: x.matches ? '.smooth-scroll' : null,
+          trigger: '.hero',
+          scroller: x.matches ? '.smooth-scroll' : 'body',
           scrub: !0,
           start: () => 'top top',
+          preventOverlaps: true,
           end: () => 'bottom top',
           invalidateOnRefresh: !0,
-          pin: '.hero__banner',
+          pin: true,
           overwrite: 'auto',
           onUpdate: (self) => {
             if (self.progress >= 0.7) {
@@ -350,6 +351,7 @@ if (video) {
         scroller: '.smooth-scroll',
         start: () => '5% top',
         end: () => 'bottom top',
+        preventOverlaps: true,
         invalidateOnRefresh: !0,
         overwrite: 'auto',
         onEnter: (e) => {
@@ -373,13 +375,14 @@ if (video) {
   window.addEventListener('resize', function () {
     gsap.timeline({
       scrollTrigger: {
-        trigger: '.hero__box-inner',
+        trigger: '.hero',
+        preventOverlaps: true,
+        scroller: x.matches ? '.smooth-scroll' : 'body',
         scrub: !0,
-        scroller: '.smooth-scroll',
         start: () => 'top top',
         end: () => 'bottom top',
         invalidateOnRefresh: !0,
-        pin: '.hero__banner',
+        pin: true,
         overwrite: 'auto',
       },
       ease: 'none',
@@ -402,13 +405,14 @@ if (video) {
     window.addEventListener('resize', function () {
       gsap.timeline({
         scrollTrigger: {
-          trigger: '.hero__box-inner',
+          trigger: '.hero',
+          scroller: x.matches ? '.smooth-scroll' : 'body',
           scrub: !0,
-          scroller: '.smooth-scroll',
+          preventOverlaps: true,
           start: () => 'top top',
           end: () => 'bottom top',
           invalidateOnRefresh: !0,
-          pin: '.hero__banner',
+          pin: true,
           overwrite: 'auto',
         },
         ease: 'none',
