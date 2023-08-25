@@ -21,16 +21,10 @@ if (video) {
     smooth: !0,
     scroller: '.smooth-scroll',
     reloadOnContextChange: !0,
-    smoothMobile: 1,
+    smoothMobile: 0,
     direction: 'vertical',
     gestureDirection: 'vertical',
     multiplier: x.matches ? 1 : 1.7,
-    smartphone: {
-      smooth: 1,
-    },
-    tablet: {
-      smooth: 1,
-    },
   });
 
   window.addEventListener('load', () => {
@@ -59,7 +53,7 @@ if (video) {
       .timeline({
         scrollTrigger: {
           trigger: '.hero__box-inner',
-          scroller: '.smooth-scroll',
+          scroller: x.matches ? '.smooth-scroll' : null,
           scrub: !0,
           start: () => 'top top',
           end: () => 'bottom top',
